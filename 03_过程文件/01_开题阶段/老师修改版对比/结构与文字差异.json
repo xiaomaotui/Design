@@ -1,0 +1,8099 @@
+{
+  "original": {
+    "path": "D:\\毕业论文\\04_最终成品\\01_开题报告\\张淑鑫_浙江平湖油库工艺设计_开题报告.docx",
+    "sha256": "e30b3d4555bc93c0256ad679f66e63edceca5325ceed1c01a8c735e24f8f9341",
+    "bytes": 205777,
+    "paragraph_records": 892,
+    "sections": 2,
+    "tables": 1,
+    "parts": 30,
+    "has_comments": false,
+    "comment_count": 0,
+    "tracked_insertions": 36,
+    "tracked_deletions": 0,
+    "section_count": 2,
+    "table_count_xml": 2
+  },
+  "teacher": {
+    "path": "D:\\毕业论文\\04_最终成品\\01_开题报告\\老师修改版张淑鑫_浙江平湖油库工艺设计_开题报告-2026.07.16.docx",
+    "sha256": "8a12dd7db60893c88707b4e2e982a7c1f15c068ccc60f40e1f2a93e5c237d6b6",
+    "bytes": 33754,
+    "paragraph_records": 161,
+    "sections": 1,
+    "tables": 1,
+    "parts": 23,
+    "has_comments": false,
+    "comment_count": 0,
+    "tracked_insertions": 38,
+    "tracked_deletions": 0,
+    "section_count": 1,
+    "table_count_xml": 2
+  },
+  "content_operations": [
+    {
+      "type": "delete",
+      "original_range": [
+        0,
+        716
+      ],
+      "teacher_range": [
+        0,
+        0
+      ],
+      "original": [
+        {
+          "loc": "body/p0",
+          "text": ""
+        },
+        {
+          "loc": "body/p1",
+          "text": ""
+        },
+        {
+          "loc": "body/p2",
+          "text": ""
+        },
+        {
+          "loc": "body/p3",
+          "text": ""
+        },
+        {
+          "loc": "body/p4",
+          "text": ""
+        },
+        {
+          "loc": "body/p5",
+          "text": ""
+        },
+        {
+          "loc": "body/p6",
+          "text": ""
+        },
+        {
+          "loc": "body/p7",
+          "text": ""
+        },
+        {
+          "loc": "body/p8",
+          "text": ""
+        },
+        {
+          "loc": "body/p9",
+          "text": ""
+        },
+        {
+          "loc": "body/p10",
+          "text": ""
+        },
+        {
+          "loc": "body/p11",
+          "text": ""
+        },
+        {
+          "loc": "body/p12",
+          "text": ""
+        },
+        {
+          "loc": "body/p13",
+          "text": ""
+        },
+        {
+          "loc": "body/p14",
+          "text": ""
+        },
+        {
+          "loc": "body/p15",
+          "text": ""
+        },
+        {
+          "loc": "body/p16",
+          "text": ""
+        },
+        {
+          "loc": "body/p17",
+          "text": ""
+        },
+        {
+          "loc": "body/p18",
+          "text": ""
+        },
+        {
+          "loc": "body/p19",
+          "text": ""
+        },
+        {
+          "loc": "body/p20",
+          "text": ""
+        },
+        {
+          "loc": "body/p21",
+          "text": ""
+        },
+        {
+          "loc": "body/p22",
+          "text": ""
+        },
+        {
+          "loc": "body/p23",
+          "text": ""
+        },
+        {
+          "loc": "body/p24",
+          "text": ""
+        },
+        {
+          "loc": "body/p25",
+          "text": ""
+        },
+        {
+          "loc": "body/p26",
+          "text": ""
+        },
+        {
+          "loc": "body/p27",
+          "text": ""
+        },
+        {
+          "loc": "body/p28",
+          "text": ""
+        },
+        {
+          "loc": "body/p29",
+          "text": ""
+        },
+        {
+          "loc": "body/p30",
+          "text": ""
+        },
+        {
+          "loc": "body/p31",
+          "text": ""
+        },
+        {
+          "loc": "body/p32",
+          "text": ""
+        },
+        {
+          "loc": "body/p33",
+          "text": ""
+        },
+        {
+          "loc": "body/p34",
+          "text": ""
+        },
+        {
+          "loc": "body/p35",
+          "text": ""
+        },
+        {
+          "loc": "body/p36",
+          "text": ""
+        },
+        {
+          "loc": "body/p37",
+          "text": ""
+        },
+        {
+          "loc": "body/p38",
+          "text": ""
+        },
+        {
+          "loc": "body/p39",
+          "text": ""
+        },
+        {
+          "loc": "body/p40",
+          "text": ""
+        },
+        {
+          "loc": "body/p41",
+          "text": ""
+        },
+        {
+          "loc": "body/p42",
+          "text": ""
+        },
+        {
+          "loc": "body/p43",
+          "text": ""
+        },
+        {
+          "loc": "body/p44",
+          "text": ""
+        },
+        {
+          "loc": "body/p45",
+          "text": ""
+        },
+        {
+          "loc": "body/p46",
+          "text": ""
+        },
+        {
+          "loc": "body/p47",
+          "text": ""
+        },
+        {
+          "loc": "body/p48",
+          "text": ""
+        },
+        {
+          "loc": "body/p49",
+          "text": ""
+        },
+        {
+          "loc": "body/p50",
+          "text": ""
+        },
+        {
+          "loc": "body/p51",
+          "text": ""
+        },
+        {
+          "loc": "body/p52",
+          "text": ""
+        },
+        {
+          "loc": "body/p53",
+          "text": ""
+        },
+        {
+          "loc": "body/p54",
+          "text": ""
+        },
+        {
+          "loc": "body/p55",
+          "text": ""
+        },
+        {
+          "loc": "body/p56",
+          "text": ""
+        },
+        {
+          "loc": "body/p57",
+          "text": ""
+        },
+        {
+          "loc": "body/p58",
+          "text": ""
+        },
+        {
+          "loc": "body/p59",
+          "text": ""
+        },
+        {
+          "loc": "body/p60",
+          "text": ""
+        },
+        {
+          "loc": "body/p61",
+          "text": ""
+        },
+        {
+          "loc": "body/p62",
+          "text": ""
+        },
+        {
+          "loc": "body/p63",
+          "text": ""
+        },
+        {
+          "loc": "body/p64",
+          "text": ""
+        },
+        {
+          "loc": "body/p65",
+          "text": ""
+        },
+        {
+          "loc": "body/p66",
+          "text": ""
+        },
+        {
+          "loc": "body/p67",
+          "text": ""
+        },
+        {
+          "loc": "body/p68",
+          "text": ""
+        },
+        {
+          "loc": "body/p69",
+          "text": ""
+        },
+        {
+          "loc": "body/p70",
+          "text": ""
+        },
+        {
+          "loc": "body/p71",
+          "text": ""
+        },
+        {
+          "loc": "body/p72",
+          "text": ""
+        },
+        {
+          "loc": "body/p73",
+          "text": ""
+        },
+        {
+          "loc": "body/p74",
+          "text": ""
+        },
+        {
+          "loc": "body/p75",
+          "text": ""
+        },
+        {
+          "loc": "body/p76",
+          "text": ""
+        },
+        {
+          "loc": "body/p77",
+          "text": ""
+        },
+        {
+          "loc": "body/p78",
+          "text": ""
+        },
+        {
+          "loc": "body/p79",
+          "text": ""
+        },
+        {
+          "loc": "body/p80",
+          "text": ""
+        },
+        {
+          "loc": "body/p81",
+          "text": ""
+        },
+        {
+          "loc": "body/p82",
+          "text": ""
+        },
+        {
+          "loc": "body/p83",
+          "text": ""
+        },
+        {
+          "loc": "body/p84",
+          "text": ""
+        },
+        {
+          "loc": "body/p85",
+          "text": ""
+        },
+        {
+          "loc": "body/p86",
+          "text": ""
+        },
+        {
+          "loc": "body/p87",
+          "text": ""
+        },
+        {
+          "loc": "body/p88",
+          "text": ""
+        },
+        {
+          "loc": "body/p89",
+          "text": ""
+        },
+        {
+          "loc": "body/p90",
+          "text": ""
+        },
+        {
+          "loc": "body/p91",
+          "text": ""
+        },
+        {
+          "loc": "body/p92",
+          "text": ""
+        },
+        {
+          "loc": "body/p93",
+          "text": ""
+        },
+        {
+          "loc": "body/p94",
+          "text": ""
+        },
+        {
+          "loc": "body/p95",
+          "text": ""
+        },
+        {
+          "loc": "body/p96",
+          "text": ""
+        },
+        {
+          "loc": "body/p97",
+          "text": ""
+        },
+        {
+          "loc": "body/p98",
+          "text": ""
+        },
+        {
+          "loc": "body/p99",
+          "text": ""
+        },
+        {
+          "loc": "body/p100",
+          "text": ""
+        },
+        {
+          "loc": "body/p101",
+          "text": ""
+        },
+        {
+          "loc": "body/p102",
+          "text": ""
+        },
+        {
+          "loc": "body/p103",
+          "text": ""
+        },
+        {
+          "loc": "body/p104",
+          "text": ""
+        },
+        {
+          "loc": "body/p105",
+          "text": ""
+        },
+        {
+          "loc": "body/p106",
+          "text": ""
+        },
+        {
+          "loc": "body/p107",
+          "text": ""
+        },
+        {
+          "loc": "body/p108",
+          "text": ""
+        },
+        {
+          "loc": "body/p109",
+          "text": ""
+        },
+        {
+          "loc": "body/p110",
+          "text": ""
+        },
+        {
+          "loc": "body/p111",
+          "text": ""
+        },
+        {
+          "loc": "body/p112",
+          "text": ""
+        },
+        {
+          "loc": "body/p113",
+          "text": ""
+        },
+        {
+          "loc": "body/p114",
+          "text": ""
+        },
+        {
+          "loc": "body/p115",
+          "text": ""
+        },
+        {
+          "loc": "body/p116",
+          "text": ""
+        },
+        {
+          "loc": "body/p117",
+          "text": ""
+        },
+        {
+          "loc": "body/p118",
+          "text": ""
+        },
+        {
+          "loc": "body/p119",
+          "text": ""
+        },
+        {
+          "loc": "body/p120",
+          "text": ""
+        },
+        {
+          "loc": "body/p121",
+          "text": ""
+        },
+        {
+          "loc": "body/p122",
+          "text": ""
+        },
+        {
+          "loc": "body/p123",
+          "text": ""
+        },
+        {
+          "loc": "body/p124",
+          "text": ""
+        },
+        {
+          "loc": "body/p125",
+          "text": ""
+        },
+        {
+          "loc": "body/p126",
+          "text": ""
+        },
+        {
+          "loc": "body/p127",
+          "text": ""
+        },
+        {
+          "loc": "body/p128",
+          "text": ""
+        },
+        {
+          "loc": "body/p129",
+          "text": ""
+        },
+        {
+          "loc": "body/p130",
+          "text": ""
+        },
+        {
+          "loc": "body/p131",
+          "text": ""
+        },
+        {
+          "loc": "body/p132",
+          "text": ""
+        },
+        {
+          "loc": "body/p133",
+          "text": ""
+        },
+        {
+          "loc": "body/p134",
+          "text": ""
+        },
+        {
+          "loc": "body/p135",
+          "text": ""
+        },
+        {
+          "loc": "body/p136",
+          "text": ""
+        },
+        {
+          "loc": "body/p137",
+          "text": ""
+        },
+        {
+          "loc": "body/p138",
+          "text": ""
+        },
+        {
+          "loc": "body/p139",
+          "text": ""
+        },
+        {
+          "loc": "body/p140",
+          "text": ""
+        },
+        {
+          "loc": "body/p141",
+          "text": ""
+        },
+        {
+          "loc": "body/p142",
+          "text": ""
+        },
+        {
+          "loc": "body/p143",
+          "text": ""
+        },
+        {
+          "loc": "body/p144",
+          "text": ""
+        },
+        {
+          "loc": "body/p145",
+          "text": ""
+        },
+        {
+          "loc": "body/p146",
+          "text": ""
+        },
+        {
+          "loc": "body/p147",
+          "text": ""
+        },
+        {
+          "loc": "body/p148",
+          "text": ""
+        },
+        {
+          "loc": "body/p149",
+          "text": ""
+        },
+        {
+          "loc": "body/p150",
+          "text": ""
+        },
+        {
+          "loc": "body/p151",
+          "text": ""
+        },
+        {
+          "loc": "body/p152",
+          "text": ""
+        },
+        {
+          "loc": "body/p153",
+          "text": ""
+        },
+        {
+          "loc": "body/p154",
+          "text": ""
+        },
+        {
+          "loc": "body/p155",
+          "text": ""
+        },
+        {
+          "loc": "body/p156",
+          "text": ""
+        },
+        {
+          "loc": "body/p157",
+          "text": ""
+        },
+        {
+          "loc": "body/p158",
+          "text": ""
+        },
+        {
+          "loc": "body/p159",
+          "text": ""
+        },
+        {
+          "loc": "body/p160",
+          "text": ""
+        },
+        {
+          "loc": "body/p161",
+          "text": ""
+        },
+        {
+          "loc": "body/p162",
+          "text": ""
+        },
+        {
+          "loc": "body/p163",
+          "text": ""
+        },
+        {
+          "loc": "body/p164",
+          "text": ""
+        },
+        {
+          "loc": "body/p165",
+          "text": ""
+        },
+        {
+          "loc": "body/p166",
+          "text": ""
+        },
+        {
+          "loc": "body/p167",
+          "text": ""
+        },
+        {
+          "loc": "body/p168",
+          "text": ""
+        },
+        {
+          "loc": "body/p169",
+          "text": ""
+        },
+        {
+          "loc": "body/p170",
+          "text": ""
+        },
+        {
+          "loc": "body/p171",
+          "text": ""
+        },
+        {
+          "loc": "body/p172",
+          "text": ""
+        },
+        {
+          "loc": "body/p173",
+          "text": ""
+        },
+        {
+          "loc": "body/p174",
+          "text": ""
+        },
+        {
+          "loc": "body/p175",
+          "text": ""
+        },
+        {
+          "loc": "body/p176",
+          "text": ""
+        },
+        {
+          "loc": "body/p177",
+          "text": ""
+        },
+        {
+          "loc": "body/p178",
+          "text": ""
+        },
+        {
+          "loc": "body/p179",
+          "text": ""
+        },
+        {
+          "loc": "body/p180",
+          "text": ""
+        },
+        {
+          "loc": "body/p181",
+          "text": ""
+        },
+        {
+          "loc": "body/p182",
+          "text": ""
+        },
+        {
+          "loc": "body/p183",
+          "text": ""
+        },
+        {
+          "loc": "body/p184",
+          "text": ""
+        },
+        {
+          "loc": "body/p185",
+          "text": ""
+        },
+        {
+          "loc": "body/p186",
+          "text": ""
+        },
+        {
+          "loc": "body/p187",
+          "text": ""
+        },
+        {
+          "loc": "body/p188",
+          "text": ""
+        },
+        {
+          "loc": "body/p189",
+          "text": ""
+        },
+        {
+          "loc": "body/p190",
+          "text": ""
+        },
+        {
+          "loc": "body/p191",
+          "text": ""
+        },
+        {
+          "loc": "body/p192",
+          "text": ""
+        },
+        {
+          "loc": "body/p193",
+          "text": ""
+        },
+        {
+          "loc": "body/p194",
+          "text": ""
+        },
+        {
+          "loc": "body/p195",
+          "text": ""
+        },
+        {
+          "loc": "body/p196",
+          "text": ""
+        },
+        {
+          "loc": "body/p197",
+          "text": ""
+        },
+        {
+          "loc": "body/p198",
+          "text": ""
+        },
+        {
+          "loc": "body/p199",
+          "text": ""
+        },
+        {
+          "loc": "body/p200",
+          "text": ""
+        },
+        {
+          "loc": "body/p201",
+          "text": ""
+        },
+        {
+          "loc": "body/p202",
+          "text": ""
+        },
+        {
+          "loc": "body/p203",
+          "text": ""
+        },
+        {
+          "loc": "body/p204",
+          "text": ""
+        },
+        {
+          "loc": "body/p205",
+          "text": ""
+        },
+        {
+          "loc": "body/p206",
+          "text": ""
+        },
+        {
+          "loc": "body/p207",
+          "text": ""
+        },
+        {
+          "loc": "body/p208",
+          "text": ""
+        },
+        {
+          "loc": "body/p209",
+          "text": ""
+        },
+        {
+          "loc": "body/p210",
+          "text": ""
+        },
+        {
+          "loc": "body/p211",
+          "text": ""
+        },
+        {
+          "loc": "body/p212",
+          "text": ""
+        },
+        {
+          "loc": "body/p213",
+          "text": ""
+        },
+        {
+          "loc": "body/p214",
+          "text": ""
+        },
+        {
+          "loc": "body/p215",
+          "text": ""
+        },
+        {
+          "loc": "body/p216",
+          "text": ""
+        },
+        {
+          "loc": "body/p217",
+          "text": ""
+        },
+        {
+          "loc": "body/p218",
+          "text": ""
+        },
+        {
+          "loc": "body/p219",
+          "text": ""
+        },
+        {
+          "loc": "body/p220",
+          "text": ""
+        },
+        {
+          "loc": "body/p221",
+          "text": ""
+        },
+        {
+          "loc": "body/p222",
+          "text": ""
+        },
+        {
+          "loc": "body/p223",
+          "text": ""
+        },
+        {
+          "loc": "body/p224",
+          "text": ""
+        },
+        {
+          "loc": "body/p225",
+          "text": ""
+        },
+        {
+          "loc": "body/p226",
+          "text": ""
+        },
+        {
+          "loc": "body/p227",
+          "text": ""
+        },
+        {
+          "loc": "body/p228",
+          "text": ""
+        },
+        {
+          "loc": "body/p229",
+          "text": ""
+        },
+        {
+          "loc": "body/p230",
+          "text": ""
+        },
+        {
+          "loc": "body/p231",
+          "text": ""
+        },
+        {
+          "loc": "body/p232",
+          "text": ""
+        },
+        {
+          "loc": "body/p233",
+          "text": ""
+        },
+        {
+          "loc": "body/p234",
+          "text": ""
+        },
+        {
+          "loc": "body/p235",
+          "text": ""
+        },
+        {
+          "loc": "body/p236",
+          "text": ""
+        },
+        {
+          "loc": "body/p237",
+          "text": ""
+        },
+        {
+          "loc": "body/p238",
+          "text": ""
+        },
+        {
+          "loc": "body/p239",
+          "text": ""
+        },
+        {
+          "loc": "body/p240",
+          "text": ""
+        },
+        {
+          "loc": "body/p241",
+          "text": ""
+        },
+        {
+          "loc": "body/p242",
+          "text": ""
+        },
+        {
+          "loc": "body/p243",
+          "text": ""
+        },
+        {
+          "loc": "body/p244",
+          "text": ""
+        },
+        {
+          "loc": "body/p245",
+          "text": ""
+        },
+        {
+          "loc": "body/p246",
+          "text": ""
+        },
+        {
+          "loc": "body/p247",
+          "text": ""
+        },
+        {
+          "loc": "body/p248",
+          "text": ""
+        },
+        {
+          "loc": "body/p249",
+          "text": ""
+        },
+        {
+          "loc": "body/p250",
+          "text": ""
+        },
+        {
+          "loc": "body/p251",
+          "text": ""
+        },
+        {
+          "loc": "body/p252",
+          "text": ""
+        },
+        {
+          "loc": "body/p253",
+          "text": ""
+        },
+        {
+          "loc": "body/p254",
+          "text": ""
+        },
+        {
+          "loc": "body/p255",
+          "text": ""
+        },
+        {
+          "loc": "body/p256",
+          "text": ""
+        },
+        {
+          "loc": "body/p257",
+          "text": ""
+        },
+        {
+          "loc": "body/p258",
+          "text": ""
+        },
+        {
+          "loc": "body/p259",
+          "text": ""
+        },
+        {
+          "loc": "body/p260",
+          "text": ""
+        },
+        {
+          "loc": "body/p261",
+          "text": ""
+        },
+        {
+          "loc": "body/p262",
+          "text": ""
+        },
+        {
+          "loc": "body/p263",
+          "text": ""
+        },
+        {
+          "loc": "body/p264",
+          "text": ""
+        },
+        {
+          "loc": "body/p265",
+          "text": ""
+        },
+        {
+          "loc": "body/p266",
+          "text": ""
+        },
+        {
+          "loc": "body/p267",
+          "text": ""
+        },
+        {
+          "loc": "body/p268",
+          "text": ""
+        },
+        {
+          "loc": "body/p269",
+          "text": ""
+        },
+        {
+          "loc": "body/p270",
+          "text": ""
+        },
+        {
+          "loc": "body/p271",
+          "text": ""
+        },
+        {
+          "loc": "body/p272",
+          "text": ""
+        },
+        {
+          "loc": "body/p273",
+          "text": ""
+        },
+        {
+          "loc": "body/p274",
+          "text": ""
+        },
+        {
+          "loc": "body/p275",
+          "text": ""
+        },
+        {
+          "loc": "body/p276",
+          "text": ""
+        },
+        {
+          "loc": "body/p277",
+          "text": ""
+        },
+        {
+          "loc": "body/p278",
+          "text": ""
+        },
+        {
+          "loc": "body/p279",
+          "text": ""
+        },
+        {
+          "loc": "body/p280",
+          "text": ""
+        },
+        {
+          "loc": "body/p281",
+          "text": ""
+        },
+        {
+          "loc": "body/p282",
+          "text": ""
+        },
+        {
+          "loc": "body/p283",
+          "text": ""
+        },
+        {
+          "loc": "body/p284",
+          "text": ""
+        },
+        {
+          "loc": "body/p285",
+          "text": ""
+        },
+        {
+          "loc": "body/p286",
+          "text": ""
+        },
+        {
+          "loc": "body/p287",
+          "text": ""
+        },
+        {
+          "loc": "body/p288",
+          "text": ""
+        },
+        {
+          "loc": "body/p289",
+          "text": ""
+        },
+        {
+          "loc": "body/p290",
+          "text": ""
+        },
+        {
+          "loc": "body/p291",
+          "text": ""
+        },
+        {
+          "loc": "body/p292",
+          "text": ""
+        },
+        {
+          "loc": "body/p293",
+          "text": ""
+        },
+        {
+          "loc": "body/p294",
+          "text": ""
+        },
+        {
+          "loc": "body/p295",
+          "text": ""
+        },
+        {
+          "loc": "body/p296",
+          "text": ""
+        },
+        {
+          "loc": "body/p297",
+          "text": ""
+        },
+        {
+          "loc": "body/p298",
+          "text": ""
+        },
+        {
+          "loc": "body/p299",
+          "text": ""
+        },
+        {
+          "loc": "body/p300",
+          "text": ""
+        },
+        {
+          "loc": "body/p301",
+          "text": ""
+        },
+        {
+          "loc": "body/p302",
+          "text": ""
+        },
+        {
+          "loc": "body/p303",
+          "text": ""
+        },
+        {
+          "loc": "body/p304",
+          "text": ""
+        },
+        {
+          "loc": "body/p305",
+          "text": ""
+        },
+        {
+          "loc": "body/p306",
+          "text": ""
+        },
+        {
+          "loc": "body/p307",
+          "text": ""
+        },
+        {
+          "loc": "body/p308",
+          "text": ""
+        },
+        {
+          "loc": "body/p309",
+          "text": ""
+        },
+        {
+          "loc": "body/p310",
+          "text": ""
+        },
+        {
+          "loc": "body/p311",
+          "text": ""
+        },
+        {
+          "loc": "body/p312",
+          "text": ""
+        },
+        {
+          "loc": "body/p313",
+          "text": ""
+        },
+        {
+          "loc": "body/p314",
+          "text": ""
+        },
+        {
+          "loc": "body/p315",
+          "text": ""
+        },
+        {
+          "loc": "body/p316",
+          "text": ""
+        },
+        {
+          "loc": "body/p317",
+          "text": ""
+        },
+        {
+          "loc": "body/p318",
+          "text": ""
+        },
+        {
+          "loc": "body/p319",
+          "text": ""
+        },
+        {
+          "loc": "body/p320",
+          "text": ""
+        },
+        {
+          "loc": "body/p321",
+          "text": ""
+        },
+        {
+          "loc": "body/p322",
+          "text": ""
+        },
+        {
+          "loc": "body/p323",
+          "text": ""
+        },
+        {
+          "loc": "body/p324",
+          "text": ""
+        },
+        {
+          "loc": "body/p325",
+          "text": ""
+        },
+        {
+          "loc": "body/p326",
+          "text": ""
+        },
+        {
+          "loc": "body/p327",
+          "text": ""
+        },
+        {
+          "loc": "body/p328",
+          "text": ""
+        },
+        {
+          "loc": "body/p329",
+          "text": ""
+        },
+        {
+          "loc": "body/p330",
+          "text": ""
+        },
+        {
+          "loc": "body/p331",
+          "text": ""
+        },
+        {
+          "loc": "body/p332",
+          "text": ""
+        },
+        {
+          "loc": "body/p333",
+          "text": ""
+        },
+        {
+          "loc": "body/p334",
+          "text": ""
+        },
+        {
+          "loc": "body/p335",
+          "text": ""
+        },
+        {
+          "loc": "body/p336",
+          "text": ""
+        },
+        {
+          "loc": "body/p337",
+          "text": ""
+        },
+        {
+          "loc": "body/p338",
+          "text": ""
+        },
+        {
+          "loc": "body/p339",
+          "text": ""
+        },
+        {
+          "loc": "body/p340",
+          "text": ""
+        },
+        {
+          "loc": "body/p341",
+          "text": ""
+        },
+        {
+          "loc": "body/p342",
+          "text": ""
+        },
+        {
+          "loc": "body/p343",
+          "text": ""
+        },
+        {
+          "loc": "body/p344",
+          "text": ""
+        },
+        {
+          "loc": "body/p345",
+          "text": ""
+        },
+        {
+          "loc": "body/p346",
+          "text": ""
+        },
+        {
+          "loc": "body/p347",
+          "text": ""
+        },
+        {
+          "loc": "body/p348",
+          "text": ""
+        },
+        {
+          "loc": "body/p349",
+          "text": ""
+        },
+        {
+          "loc": "body/p350",
+          "text": ""
+        },
+        {
+          "loc": "body/p351",
+          "text": ""
+        },
+        {
+          "loc": "body/p352",
+          "text": ""
+        },
+        {
+          "loc": "body/p353",
+          "text": ""
+        },
+        {
+          "loc": "body/p354",
+          "text": ""
+        },
+        {
+          "loc": "body/p355",
+          "text": ""
+        },
+        {
+          "loc": "body/p356",
+          "text": ""
+        },
+        {
+          "loc": "body/p357",
+          "text": ""
+        },
+        {
+          "loc": "body/p358",
+          "text": ""
+        },
+        {
+          "loc": "body/p359",
+          "text": ""
+        },
+        {
+          "loc": "body/p360",
+          "text": ""
+        },
+        {
+          "loc": "body/p361",
+          "text": ""
+        },
+        {
+          "loc": "body/p362",
+          "text": ""
+        },
+        {
+          "loc": "body/p363",
+          "text": ""
+        },
+        {
+          "loc": "body/p364",
+          "text": ""
+        },
+        {
+          "loc": "body/p365",
+          "text": ""
+        },
+        {
+          "loc": "body/p366",
+          "text": ""
+        },
+        {
+          "loc": "body/p367",
+          "text": ""
+        },
+        {
+          "loc": "body/p368",
+          "text": ""
+        },
+        {
+          "loc": "body/p369",
+          "text": ""
+        },
+        {
+          "loc": "body/p370",
+          "text": ""
+        },
+        {
+          "loc": "body/p371",
+          "text": ""
+        },
+        {
+          "loc": "body/p372",
+          "text": ""
+        },
+        {
+          "loc": "body/p373",
+          "text": ""
+        },
+        {
+          "loc": "body/p374",
+          "text": ""
+        },
+        {
+          "loc": "body/p375",
+          "text": ""
+        },
+        {
+          "loc": "body/p376",
+          "text": ""
+        },
+        {
+          "loc": "body/p377",
+          "text": ""
+        },
+        {
+          "loc": "body/p378",
+          "text": ""
+        },
+        {
+          "loc": "body/p379",
+          "text": ""
+        },
+        {
+          "loc": "body/p380",
+          "text": ""
+        },
+        {
+          "loc": "body/p381",
+          "text": ""
+        },
+        {
+          "loc": "body/p382",
+          "text": ""
+        },
+        {
+          "loc": "body/p383",
+          "text": ""
+        },
+        {
+          "loc": "body/p384",
+          "text": ""
+        },
+        {
+          "loc": "body/p385",
+          "text": ""
+        },
+        {
+          "loc": "body/p386",
+          "text": ""
+        },
+        {
+          "loc": "body/p387",
+          "text": ""
+        },
+        {
+          "loc": "body/p388",
+          "text": ""
+        },
+        {
+          "loc": "body/p389",
+          "text": ""
+        },
+        {
+          "loc": "body/p390",
+          "text": ""
+        },
+        {
+          "loc": "body/p391",
+          "text": ""
+        },
+        {
+          "loc": "body/p392",
+          "text": ""
+        },
+        {
+          "loc": "body/p393",
+          "text": ""
+        },
+        {
+          "loc": "body/p394",
+          "text": ""
+        },
+        {
+          "loc": "body/p395",
+          "text": ""
+        },
+        {
+          "loc": "body/p396",
+          "text": ""
+        },
+        {
+          "loc": "body/p397",
+          "text": ""
+        },
+        {
+          "loc": "body/p398",
+          "text": ""
+        },
+        {
+          "loc": "body/p399",
+          "text": ""
+        },
+        {
+          "loc": "body/p400",
+          "text": ""
+        },
+        {
+          "loc": "body/p401",
+          "text": ""
+        },
+        {
+          "loc": "body/p402",
+          "text": ""
+        },
+        {
+          "loc": "body/p403",
+          "text": ""
+        },
+        {
+          "loc": "body/p404",
+          "text": ""
+        },
+        {
+          "loc": "body/p405",
+          "text": ""
+        },
+        {
+          "loc": "body/p406",
+          "text": ""
+        },
+        {
+          "loc": "body/p407",
+          "text": ""
+        },
+        {
+          "loc": "body/p408",
+          "text": ""
+        },
+        {
+          "loc": "body/p409",
+          "text": ""
+        },
+        {
+          "loc": "body/p410",
+          "text": ""
+        },
+        {
+          "loc": "body/p411",
+          "text": ""
+        },
+        {
+          "loc": "body/p412",
+          "text": ""
+        },
+        {
+          "loc": "body/p413",
+          "text": ""
+        },
+        {
+          "loc": "body/p414",
+          "text": ""
+        },
+        {
+          "loc": "body/p415",
+          "text": ""
+        },
+        {
+          "loc": "body/p416",
+          "text": ""
+        },
+        {
+          "loc": "body/p417",
+          "text": ""
+        },
+        {
+          "loc": "body/p418",
+          "text": ""
+        },
+        {
+          "loc": "body/p419",
+          "text": ""
+        },
+        {
+          "loc": "body/p420",
+          "text": ""
+        },
+        {
+          "loc": "body/p421",
+          "text": ""
+        },
+        {
+          "loc": "body/p422",
+          "text": ""
+        },
+        {
+          "loc": "body/p423",
+          "text": ""
+        },
+        {
+          "loc": "body/p424",
+          "text": ""
+        },
+        {
+          "loc": "body/p425",
+          "text": ""
+        },
+        {
+          "loc": "body/p426",
+          "text": ""
+        },
+        {
+          "loc": "body/p427",
+          "text": ""
+        },
+        {
+          "loc": "body/p428",
+          "text": ""
+        },
+        {
+          "loc": "body/p429",
+          "text": ""
+        },
+        {
+          "loc": "body/p430",
+          "text": ""
+        },
+        {
+          "loc": "body/p431",
+          "text": ""
+        },
+        {
+          "loc": "body/p432",
+          "text": ""
+        },
+        {
+          "loc": "body/p433",
+          "text": ""
+        },
+        {
+          "loc": "body/p434",
+          "text": ""
+        },
+        {
+          "loc": "body/p435",
+          "text": ""
+        },
+        {
+          "loc": "body/p436",
+          "text": ""
+        },
+        {
+          "loc": "body/p437",
+          "text": ""
+        },
+        {
+          "loc": "body/p438",
+          "text": ""
+        },
+        {
+          "loc": "body/p439",
+          "text": ""
+        },
+        {
+          "loc": "body/p440",
+          "text": ""
+        },
+        {
+          "loc": "body/p441",
+          "text": ""
+        },
+        {
+          "loc": "body/p442",
+          "text": ""
+        },
+        {
+          "loc": "body/p443",
+          "text": ""
+        },
+        {
+          "loc": "body/p444",
+          "text": ""
+        },
+        {
+          "loc": "body/p445",
+          "text": ""
+        },
+        {
+          "loc": "body/p446",
+          "text": ""
+        },
+        {
+          "loc": "body/p447",
+          "text": ""
+        },
+        {
+          "loc": "body/p448",
+          "text": ""
+        },
+        {
+          "loc": "body/p449",
+          "text": ""
+        },
+        {
+          "loc": "body/p450",
+          "text": ""
+        },
+        {
+          "loc": "body/p451",
+          "text": ""
+        },
+        {
+          "loc": "body/p452",
+          "text": ""
+        },
+        {
+          "loc": "body/p453",
+          "text": ""
+        },
+        {
+          "loc": "body/p454",
+          "text": ""
+        },
+        {
+          "loc": "body/p455",
+          "text": ""
+        },
+        {
+          "loc": "body/p456",
+          "text": ""
+        },
+        {
+          "loc": "body/p457",
+          "text": ""
+        },
+        {
+          "loc": "body/p458",
+          "text": ""
+        },
+        {
+          "loc": "body/p459",
+          "text": ""
+        },
+        {
+          "loc": "body/p460",
+          "text": ""
+        },
+        {
+          "loc": "body/p461",
+          "text": ""
+        },
+        {
+          "loc": "body/p462",
+          "text": ""
+        },
+        {
+          "loc": "body/p463",
+          "text": ""
+        },
+        {
+          "loc": "body/p464",
+          "text": ""
+        },
+        {
+          "loc": "body/p465",
+          "text": ""
+        },
+        {
+          "loc": "body/p466",
+          "text": ""
+        },
+        {
+          "loc": "body/p467",
+          "text": ""
+        },
+        {
+          "loc": "body/p468",
+          "text": ""
+        },
+        {
+          "loc": "body/p469",
+          "text": ""
+        },
+        {
+          "loc": "body/p470",
+          "text": ""
+        },
+        {
+          "loc": "body/p471",
+          "text": ""
+        },
+        {
+          "loc": "body/p472",
+          "text": ""
+        },
+        {
+          "loc": "body/p473",
+          "text": ""
+        },
+        {
+          "loc": "body/p474",
+          "text": ""
+        },
+        {
+          "loc": "body/p475",
+          "text": ""
+        },
+        {
+          "loc": "body/p476",
+          "text": ""
+        },
+        {
+          "loc": "body/p477",
+          "text": ""
+        },
+        {
+          "loc": "body/p478",
+          "text": ""
+        },
+        {
+          "loc": "body/p479",
+          "text": ""
+        },
+        {
+          "loc": "body/p480",
+          "text": ""
+        },
+        {
+          "loc": "body/p481",
+          "text": ""
+        },
+        {
+          "loc": "body/p482",
+          "text": ""
+        },
+        {
+          "loc": "body/p483",
+          "text": ""
+        },
+        {
+          "loc": "body/p484",
+          "text": ""
+        },
+        {
+          "loc": "body/p485",
+          "text": ""
+        },
+        {
+          "loc": "body/p486",
+          "text": ""
+        },
+        {
+          "loc": "body/p487",
+          "text": ""
+        },
+        {
+          "loc": "body/p488",
+          "text": ""
+        },
+        {
+          "loc": "body/p489",
+          "text": ""
+        },
+        {
+          "loc": "body/p490",
+          "text": ""
+        },
+        {
+          "loc": "body/p491",
+          "text": ""
+        },
+        {
+          "loc": "body/p492",
+          "text": ""
+        },
+        {
+          "loc": "body/p493",
+          "text": ""
+        },
+        {
+          "loc": "body/p494",
+          "text": ""
+        },
+        {
+          "loc": "body/p495",
+          "text": ""
+        },
+        {
+          "loc": "body/p496",
+          "text": ""
+        },
+        {
+          "loc": "body/p497",
+          "text": ""
+        },
+        {
+          "loc": "body/p498",
+          "text": ""
+        },
+        {
+          "loc": "body/p499",
+          "text": ""
+        },
+        {
+          "loc": "body/p500",
+          "text": ""
+        },
+        {
+          "loc": "body/p501",
+          "text": ""
+        },
+        {
+          "loc": "body/p502",
+          "text": ""
+        },
+        {
+          "loc": "body/p503",
+          "text": ""
+        },
+        {
+          "loc": "body/p504",
+          "text": ""
+        },
+        {
+          "loc": "body/p505",
+          "text": ""
+        },
+        {
+          "loc": "body/p506",
+          "text": ""
+        },
+        {
+          "loc": "body/p507",
+          "text": ""
+        },
+        {
+          "loc": "body/p508",
+          "text": ""
+        },
+        {
+          "loc": "body/p509",
+          "text": ""
+        },
+        {
+          "loc": "body/p510",
+          "text": ""
+        },
+        {
+          "loc": "body/p511",
+          "text": ""
+        },
+        {
+          "loc": "body/p512",
+          "text": ""
+        },
+        {
+          "loc": "body/p513",
+          "text": ""
+        },
+        {
+          "loc": "body/p514",
+          "text": ""
+        },
+        {
+          "loc": "body/p515",
+          "text": ""
+        },
+        {
+          "loc": "body/p516",
+          "text": ""
+        },
+        {
+          "loc": "body/p517",
+          "text": ""
+        },
+        {
+          "loc": "body/p518",
+          "text": ""
+        },
+        {
+          "loc": "body/p519",
+          "text": ""
+        },
+        {
+          "loc": "body/p520",
+          "text": ""
+        },
+        {
+          "loc": "body/p521",
+          "text": ""
+        },
+        {
+          "loc": "body/p522",
+          "text": ""
+        },
+        {
+          "loc": "body/p523",
+          "text": ""
+        },
+        {
+          "loc": "body/p524",
+          "text": ""
+        },
+        {
+          "loc": "body/p525",
+          "text": ""
+        },
+        {
+          "loc": "body/p526",
+          "text": ""
+        },
+        {
+          "loc": "body/p527",
+          "text": ""
+        },
+        {
+          "loc": "body/p528",
+          "text": ""
+        },
+        {
+          "loc": "body/p529",
+          "text": ""
+        },
+        {
+          "loc": "body/p530",
+          "text": ""
+        },
+        {
+          "loc": "body/p531",
+          "text": ""
+        },
+        {
+          "loc": "body/p532",
+          "text": ""
+        },
+        {
+          "loc": "body/p533",
+          "text": ""
+        },
+        {
+          "loc": "body/p534",
+          "text": ""
+        },
+        {
+          "loc": "body/p535",
+          "text": ""
+        },
+        {
+          "loc": "body/p536",
+          "text": ""
+        },
+        {
+          "loc": "body/p537",
+          "text": ""
+        },
+        {
+          "loc": "body/p538",
+          "text": ""
+        },
+        {
+          "loc": "body/p539",
+          "text": ""
+        },
+        {
+          "loc": "body/p540",
+          "text": ""
+        },
+        {
+          "loc": "body/p541",
+          "text": ""
+        },
+        {
+          "loc": "body/p542",
+          "text": ""
+        },
+        {
+          "loc": "body/p543",
+          "text": ""
+        },
+        {
+          "loc": "body/p544",
+          "text": ""
+        },
+        {
+          "loc": "body/p545",
+          "text": ""
+        },
+        {
+          "loc": "body/p546",
+          "text": ""
+        },
+        {
+          "loc": "body/p547",
+          "text": ""
+        },
+        {
+          "loc": "body/p548",
+          "text": ""
+        },
+        {
+          "loc": "body/p549",
+          "text": ""
+        },
+        {
+          "loc": "body/p550",
+          "text": ""
+        },
+        {
+          "loc": "body/p551",
+          "text": ""
+        },
+        {
+          "loc": "body/p552",
+          "text": ""
+        },
+        {
+          "loc": "body/p553",
+          "text": ""
+        },
+        {
+          "loc": "body/p554",
+          "text": ""
+        },
+        {
+          "loc": "body/p555",
+          "text": ""
+        },
+        {
+          "loc": "body/p556",
+          "text": ""
+        },
+        {
+          "loc": "body/p557",
+          "text": ""
+        },
+        {
+          "loc": "body/p558",
+          "text": ""
+        },
+        {
+          "loc": "body/p559",
+          "text": ""
+        },
+        {
+          "loc": "body/p560",
+          "text": ""
+        },
+        {
+          "loc": "body/p561",
+          "text": ""
+        },
+        {
+          "loc": "body/p562",
+          "text": ""
+        },
+        {
+          "loc": "body/p563",
+          "text": ""
+        },
+        {
+          "loc": "body/p564",
+          "text": ""
+        },
+        {
+          "loc": "body/p565",
+          "text": ""
+        },
+        {
+          "loc": "body/p566",
+          "text": ""
+        },
+        {
+          "loc": "body/p567",
+          "text": ""
+        },
+        {
+          "loc": "body/p568",
+          "text": ""
+        },
+        {
+          "loc": "body/p569",
+          "text": ""
+        },
+        {
+          "loc": "body/p570",
+          "text": ""
+        },
+        {
+          "loc": "body/p571",
+          "text": ""
+        },
+        {
+          "loc": "body/p572",
+          "text": ""
+        },
+        {
+          "loc": "body/p573",
+          "text": ""
+        },
+        {
+          "loc": "body/p574",
+          "text": ""
+        },
+        {
+          "loc": "body/p575",
+          "text": ""
+        },
+        {
+          "loc": "body/p576",
+          "text": ""
+        },
+        {
+          "loc": "body/p577",
+          "text": ""
+        },
+        {
+          "loc": "body/p578",
+          "text": ""
+        },
+        {
+          "loc": "body/p579",
+          "text": ""
+        },
+        {
+          "loc": "body/p580",
+          "text": ""
+        },
+        {
+          "loc": "body/p581",
+          "text": ""
+        },
+        {
+          "loc": "body/p582",
+          "text": ""
+        },
+        {
+          "loc": "body/p583",
+          "text": ""
+        },
+        {
+          "loc": "body/p584",
+          "text": ""
+        },
+        {
+          "loc": "body/p585",
+          "text": ""
+        },
+        {
+          "loc": "body/p586",
+          "text": ""
+        },
+        {
+          "loc": "body/p587",
+          "text": ""
+        },
+        {
+          "loc": "body/p588",
+          "text": ""
+        },
+        {
+          "loc": "body/p589",
+          "text": ""
+        },
+        {
+          "loc": "body/p590",
+          "text": ""
+        },
+        {
+          "loc": "body/p591",
+          "text": ""
+        },
+        {
+          "loc": "body/p592",
+          "text": ""
+        },
+        {
+          "loc": "body/p593",
+          "text": ""
+        },
+        {
+          "loc": "body/p594",
+          "text": ""
+        },
+        {
+          "loc": "body/p595",
+          "text": ""
+        },
+        {
+          "loc": "body/p596",
+          "text": ""
+        },
+        {
+          "loc": "body/p597",
+          "text": ""
+        },
+        {
+          "loc": "body/p598",
+          "text": ""
+        },
+        {
+          "loc": "body/p599",
+          "text": ""
+        },
+        {
+          "loc": "body/p600",
+          "text": ""
+        },
+        {
+          "loc": "body/p601",
+          "text": ""
+        },
+        {
+          "loc": "body/p602",
+          "text": ""
+        },
+        {
+          "loc": "body/p603",
+          "text": ""
+        },
+        {
+          "loc": "body/p604",
+          "text": ""
+        },
+        {
+          "loc": "body/p605",
+          "text": ""
+        },
+        {
+          "loc": "body/p606",
+          "text": ""
+        },
+        {
+          "loc": "body/p607",
+          "text": ""
+        },
+        {
+          "loc": "body/p608",
+          "text": ""
+        },
+        {
+          "loc": "body/p609",
+          "text": ""
+        },
+        {
+          "loc": "body/p610",
+          "text": ""
+        },
+        {
+          "loc": "body/p611",
+          "text": ""
+        },
+        {
+          "loc": "body/p612",
+          "text": ""
+        },
+        {
+          "loc": "body/p613",
+          "text": ""
+        },
+        {
+          "loc": "body/p614",
+          "text": ""
+        },
+        {
+          "loc": "body/p615",
+          "text": ""
+        },
+        {
+          "loc": "body/p616",
+          "text": ""
+        },
+        {
+          "loc": "body/p617",
+          "text": ""
+        },
+        {
+          "loc": "body/p618",
+          "text": ""
+        },
+        {
+          "loc": "body/p619",
+          "text": ""
+        },
+        {
+          "loc": "body/p620",
+          "text": ""
+        },
+        {
+          "loc": "body/p621",
+          "text": ""
+        },
+        {
+          "loc": "body/p622",
+          "text": ""
+        },
+        {
+          "loc": "body/p623",
+          "text": ""
+        },
+        {
+          "loc": "body/p624",
+          "text": ""
+        },
+        {
+          "loc": "body/p625",
+          "text": ""
+        },
+        {
+          "loc": "body/p626",
+          "text": ""
+        },
+        {
+          "loc": "body/p627",
+          "text": ""
+        },
+        {
+          "loc": "body/p628",
+          "text": ""
+        },
+        {
+          "loc": "body/p629",
+          "text": ""
+        },
+        {
+          "loc": "body/p630",
+          "text": ""
+        },
+        {
+          "loc": "body/p631",
+          "text": ""
+        },
+        {
+          "loc": "body/p632",
+          "text": ""
+        },
+        {
+          "loc": "body/p633",
+          "text": ""
+        },
+        {
+          "loc": "body/p634",
+          "text": ""
+        },
+        {
+          "loc": "body/p635",
+          "text": ""
+        },
+        {
+          "loc": "body/p636",
+          "text": ""
+        },
+        {
+          "loc": "body/p637",
+          "text": ""
+        },
+        {
+          "loc": "body/p638",
+          "text": ""
+        },
+        {
+          "loc": "body/p639",
+          "text": ""
+        },
+        {
+          "loc": "body/p640",
+          "text": ""
+        },
+        {
+          "loc": "body/p641",
+          "text": ""
+        },
+        {
+          "loc": "body/p642",
+          "text": ""
+        },
+        {
+          "loc": "body/p643",
+          "text": ""
+        },
+        {
+          "loc": "body/p644",
+          "text": ""
+        },
+        {
+          "loc": "body/p645",
+          "text": ""
+        },
+        {
+          "loc": "body/p646",
+          "text": ""
+        },
+        {
+          "loc": "body/p647",
+          "text": ""
+        },
+        {
+          "loc": "body/p648",
+          "text": ""
+        },
+        {
+          "loc": "body/p649",
+          "text": ""
+        },
+        {
+          "loc": "body/p650",
+          "text": ""
+        },
+        {
+          "loc": "body/p651",
+          "text": ""
+        },
+        {
+          "loc": "body/p652",
+          "text": ""
+        },
+        {
+          "loc": "body/p653",
+          "text": ""
+        },
+        {
+          "loc": "body/p654",
+          "text": ""
+        },
+        {
+          "loc": "body/p655",
+          "text": ""
+        },
+        {
+          "loc": "body/p656",
+          "text": ""
+        },
+        {
+          "loc": "body/p657",
+          "text": ""
+        },
+        {
+          "loc": "body/p658",
+          "text": ""
+        },
+        {
+          "loc": "body/p659",
+          "text": ""
+        },
+        {
+          "loc": "body/p660",
+          "text": ""
+        },
+        {
+          "loc": "body/p661",
+          "text": ""
+        },
+        {
+          "loc": "body/p662",
+          "text": ""
+        },
+        {
+          "loc": "body/p663",
+          "text": ""
+        },
+        {
+          "loc": "body/p664",
+          "text": ""
+        },
+        {
+          "loc": "body/p665",
+          "text": ""
+        },
+        {
+          "loc": "body/p666",
+          "text": ""
+        },
+        {
+          "loc": "body/p667",
+          "text": ""
+        },
+        {
+          "loc": "body/p668",
+          "text": ""
+        },
+        {
+          "loc": "body/p669",
+          "text": ""
+        },
+        {
+          "loc": "body/p670",
+          "text": ""
+        },
+        {
+          "loc": "body/p671",
+          "text": ""
+        },
+        {
+          "loc": "body/p672",
+          "text": ""
+        },
+        {
+          "loc": "body/p673",
+          "text": ""
+        },
+        {
+          "loc": "body/p674",
+          "text": ""
+        },
+        {
+          "loc": "body/p675",
+          "text": ""
+        },
+        {
+          "loc": "body/p676",
+          "text": ""
+        },
+        {
+          "loc": "body/p677",
+          "text": ""
+        },
+        {
+          "loc": "body/p678",
+          "text": ""
+        },
+        {
+          "loc": "body/p679",
+          "text": ""
+        },
+        {
+          "loc": "body/p680",
+          "text": ""
+        },
+        {
+          "loc": "body/p681",
+          "text": ""
+        },
+        {
+          "loc": "body/p682",
+          "text": ""
+        },
+        {
+          "loc": "body/p683",
+          "text": ""
+        },
+        {
+          "loc": "body/p684",
+          "text": ""
+        },
+        {
+          "loc": "body/p685",
+          "text": ""
+        },
+        {
+          "loc": "body/p686",
+          "text": ""
+        },
+        {
+          "loc": "body/p687",
+          "text": ""
+        },
+        {
+          "loc": "body/p688",
+          "text": ""
+        },
+        {
+          "loc": "body/p689",
+          "text": ""
+        },
+        {
+          "loc": "body/p690",
+          "text": ""
+        },
+        {
+          "loc": "body/p691",
+          "text": ""
+        },
+        {
+          "loc": "body/p692",
+          "text": ""
+        },
+        {
+          "loc": "body/p693",
+          "text": ""
+        },
+        {
+          "loc": "body/p694",
+          "text": ""
+        },
+        {
+          "loc": "body/p695",
+          "text": ""
+        },
+        {
+          "loc": "body/p696",
+          "text": ""
+        },
+        {
+          "loc": "body/p697",
+          "text": ""
+        },
+        {
+          "loc": "body/p698",
+          "text": ""
+        },
+        {
+          "loc": "body/p699",
+          "text": ""
+        },
+        {
+          "loc": "body/p700",
+          "text": ""
+        },
+        {
+          "loc": "body/p701",
+          "text": ""
+        },
+        {
+          "loc": "body/p702",
+          "text": ""
+        },
+        {
+          "loc": "body/p703",
+          "text": ""
+        },
+        {
+          "loc": "body/p704",
+          "text": ""
+        },
+        {
+          "loc": "body/p705",
+          "text": ""
+        },
+        {
+          "loc": "body/p706",
+          "text": ""
+        },
+        {
+          "loc": "body/p707",
+          "text": ""
+        },
+        {
+          "loc": "body/p708",
+          "text": ""
+        },
+        {
+          "loc": "body/p709",
+          "text": ""
+        },
+        {
+          "loc": "body/p710",
+          "text": ""
+        },
+        {
+          "loc": "body/p711",
+          "text": ""
+        },
+        {
+          "loc": "body/p712",
+          "text": ""
+        },
+        {
+          "loc": "body/p713",
+          "text": ""
+        },
+        {
+          "loc": "body/p714",
+          "text": ""
+        },
+        {
+          "loc": "body/p715",
+          "text": ""
+        }
+      ],
+      "teacher": []
+    },
+    {
+      "type": "delete",
+      "original_range": [
+        737,
+        738
+      ],
+      "teacher_range": [
+        21,
+        21
+      ],
+      "original": [
+        {
+          "loc": "body/p737",
+          "text": ""
+        }
+      ],
+      "teacher": []
+    },
+    {
+      "type": "replace",
+      "original_range": [
+        739,
+        740
+      ],
+      "teacher_range": [
+        22,
+        23
+      ],
+      "original": [
+        {
+          "loc": "table0/r0c0/p1",
+          "text": "油库是成品油和原油供应链中的重要节点，承担接卸、储存、计量、调和、转输和装车外运等任务。油库工艺设计并不是简单地把储罐、泵和管线连接起来，而是要在给定油品性质、库容规模、周转量、收发方式和场地条件下，建立安全、连续、灵活的物流系统。浙江平湖地区水陆交通条件较好、产业和交通用能需求集中，开展油库工艺设计研究，对保障区域油品供应、提高储运设施运行效率具有现实意义。本选题以“浙江平湖油库工艺设计”为对象，在后续设计任务书和原始资料允许的范围内，完成工艺流程、储罐及管线、泵组、总图接口、安全环保设施等方面的系统设计，为形成可实施、可校核的工程方案奠定基础。"
+        }
+      ],
+      "teacher": [
+        {
+          "loc": "table0/r0c0/p1",
+          "text": "油库是成品油和原油供应链中的重要节点，承担接卸、储存、计量、调和、转输和装车外运等任务。油库工艺设计并不是简单地把储罐、泵和管线连接起来，而是要在给定油品性质、库容规模、周转量、收发方式和场地条件下，建立安全、连续、灵活的物流系统。浙江平湖地区水陆交通条件较好、产业和交通用能需求集中，开展油库工艺设计研究，对保障区域油品供应、提高储运设施运行效率具有现实意义。本选题以“浙江平湖油库”为对象，在后续设计任务书和原始资料允许的范围内，完成工艺流程、储罐及管线、泵组、总图接口、安全环保设施等方面的系统设计。"
+        }
+      ]
+    },
+    {
+      "type": "replace",
+      "original_range": [
+        741,
+        743
+      ],
+      "teacher_range": [
+        24,
+        26
+      ],
+      "original": [
+        {
+          "loc": "table0/r0c0/p3",
+          "text": "油品储运中的蒸发损耗同时意味着资源损失和挥发性有机物排放。储罐呼吸、装卸作业、密封边缘、附件开口以及检维修过程都可能形成VOCs排放。王雷等的案例分析表明，浮顶密封形式、罐壁锈蚀、附件密封和挂壁损耗会显著改变排放量[5]；An等的实测研究也显示，不同油库类型的主要排放环节并不相同，储罐结构和作业方式决定了排放构成[14]。因此，本课题将“源头减量—过程密闭—油气收集—末端回收—运行监测”作为一条完整技术链进行研究，而不是把环保设施作为主体工艺完成后的附加项。通过合理选择罐型与密封、控制装卸速度和压力、设置油气收集接口并比选回收工艺，可兼顾资源回收、排放控制、能耗和防爆安全。"
+        },
+        {
+          "loc": "table0/r0c0/p4",
+          "text": "油库设计还必须处理事故状态下的系统协同问题。董林林指出，消防水、泡沫灭火、消防泵动力、罐组布置、防火堤、道路和事故排水应作为整体设计[7]；Doregar Zavareh等提出，风险识别还应追踪污染物经空气、水体和土壤到达人员、生态与设施受体的路径[13]。据此，本课题将正常工况、开停工工况和事故工况统一纳入设计边界，关注泄漏围控、雨污分流、事故水收集、消防冷却、紧急切断和应急疏散之间的衔接。研究成果不仅能够训练油气储运工程专业所需的流程设计、计算和图纸表达能力，也可形成一套面向油库安全、环保与运行管理的综合分析方法。"
+        }
+      ],
+      "teacher": [
+        {
+          "loc": "table0/r0c0/p3",
+          "text": "油品储运中的蒸发损耗同时意味着资源损失和挥发性有机物排放。储罐呼吸、装卸作业、密封边缘、附件开口以及检维修过程都可能形成VOCs排放。王雷等的案例分析表明，浮顶密封形式、罐壁锈蚀、附件密封和挂壁损耗会显著改变排放量[5]；An等的实测研究也显示，不同油库类型的主要排放环节并不相同，储罐结构和作业方式决定了排放构成[14]。因此，本文将“源头减量—过程密闭—油气收集—末端回收—运行监测”作为一条完整技术链进行研究，而不是把环保设施作为主体工艺完成后的附加项。通过合理选择罐型与密封、控制装卸速度和压力、设置油气收集接口并比选回收工艺，可兼顾资源回收、排放控制、能耗和防爆安全。"
+        },
+        {
+          "loc": "table0/r0c0/p4",
+          "text": "油库设计还必须处理事故状态下的系统协同问题。董林林指出，消防水、泡沫灭火、消防泵动力、罐组布置、防火堤、道路和事故排水应作为整体设计[7]；Doregar Zavareh等提出，风险识别还应追踪污染物经空气、水体和土壤到达人员、生态与设施受体的路径[13]。据此，本文将正常工况、开停工工况和事故工况统一纳入设计边界，关注泄漏围控、雨污分流、事故水收集、消防冷却、紧急切断和应急疏散之间的衔接。研究成果不仅能够训练油气储运工程专业所需的流程设计、计算和图纸表达能力，也可形成一套面向油库安全、环保与运行管理的综合分析方法。"
+        }
+      ]
+    },
+    {
+      "type": "replace",
+      "original_range": [
+        745,
+        747
+      ],
+      "teacher_range": [
+        28,
+        30
+      ],
+      "original": [
+        {
+          "loc": "table0/r0c0/p7",
+          "text": "国内油库工艺研究首先集中于罐区流程和收发系统的优化。惠熙祥等比较了单管串联、单管并联、双管和独立管道等流程形式，认为流程优选应在功能完整、避免混油、调度灵活和投资运行费用之间取得平衡[1]。这一观点说明，管线数量并非越多越好；设计应从典型作业工况出发，识别能否同时收发、能否倒罐、能否计量和检修旁通，再确定共用或专用管线。对本课题而言，应先建立“油品—储罐—泵—收发设施”的物流矩阵，再进行流程组合，以防止仅凭经验布置导致功能缺失或系统过度复杂。"
+        },
+        {
+          "loc": "table0/r0c0/p8",
+          "text": "在蒸发损耗和油气回收方面，国内已从单一末端治理发展到全过程控制。谭力文等对罐区蒸发损耗及多罐气相连通进行了研究，提出集气管网应校核最大气量、压力损失、气阻和安全泄压条件[2]。黄维秋系统总结了油气回收装置在气量、浓度、组分、温湿度和波动工况下的关键问题，强调回收效率、能耗、运行稳定性与防爆安全需要统筹[3]。黄维秋等进一步比较吸收、吸附、冷凝和膜分离工艺，指出不同技术在适用浓度、再生方式、能耗和预处理要求方面各有边界，组合工艺能够发挥浓缩、回收和末端净化的互补作用[4]。这些研究为本课题建立油气量计算、集气管径校核及回收方案技术适用性比较提供了基础。"
+        }
+      ],
+      "teacher": [
+        {
+          "loc": "table0/r0c0/p7",
+          "text": "国内油库工艺研究首先集中于罐区流程和收发系统的优化。惠熙祥等比较了单管串联、单管并联、双管和独立管道等流程形式，认为流程优选应在功能完整、避免混油、调度灵活和投资运行费用之间取得平衡[1]。这一观点说明，管线数量并非越多越好；设计应从典型作业工况出发，识别能否同时收发、能否倒罐、能否计量和检修旁通，再确定共用或专用管线。对本文而言，应先建立“油品—储罐—泵—收发设施”的物流矩阵，再进行流程组合，以防止仅凭经验布置导致功能缺失或系统过度复杂。"
+        },
+        {
+          "loc": "table0/r0c0/p8",
+          "text": "在蒸发损耗和油气回收方面，国内已从单一末端治理发展到全过程控制。谭力文等对罐区蒸发损耗及多罐气相连通进行了研究，提出集气管网应校核最大气量、压力损失、气阻和安全泄压条件[2]。黄维秋系统总结了油气回收装置在气量、浓度、组分、温湿度和波动工况下的关键问题，强调回收效率、能耗、运行稳定性与防爆安全需要统筹[3]。黄维秋等进一步比较吸收、吸附、冷凝和膜分离工艺，指出不同技术在适用浓度、再生方式、能耗和预处理要求方面各有边界，组合工艺能够发挥浓缩、回收和末端净化的互补作用[4]。这些研究为本文建立油气量计算、集气管径校核及回收方案技术适用性比较提供了基础。"
+        }
+      ]
+    },
+    {
+      "type": "replace",
+      "original_range": [
+        749,
+        750
+      ],
+      "teacher_range": [
+        32,
+        33
+      ],
+      "original": [
+        {
+          "loc": "table0/r0c0/p11",
+          "text": "总体来看，国内研究已覆盖流程比选、蒸发损耗、油气回收、消防系统和风险评价，工程针对性较强；不足之处是部分研究以单一装置或特定油库为案例，各专业之间的接口论证仍不充分。"
+        }
+      ],
+      "teacher": [
+        {
+          "loc": "table0/r0c0/p11",
+          "text": "总体来看，国内研究已覆盖流程比选、蒸发损耗、油气回收、消防系统和风险评价，工程针对性较强；不足之处是部分研究以单一装置或特定油库为案例，无法形成一套可参照的工程案例。"
+        }
+      ]
+    },
+    {
+      "type": "replace",
+      "original_range": [
+        753,
+        754
+      ],
+      "teacher_range": [
+        36,
+        37
+      ],
+      "original": [
+        {
+          "loc": "table0/r0c0/p15",
+          "text": "在火灾爆炸和环境风险方面，Doregar Zavareh等把源—途径—受体模型、Dow火灾爆炸指数和环境脆弱性指标结合，用于储罐事故的环境风险评估[13]。这种方法将围堰、防渗、排水、地下水和周边敏感点纳入事故后果分析，拓展了传统只关注人员伤害和设备损失的评价边界。它对本课题的启示是：事故水池、雨污切换、罐区围控和消防废水去向应在工艺与总图阶段同步确定，不能留待末端专业被动处理。"
+        }
+      ],
+      "teacher": [
+        {
+          "loc": "table0/r0c0/p15",
+          "text": "在火灾爆炸和环境风险方面，Doregar Zavareh等把源—途径—受体模型、Dow火灾爆炸指数和环境脆弱性指标结合，用于储罐事故的环境风险评估[13]。这种方法将围堰、防渗、排水、地下水和周边敏感点纳入事故后果分析，拓展了传统只关注人员伤害和设备损失的评价边界。它对本文的启示是：事故水池、雨污切换、罐区围控和消防废水去向应在工艺与总图阶段同步确定，不能留待末端专业被动处理。"
+        }
+      ]
+    },
+    {
+      "type": "replace",
+      "original_range": [
+        758,
+        760
+      ],
+      "teacher_range": [
+        41,
+        43
+      ],
+      "original": [
+        {
+          "loc": "table0/r0c0/p20",
+          "text": "本课题首先整理设计基础，明确油品名称、密度、黏度、饱和蒸气压、闪点等物性，确定设计库容、单罐容量、年周转量、进出库方式、作业天数与同时作业系数。根据周转量和储备天数进行库容复核，结合油品相容性、混油限制、检修备用和消防分组确定储罐数量及罐组划分。若原始资料存在缺项，则建立“待确认参数表”，分别说明参数来源、取值原则及其对计算结果的影响，避免以未经证实的数据代替任务书条件。"
+        },
+        {
+          "loc": "table0/r0c0/p21",
+          "text": "其次开展工艺流程方案设计。根据铁路、公路、水运或管道等可能的收发边界，分解卸油、进罐、出罐、装车、倒罐、计量、清管、排空和事故切断等工况，绘制物流矩阵和流程简图。比较专管专用、共用母管及不同串并联方式，重点解决同时作业冲突、混油控制、设备备用和检修隔离问题。最终形成正常流程、辅助流程和事故流程的说明，并确定主要阀门、止回、泄压、放空、取样和计量接口。"
+        }
+      ],
+      "teacher": [
+        {
+          "loc": "table0/r0c0/p20",
+          "text": "本文首先确定设计基础，明确油品名称、密度、黏度、饱和蒸气压、闪点等物性，计算设计库容、单罐容量、年周转量、进出库方式、作业天数与同时作业系数。根据周转量和储备天数进行库容复核，结合油品相容性、混油限制、检修备用和消防分组确定储罐数量及罐组划分。"
+        },
+        {
+          "loc": "table0/r0c0/p21",
+          "text": "其次开展工艺流程方案设计。根据铁路、公路、水运或管道等可能的收发边界，分解卸油、进罐、出罐、装车、倒罐、计量、清管、排空和事故切断等工况。比较专管专用、共用母管及不同串并联方式，重点解决同时作业冲突、混油控制、设备备用和检修隔离问题。最终形成正常流程、辅助流程和事故流程的说明，并确定主要阀门、止回、泄压、放空、取样和计量接口。"
+        }
+      ]
+    },
+    {
+      "type": "replace",
+      "original_range": [
+        762,
+        763
+      ],
+      "teacher_range": [
+        45,
+        46
+      ],
+      "original": [
+        {
+          "loc": "table0/r0c0/p24",
+          "text": "拟重点解决四个问题：一是如何在多种作业工况下兼顾流程灵活性与系统简洁性；二是如何把计算流量、管径、泵扬程和设备选型形成可追溯的计算链；三是如何将油气减排从储罐本体延伸至装卸、收集、处理和监测全过程；四是如何使工艺、总图、消防和排水的接口在同一事故场景下相互一致。研究将采用文献调研、规范核查、物料衡算、水力计算、方案比较和风险检查表等方法，并通过流程图、总平面图、罐区布置图及计算书表达成果。"
+        }
+      ],
+      "teacher": [
+        {
+          "loc": "table0/r0c0/p24",
+          "text": "研究将采用文献调研、规范核查、物料衡算、水力计算、方案比较和风险检查表等方法，并通过流程图、总平面图及计算书表达成果。"
+        }
+      ]
+    },
+    {
+      "type": "replace",
+      "original_range": [
+        775,
+        776
+      ],
+      "teacher_range": [
+        58,
+        59
+      ],
+      "original": [
+        {
+          "loc": "table0/r0c0/p37",
+          "text": "2.2 储罐方案"
+        }
+      ],
+      "teacher": [
+        {
+          "loc": "table0/r0c0/p37",
+          "text": "2.2 储罐选择"
+        }
+      ]
+    },
+    {
+      "type": "replace",
+      "original_range": [
+        783,
+        785
+      ],
+      "teacher_range": [
+        66,
+        68
+      ],
+      "original": [
+        {
+          "loc": "table0/r0c0/p45",
+          "text": "3.2.1 正常收发油流程"
+        },
+        {
+          "loc": "table0/r0c0/p46",
+          "text": "3.2.2 计量、清扫及异常流程"
+        }
+      ],
+      "teacher": [
+        {
+          "loc": "table0/r0c0/p45",
+          "text": "3.2.1 收发油流程"
+        },
+        {
+          "loc": "table0/r0c0/p46",
+          "text": "3.2.2 计量及清扫流程"
+        }
+      ]
+    },
+    {
+      "type": "delete",
+      "original_range": [
+        835,
+        843
+      ],
+      "teacher_range": [
+        118,
+        118
+      ],
+      "original": [
+        {
+          "loc": "table0/r0c0/p97",
+          "text": ""
+        },
+        {
+          "loc": "table0/r0c0/p98",
+          "text": ""
+        },
+        {
+          "loc": "table0/r0c0/p99",
+          "text": ""
+        },
+        {
+          "loc": "table0/r0c0/p100",
+          "text": ""
+        },
+        {
+          "loc": "table0/r0c0/p101",
+          "text": ""
+        },
+        {
+          "loc": "table0/r0c0/p102",
+          "text": ""
+        },
+        {
+          "loc": "table0/r0c0/p103",
+          "text": ""
+        },
+        {
+          "loc": "table0/r0c0/p104",
+          "text": ""
+        }
+      ],
+      "teacher": []
+    },
+    {
+      "type": "delete",
+      "original_range": [
+        844,
+        845
+      ],
+      "teacher_range": [
+        119,
+        119
+      ],
+      "original": [
+        {
+          "loc": "table0/r1c0/p1",
+          "text": ""
+        }
+      ],
+      "teacher": []
+    },
+    {
+      "type": "replace",
+      "original_range": [
+        851,
+        853
+      ],
+      "teacher_range": [
+        125,
+        126
+      ],
+      "original": [
+        {
+          "loc": "table0/r1c0/t0/r2c0/p0",
+          "text": "1"
+        },
+        {
+          "loc": "table0/r1c0/t0/r3c0/p0",
+          "text": "2"
+        }
+      ],
+      "teacher": [
+        {
+          "loc": "table0/r2c0/t0/r2c3/p0",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "delete",
+      "original_range": [
+        858,
+        859
+      ],
+      "teacher_range": [
+        131,
+        131
+      ],
+      "original": [
+        {
+          "loc": "table0/r1c0/t0/r6c3/p0",
+          "text": ""
+        }
+      ],
+      "teacher": []
+    },
+    {
+      "type": "insert",
+      "original_range": [
+        861,
+        861
+      ],
+      "teacher_range": [
+        133,
+        134
+      ],
+      "original": [],
+      "teacher": [
+        {
+          "loc": "table0/r2c0/t0/r8c0/p0",
+          "text": "7"
+        }
+      ]
+    },
+    {
+      "type": "insert",
+      "original_range": [
+        862,
+        862
+      ],
+      "teacher_range": [
+        135,
+        136
+      ],
+      "original": [],
+      "teacher": [
+        {
+          "loc": "table0/r2c0/t0/r9c3/p0",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "type": "delete",
+      "original_range": [
+        863,
+        864
+      ],
+      "teacher_range": [
+        137,
+        137
+      ],
+      "original": [
+        {
+          "loc": "table0/r1c0/t0/r10c3/p0",
+          "text": ""
+        }
+      ],
+      "teacher": []
+    },
+    {
+      "type": "replace",
+      "original_range": [
+        866,
+        868
+      ],
+      "teacher_range": [
+        139,
+        140
+      ],
+      "original": [
+        {
+          "loc": "table0/r2c0/p2",
+          "text": "                    "
+        },
+        {
+          "loc": "table0/r2c0/p3",
+          "text": "                          "
+        }
+      ],
+      "teacher": [
+        {
+          "loc": "table0/r3c0/p2",
+          "text": "                              "
+        }
+      ]
+    },
+    {
+      "type": "replace",
+      "original_range": [
+        871,
+        872
+      ],
+      "teacher_range": [
+        143,
+        144
+      ],
+      "original": [
+        {
+          "loc": "table0/r2c0/p7",
+          "text": "                                                        年   月   日"
+        }
+      ],
+      "teacher": [
+        {
+          "loc": "table0/r3c0/p6",
+          "text": "                                                      年   月   日"
+        }
+      ]
+    },
+    {
+      "type": "delete",
+      "original_range": [
+        876,
+        878
+      ],
+      "teacher_range": [
+        148,
+        148
+      ],
+      "original": [
+        {
+          "loc": "table0/r3c0/p4",
+          "text": ""
+        },
+        {
+          "loc": "table0/r3c0/p5",
+          "text": ""
+        }
+      ],
+      "teacher": []
+    },
+    {
+      "type": "replace",
+      "original_range": [
+        880,
+        881
+      ],
+      "teacher_range": [
+        150,
+        151
+      ],
+      "original": [
+        {
+          "loc": "table0/r3c0/p8",
+          "text": "                                                        年   月   日"
+        }
+      ],
+      "teacher": [
+        {
+          "loc": "table0/r4c0/p6",
+          "text": "                                                      年   月   日"
+        }
+      ]
+    },
+    {
+      "type": "delete",
+      "original_range": [
+        883,
+        884
+      ],
+      "teacher_range": [
+        153,
+        153
+      ],
+      "original": [
+        {
+          "loc": "table0/r4c0/p2",
+          "text": ""
+        }
+      ],
+      "teacher": []
+    }
+  ],
+  "format_change_count": 95,
+  "format_changes": [
+    {
+      "text": "",
+      "original_loc": "body/p736",
+      "teacher_loc": "body/p20",
+      "original_format": {
+        "style": "Normal",
+        "align": "CENTER (1)",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "355600",
+        "before": null,
+        "after": null,
+        "runs": []
+      },
+      "teacher_format": {
+        "style": "正文首行缩进 21",
+        "align": "JUSTIFY (3)",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": []
+      }
+    },
+    {
+      "text": "1.本选题研究的目的及意义",
+      "original_loc": "table0/r0c0/p0",
+      "teacher_loc": "table0/r0c0/p0",
+      "original_format": {
+        "style": "Heading 1",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "1.",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "本选题研究的目的及意义",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Heading 1",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "1.",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "本选题研究的目的及意义",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "油库介质通常具有易燃、易爆、易挥发和易产生静电等特性，收发油过程又具有流量变化大、操作工况多和设备联锁关系复杂等特点。一旦工艺流程不合理、阀门切换错误、管线超压、储罐冒顶或密封失效，可能导致泄漏、火灾、爆炸和环境污染。惠熙祥等指出，罐区流程选择应由油库功能、油品种类和性质、周转频率、混油限制以及技术条件共同决定[1]。因此，本选题的首要目的，是通过物流分析和工况分解建立清晰的收发油路径，合理划分罐组和泵组，减少不必要的串并联和交叉作业，并通过水力计算、设备校核和联锁控制降低误操作及超压风险。",
+      "original_loc": "table0/r0c0/p2",
+      "teacher_loc": "table0/r0c0/p2",
+      "original_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "油库介质通常具有易燃、易爆、易挥发和易产生静电等特性，收发油过程又具有流量变化大、操作工况多和设备联锁关系复杂等特点。一旦工艺流程不合理、阀门切换错误、管线超压、储罐冒顶或密封失效，可能导致泄漏、火灾、爆炸和环境污染。惠熙祥等指出，罐区流程选择应由油库功能、油品种类和性质、周转频率、混油限制以及技术条件共同决定",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "[1]",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "。因此，本选题的首要目的，是通过物流分析和工况分解建立清晰的收发油路径，合理划分罐组和泵组，减少不必要的串并联和交叉作业，并通过水力计算、设备校核和联锁控制降低误操作及超压风险。",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "油库介质通常具有易燃、易爆、易挥发和易产生静电等特性，收发油过程又具有流量变化大、操作工况多和设备联锁关系复杂等特点。一旦工艺流程不合理、阀门切换错误、管线超压、储罐冒顶或密封失效，可能导致泄漏、火灾、爆炸和环境污染。惠熙祥等指出，罐区流程选择应由油库功能、油品种类和性质、周转频率、混油限制以及技术条件共同决定",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "[1]",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "。因此，本选题的首要目的，是通过物流分析和工况分解建立清晰的收发油路径，合理划分罐组和泵组，减少不必要的串并联和交叉作业，并通过水力计算、设备校核和联锁控制降低误操作及超压风险。",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "2.本选题国内外研究状况综述",
+      "original_loc": "table0/r0c0/p5",
+      "teacher_loc": "table0/r0c0/p5",
+      "original_format": {
+        "style": "Heading 1",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "2.",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "本选题国内外研究状况综述",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Heading 1",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "2.",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "本选题国内外研究状况综述",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "2.1国内研究状况",
+      "original_loc": "table0/r0c0/p6",
+      "teacher_loc": "table0/r0c0/p6",
+      "original_format": {
+        "style": "Heading 2",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "2.1国内研究状况",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Heading 2",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "2.1国内研究状况",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "储罐本体减排研究正逐步细化到密封和运行状态。王雷等分析外浮顶储罐排放影响因素，案例中增加二次密封、改善罐壁状况和附件密封均明显降低排放，而挂壁损耗仍可能占较大比例[5]。刘世达等从储罐大小呼吸、高温重油裂解气和深度治理要求出发，提出内浮顶改造、罐顶气收集、吸收及氧化处理等多种路径，并强调浓度与排放总量应同时控制[6]。上述成果表明，油库环保设计不能只填写一套油气回收装置，而应在油品性质确定后，依次论证储罐型式、浮盘与密封、罐体防腐、呼吸阀和阻火设施、气相连通方式、回收装置及监测点位。",
+      "original_loc": "table0/r0c0/p9",
+      "teacher_loc": "table0/r0c0/p9",
+      "original_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "储罐本体减排研究正逐步细化到密封和运行状态。王雷等分析外浮顶储罐排放影响因素，案例中增加二次密封、改善罐壁状况和附件密封均明显降低排放，而挂壁损耗仍可能占较大比例",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "[5]",
+            "font": null,
+            "size": null,
+            "bold": false,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "。刘世达等从储罐大小呼吸、高温重油裂解气和深度治理要求出发，提出内浮顶改造、罐顶气收集、吸收及氧化处理等多种路径，并强调浓度与排放总量应同时控制",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "[6]",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "。上述成果表明，油库环保设计不能只填写一套油气回收装置，而应在油品性质确定后，依次论证储罐型式、浮盘与密封、罐体防腐、呼吸阀和阻火设施、气相连通方式、回收装置及监测点位。",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "储罐本体减排研究正逐步细化到密封和运行状态。王雷等分析外浮顶储罐排放影响因素，案例中增加二次密封、改善罐壁状况和附件密封均明显降低排放，而挂壁损耗仍可能占较大比例",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "[5]",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": false,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "。刘世达等从储罐大小呼吸、高温重油裂解气和深度治理要求出发，提出内浮顶改造、罐顶气收集、吸收及氧化处理等多种路径，并强调浓度与排放总量应同时控制",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "[6]",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "。上述成果表明，油库环保设计不能只填写一套油气回收装置，而应在油品性质确定后，依次论证储罐型式、浮盘与密封、罐体防腐、呼吸阀和阻火设施、气相连通方式、回收装置及监测点位。",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "油库安全研究则由规范符合性逐渐扩展到系统风险评价。董林林从大型油库危险性出发，讨论罐组布置、消防水和泡沫系统、消防泵动力与事故排水，强调极端火灾场景下持续供水和备用动力的重要性[7]。周毅、赵晓刚将层次分析与灰色评价结合，按照油品、设备设施、作业环境和人员组织等层级识别火灾危险因素，为多指标风险排序提供了方法[8]。郭欣、康习锋通过实验研究邻近罐壁热辐射分布，发现朝向着火罐的一侧受热最大，辐射沿高度及水平方向具有明显分布规律，且相对间距增大时热辐射降低[9]。",
+      "original_loc": "table0/r0c0/p10",
+      "teacher_loc": "table0/r0c0/p10",
+      "original_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "油库安全研究则由规范符合性逐渐扩展到系统风险评价。董林林从大型油库危险性出发，讨论罐组布置、消防水和泡沫系统、消防泵动力与事故排水，强调极端火灾场景下持续供水和备用动力的重要性",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "[7]",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "。周毅、赵晓刚将层次分析与灰色评价结合，按照油品、设备设施、作业环境和人员组织等层级识别火灾危险因素，为多指标风险排序提供了方法",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "[8]",
+            "font": null,
+            "size": null,
+            "bold": false,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "。郭欣、康习锋通过实验研究邻近罐壁热辐射分布，发现朝向着火罐的一侧受热最大，辐射沿高度及水平方向具有明显分布规律，且相对间距增大时热辐射降低",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "[9]",
+            "font": null,
+            "size": null,
+            "bold": false,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "。",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "油库安全研究则由规范符合性逐渐扩展到系统风险评价。董林林从大型油库危险性出发，讨论罐组布置、消防水和泡沫系统、消防泵动力与事故排水，强调极端火灾场景下持续供水和备用动力的重要性",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "[7]",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "。周毅、赵晓刚将层次分析与灰色评价结合，按照油品、设备设施、作业环境和人员组织等层级识别火灾危险因素，为多指标风险排序提供了方法",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "[8]",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": false,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "。郭欣、康习锋通过实验研究邻近罐壁热辐射分布，发现朝向着火罐的一侧受热最大，辐射沿高度及水平方向具有明显分布规律，且相对间距增大时热辐射降低",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "[9]",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": false,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "。",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "2.2国外研究状况",
+      "original_loc": "table0/r0c0/p12",
+      "teacher_loc": "table0/r0c0/p12",
+      "original_format": {
+        "style": "Heading 2",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "2.2国外研究状况",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Heading 2",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "2.2国外研究状况",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "国外油库研究更加重视定量风险、空间分析和数字化表达。Yang等建立油罐区区域能源风险叠加模型，将昼夜条件、气象概率、泄漏—火灾—爆炸后果及多危险源叠加纳入计算，并以个体风险等值线和社会风险曲线进行可视化[10]。该研究说明，总图评价不应只检查单罐安全距离，还应观察多个罐组、装卸设施和周边受体的风险叠加。对本选题而言，可在基础资料满足时采用场景法筛查高风险区域，并据此校核控制室、消防设施、道路和应急集合点的布置。",
+      "original_loc": "table0/r0c0/p13",
+      "teacher_loc": "table0/r0c0/p13",
+      "original_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "国外油库研究更加重视定量风险、空间分析和数字化表达。Yang等建立油罐区区域能源风险叠加模型，将昼夜条件、气象概率、泄漏—火灾—爆炸后果及多危险源叠加纳入计算，并以个体风险等值线和社会风险曲线进行可视化",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "[10]",
+            "font": null,
+            "size": null,
+            "bold": false,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "。该研究说明，总图评价不应只检查单罐安全距离，还应观察多个罐组、装卸设施和周边受体的风险叠加。对本",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "选",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "题而言，可在基础资料满足时采用场景法筛查高风险区域，并据此校核控制室、消防设施、道路和应急集合点的布置。",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "国外油库研究更加重视定量风险、空间分析和数字化表达。Yang等建立油罐区区域能源风险叠加模型，将昼夜条件、气象概率、泄漏—火灾—爆炸后果及多危险源叠加纳入计算，并以个体风险等值线和社会风险曲线进行可视化",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "[10]",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": false,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "。该研究说明，总图评价不应只检查单罐安全距离，还应观察多个罐组、装卸设施和周边受体的风险叠加。对本",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "选",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "题而言，可在基础资料满足时采用场景法筛查高风险区域，并据此校核控制室、消防设施、道路和应急集合点的布置。",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "VOCs研究方面，Barbes等在石油产品储罐区开展多月、多点监测和地统计分析，发现低风速、高湿等条件下污染物易在局部聚集，连续分区监测比单次边界检测更能识别异常源区[11]。Tagliaferri等比较不同时间分辨率排放数据对扩散预测的影响，结果显示固定顶罐的短时峰值可能被年平均排放显著低估，而外浮顶罐的差异相对较小[12]。这提示油库排放设计必须同时关注年总量和装卸、呼吸等短时峰值工况，油气主管、处理装置和报警监测均应按可能出现的峰值负荷校核。",
+      "original_loc": "table0/r0c0/p14",
+      "teacher_loc": "table0/r0c0/p14",
+      "original_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "VOCs研究方面，Barbes等在石油产品储罐区开展多月、多点监测和地统计分析，发现低风速、高湿等条件下污染物易在局部聚集，连续分区监测比单次边界检测更能识别异常源区",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "[11]",
+            "font": null,
+            "size": null,
+            "bold": false,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "。Tagliaferri等比较不同时间分辨率排放数据对扩散预测的影响，结果显示固定顶罐的短时峰值可能被年平均排放显著低估，而外浮顶罐的差异相对较小",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "[12]",
+            "font": null,
+            "size": null,
+            "bold": false,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "。这提示油库排放设计必须同时关注年总量和装卸、呼吸等短时峰值工况，油气主管、处理装置和报警监测均应按可能出现的峰值负荷校核。",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "VOCs研究方面，Barbes等在石油产品储罐区开展多月、多点监测和地统计分析，发现低风速、高湿等条件下污染物易在局部聚集，连续分区监测比单次边界检测更能识别异常源区",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "[11]",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": false,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "。Tagliaferri等比较不同时间分辨率排放数据对扩散预测的影响，结果显示固定顶罐的短时峰值可能被年平均排放显著低估，而外浮顶罐的差异相对较小",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "[12]",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": false,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "。这提示油库排放设计必须同时关注年总量和装卸、呼吸等短时峰值工况，油气主管、处理装置和报警监测均应按可能出现的峰值负荷校核。",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "国外研究还在排放源谱和气味表征方面不断深化。An等基于原油库与成品油库观测构建VOCs源谱和排放清单，指出工作损耗、密封边缘损耗等贡献会随油库类型和储罐结构显著变化[14]。Polvara等对多种原油排放进行动态嗅辨和化学组分分析，发现气味影响并不只由TVOC、硫化氢或总硫决定，挥发性有机硫化物可能成为关键气味驱动因子[15]。这意味着环境控制指标不能只看总烃浓度，还应在油品条件需要时关注特征组分和厂界气味，并为运行期泄漏检测与修复、便携监测和气象联动预留条件。",
+      "original_loc": "table0/r0c0/p16",
+      "teacher_loc": "table0/r0c0/p16",
+      "original_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "国外研究还在排放源谱和气味表征方面不断深化。An等基于原油库与成品油库观测构建VOCs源谱和排放清单，指出工作损耗、密封边缘损耗等贡献会随油库类型和储罐结构显著变化",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "[14]",
+            "font": null,
+            "size": null,
+            "bold": false,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "。Polvara等对多种原油排放进行动态嗅辨和化学组分分析，发现气味影响并不只由TVOC、硫化氢或总硫决定，挥发性有机硫化物可能成为关键气味驱动因子",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "[15]",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "。这意味着环境控制指标不能只看总烃浓度，还应在油品条件需要时关注特征组分和厂界气味，并为运行期泄漏检测与修复、便携监测和气象联动预留条件。",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "国外研究还在排放源谱和气味表征方面不断深化。An等基于原油库与成品油库观测构建VOCs源谱和排放清单，指出工作损耗、密封边缘损耗等贡献会随油库类型和储罐结构显著变化",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "[14]",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": false,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "。Polvara等对多种原油排放进行动态嗅辨和化学组分分析，发现气味影响并不只由TVOC、硫化氢或总硫决定，挥发性有机硫化物可能成为关键气味驱动因子",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "[15]",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "。这意味着环境控制指标不能只看总烃浓度，还应在油品条件需要时关注特征组分和厂界气味，并为运行期泄漏检测与修复、便携监测和气象联动预留条件。",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "综合国内外研究可以看出，油库设计正从“满足储运功能”转向“功能、安全、低碳、环境与韧性协同”。国内文献具有较强的工艺和规范适用性，国外文献在风险叠加、时空监测、排放时间分辨率和环境受体分析方面提供了新方法。本选题拟吸收两方面成果，以工程可实施性为核心，建立从基础数据、流程方案、计算选型到安全环保校核的闭环。",
+      "original_loc": "table0/r0c0/p17",
+      "teacher_loc": "table0/r0c0/p17",
+      "original_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "综合国内外研究可以看出，油库设计正从“满足储运功能”转向“功能、安全、低碳、环境与韧性协同”。国内文献具有较强的工艺和规范适用性，国外文献在风险叠加、时空监测、排放时间分辨率和环境受体分析方面提供了新方法。本",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "选",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "题拟吸收两方面成果，以工程可实施性为核心，建立从基础数据、流程方案、计算选型到安全环保校核的闭环。",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "综合国内外研究可以看出，油库设计正从“满足储运功能”转向“功能、安全、低碳、环境与韧性协同”。国内文献具有较强的工艺和规范适用性，国外文献在风险叠加、时空监测、排放时间分辨率和环境受体分析方面提供了新方法。本",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "选",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": "题拟吸收两方面成果，以工程可实施性为核心，建立从基础数据、流程方案、计算选型到安全环保校核的闭环。",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "3.本选题研究的主要内容及写作提纲",
+      "original_loc": "table0/r0c0/p18",
+      "teacher_loc": "table0/r0c0/p18",
+      "original_format": {
+        "style": "Heading 1",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "3.本选题研究的主要内容及写作提纲",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Heading 1",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "3.本选题研究的主要内容及写作提纲",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "3.1主要研究内容",
+      "original_loc": "table0/r0c0/p19",
+      "teacher_loc": "table0/r0c0/p19",
+      "original_format": {
+        "style": "Heading 2",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "3.1主要研究内容",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Heading 2",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "3.1主要研究内容",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "再次完成水力计算和主要设备选型。按最不利输送路径计算沿程与局部阻力，校核管内设计流速、允许压降、泵吸入条件和系统扬程；根据流量—扬程组合选择输油泵并设置合理备用，核对汽蚀余量、电机功率和调节方式。储罐选型则综合油品挥发性、储存温度、单罐容量、检修和环保要求，确定固定顶、内浮顶或外浮顶等形式，并对呼吸阀、阻火器、液位计、高高液位报警与联锁切断提出要求。",
+      "original_loc": "table0/r0c0/p22",
+      "teacher_loc": "table0/r0c0/p22",
+      "original_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "再次完成水力计算和主要设备选型。按最不利输送路径计算沿程与局部阻力，校核管内设计流速、允许压降、泵吸入条件和系统扬程；根据流量—扬程组合选择输油泵并设置合理备用，核对汽蚀余量、电机功率和调节方式。储罐选型则综合油品挥发性、储存温度、单罐容量、检修和环保要求，确定固定顶、内浮顶或外浮顶等形式，并对呼吸阀、阻火器、液位计、高高液位报警与联锁切断提出要求。",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "再次完成水力计算和主要设备选型。按最不利输送路径计算沿程与局部阻力，校核管内设计流速、允许压降、泵吸入条件和系统扬程；根据流量—扬程组合选择输油泵并设置合理备用，核对汽蚀余量、电机功率和调节方式。储罐选型则综合油品挥发性、储存温度、单罐容量、检修和环保要求，确定固定顶、内浮顶或外浮顶等形式，并对呼吸阀、阻火器、液位计、高高液位报警与联锁切断提出要求。",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "安全与环保部分将贯穿全过程。根据危险性和作业特点识别泄漏、溢油、静电、超压、火灾、爆炸及油气中毒等场景，落实防火间距、防火堤、消防道路、消防冷却和泡沫灭火接口。建立储罐呼吸及装卸油气的源项清单，估算正常和峰值油气负荷，比选吸收、吸附、冷凝、膜分离及组合工艺，提出密闭收集、压力控制、阻火防爆和异常旁路原则。同时协调含油污水、初期雨水、清罐废水和消防事故水的收集边界，说明雨污切换和事故状态下的去向。",
+      "original_loc": "table0/r0c0/p23",
+      "teacher_loc": "table0/r0c0/p23",
+      "original_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "安全与环保部分将贯穿全过程。根据危险性和作业特点识别泄漏、溢油、静电、超压、火灾、爆炸及油气中毒等场景，落实防火间距、防火堤、消防道路、消防冷却和泡沫灭火接口。建立储罐呼吸及装卸油气的源项清单，估算正常和峰值油气负荷，比选吸收、吸附、冷凝、膜分离及组合工艺，提出密闭收集、压力控制、阻火防爆和异常旁路原则。同时协调含油污水、初期雨水、清罐废水和消防事故水的收集边界，说明雨污切换和事故状态下的去向。",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "安全与环保部分将贯穿全过程。根据危险性和作业特点识别泄漏、溢油、静电、超压、火灾、爆炸及油气中毒等场景，落实防火间距、防火堤、消防道路、消防冷却和泡沫灭火接口。建立储罐呼吸及装卸油气的源项清单，估算正常和峰值油气负荷，比选吸收、吸附、冷凝、膜分离及组合工艺，提出密闭收集、压力控制、阻火防爆和异常旁路原则。同时协调含油污水、初期雨水、清罐废水和消防事故水的收集边界，说明雨污切换和事故状态下的去向。",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "3.2写作提纲",
+      "original_loc": "table0/r0c0/p25",
+      "teacher_loc": "table0/r0c0/p25",
+      "original_format": {
+        "style": "Heading 2",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "3.2写作提纲",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Heading 2",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "3.2写作提纲",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "1 设计总论",
+      "original_loc": "table0/r0c0/p26",
+      "teacher_loc": "table0/r0c0/p26",
+      "original_format": {
+        "style": "toc 1",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "1",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": " 设计总论",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "toc 1",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "1",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": " 设计总论",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "1.1 项目概况与设计范围",
+      "original_loc": "table0/r0c0/p27",
+      "teacher_loc": "table0/r0c0/p27",
+      "original_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "1.1 项目概况与设计范围",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "1.1 项目概况与设计范围",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "1.1.1 项目背景与建设条件",
+      "original_loc": "table0/r0c0/p28",
+      "teacher_loc": "table0/r0c0/p28",
+      "original_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "1.1.1 项目背景与建设条件",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "1.1.1 项目背景与建设条件",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "1.1.2 设计任务、范围及边界",
+      "original_loc": "table0/r0c0/p29",
+      "teacher_loc": "table0/r0c0/p29",
+      "original_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "1.1.2 设计任务、范围及边界",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "1.1.2 设计任务、范围及边界",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "1.2 设计依据与基础数据",
+      "original_loc": "table0/r0c0/p30",
+      "teacher_loc": "table0/r0c0/p30",
+      "original_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "1.2 设计依据与基础数据",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "1.2 设计依据与基础数据",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "1.2.1 设计规范与技术原则",
+      "original_loc": "table0/r0c0/p31",
+      "teacher_loc": "table0/r0c0/p31",
+      "original_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "1.2.1 设计规范与技术原则",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "1.2.1 设计规范与技术原则",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "1.2.2 油品性质及危险性分析",
+      "original_loc": "table0/r0c0/p32",
+      "teacher_loc": "table0/r0c0/p32",
+      "original_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "1.2.2 油品性质及危险性分析",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "1.2.2 油品性质及危险性分析",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "2 库容计算与储罐方案",
+      "original_loc": "table0/r0c0/p33",
+      "teacher_loc": "table0/r0c0/p33",
+      "original_format": {
+        "style": "toc 1",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "2",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": " 库容计算与储罐方案",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "toc 1",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "2",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": " 库容计算与储罐方案",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "2.1 库容计算",
+      "original_loc": "table0/r0c0/p34",
+      "teacher_loc": "table0/r0c0/p34",
+      "original_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "2.1 库容计算",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "2.1 库容计算",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "2.1.1 年周转量与储备天数",
+      "original_loc": "table0/r0c0/p35",
+      "teacher_loc": "table0/r0c0/p35",
+      "original_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "2.1.1 年周转量与储备天数",
+            "font": "Arial",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "2.1.1 年周转量与储备天数",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "2.1.2 设计库容及备用容量",
+      "original_loc": "table0/r0c0/p36",
+      "teacher_loc": "table0/r0c0/p36",
+      "original_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "2.1.2 设计库容及备用容量",
+            "font": "Arial",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "2.1.2 设计库容及备用容量",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "2.2.1 储罐型式与数量比选",
+      "original_loc": "table0/r0c0/p38",
+      "teacher_loc": "table0/r0c0/p38",
+      "original_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "2.2.1 储罐型式与数量比选",
+            "font": "Arial",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "2.2.1 储罐型式与数量比选",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "2.2.2 罐组划分及附件配置",
+      "original_loc": "table0/r0c0/p39",
+      "teacher_loc": "table0/r0c0/p39",
+      "original_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "2.2.2 罐组划分及附件配置",
+            "font": "Arial",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "2.2.2 罐组划分及附件配置",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "2.2.3 储罐抗风圈设计与稳定性校核",
+      "original_loc": "table0/r0c0/p40",
+      "teacher_loc": "table0/r0c0/p40",
+      "original_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "2.2.3 储罐抗风圈设计与稳定性校核",
+            "font": "Arial",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "2.2.3 储罐抗风圈设计与稳定性校核",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "3 收发油工艺流程设计",
+      "original_loc": "table0/r0c0/p41",
+      "teacher_loc": "table0/r0c0/p41",
+      "original_format": {
+        "style": "toc 1",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "3",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": " 收发油工艺流程设计",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "toc 1",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "3",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": " 收发油工艺流程设计",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "3.1 作业工况与物流组织",
+      "original_loc": "table0/r0c0/p42",
+      "teacher_loc": "table0/r0c0/p42",
+      "original_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "3.1 作业工况与物流组织",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "3.1 作业工况与物流组织",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "3.1.1 收油、发油及倒罐工况",
+      "original_loc": "table0/r0c0/p43",
+      "teacher_loc": "table0/r0c0/p43",
+      "original_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "3.1.1 收油、发油及倒罐工况",
+            "font": "Arial",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "3.1.1 收油、发油及倒罐工况",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "3.2 工艺流程方案",
+      "original_loc": "table0/r0c0/p44",
+      "teacher_loc": "table0/r0c0/p44",
+      "original_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "3.2 工艺流程方案",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "3.2 工艺流程方案",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "4 管网水力计算与设备选型",
+      "original_loc": "table0/r0c0/p47",
+      "teacher_loc": "table0/r0c0/p47",
+      "original_format": {
+        "style": "toc 1",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "4",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": " 管网水力计算与设备选型",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "toc 1",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "4",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": " 管网水力计算与设备选型",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "4.1 设计流量、设计流速与管径",
+      "original_loc": "table0/r0c0/p48",
+      "teacher_loc": "table0/r0c0/p48",
+      "original_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "4.1 设计流量、设计流速与管径",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "4.1 设计流量、设计流速与管径",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "4.2 沿程阻力、局部阻力与系统扬程",
+      "original_loc": "table0/r0c0/p49",
+      "teacher_loc": "table0/r0c0/p49",
+      "original_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "4.2 沿程阻力、局部阻力与系统扬程",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "4.2 沿程阻力、局部阻力与系统扬程",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "4.3 输油泵、阀门及计量设备选型",
+      "original_loc": "table0/r0c0/p50",
+      "teacher_loc": "table0/r0c0/p50",
+      "original_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "4.3 输油泵、阀门及计量设备选型",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "4.3 输油泵、阀门及计量设备选型",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "4.3.1 输油泵选型",
+      "original_loc": "table0/r0c0/p51",
+      "teacher_loc": "table0/r0c0/p51",
+      "original_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "4.3.1 输油泵选型",
+            "font": "Arial",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "4.3.1 输油泵选型",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "4.3.2 泵的装卸能力校核",
+      "original_loc": "table0/r0c0/p52",
+      "teacher_loc": "table0/r0c0/p52",
+      "original_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "4.3.2 泵的装卸能力校核",
+            "font": "Arial",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "4.3.2 泵的装卸能力校核",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "4.3.3 阀门及计量设备选型",
+      "original_loc": "table0/r0c0/p53",
+      "teacher_loc": "table0/r0c0/p53",
+      "original_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "4.3.3 阀门及计量设备选型",
+            "font": "Arial",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "4.3.3 阀门及计量设备选型",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "5 总图与安全消防设计",
+      "original_loc": "table0/r0c0/p54",
+      "teacher_loc": "table0/r0c0/p54",
+      "original_format": {
+        "style": "toc 1",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": " 总图与安全消防设计",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "toc 1",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": " 总图与安全消防设计",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "5.1 功能分区、罐组布置与安全间距",
+      "original_loc": "table0/r0c0/p55",
+      "teacher_loc": "table0/r0c0/p55",
+      "original_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5.1 功能分区、罐组布置与安全间距",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5.1 功能分区、罐组布置与安全间距",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "5.2 HSE管理与危险因素分析",
+      "original_loc": "table0/r0c0/p56",
+      "teacher_loc": "table0/r0c0/p56",
+      "original_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5.2 HSE管理与危险因素分析",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5.2 HSE管理与危险因素分析",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "5.2.1 HSE设计原则与管理措施",
+      "original_loc": "table0/r0c0/p57",
+      "teacher_loc": "table0/r0c0/p57",
+      "original_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5.2.1 HSE设计原则与管理措施",
+            "font": "Arial",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5.2.1 HSE设计原则与管理措施",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "5.2.2 泄漏风险识别与防泄漏措施",
+      "original_loc": "table0/r0c0/p58",
+      "teacher_loc": "table0/r0c0/p58",
+      "original_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5.2.2 泄漏风险识别与防泄漏措施",
+            "font": "Arial",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5.2.2 泄漏风险识别与防泄漏措施",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "5.3 防火、防爆设计",
+      "original_loc": "table0/r0c0/p59",
+      "teacher_loc": "table0/r0c0/p59",
+      "original_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5.3 防火、防爆设计",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5.3 防火、防爆设计",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "5.3.1 防火分区、防火间距与防火堤",
+      "original_loc": "table0/r0c0/p60",
+      "teacher_loc": "table0/r0c0/p60",
+      "original_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5.3.1 防火分区、防火间距与防火堤",
+            "font": "Arial",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5.3.1 防火分区、防火间距与防火堤",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "5.3.2 爆炸危险区域划分与防爆措施",
+      "original_loc": "table0/r0c0/p61",
+      "teacher_loc": "table0/r0c0/p61",
+      "original_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5.3.2 爆炸危险区域划分与防爆措施",
+            "font": "Arial",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5.3.2 爆炸危险区域划分与防爆措施",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "5.4 防雷电、防静电与防震设计",
+      "original_loc": "table0/r0c0/p62",
+      "teacher_loc": "table0/r0c0/p62",
+      "original_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5.4 防雷电、防静电与防震设计",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5.4 防雷电、防静电与防震设计",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "5.4.1 防雷接地与防静电措施",
+      "original_loc": "table0/r0c0/p63",
+      "teacher_loc": "table0/r0c0/p63",
+      "original_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5.4.1 防雷接地与防静电措施",
+            "font": "Arial",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5.4.1 防雷接地与防静电措施",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "5.4.2 抗震设防与设备管线防震",
+      "original_loc": "table0/r0c0/p64",
+      "teacher_loc": "table0/r0c0/p64",
+      "original_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5.4.2 抗震设防与设备管线防震",
+            "font": "Arial",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5.4.2 抗震设防与设备管线防震",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "5.5 消防系统与事故水控制",
+      "original_loc": "table0/r0c0/p65",
+      "teacher_loc": "table0/r0c0/p65",
+      "original_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5.5 消防系统与事故水控制",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5.5 消防系统与事故水控制",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "5.5.1 消防冷却与泡沫灭火",
+      "original_loc": "table0/r0c0/p66",
+      "teacher_loc": "table0/r0c0/p66",
+      "original_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5.5.1 消防冷却与泡沫灭火",
+            "font": "Arial",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5.5.1 消防冷却与泡沫灭火",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "5.5.2 应急疏散与事故水收集",
+      "original_loc": "table0/r0c0/p67",
+      "teacher_loc": "table0/r0c0/p67",
+      "original_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5.5.2 应急疏散与事故水收集",
+            "font": "Arial",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "目录3",
+        "align": "None",
+        "first_indent": 44.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5.5.2 应急疏散与事故水收集",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "6 环境保护与油气回收",
+      "original_loc": "table0/r0c0/p68",
+      "teacher_loc": "table0/r0c0/p68",
+      "original_format": {
+        "style": "toc 1",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "6",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": " 环境保护与油气回收",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "toc 1",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "6",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": " 环境保护与油气回收",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "6.1 VOCs源项与蒸发损耗分析",
+      "original_loc": "table0/r0c0/p69",
+      "teacher_loc": "table0/r0c0/p69",
+      "original_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "6.1 VOCs源项与蒸发损耗分析",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "6.1 VOCs源项与蒸发损耗分析",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "6.2 油气密闭收集及回收方案比选",
+      "original_loc": "table0/r0c0/p70",
+      "teacher_loc": "table0/r0c0/p70",
+      "original_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "6.2 油气密闭收集及回收方案比选",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "6.2 油气密闭收集及回收方案比选",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "6.3 含油污水、雨污分流与运行监测",
+      "original_loc": "table0/r0c0/p71",
+      "teacher_loc": "table0/r0c0/p71",
+      "original_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "6.3 含油污水、雨污分流与运行监测",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "6.3 含油污水、雨污分流与运行监测",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "7 自动控制与运行管理",
+      "original_loc": "table0/r0c0/p72",
+      "teacher_loc": "table0/r0c0/p72",
+      "original_format": {
+        "style": "toc 1",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "7",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": " 自动控制与运行管理",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "toc 1",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "7",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": " 自动控制与运行管理",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "7.1 液位、压力、流量和可燃气体监测",
+      "original_loc": "table0/r0c0/p73",
+      "teacher_loc": "table0/r0c0/p73",
+      "original_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "7.1 液位、压力、流量和可燃气体监测",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "7.1 液位、压力、流量和可燃气体监测",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "7.2 联锁切断、报警与控制逻辑",
+      "original_loc": "table0/r0c0/p74",
+      "teacher_loc": "table0/r0c0/p74",
+      "original_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "7.2 联锁切断、报警与控制逻辑",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "7.2 联锁切断、报警与控制逻辑",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "7.3 操作、检维修和应急管理建议",
+      "original_loc": "table0/r0c0/p75",
+      "teacher_loc": "table0/r0c0/p75",
+      "original_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "7.3 操作、检维修和应急管理建议",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "toc 2",
+        "align": "None",
+        "first_indent": 22.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "7.3 操作、检维修和应急管理建议",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "8 结论",
+      "original_loc": "table0/r0c0/p76",
+      "teacher_loc": "table0/r0c0/p76",
+      "original_format": {
+        "style": "toc 1",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "8",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": " 结论",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "toc 1",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "8",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          },
+          {
+            "text": " 结论",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "4.主要参考文献",
+      "original_loc": "table0/r0c0/p78",
+      "teacher_loc": "table0/r0c0/p78",
+      "original_format": {
+        "style": "Heading 1",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "4.主要参考文献",
+            "font": null,
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Heading 1",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "4.主要参考文献",
+            "font": "Times New Roman",
+            "size": null,
+            "bold": null,
+            "italic": null,
+            "color": null
+          }
+        ]
+      }
+    },
+    {
+      "text": "[7] 董林林. 大型油库消防系统设计[J]. 油气储运, 2011, 30(11): 864-866.",
+      "original_loc": "table0/r0c0/p85",
+      "teacher_loc": "table0/r0c0/p85",
+      "original_format": {
+        "style": "正文首行缩进 21",
+        "align": "JUSTIFY (3)",
+        "first_indent": -21.0,
+        "left_indent": 21.0,
+        "line_spacing": "203200",
+        "before": 3.0,
+        "after": null,
+        "runs": [
+          {
+            "text": "[7] 董林林. 大型油库消防系统设计[J]. 油气储运, 2011, 30(11): 864-866.",
+            "font": "Times New Roman",
+            "size": 10.5,
+            "bold": false,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "正文首行缩进 21",
+        "align": "JUSTIFY (3)",
+        "first_indent": 21.0,
+        "left_indent": null,
+        "line_spacing": "203200",
+        "before": 3.0,
+        "after": null,
+        "runs": [
+          {
+            "text": "[7] 董林林. 大型油库消防系统设计[J]. 油气储运, 2011, 30(11): 864-866.",
+            "font": "Times New Roman",
+            "size": 10.5,
+            "bold": false,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      }
+    },
+    {
+      "text": "",
+      "original_loc": "table0/r0c0/p94",
+      "teacher_loc": "table0/r0c0/p94",
+      "original_format": {
+        "style": "正文首行缩进 21",
+        "align": "None",
+        "first_indent": -21.0,
+        "left_indent": 42.0,
+        "line_spacing": "203200",
+        "before": 3.0,
+        "after": null,
+        "runs": []
+      },
+      "teacher_format": {
+        "style": "正文首行缩进 21",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "203200",
+        "before": 3.0,
+        "after": null,
+        "runs": []
+      }
+    },
+    {
+      "text": "",
+      "original_loc": "table0/r0c0/p95",
+      "teacher_loc": "table0/r0c0/p95",
+      "original_format": {
+        "style": "正文首行缩进 21",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "203200",
+        "before": 3.0,
+        "after": null,
+        "runs": []
+      },
+      "teacher_format": {
+        "style": "正文首行缩进 21",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "12700",
+        "before": null,
+        "after": null,
+        "runs": []
+      }
+    },
+    {
+      "text": "",
+      "original_loc": "table0/r0c0/p96",
+      "teacher_loc": "table0/r1c0/p0",
+      "original_format": {
+        "style": "正文首行缩进 21",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "203200",
+        "before": 3.0,
+        "after": null,
+        "runs": []
+      },
+      "teacher_format": {
+        "style": "正文首行缩进 21",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "12700",
+        "before": null,
+        "after": null,
+        "runs": []
+      }
+    },
+    {
+      "text": "5.完成措施及进度安排",
+      "original_loc": "table0/r1c0/p0",
+      "teacher_loc": "table0/r1c0/p1",
+      "original_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "2.0",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5.完成措施及进度安排",
+            "font": null,
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "2.0",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5.完成措施及进度安排",
+            "font": "Times New Roman",
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      }
+    },
+    {
+      "text": "毕业设计进度安排",
+      "original_loc": "table0/r1c0/t0/r0c0/p0",
+      "teacher_loc": "table0/r2c0/t0/r0c0/p0",
+      "original_format": {
+        "style": "Normal",
+        "align": "CENTER (1)",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "2.0",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "毕业设计进度安排",
+            "font": "宋体",
+            "size": 11.0,
+            "bold": true,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "CENTER (1)",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "2.0",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "毕业设计进度安排",
+            "font": "Times New Roman",
+            "size": 11.0,
+            "bold": true,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      }
+    },
+    {
+      "text": "序号",
+      "original_loc": "table0/r1c0/t0/r1c0/p0",
+      "teacher_loc": "table0/r2c0/t0/r1c0/p0",
+      "original_format": {
+        "style": "Normal",
+        "align": "CENTER (1)",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "2.0",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "序号",
+            "font": "宋体",
+            "size": 11.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "CENTER (1)",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "2.0",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "序号",
+            "font": "Times New Roman",
+            "size": 11.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      }
+    },
+    {
+      "text": "毕业设计各阶段内容",
+      "original_loc": "table0/r1c0/t0/r1c1/p0",
+      "teacher_loc": "table0/r2c0/t0/r1c1/p0",
+      "original_format": {
+        "style": "Normal",
+        "align": "CENTER (1)",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "2.0",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "毕业设计各阶段内容",
+            "font": "宋体",
+            "size": 11.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "CENTER (1)",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "2.0",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "毕业设计各阶段内容",
+            "font": "Times New Roman",
+            "size": 11.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      }
+    },
+    {
+      "text": "时间安排",
+      "original_loc": "table0/r1c0/t0/r1c2/p0",
+      "teacher_loc": "table0/r2c0/t0/r1c2/p0",
+      "original_format": {
+        "style": "Normal",
+        "align": "CENTER (1)",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "2.0",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "时间安排",
+            "font": "宋体",
+            "size": 11.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "CENTER (1)",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "2.0",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "时间安排",
+            "font": "Times New Roman",
+            "size": 11.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      }
+    },
+    {
+      "text": "备注",
+      "original_loc": "table0/r1c0/t0/r1c3/p0",
+      "teacher_loc": "table0/r2c0/t0/r1c3/p0",
+      "original_format": {
+        "style": "Normal",
+        "align": "CENTER (1)",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "2.0",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "备注",
+            "font": "宋体",
+            "size": 11.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "CENTER (1)",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "2.0",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "备注",
+            "font": "Times New Roman",
+            "size": 11.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      }
+    },
+    {
+      "text": "3",
+      "original_loc": "table0/r1c0/t0/r4c0/p0",
+      "teacher_loc": "table0/r2c0/t0/r4c0/p0",
+      "original_format": {
+        "style": "Normal",
+        "align": "CENTER (1)",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "2.0",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "3",
+            "font": "宋体",
+            "size": 11.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "CENTER (1)",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "2.0",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "3",
+            "font": "Times New Roman",
+            "size": 11.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      }
+    },
+    {
+      "text": "4",
+      "original_loc": "table0/r1c0/t0/r5c0/p0",
+      "teacher_loc": "table0/r2c0/t0/r5c0/p0",
+      "original_format": {
+        "style": "Normal",
+        "align": "CENTER (1)",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "2.0",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "4",
+            "font": "宋体",
+            "size": 11.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "CENTER (1)",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "2.0",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "4",
+            "font": "Times New Roman",
+            "size": 11.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      }
+    },
+    {
+      "text": "5",
+      "original_loc": "table0/r1c0/t0/r6c0/p0",
+      "teacher_loc": "table0/r2c0/t0/r6c0/p0",
+      "original_format": {
+        "style": "Normal",
+        "align": "CENTER (1)",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "2.0",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5",
+            "font": "宋体",
+            "size": 11.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "CENTER (1)",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "2.0",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "5",
+            "font": "Times New Roman",
+            "size": 11.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      }
+    },
+    {
+      "text": "6",
+      "original_loc": "table0/r1c0/t0/r7c0/p0",
+      "teacher_loc": "table0/r2c0/t0/r7c0/p0",
+      "original_format": {
+        "style": "Normal",
+        "align": "CENTER (1)",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "2.0",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "6",
+            "font": "宋体",
+            "size": 11.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "CENTER (1)",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "2.0",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "6",
+            "font": "Times New Roman",
+            "size": 11.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      }
+    },
+    {
+      "text": "8",
+      "original_loc": "table0/r1c0/t0/r9c0/p0",
+      "teacher_loc": "table0/r2c0/t0/r9c0/p0",
+      "original_format": {
+        "style": "Normal",
+        "align": "CENTER (1)",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "2.0",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "8",
+            "font": "宋体",
+            "size": 11.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "CENTER (1)",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "2.0",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "8",
+            "font": "Times New Roman",
+            "size": 11.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      }
+    },
+    {
+      "text": "9",
+      "original_loc": "table0/r1c0/t0/r10c0/p0",
+      "teacher_loc": "table0/r2c0/t0/r10c0/p0",
+      "original_format": {
+        "style": "Normal",
+        "align": "CENTER (1)",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "2.0",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "9",
+            "font": "宋体",
+            "size": 11.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "CENTER (1)",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "2.0",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "9",
+            "font": "Times New Roman",
+            "size": 11.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      }
+    },
+    {
+      "text": "指导教师意见",
+      "original_loc": "table0/r2c0/p0",
+      "teacher_loc": "table0/r3c0/p0",
+      "original_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "指导教师意见",
+            "font": null,
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "指导教师意见",
+            "font": "Times New Roman",
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      }
+    },
+    {
+      "text": "   ",
+      "original_loc": "table0/r2c0/p1",
+      "teacher_loc": "table0/r3c0/p1",
+      "original_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "   ",
+            "font": null,
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "   ",
+            "font": "Times New Roman",
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      }
+    },
+    {
+      "text": "签名：",
+      "original_loc": "table0/r2c0/p5",
+      "teacher_loc": "table0/r3c0/p4",
+      "original_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": 288.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "签名：",
+            "font": null,
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": 288.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "签名：",
+            "font": "Times New Roman",
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      }
+    },
+    {
+      "text": "专业意见",
+      "original_loc": "table0/r3c0/p0",
+      "teacher_loc": "table0/r4c0/p0",
+      "original_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "专业意见",
+            "font": null,
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "专业意见",
+            "font": "Times New Roman",
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      }
+    },
+    {
+      "text": "  ",
+      "original_loc": "table0/r3c0/p1",
+      "teacher_loc": "table0/r4c0/p1",
+      "original_format": {
+        "style": "Normal",
+        "align": "RIGHT (2)",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "  ",
+            "font": null,
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "RIGHT (2)",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "  ",
+            "font": "Times New Roman",
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      }
+    },
+    {
+      "text": "",
+      "original_loc": "table0/r3c0/p2",
+      "teacher_loc": "table0/r4c0/p2",
+      "original_format": {
+        "style": "Normal",
+        "align": "RIGHT (2)",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": []
+      },
+      "teacher_format": {
+        "style": "正文首行缩进 21",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": []
+      }
+    },
+    {
+      "text": "                                签名：",
+      "original_loc": "table0/r3c0/p6",
+      "teacher_loc": "table0/r4c0/p4",
+      "original_format": {
+        "style": "Normal",
+        "align": "CENTER (1)",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "                        ",
+            "font": null,
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          },
+          {
+            "text": "        ",
+            "font": null,
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          },
+          {
+            "text": "签名：",
+            "font": null,
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "CENTER (1)",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "                        ",
+            "font": "Times New Roman",
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          },
+          {
+            "text": "        ",
+            "font": "Times New Roman",
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          },
+          {
+            "text": "签名：",
+            "font": "Times New Roman",
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      }
+    },
+    {
+      "text": "学院审核意见",
+      "original_loc": "table0/r4c0/p1",
+      "teacher_loc": "table0/r5c0/p1",
+      "original_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "学院审核意见",
+            "font": null,
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "学院审核意见",
+            "font": "Times New Roman",
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      }
+    },
+    {
+      "text": "          1.通过；        2.完善后通过；      3.不通过",
+      "original_loc": "table0/r4c0/p5",
+      "teacher_loc": "table0/r5c0/p4",
+      "original_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "          1.通过；        2.完善后通过；      3.不通过",
+            "font": null,
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "          1.通过；        2.完善后通过；      3.不通过",
+            "font": "Times New Roman",
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      }
+    },
+    {
+      "text": "                                           ",
+      "original_loc": "table0/r4c0/p6",
+      "teacher_loc": "table0/r5c0/p5",
+      "original_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "                                           ",
+            "font": null,
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "                                           ",
+            "font": "Times New Roman",
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      }
+    },
+    {
+      "text": "      签名：",
+      "original_loc": "table0/r4c0/p8",
+      "teacher_loc": "table0/r5c0/p7",
+      "original_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": 252.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "  ",
+            "font": null,
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          },
+          {
+            "text": " ",
+            "font": null,
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          },
+          {
+            "text": "   ",
+            "font": null,
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          },
+          {
+            "text": "签名：",
+            "font": "Times New Roman",
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": 252.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "  ",
+            "font": "Times New Roman",
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          },
+          {
+            "text": " ",
+            "font": "Times New Roman",
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          },
+          {
+            "text": "   ",
+            "font": "Times New Roman",
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          },
+          {
+            "text": "签名：",
+            "font": "Times New Roman",
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      }
+    },
+    {
+      "text": "                                          ",
+      "original_loc": "table0/r4c0/p9",
+      "teacher_loc": "table0/r5c0/p8",
+      "original_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "                                          ",
+            "font": null,
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": null,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "                                          ",
+            "font": "Times New Roman",
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      }
+    },
+    {
+      "text": "年   月   日",
+      "original_loc": "table0/r4c0/p10",
+      "teacher_loc": "table0/r5c0/p9",
+      "original_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": 336.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "年   月   日",
+            "font": null,
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      },
+      "teacher_format": {
+        "style": "Normal",
+        "align": "None",
+        "first_indent": 336.0,
+        "left_indent": null,
+        "line_spacing": "None",
+        "before": null,
+        "after": null,
+        "runs": [
+          {
+            "text": "年   月   日",
+            "font": "Times New Roman",
+            "size": 12.0,
+            "bold": null,
+            "italic": null,
+            "color": "000000"
+          }
+        ]
+      }
+    }
+  ]
+}

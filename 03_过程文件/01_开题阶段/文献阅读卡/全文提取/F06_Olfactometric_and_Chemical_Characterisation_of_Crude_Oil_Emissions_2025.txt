@@ -1,0 +1,740 @@
+Academic Editor: Xiupei Yang
+Received: 17 January 2025
+Revised: 25 February 2025
+Accepted: 25 February 2025
+Published: 1 March 2025
+Citation: Polvara, E.; Legnani, V .;
+Invernizzi, M.; Sironi, S. Olfactometric
+and Chemical Characterisation of
+Gaseous Emission from Crude Oils.
+Molecules 2025, 30, 1136. https://
+doi.org/10.3390/molecules30051136
+Copyright: © 2025 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed under the terms and
+conditions of the Creative Commons
+Attribution (CC BY) license
+(https://creativecommons.org/
+licenses/by/4.0/).
+Article
+Olfactometric and Chemical Characterisation of Gaseous
+Emission from Crude Oils
+Elisa Polvara
+ , Vittoria Legnani, Marzio Invernizzi *
+ and Selena Sironi
+Department of Chemistry, Materials and Chemical Engineering “Giulio Natta”, Politecnico di Milano,
+Piazza Leonardo da Vinci 32, 20133 Milano, Italy; elisa.polvara@polimi.it (E.P .); selena.sironi@polimi.it (S.S.)
+* Correspondence: marzio.invernizzi@polimi.it
+Abstract: This study focuses on the olfactometric and chemical characterisation of gaseous
+and vapour emissions from different crude oils. To investigate this topic, laboratory ex-
+periments were set up to obtain comparable gaseous samples: they were estimated in
+terms of odour concentration (Cod), via dynamic olfactometry, and chemical-specific char-
+acterisation. It was found that, even if considered similar in regard to physical properties
+and chemical composition, the gaseous emissions of different crude oils are significantly
+different in terms of odorous potential. The observed discrepancy appears to be associated
+with the presence of volatile organic sulphur compounds (VOSCs), and the highest values
+of Cod were found in samples containing mercaptans and sulphides. In addition, from the
+conducted comparison, it appeared that crude odorous potential, in terms of Cod, is not
+strictly linked to the quantity of the volatile organic compounds (VOCs), H2S concentration,
+or a priori knowledge of the percentage of elemental sulphur in the crude; on the contrary,
+the presence of volatile organic sulphur compounds in the gaseous emissions is the most
+influential parameter for the odour potential of this matrix.
+Keywords: odour emissions; volatile organic sulphur compounds (VOSCs); dynamic
+olfactometry; TVOC; odorous potential
+1. Introduction
+In the oil extraction and refinement field, the handling of crude oil is one of the main
+sources of volatile organic compounds (VOCs). The loading and unloading operations of
+the oil tankers and their storage the tanks in coastal depositories or refineries represent
+a major contribution to global VOC emission inventory [ 1,2]. Indeed, the entire process
+(from extraction to final use) is connected with the emission of VOCs, particularly BTEX
+and light aliphatic hydrocarbons, into the atmosphere [3,4].
+The odour harassment connected with the entire crude oil refinery process is a well-
+known problem, and different scientific papers and regulatory agencies have highlighted
+the topic and delved into the mitigation and the control of odour emissions from this
+process [3,5–8]. However, although this theme has been known for some time and the
+characterisation of the crude oil liquid matrix has been investigated [ 9–12], the odorous
+potential of crude oil gaseous emissions remains very poorly investigated. Indeed, crude
+oils comprise a complex and variable matrix, whose chemical composition and correlated
+gaseous emissions are not usually known a priori [13,14]. Indeed, in the oil-refining field,
+this matrix is characterised from a physical point of view (e.g., density, viscosity, content
+of elemental sulphur and nitrogen), and crude oils are generally considered as a unique
+category in terms of diffuse emissions, with similar VOC emission properties [11].
+Molecules 2025, 30, 1136 https://doi.org/10.3390/molecules30051136
+
+Molecules 2025, 30, 1136 2 of 16
+Crude oils are a mixture of hydrocarbon compounds, such as paraffins (~30% m/m),
+naphthenes (~40% m/m), and aromatics (~25% m/m), plus small amounts of organic
+compounds of sulphur, oxygen, and nitrogen (≤ 5% m/m) [15]. Moreover, traces of metallic
+compounds such as vanadium, nickel, and sodium may be present. The proportions of
+these elements are generally 84.5% carbon, 13% hydrogen, 1–3% sulphur, and less than
+1% each of nitrogen, oxygen, metals, and salts [ 15–18]. Therefore, a specific crude oil
+may contain a large number of compounds and isomers that are not easily identifiable or
+quantifiable individually. In addition, the elemental composition of crude oils depends on
+the type and origin of the crude, i.e., the geological origin and processes during formation
+and migration can influence the final composition of crude oils [19,20].
+Despite this complexity, the scientific and technical literatures describe limited knowl-
+edge about crude oils.
+As previously noted, due to the great emission potential of crude-handling processes,
+in recent years, the attention toward VOC releases from these activities has been increasing
+due to the increasing interest in their environmental and health impacts on workers and
+the resident population [12,21–27]. Another important issue deriving from the emissions of
+VOCs is the odour nuisance, which often raises concern amongst the population because
+of its association with potential health effects and to environmental stress correlated with
+odorous exposure [28–32]. Even if odour nuisance does not represent a direct problem for
+human health, prolonged exposure to odours may cause reversible negative effects that
+may adversely affect the quality of life, both in terms of physiological and psychological
+outcomes, such as headaches, eye/throat irritation, or stress and emotional distress [31,33].
+Despite the growing interest in VOCs emissions, few works have been published
+in the scientific literature regarding the chemical characterisation of gaseous emissions
+from crude oil storage and handling. In addition, the available studies regarding the
+chemical characterisation of crude oils, to the best of our knowledge, did not investigate
+their odorous potential.
+Concerning crude oil tanker emissions, a recent study [13] exploited simulation soft-
+ware to model and identify significant VOCs in hydrocarbon vapour emissions during
+crude oil loading operations. The study, based on assumptions regarding the compositions
+of the three different crude oils, was more focused on the influence of operating conditions
+(i.e., temperature, pressure, and tank level) on vapour emissions rather than on their chemi-
+cal compositions. Actually, the simulation provided only a rough qualitative composition of
+the vapours, i.e., the lower boiling point VOCs are estimated as the most present, benzene
+is the only identified aromatic compound, cyclopentane is the most significant naphthenic
+component, and pentane is the main paraffinic component. Moreover, the input data
+regarding compositions are just hypotheses, limiting the robustness of the method and the
+reliability of the conclusions.
+Crude oils gaseous emission was also investigated in a second study [34], in which a
+gas chromatograph coupled with a flame ionization detector (FID) was used, analysing hy-
+drocarbons emitted from crude oil tankers. It was concluded that, on average, the vapours
+released by crude handling are composed of 13% hydrocarbons, i.e., methane, ethane,
+propane, butane, pentane, hexane, and a smaller number of heavier components: amongst
+all of these, propane and butane constitute the major components. The other components
+include 70% nitrogen, 10% carbon dioxide, 5% oxygen, and 2% other compounds, such as
+hydrogen sulphide.
+In a third study [35], an experimental investigation of crude oil storage tank emissions
+was conducted, characterizing the VOCs in the headspace of a typical liquid oil storage
+tank battery. Through gas chromatography–mass spectrometry (GC–MS) analysis, the main
+constituents identified were alkanes (from propane to nonane, with numerous isomers),
+
+Molecules 2025, 30, 1136 3 of 16
+only a few aromatics (benzene, toluene, and p-xylene), and CO 2. However, despite the
+importance of the cited studies, the correlation between the chemical composition of
+crude oil emissions and their odorous potential was never investigated. In addition,
+no studies were conducted to assess the differences in emissivity in terms of chemical
+composition and odour among different types of crude oil. Therefore, due to the lack of
+information available in this field, this paper is a first attempt to deepen the knowledge
+of the atmospheric emissions, both in terms chemicals and odour, of different types of
+crude oils to obtain a detailed composition of the possible emissions derived from oil
+handling. In addition to this aim, an additional, and more daring, objective of this study is
+to correlate the obtained odour potential with the resulting chemical composition to find
+the parameters mainly responsible for odour harassment and to provide useful information
+for their abatement/containment.
+2. Results and Discussion
+2.1. Cod and TVOC Measurement
+First, a preliminary evaluation of the emissivity along the overall bubbling time was
+conducted to investigate the concentrations’ trend during the aeration, and consequent
+evaporation, of the liquid. Therefore, the evolution of Cod and TVOC over time (i.e., at five
+different sampling times: 30 min; 8, 24, 192, and 576 h) was examined for all the crudes.
+Due to the similarity in the obtained trends between the tested crude oils, only the outcome
+for crude oil A is reported in Figure 1.
+Molecules 2025, 30, x FOR PEER REVIEW 3 of 16 
+ 
+ 
+storage tank ba ttery. Through gas chromatography–mass spectrometry (GC–MS) analy-
+sis, the main constituents identiﬁed were alkanes (from propane to nonane, with numer-
+ous isomers), only a few aromatics (benzene, toluene, and p-xylene), and CO 2. However, 
+despite the importance of the cited studies, the correlation between the chemical compo-
+sition of crude oil emissions and their odorous potential was never investigated. In addi-
+tion, no studies were conducted to assess the diﬀerences in emissivity in terms of chemical 
+composition and odour among di ﬀerent types of crude oil. Therefore, due to the lack of 
+information available in this ﬁeld, this paper is a ﬁrst attempt to deepen the knowledge of 
+the atmospheric emissions, both in terms chemicals and odour, of diﬀerent types of crude 
+oils to obtain a detailed composition of the possible emissions derived from oil handling. 
+In addition to this aim, an additional, and more daring, objective of this study is to corre-
+late the obtained odour potential with the resulting chemical composition to ﬁnd the pa-
+rameters mainly responsible for odour harassment and to provide useful information for 
+their abatement/containment. 
+2. Results and Discussion 
+2.1. Cod and TVOC Measurement 
+First, a preliminary evaluation of the emissivity along the overall bubbling time was 
+conducted to investigate the concentrations’ trend during the aeration, and consequent 
+evaporation, of the liquid. Therefore, the evolution of Cod and TVOC over time (i.e., at ﬁve 
+diﬀerent sampling times: 30 min; 8, 24, 192, and 576 h) was examined for all the crudes. 
+Due to the similarity in the obtained trends  between the tested crude oils, only the out-
+come for crude oil A is reported in Figure 1. 
+ 
+Figure 1. (a) Trend along time of Cod; (b) TVOC of crude oil A. 
+Figure 1. (a) Trend along time of Cod; (b) TVOC of crude oil A.
+
+Molecules 2025, 30, 1136 4 of 16
+As expected, as the aeration time proceeds, both the C od and TVOC of the gaseous
+samples decrease and, especially in the first portion of bubbling, the majority of volatile
+compounds is lost from the liquid, as can be observed by the decreasing in TVOC from
+2.8 × 105 to 6.2 × 104 mgC/Nm3 within the first 30 min. Note that this trend is common to
+all the crude oils tested in the study: during the bubbling of crude oil, a steep decrease, both
+in terms of odour (Cod) and VOCs (TVOC), was observed between the first two samples.
+After this preliminary observation, a direct comparison of each crude oil was conducted.
+Figure 2 depicts a comparison of TVOC and C od detected in each first sample obtained
+from each crude oil. The comparison was conducted on these samples, collected at 30 min
+into each bubbling trial because, as previously mentioned (Figure 1), these samples were
+the richest in terms of both TVOC and Cod.
+Molecules 2025, 30, x FOR PEER REVIEW 4 of 16 
+ 
+ 
+As expected, as the aeration time proceeds, both the C od and TVOC of the gaseous 
+samples decrease and, especially in the ﬁrst portion of bubbling, the majority of volatile 
+compounds is lost from the liquid, as can be observed by the decreasing in TVOC from 
+2.8 × 10
+5 to 6.2 × 104 mgC/Nm3 within the ﬁrst 30 min. Note that this trend is common to all 
+the crude oils tested in the study: during the bubbling of crude oil, a steep decrease, both 
+in terms of odour (Cod) and VOCs (TVOC), was observed between the ﬁrst two samples. 
+After this preliminary observation, a direct comparison of each crude oil was conducted. 
+Figure 2 depicts a comparison of TVOC and C od detected in each ﬁrst sample obtained 
+from each crude oil. The comparison was conducted on these samples, collected at 30 min 
+into each bubbling trial because, as previously mentioned (Figure 1), these samples were 
+the richest in terms of both TVOC and Cod. 
+ 
+Figure 2. (a) TVOC and (b) Cod of ﬁrst samples (30 min) obtained by diﬀerent crude oils. 
+Figure 2. (a) TVOC and (b) Cod of first samples (30 min) obtained by different crude oils.
+
+Molecules 2025, 30, 1136 5 of 16
+As can be noted from Figure 2a, the TVOC values of the different crude oils were rather
+similar among each other, showing the same order of magnitude and ranging, at most,
+by a factor of three between the minimum and maximum. On the contrary, by observing
+Figure 2b, a much greater variability in terms of C od was obtained: the C od values span
+over two orders of magnitude among the analysed crude oil samples. Thus, despite these
+two parameters showing a similar trend concerning the flushing time (Figure 1), the Cod
+obtained from different crude oils varied drastically. Therefore, in order to ascertain the
+reason for this discrepancy, a comprehensive chemical characterisation was conducted for
+the purpose of identifying volatile molecules present in the crude oil vapours.
+2.2. Chemical Analyses: Identification and Quantification of VOCs
+2.2.1. Speciation and Quantification of VOCs: GC–MS/FID/PFPD
+A preliminary GC investigation was conducted to deepen the TVOC downward trend,
+obtained by FID analysis, along the bubbling time (Figure 1). Figure 3 reports the GC-FID
+chromatograms of crude oil A, corresponding to the first sampling time (30 min), an inter-
+mediate time (24 h), and the final time (576 h). In addition, in the reported chromatograms,
+the concentrations of three single paraffins (butane, hexane, and octane), significant con-
+stituents of the emission, are singularly reported.
+For all the crude oils investigated, GC-FID chromatograms showed that, at the begin-
+ning of the bubbling, the predominant compounds emitted are the most volatile, with a low
+retention time (e.g., isobutane, butane, pentane). Proceeding with the bubbling time, the
+predominant species shift to less volatile types (e.g., decane-4-methyl, undecane, dodecane),
+eluted at a higher retention time. In addition, even individual VOC concentrations, as
+reported in Figure 3, present a general decrease, consistent with expectations and in line
+with the TVOC trend (Figure 2). All the observations could be justified by the differing
+volatility of the observed species, i.e, along with the bubbling, very volatile compounds
+tend to evaporate easily due to their low molecular mass and high vapour pressure. As a
+result, the most volatile compounds are released abruptly during the first bubbling period,
+with very high concentrations. Conversely, the less volatile compounds are emitted more
+slowly and in lower concentrations than the results for the more volatile types. After only
+one day of bubbling, some of the most volatile molecules (e.g., butane) are used up, while
+heavier types are still present in the stripped gas. At the end of the bubbling trial, even
+intermediate chain hydrocarbons (e.g., hexane) are absent in the gas phase, and the heaviest
+molecules (e.g., octane) are detected at very low concentrations.
+In addition, to understand the variability of observed C od amongst different crude
+oils (Figure 1), an extensive investigation of the composition of gas samples, in terms of the
+qualification and quantification of compounds, was conducted using GC–MS/FID/PFPD
+instrumentation. The identification and quantification obtained for the first sample (30 min,
+the most concentrated sample in terms of TVOC and Cod) of all the eight investigated crude
+oils are reported in the Supplementary Materials, Tables S1–S8. To evaluate the differences
+in odour potential between the crude oils, the study concentrated on examining the gaseous
+sample obtained at 30 min, as the decrease in odour is evident throughout the bubbling.
+In terms of single VOCs, detected via GC-FID, and TVOC, it is not possible to observe,
+from the experimental data, a clear explanation for the difference in Cod observed among
+the crude oils.
+
+Molecules 2025, 30, 1136 6 of 16
+Molecules 2025, 30, x FOR PEER REVIEW 6 of 16 
+ 
+ 
+ 
+Figure 3. GC-FID chromatograms for crude oil A, sampled at 30 min (a), 24 h (b) and 576 h (c). ND 
+stands for Not Detected. Detailed quanti ﬁcations are reported in Supplementary Materials (Tables 
+S1–S8). 
+On the contrary, due to the combination of an additional detector (PFPD, speciﬁc for 
+sulphur compounds), it was possible to notice a signi ﬁcant variation amongst the ana-
+lysed crude oil VOSCs, in terms of organic sulphur compounds. In Figure 4, four diﬀerent 
+GC-PFPD chromatograms, detected for the ﬁrst samples (30 min, the most concentrated 
+sample in terms of TVOC and Cod), obtained from four diﬀerent crude oils, are presented. 
+Figure 3. GC-FID chromatograms for crude oil A, sampled at 30 min ( a), 24 h ( b) and 576 h ( c).
+ND stands for Not Detected. Detailed quantifications are reported in Supplementary Materials
+(Tables S1–S8).
+On the contrary, due to the combination of an additional detector (PFPD, specific for
+sulphur compounds), it was possible to notice a significant variation amongst the analysed
+crude oil VOSCs, in terms of organic sulphur compounds. In Figure 4, four different
+GC-PFPD chromatograms, detected for the first samples (30 min, the most concentrated
+sample in terms of TVOC and Cod), obtained from four different crude oils, are presented.
+
+Molecules 2025, 30, 1136 7 of 16
+Molecules 2025, 30, x FOR PEER REVIEW 7 of 16 
+ 
+ 
+ 
+Figure 4. GC-PFPD chromatograms of crude oil A (a), crude oil F (b), crude oil G (c), and crude oil 
+E (d). Detailed quantiﬁcations are reported in the Supplementary Materials (Tables S1–S8). 
+The chromatograms show a great variability in the content of VOSCs released in the 
+gas phase. Indeed, crude oil A was mainly the richest in VOSCs. The identiﬁed molecules 
+included ethanethiol, dimethyl sulphide, 1-pr opanethiol, 2-propanethiol, thiophene, di-
+methyl disulphide, and methyl ethyl disulphide. An intermediate outcome was obtained 
+for crude oils F and G, in which only methanethiol, dimethyl sulphide, and 2-propanethiol 
+could be identiﬁed. On the contrary, for crude oil E, no peaks were identiﬁed in correlation 
+with the presence of sulphur compounds (Figure 4d), meaning that sulphur compounds 
+were not detected (<LoQ = 0.03 mgS/m3). 
+2.2.2. Quantiﬁcation of Hydrogen Sulphide 
+In parallel to the identiﬁcation of VOCs and VOSCs via GC analysis, the quanti ﬁca-
+tion of hydrogen sulphide, released in the stripped gas phase, was conducted by using an 
+electrochemical sensor. The importance of mo nitoring this compound is correlated with 
+its low odour threshold value (OTV), equal to 5.7 × 10
+−4 mg/m3 [36]. The H2S concentration 
+of the ﬁrst samples of the examined crude oils is shown in Table S9 of the Supplementary 
+Materials. Crude G had the highest content, with 14 mg/Nm3, and crude C had the lowest, 
+with 0.46 mg/Nm3. 
+2.3. Odour Characterisation: Correlation Between Chemical Composition and Odour Potential 
+Thanks to the identi ﬁcation and quanti ﬁcation of single compounds present in the 
+gaseous samples, it was possible to investigate the mass contribution in terms of the chem-
+ical concentration (expressed in mg/m 3) and odour contribution of the detected VOCs. 
+Therefore, a comparison of the mass and the odour contributions of the hydrocarbons and 
+sulphur compounds, respectively, was carried out. To evaluate the odour contribution of 
+each single compound, the odour activity value (OAV i) of every single compound was 
+calculated [37–39]. This parameter represents a ﬁrst approximation of a compound’s con-
+tribution to the odour potential of a gaseous sample, and it can be calculated as follows: 
+OAVi= Ci
+OTVi
+ (2)
+Figure 4. GC-PFPD chromatograms of crude oil A (a), crude oil F (b), crude oil G (c), and crude oil E
+(d). Detailed quantifications are reported in the Supplementary Materials (Tables S1–S8).
+The chromatograms show a great variability in the content of VOSCs released in
+the gas phase. Indeed, crude oil A was mainly the richest in VOSCs. The identified
+molecules included ethanethiol, dimethyl sulphide, 1-propanethiol, 2-propanethiol, thio-
+phene, dimethyl disulphide, and methyl ethyl disulphide. An intermediate outcome was
+obtained for crude oils F and G, in which only methanethiol, dimethyl sulphide, and 2-
+propanethiol could be identified. On the contrary, for crude oil E, no peaks were identified
+in correlation with the presence of sulphur compounds (Figure 4d), meaning that sulphur
+compounds were not detected (<LoQ = 0.03 mgS/m3).
+2.2.2. Quantification of Hydrogen Sulphide
+In parallel to the identification of VOCs and VOSCs via GC analysis, the quantification
+of hydrogen sulphide, released in the stripped gas phase, was conducted by using an
+electrochemical sensor. The importance of monitoring this compound is correlated with its
+low odour threshold value (OTV), equal to 5.7 × 10−4 mg/m3 [36]. The H2S concentration
+of the first samples of the examined crude oils is shown in Table S9 of the Supplementary
+Materials. Crude G had the highest content, with 14 mg/Nm 3, and crude C had the lowest,
+with 0.46 mg/Nm3.
+2.3. Odour Characterisation: Correlation Between Chemical Composition and Odour Potential
+Thanks to the identification and quantification of single compounds present in the
+gaseous samples, it was possible to investigate the mass contribution in terms of the
+chemical concentration (expressed in mg/m3) and odour contribution of the detected VOCs.
+Therefore, a comparison of the mass and the odour contributions of the hydrocarbons and
+sulphur compounds, respectively, was carried out. To evaluate the odour contribution
+of each single compound, the odour activity value (OAV i) of every single compound
+was calculated [37–39]. This parameter represents a first approximation of a compound’s
+contribution to the odour potential of a gaseous sample, and it can be calculated as follows:
+OAVi = Ci
+OTVi
+(1)
+
+Molecules 2025, 30, 1136 8 of 16
+where Ci is the concentration of a detected compound I, and OTV i is its odour thresh-
+old value.
+Therefore, for the first sample of every type of crude oil, the calculation of the OAVs
+for each detected compound was conducted. For the sake of brevity, the OAV results
+of crude oil A were taken as an illustrative case. In Figure 5, the OAV values, together
+with the mass concentration of some significant compounds detected in the first sample
+(after 30 min of bubbling), are reported as follows: six hydrocarbon compounds, both
+aliphatic and aromatic, amongst the most concentrated (i.e., butane, n-hexane, nonane,
+cyclohexane, toluene, ethylbenzene), and the five sulphur compounds (i.e., ethanethiol,
+dimethyl sulphide, 1-propanethiol, 2-propanethiol, dimethyl disulphide).
+Molecules 2025, 30, x FOR PEER REVIEW 8 of 16 
+ 
+ 
+where Ci is the concentration of a detected compound I, and OTV i is its odour threshold 
+value. 
+Therefore, for the ﬁrst sample of every type of crude oil, the calculation of the OAVs 
+for each detected compound was conducted. Fo r the sake of brevity, the OAV results of 
+crude oil A were taken as an illustrative case. In Figure 5, the OAV values, together with 
+the mass concentration of some signiﬁcant compounds detected in the ﬁrst sample (after 
+30 min of bubbling), are reported as follows: six hydrocarbon compounds, both aliphatic 
+and aromatic, amongst the most concentrated (i.e., butane, n-hexane, nonane, cyclohex-
+ane, toluene, ethylbenzene), and the ﬁve sulphur compounds (i.e., ethanethiol, dimethyl 
+sulphide, 1-propanethiol, 2-propanethiol, dimethyl disulphide). 
+ 
+Figure 5. Percentage contribution of concentration (mg/m 3) and OAV of main hydrocarbons and 
+sulphur compounds for the ﬁrst sample of crude oil A. 
+The most signiﬁcant compounds in terms of odour (high OAV values, black columns 
+in Figure 5) are mainly sulphur compounds, which, however, are in the minority in terms 
+of concentration (low concentration values, grey columns in Figure 5). In contrast, hydro-
+carbons, the main constituents of the gase ous mixture (high concentration values, grey 
+columns in Figure 5), exhibit a negligible odour contribution. From this evidence, it ap-
+pears possible to state that the observed diﬀerence in odour concentration for the diﬀerent 
+crude samples (Figure 2) can therefore be correlated to the presence of these sulphur com-
+pounds. Indeed, crudes A, F, and G, which presented peaks in the PFPD chromatograms 
+(Figure 4), were also the most odorous types, with a C od always higher than 10 6 ouE/m3 
+(Figure 2). 
+A further investigation, carried out to better investigate the odour potential of crude 
+oils, was the search for a relationship among odour concentration, H2S concentration, and 
+the percentage of sulphur content in the liquid matrix (%S). Sulphur content (%S) repre-
+sents the quantity of sulphur present in the crude oil, and this parameter describes the 
+weight percent of sulphur in the crude oil. Th e higher the %S value, the richer it is in 
+sulphur, and therefore, the more sour-smelling the crude oil. It is the norm that the matrix 
+emitting the most H
+2S or in general, containing the largest proportion of sulphur (ex-
+pressed as % m/m), is likely the most odorous.  
+Figure 5. Percentage contribution of concentration (mg/m3) and OAV of main hydrocarbons and
+sulphur compounds for the first sample of crude oil A.
+The most significant compounds in terms of odour (high OAV values, black columns
+in Figure 5) are mainly sulphur compounds, which, however, are in the minority in terms
+of concentration (low concentration values, grey columns in Figure 5). In contrast, hydro-
+carbons, the main constituents of the gaseous mixture (high concentration values, grey
+columns in Figure 5), exhibit a negligible odour contribution. From this evidence, it appears
+possible to state that the observed difference in odour concentration for the different crude
+samples (Figure 2) can therefore be correlated to the presence of these sulphur compounds.
+Indeed, crudes A, F, and G, which presented peaks in the PFPD chromatograms (Figure 4),
+were also the most odorous types, with a Cod always higher than 106 ouE/m3 (Figure 2).
+A further investigation, carried out to better investigate the odour potential of crude
+oils, was the search for a relationship among odour concentration, H2S concentration, and
+the percentage of sulphur content in the liquid matrix (%S). Sulphur content (%S) represents
+the quantity of sulphur present in the crude oil, and this parameter describes the weight
+percent of sulphur in the crude oil. The higher the %S value, the richer it is in sulphur, and
+therefore, the more sour-smelling the crude oil. It is the norm that the matrix emitting the
+most H2S or in general, containing the largest proportion of sulphur (expressed as % m/m),
+is likely the most odorous.
+In the following diagrams, the odour concentration of each crude sample was reported
+as a function of the percentage of sulphur content (Figure 6a) and as a function of H 2S
+measured in the first minutes (Figure 6b).
+
+Molecules 2025, 30, 1136 9 of 16
+Molecules 2025, 30, x FOR PEER REVIEW 9 of 16 
+ 
+ 
+In the following diagrams, the odour concentration of each crude sample was re-
+ported as a function of the percentage of sulphur content (Figure 6a) and as a function of 
+H2S measured in the ﬁrst minutes (Figure 6b). 
+ 
+ 
+Figure 6. Trend of odour concentration as a function of %S (a) and as a function of H2S (b). 
+Figure 6 clearly shows that crude oil A signi ﬁcantly alters the linear correlations re-
+lated to odorous potential. It was identiﬁed as the most odorous sample, with a Cod for the 
+ﬁrst sample (30 min) equal to 5.9 × 10 6 ouE/m3 but corresponding to a relatively low sul-
+phur content (%S = 0.64%) and H2S concentration (3.9 mg/Nm3). 
+By removing crude oil A (Figure 7) from the graph, a linear correlation between 
+odour concentration and the percentage of sulphur in the liquid could be observed. Also, 
+the correlation between C
+od and H2S appears to be slightly linear. Thus, as a ﬁrst approxi-
+mation, the sulphur content of crude oil can provide preliminary information about its 
+odorous property, while the concentration of hydrogen sulphide seems to be a less eﬀec-
+tive indicator for predicting odour concentration. 
+Figure 6. Trend of odour concentration as a function of %S (a) and as a function of H2S (b).
+Figure 6 clearly shows that crude oil A significantly alters the linear correlations related
+to odorous potential. It was identified as the most odorous sample, with a Cod for the first
+sample (30 min) equal to 5.9 × 106 ouE/m3 but corresponding to a relatively low sulphur
+content (%S = 0.64%) and H2S concentration (3.9 mg/Nm3).
+By removing crude oil A (Figure 7) from the graph, a linear correlation between odour
+concentration and the percentage of sulphur in the liquid could be observed. Also, the
+correlation between Cod and H2S appears to be slightly linear. Thus, as a first approxi-
+mation, the sulphur content of crude oil can provide preliminary information about its
+odorous property, while the concentration of hydrogen sulphide seems to be a less effective
+indicator for predicting odour concentration.
+
+Molecules 2025, 30, 1136 10 of 16
+Molecules 2025, 30, x FOR PEER REVIEW 10 of 16 
+ 
+ 
+ 
+Figure 7. Trend of odour concentration as a function of %S (a) and as a function of H2S (b) (excluding 
+crude oil A). 
+To investigate the anomalous trend of the C crude, the VOSCs observed in the vapour 
+of sample A was investigated in-depth. Indeed,  as previously mentioned, crude C was 
+one of the most odorous crude oils. Therefore, a detailed comparison, in terms of VOSCs, 
+was conducted for the three most odorous crude oils (crude oils A, F, G, and H, with C od 
+values higher than 106 ouE/m3, Figure 2). The VOSCs detected in the three crude oils, with 
+their OTVs, are reported in Table 1. In Tabl e S10, the molecule structure of the VOSCs 
+detected in the samples A, F, G, and H are reported. 
+Figure 7. Trend of odour concentration as a function of %S (a) and as a function of H2S (b) (excluding
+crude oil A).
+To investigate the anomalous trend of the C crude, the VOSCs observed in the vapour
+of sample A was investigated in-depth. Indeed, as previously mentioned, crude C was one
+of the most odorous crude oils. Therefore, a detailed comparison, in terms of VOSCs, was
+conducted for the three most odorous crude oils (crude oils A, F, G, and H, with Cod values
+higher than 106 ouE/m3, Figure 2). The VOSCs detected in the three crude oils, with their
+OTVs, are reported in Table 1. In Table S10, the molecule structure of the VOSCs detected
+in the samples A, F, G, and H are reported.
+From the speciation of the samples, as previously highlighted in Figure 4, crude oil
+A presents different types of VOSCs compared to those in the other crude oils analysed.
+Compared with other crude oil emissions, crude oil A presents the most variable range
+of sulphur compounds (Figure 4 and Table 1). The additional sulphur compounds ob-
+served in crude oil A (ethanethiol, 1-propanethiol, dimethyl disulphide, methyl ethyl
+disulphide), characterised by a lower OTV (as reported in Table 1), could lead to a signifi-
+
+Molecules 2025, 30, 1136 11 of 16
+cant increase in odour potential, thus explaining the observed peak odour concentration
+value (5.9 × 106 ouE/m3), justifying the observed outlier and highlighting the importance
+of VOSCs in crude oil odour potential. Therefore, to effectively assess the odour potential
+of crude oils, the presence of VOSCs within the vapour is predominant in terms of odour
+potential, compared to the effects of other known properties (H2S content or %S present in
+the liquid matrix).
+Table 1. Detected sulphur compounds (highlighted with •) for crudes A, F, G, and H. The points
+indicate the presence of a compound.
+Detected Sulphur Compound OTV
+[mg/m3] A F G H
+Methanethiol 1.4 × 10−4 • • •
+Ethanethiol 2.2 × 10−5 • •
+Dimethyl sulphide 7.6 × 10−3 • • •
+2-Propanethiol 1.9 × 10−5 • • • •
+1-Propanethiol 4.0 × 10−5 •
+Dimethyl disulphide 8.5 × 10−3 •
+Methyl Ethyl Disulphide - •
+3. Materials and Methods
+3.1. Experimental Setup
+In this study, eight liquid crude oil samples, with different worldwide origins, were
+investigated. Each was referenced with a different letter (A to H). To simulate gaseous
+emissions from crude oils, a laboratory method developed and described in a previous
+paper [7] was used for the characterisation of diffuse emissions from external floating roof
+tanks in which crude oils are generally stored. The experiment was based on the bubbling
+of the crude oil liquid sample with a controlled nitrogen flux, generating a gaseous outlet
+enriched with the stripped compounds. To evaluate the concentration trend during the
+time, for each crude oil, the gaseous emissions were sampled with Nalophan TM bags
+(Tillmanns S.p.A., Milan, Italy) at different flushing times: 30 min, 8 h, 24 h, 192 h (8 days),
+and 576 h (24 days) from the beginning of the fluxing.
+Each obtained gaseous sample was analysed both in chemical and olfactometric terms,
+as described in the following paragraphs.
+3.2. Determination of Odour Concentration (Cod): Dynamic Olfactometry
+Dynamic olfactometry is the standardised method for measuring the odour concentra-
+tion (Cod) of gaseous emissions using the human sense of smell. It involves the collection
+of gaseous samples, the dilution with odourless air, and the presentation of the sample to a
+standardised panel at increasing concentrations until the odour is detected. The outcome of
+the analysis is the odour concentration of the sample, expressed in European odour units
+per cubic meter (ouE/m3). According to the standard, it is defined as the number of times
+the gaseous sample is diluted with neutral air before its odour is statistically no longer
+perceivable [40]. The analyses were performed using an olfactometer (TO8, Ecoma GmbH,
+Kiel, Germany), based on the “Yes/No” method, involving four examiners during the
+olfactometric analysis. The panel involved is selected through tests of olfactory sensitivity
+concerning the standardised compound n-butanol (60 ppm in nitrogen SAPIO Group,
+Caponago, Italy), according to the criteria prescribed by the technical standard.
+
+Molecules 2025, 30, 1136 12 of 16
+3.3. Determination of Chemical Composition
+The gaseous samples were analysed using different analytical instrumentations, com-
+plementary with each other, to obtain the most complete quantitative and qualitative
+characterisation of the investigated gaseous samples.
+3.3.1. Determination of TVOC: Flame Ionization Detector (FID)
+A flame ionization detector (FID) instrument was used to measure the total volatile
+organic carbon (TVOC) in the gaseous samples. The equipment used experimentally was
+the Total Hydrocarbon Analyzer RS 55-T (Ratfisch, Poing, Germany), in compliance with
+the standard [ 41]. The instrument was calibrated with specific gas bottles of propane
+(SAPIO Group, Caponago, Italy). The concentration of propane, expressed in ppm and
+measured during the FID analysis, can be easily converted to TVOC, as follows (2):
+CTVOC = CC3H8 × 3 × MC
+VM
+= CC3H8 × 3 × 12
+22.4 (2)
+where CTVOC is the TVOC concentration of the samples (expressed as mgC/Nm3), CC3H8 is
+the FID output (in ppm of propane, C3H8) to be converted, MC is the molecular weight of
+the carbon atom (12 g/mol), and VM is the normal volume of air (22.4 NL/mol) at 273.15 K
+and 101.3 kPa.
+3.3.2. Quantification and Identification of VOCs: GC-FID/MS/PFPD
+To obtain the quantification and identification of single VOCs present in the gaseous
+samples, analyses using a gas chromatograph (GC, Agilent, model 8890, Folsom, CA, USA)
+coupled with three detectors (a single quadrupole mass spectrometer detector, MS Agilent
+5977B MSD, Folsom, CA, USA; an FID; and a pulsed flame photometric detector, PFPD,
+OI 5883, OI Analytics, TX, USA) were conducted. The analytical setup was described in
+detail in a previous study [ 42–44] and is briefly described below. By using a calibrated
+pump (Markes, Air Server-xr, Bridgend, UK), air samples were collected directly from the
+bags, utilized for the olfactometric measurements, and submitted to thermal desorption
+(Unity-xrTM, Markes International Ltd., Bridgend, UK) to preconcentrate the analytes
+present in the gaseous samples. The gas was then sent directly to a cold trap (TO-15/TO-
+17 air toxics, compatible with the simultaneous analysis of analytes from C 2/3 to C30/32,
+Markes International Ltd.), maintained at −27 ◦C. The thermal desorption was conducted
+by heating the trap from −27 ◦C to 300 ◦C, and the compounds were sent by hot transfer
+line into the capillary column (DB-Sulphur SCD, 60 m × 0.320 mm × 4.20 µm, Agilent J&W,
+Folsom, CA, USA).
+The quantitative estimation of analytes was conducted by GC-FID signals, using an
+external standard calibration method. Standard cylinders (SIAD SpA, Bergamo, Italy),
+containing various odorous and/or volatile compounds at known concentrations, were
+used to obtain molecule-specific response factors. Thanks to the PFPD detector, it was
+possible to specifically detect and quantify volatile organic sulphur compounds (VOSCs),
+notoriously known for their strong odour contributions [45].
+The VOCs were identified using an MS detector by comparing the spectra with the
+NIST20 database (NIST/EPA/NIH Mass Spectral Library, Version 2.4, 25 March 2020).
+3.3.3. Hydrogen Sulphide Quantification: Electrochemical Sensor
+In addition to the GC analysis, a specific analysis was performed to determine hydro-
+gen sulphide levels. To evaluate the H2S content of the various gaseous samples, a specific
+electrochemical sensor (Optima 7 biogas analyser, MRU GmbH, Neckarsulm, Germany)
+was used. This instrument’s measuring range is 0–2800 mg/m3 H2S.
+
+Molecules 2025, 30, 1136 13 of 16
+4. Conclusions
+The handling of crude oil is one of the main sources of VOCs and odour in the oil
+refining industry. Despite the importance of this topic, only few scientific papers are
+available regarding the detailed chemical characterisation of crude oil vapour emissions.
+In addition, no studies dealing with the odour potential of these emissions are available.
+Therefore, this paper aimed to analyse, both chemically and via dynamic olfactometry, the
+gaseous and vapour emission of eight different crude oils, investigating their chemical
+composition and assessing their odour potential. The gaseous samples were obtained by a
+controlled-bubbling of the different liquid samples.
+It was found that odour and TVOC concentrations of gaseous emissions have a similar
+decreasing trend over the bubbling time, according to the volatility trend, i.e., very volatile
+VOCs are emitted in the early stages of bubbling and in higher concentrations that gradually
+decrease. Focusing the analysis on the first, and richest, sample (i.e., 30 min of bubbling),
+Cod was very variable amongst crudes compared to the results for TVOC. As observed
+from GC–MS/FID/PFPD analysis, the emission of VOCs does not drastically influence
+the odour concentration (with a similar emissive profile for all tested crude oils), but the
+presence of sulphur compounds (i.e., mercaptans and sulphides) in the gaseous emissions
+of specific crude oils explains the variability of the observed Cod. VOSCs characterised by
+very low OTVs (i.e., higher OAVs) could be associated with high values of Cod measured
+for these crude oils. Indeed, the crudes with the highest C od values (crudes A, F, G, and
+H, with a Cod with an order of magnitude of 106 ouE/m3) are characterised by the widest
+presence of VOSCs. From the monitoring of H2S and considering the sulphur content (%S)
+in the crude oil, it emerged that the odour concentration of this kind of matrix is generally
+proportional to the sulphur content, and less significantly, to the H2S. This general trend
+is, however, heavily skewed considering the crude oil A. Indeed, this crude is the most
+odorous, even if it does not exhibit the highest content of sulphur (%S) and H 2S. This
+variation can be linked to its release of VOSCs; these compounds are characterised by a
+very low OTV (on the order of µg/m3).
+As a general outcome, it clearly appears that crude oils, even if considered similar
+from a physical and elemental point of view, are actually very different in terms of the
+chemical composition of vapours. The derived diffuse odorous emissions, and therefore,
+their potential impact, could be very different depending on the raw material, and the
+crude oils’ odorous potential is correlated, based on the results obtained, more with the
+presence of VOSC than with other physical properties (known a priori) of the crude. This
+result is extremely important for addressing, in greater detail, the issue of odour emissions
+from the storage/movement of crude oil.
+Different future developments of this work should be explored. Firstly, an improved
+chemical composition analysis of crude oil vapours could be conducted by integrating a
+volatile nitrogen compound detector. Moreover, this analysis could be expanded to a larger
+number of crude oil samples. Finally, possible strategies to mitigate the odour impact of
+crude oil emissions could be investigated, based on the results of this study. Potential
+approaches may include optimizing storage and handling conditions, implementing ad-
+vanced vapour recovery systems, or developing tailored treatment methods to reduce the
+concentration of the most odour-relevant compounds.
+Supplementary Materials: The following supporting information can be downloaded at: https:
+//www.mdpi.com/article/10.3390/molecules30051136/s1, Table S1: Chemical species attribution
+for crude A—30 min. Table S2: Chemical species attribution for crude B—30 min; Table S3: Chemical
+species attribution for crude C—30 min; Table S4: Chemical species attribution for crude D—30 min;
+Table S5: Chemical species attribution for crude E—30 min; Table S6: Chemical species attribution for
+
+Molecules 2025, 30, 1136 14 of 16
+crude F—30 min; Table S7: Chemical species attribution for crude G—30 min; Table S8: Chemical
+species attribution for crude H—30 min; Table S9: H2S concentration of first 30 min, %S, and first
+sample Cod for each crude; Table S10. Molecule structures of detected VOSCs in the samples A, F, G,
+and H.
+Author Contributions: Conceptualization, E.P . and M.I.; methodology, M.I.; formal analysis, E.P .
+and M.I.; investigation, V .L.; resources, S.S.; data curation, E.P . and V .L.; writing—original draft
+preparation, E.P . and V .L.; writing—review and editing, M.I. and S.S.; visualization, E.P . and M.I.;
+supervision, S.S. All authors have read and agreed to the published version of the manuscript.
+Funding: This research received no external funding.
+Institutional Review Board Statement: Not applicable.
+Informed Consent Statement: Not applicable.
+Data Availability Statement: The data used are confidential.
+Conflicts of Interest: The authors declare no conflicts of interest.
+Abbreviations
+%S mass sulphur content
+BTEX benzene, toluene, ethylbenzene, xilenes
+Cod odour concentration
+FID flame ionization detector
+GC gas chromatography
+GC-MS gas chromatography–mass spectrometry
+MS mass spectrometry
+OAV odour activity value
+OTV odour threshold value
+PFPD pulsed flame photometric detector
+TVOC total volatile organic carbon
+VOC volatile organic compound
+VOSC volatile organic sulphur compound
+References
+1. Deluchi, M.A. Emissions from the Production, Storage, and Transport of Crude Oil and Gasoline. Air Waste 1993, 43, 1486–1495.
+[CrossRef]
+2. Invernizzi, M.; Sironi, S. Odour Emission Rate Estimation Methods for Hydrocarbon Storage Tanks. Chem. Eng. Trans. 2021, 85,
+67–72. [CrossRef]
+3. Rajabi, H.; Mosleh, M.H.; Mandal, P .; Lea-Langton, A.; Sedighi, M. Emissions of Volatile Organic Compounds from Crude Oil
+Processing—Global Emission Inventory and Environmental Release. Sci. Total Environ. 2020, 727, 138654. [CrossRef]
+4. Wang, H.; Fischer, T.; Wieprecht, W.; Möller, D. A Predictive Method for Crude Oil Volatile Organic Compounds Emission from
+Soil: Evaporation and Diffusion Behavior Investigation of Binary Gas Mixtures. Environ. Sci. Pollut. Res. 2015, 22, 7735–7743.
+[CrossRef]
+5. Motalebi Damuchali, A.; Guo, H. Evaluation of Odour Properties, Their Relationships, and Impact of an Oil Refinery Plant on the
+Surrounding Environment Using Field Measurements. Atmos. Environ. 2020, 230, 117480. [CrossRef]
+6. Jafarinejad, S. Odours Emission and Control in the Petroleum Refinery: A Review. Curr. Sci. Perspect. 2016, 2, 78–82.
+7. Invernizzi, M.; Ilare, J.; Capelli, L.; Sironi, S. Proposal of a Method for Evaluating Odour Emissions from Refinery Storage Tanks.
+Chem. Eng. Trans. 2018, 68, 49–54. [CrossRef]
+8. Motalebi Damuchali, A.; Guo, H. Developing an Odour Emission Factor for an Oil Refinery Plant Using Reverse Dispersion
+Modeling. Atmos. Environ. 2020, 222, 117167. [CrossRef]
+9. Ren, L.; Wu, J.; Qian, Q.; Liu, X.; Meng, X.; Zhang, Y.; Shi, Q. Separation and Characterization of Sulfoxides in Crude Oils. Energy
+Fuels 2019, 33, 796–804. [CrossRef]
+10. Romero Yanes, J.F.; Ferreira, A.F.B.; Gomes De Medeiros, P .Y.; Bassani, G.S.; Fleming, F.P .; Feitosa, F.X.; De Sant’ana, H.B. Phase
+Behavior for Crude Oil and Methane Mixtures: Crude Oil Property Comparison. Energy Fuels 2020, 34, 5188–5195. [CrossRef]
+
+Molecules 2025, 30, 1136 15 of 16
+11. Vetere, A.; Pröfrock, D.; Schrader, W. Qualitative and Quantitative Evaluation of Sulfur-Containing Compound Types in Heavy
+Crude Oil and Its Fractions. Energy Fuels 2021, 35, 8723–8732. [CrossRef]
+12. Wang, H.; Geppert, H.; Fischer, T.; Wieprecht, W.; Möller, D. Determination of Volatile Organic and Polycyclic Aromatic
+Hydrocarbons in Crude Oil with Efficient Gas-Chromatographic Methods. J. Chromatogr. Sci. 2015, 53, 647–654. [CrossRef]
+[PubMed]
+13. Virdi, S.S.; Lee, L.Y.; Li, C.; Dev, A.K. Simulation of VOC Emission During Loading Operations in a Crude Oil Tanker.Int. J. Marit.
+Eng. 2021, 163, 1–16. [CrossRef]
+14. Yassaa, N.; Cecinato, A. Composition of Torched Crude Oil Organic Particulate Emitted by Refinery and Its Similarity to
+Atmospheric Aerosol in the Surrounding Area. Chemosphere 2005, 60, 1660–1666. [CrossRef]
+15. Aitani, A.M. Oil Refining and Products. Encycl. Energy 2004, 4, 715–729. [CrossRef]
+16. Norman, J.H. Nontechnical Guide to Petroleum Geology, Exploration, Drilling, and Production, 2nd ed.; Pennwell Books: Tulsa, OK,
+USA, 2001.
+17. Ollivier, B.; Magot, M. (Eds.) Petroleum Microbiology; ASM Press: Washington, DC, USA, 2005; ISBN 9781683671961.
+18. Speight, J.G. The Chemistry and Technology of Petroleum, 3rd ed.; CRC press: New York, NY, USA, 1999.
+19. He, Q.; Chen, S.; Wang, J.; Zhao, L.; Ma, Z. Geochemical Characteristics and Origin of Crude Oil from Carboniferous Volcanic
+Rocks in the Hongche Fault Zone of the Junggar Basin of China. Front. Earth Sci. 2022, 10, 953245. [CrossRef]
+20. Shan, Y.; Chai, H.; Wang, H.; Zhang, L.; Su, P .; Kong, X.; Bai, Z.; Cheng, M.; Zhang, H. Origin and Characteristics of the Crude
+Oils and Condensates in the Callovian-Oxfordian Carbonate Reservoirs of the Amu Darya Right Bank Block, Turkmenistan.
+Lithosphere 2022, 2022, 5446117. [CrossRef]
+21. Xuan, L.; Ma, Y.; Xing, Y.; Meng, Q.; Song, J.; Chen, T.; Wang, H.; Wang, P .; Zhang, Y.; Gao, P . Source, Temporal Variation and
+Health Risk of Volatile Organic Compounds (VOCs) from Urban Traffic in Harbin, China. Environ. Pollut. 2021, 270, 116074.
+[CrossRef]
+22. Davidson, C.J.; Hannigan, J.H.; Bowen, S.E. Effects of Inhaled Combined Benzene, Toluene, Ethylbenzene, and Xylenes (BTEX):
+Toward an Environmental Exposure Model. Environ. Toxicol. Pharmacol. 2021, 81, 103518. [CrossRef]
+23. Zhao, Q.; Li, Y.; Chai, X.; Xu, L.; Zhang, L.; Ning, P .; Huang, J.; Tian, S. Interaction of Inhalable Volatile Organic Compounds and
+Pulmonary Surfactant: Potential Hazards of VOCs Exposure to Lung. J. Hazard. Mater. 2019, 369, 512–520. [CrossRef]
+24. Kim, H.; Festa, N.; Burrows, K.; Kim, D.C.; Gill, T.M.; Bell, M.L. Is Residential Exposure to Oil Refineries a Novel Contextual Risk
+Factor for Coronary Heart Disease? Environ. Res. 2024, 244, 117965. [CrossRef] [PubMed]
+25. Lv, Z.; Liu, X.; Bai, H.; Nie, L.; Li, G. Process-Specific Volatile Organic Compounds Emission Characteristics, Environmental
+Impact and Health Risk Assessments of the Petrochemical Industry in the Beijing-Tianjin-Hebei Region. Environ. Sci. Pollut. Res.
+Int. 2024, 31, 3938–3950. [CrossRef] [PubMed]
+26. Khajeh Hoseini, L.; Jalilzadeh Yengejeh, R.; Mohammadi Rouzbehani, M.; Sabzalipour, S. Health Risk Assessment of Volatile
+Organic Compounds (VOCs) in a Refinery in the Southwest of Iran Using SQRA Method. Front. Public. Health 2022, 10, 978354.
+[CrossRef]
+27. Invernizzi, M.; Roveda, L.; Polvara, E.; Sironi, S. Lights and Shadows of the Voc Emission Quantification. Chem. Eng. Trans. 2021,
+85, 109–114. [CrossRef]
+28. Polvara, E.; Roveda, L.; Invernizzi, M.; Capelli, L.; Sironi, S. Estimation of Emission Factors for Hazardous Air Pollutants from
+Petroleum Refineries. Atmosphere 2021, 12, 1531. [CrossRef]
+29. Wojnarowska, M.; Plichta, G.; Sagan, A.; Plichta, J.; Stobiecka, J.; Sołtysik, M. Odour Nuisance and Urban Residents’ Quality of
+Life: A Case Study in Kraków’s in Plaszow District. Urban. Clim. 2020, 34, 100704. [CrossRef]
+30. Wu, C.; Liu, J.; Liu, S.; Li, W.; Yan, L.; Shu, M.; Zhao, P .; Zhou, P .; Cao, W. Assessment of the Health Risks and Odor Concentration
+of Volatile Compounds from a Municipal Solid Waste Landfill in China.Chemosphere 2018, 202, 1–8. [CrossRef]
+31. Guadalupe-Fernandez, V .; De Sario, M.; Vecchi, S.; Bauleo, L.; Michelozzi, P .; Davoli, M.; Ancona, C. Industrial Odour Pollution
+and Human Health: A Systematic Review and Meta-Analysis. Environ. Health 2021, 20, 108. [CrossRef]
+32. Horton, R.A.; Wing, S.; Marshall, S.W.; Brownley, K.A. Malodor as a Trigger of Stress and Negative Mood in Neighbors of
+Industrial Hog Operations. Am. J. Public Health 2009, 99 (Suppl. S3), S610–S615. [CrossRef]
+33. Hooiveld, M.; van Dijk, C.E.; van der Sman-De Beer, F.; Smit, L.A.M.; Vogelaar, M.; Wouters, I.M.; Heederik, D.J.; Joris Yzermans,
+C. Odour Annoyance in the Neighbourhood of Livestock Farming—Perceived Health and Health Care Seeking Behaviour. Ann.
+Agric. Environ. Med. 2015, 22, 55–61. [CrossRef]
+34. Tamaddoni, M.; Sotudeh-Gharebagh, R.; Nario, S.; Hajihosseinzadeh, M.; Mostoufi, N. Experimental Study of the VOC Emitted
+from Crude Oil Tankers. Process Saf. Environ. Prot. 2014, 92, 929–937. [CrossRef]
+35. Khoramfar, S.; Jones, K.D.; Boswell, J.; Ghobadi, J.; Paca, J. Evaluation of a Sequential Biotrickling–Biofiltration Unit for Removal
+of VOCs from the Headspace of Crude Oil Storage Tanks. J. Chem. Technol. Biotechnol. 2018, 93, 1778–1789. [CrossRef]
+36. Nagata, Y. Measurement of Odor Threshold by Triangle Odor Bag Method. Odor Meas. Rev. 2003, 118, 118–127.
+
+Molecules 2025, 30, 1136 16 of 16
+37. Rincón, C.A.; De Guardia, A.; Couvert, A.; Wolbert, D.; Le Roux, S.; Soutrel, I.; Nunes, G. Odor Concentration (OC) Prediction
+Based on Odor Activity Values (OAVs) during Composting of Solid Wastes and Digestates. Atmos. Environ. 2019, 201, 1–12.
+[CrossRef]
+38. Cadwallader, K. Measuring Cheese Flavor. In Improving the Flavour of Cheese; University of Illinois: Champaign, IL, USA, 2007;
+pp. 401–417. [CrossRef]
+39. Capelli, L.; Sironi, S.; Del Rosso, R.; Céntola, P .; Il Grande, M. A Comparative and Critical Evaluation of Odour Assessment
+Methods on a Landfill Site. Atmos. Environ. 2008, 42, 7050–7058. [CrossRef]
+40. EN 13725:2022; Stationary Source Emissions—Determination of Odour Concentration by Dynamic Olfactometry and Odour
+Emission Rate. CEN: Brussels, Belgium, 2022.
+41. EN 12619:2013; Determination of the Mass Concentration of Total Gaseous Organic Carbon—Continuous Flame Ionisation
+Detector Method. CEN: Brussels, Belgium, 2013; ISBN 9780580738050.
+42. Polvara, E.; Gallego, E.; Invernizzi, M.; Perales, J.F.; Sironi, S. Chemical Characterization of Odorous Emissions: A Comparative
+Performance Study of Different Sampling Methods. Talanta 2023, 253, 124110. [CrossRef]
+43. Polvara, E.; Morosini, D.; Invernizzi, M.; Sironi, S. Analysis of Odorous VOCs Using TD-GC-MS/FID/PFPD: Development and
+Applications to Real Samples. Chem. Eng. Trans. 2022, 95, 151–156. [CrossRef]
+44. Massimi, N.; Polvara, E.; Invernizzi, M.; Sironi, S. VOSCs Analysis through TD-GC-MS/FID/PFPD: Tools to Enhance Detectivity
+and Selectivity in Real Samples. Chem. Eng. Trans. 2024, 112, 91–96. [CrossRef]
+45. Barczak, R.J.; Fisher, R.M.; Le-Minh, N.; Stuetz, R.M. Identification of Volatile Sulfur Odorants Emitted from Ageing Wastewater
+Biosolids. Chemosphere 2022, 287, 132210. [CrossRef]
+Disclaimer/Publisher’s Note: The statements, opinions and data contained in all publications are solely those of the individual
+author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to
+people or property resulting from any ideas, methods, instructions or products referred to in the content.

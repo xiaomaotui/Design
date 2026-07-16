@@ -1,0 +1,1439 @@
+{
+  "reference": "D:\\毕业论文\\01_原始资料\\02_学生当前稿件\\开题报告.docx",
+  "sha256": "c3ff01dab61f07e11008645ad10b94a0cad5b32025484e9e68f6d24b1ab4c534",
+  "paragraphs": [
+    {
+      "location": "document/paragraph[0]",
+      "style": "Normal",
+      "text": "泉州职业技术大学",
+      "alignment": 1,
+      "runs": [
+        {
+          "text": "泉州职业技术大学",
+          "font": "方正小标宋简体",
+          "size_pt": 22.0,
+          "bold": false,
+          "italic": null,
+          "color": "000000"
+        }
+      ]
+    },
+    {
+      "location": "document/paragraph[1]",
+      "style": "Normal",
+      "text": "本科毕业设计开题报告书",
+      "alignment": 1,
+      "runs": [
+        {
+          "text": "本科",
+          "font": "方正小标宋简体",
+          "size_pt": 22.0,
+          "bold": false,
+          "italic": null,
+          "color": "000000"
+        },
+        {
+          "text": "毕业设计",
+          "font": "方正小标宋简体",
+          "size_pt": 22.0,
+          "bold": false,
+          "italic": null,
+          "color": "000000"
+        },
+        {
+          "text": "开题报告书",
+          "font": "方正小标宋简体",
+          "size_pt": 22.0,
+          "bold": false,
+          "italic": null,
+          "color": "000000"
+        }
+      ]
+    },
+    {
+      "location": "document/paragraph[2]",
+      "style": "Normal",
+      "text": "",
+      "alignment": 1,
+      "runs": []
+    },
+    {
+      "location": "document/paragraph[3]",
+      "style": "Normal",
+      "text": "",
+      "alignment": null,
+      "runs": []
+    },
+    {
+      "location": "document/paragraph[4]",
+      "style": "Normal",
+      "text": "",
+      "alignment": null,
+      "runs": []
+    },
+    {
+      "location": "document/paragraph[5]",
+      "style": "正文首行缩进 21",
+      "text": "",
+      "alignment": null,
+      "runs": []
+    },
+    {
+      "location": "document/paragraph[6]",
+      "style": "Normal",
+      "text": "题    目   浙江平湖油库工艺设计",
+      "alignment": null,
+      "runs": [
+        {
+          "text": "题    目  ",
+          "font": "宋体",
+          "size_pt": 15.0,
+          "bold": null,
+          "italic": null,
+          "color": "000000"
+        },
+        {
+          "text": " ",
+          "font": "宋体",
+          "size_pt": 15.0,
+          "bold": null,
+          "italic": null,
+          "color": "000000"
+        },
+        {
+          "text": "浙江平湖油库工艺设计",
+          "font": "宋体",
+          "size_pt": 15.0,
+          "bold": null,
+          "italic": null,
+          "color": "000000"
+        }
+      ]
+    },
+    {
+      "location": "document/paragraph[7]",
+      "style": "Normal",
+      "text": "          学    院   能源学院                    ",
+      "alignment": null,
+      "runs": [
+        {
+          "text": "          学    院  ",
+          "font": "宋体",
+          "size_pt": 15.0,
+          "bold": null,
+          "italic": null,
+          "color": "000000"
+        },
+        {
+          "text": " ",
+          "font": "宋体",
+          "size_pt": 15.0,
+          "bold": null,
+          "italic": null,
+          "color": "000000"
+        },
+        {
+          "text": "能源学院",
+          "font": "宋体",
+          "size_pt": 15.0,
+          "bold": null,
+          "italic": null,
+          "color": "000000"
+        },
+        {
+          "text": "                    ",
+          "font": "宋体",
+          "size_pt": 15.0,
+          "bold": null,
+          "italic": null,
+          "color": "000000"
+        }
+      ]
+    },
+    {
+      "location": "document/paragraph[8]",
+      "style": "Normal",
+      "text": "年级专业     23油气储运工程专业                  ",
+      "alignment": null,
+      "runs": [
+        {
+          "text": "年级专业  ",
+          "font": "宋体",
+          "size_pt": 15.0,
+          "bold": null,
+          "italic": null,
+          "color": "000000"
+        },
+        {
+          "text": "   ",
+          "font": "宋体",
+          "size_pt": 15.0,
+          "bold": null,
+          "italic": null,
+          "color": "000000"
+        },
+        {
+          "text": "23油气储运工程专业",
+          "font": "宋体",
+          "size_pt": 15.0,
+          "bold": null,
+          "italic": null,
+          "color": "000000"
+        },
+        {
+          "text": "                  ",
+          "font": "宋体",
+          "size_pt": 15.0,
+          "bold": null,
+          "italic": null,
+          "color": "000000"
+        }
+      ]
+    },
+    {
+      "location": "document/paragraph[9]",
+      "style": "Normal",
+      "text": "             姓    名      张淑鑫                 ",
+      "alignment": null,
+      "runs": [
+        {
+          "text": "             姓    名  ",
+          "font": "宋体",
+          "size_pt": 15.0,
+          "bold": null,
+          "italic": null,
+          "color": "000000"
+        },
+        {
+          "text": "    ",
+          "font": "宋体",
+          "size_pt": 15.0,
+          "bold": null,
+          "italic": null,
+          "color": "000000"
+        },
+        {
+          "text": "张淑鑫",
+          "font": "宋体",
+          "size_pt": 15.0,
+          "bold": null,
+          "italic": null,
+          "color": "000000"
+        },
+        {
+          "text": "                 ",
+          "font": "宋体",
+          "size_pt": 15.0,
+          "bold": null,
+          "italic": null,
+          "color": "000000"
+        }
+      ]
+    },
+    {
+      "location": "document/paragraph[10]",
+      "style": "Normal",
+      "text": "学    号     23104243                  ",
+      "alignment": null,
+      "runs": [
+        {
+          "text": "学    号  ",
+          "font": "宋体",
+          "size_pt": 15.0,
+          "bold": null,
+          "italic": null,
+          "color": "000000"
+        },
+        {
+          "text": "   ",
+          "font": "宋体",
+          "size_pt": 15.0,
+          "bold": null,
+          "italic": null,
+          "color": "000000"
+        },
+        {
+          "text": "23104243",
+          "font": "宋体",
+          "size_pt": 15.0,
+          "bold": null,
+          "italic": null,
+          "color": "000000"
+        },
+        {
+          "text": "                  ",
+          "font": "宋体",
+          "size_pt": 15.0,
+          "bold": null,
+          "italic": null,
+          "color": "000000"
+        }
+      ]
+    },
+    {
+      "location": "document/paragraph[11]",
+      "style": "Normal",
+      "text": "指导教师      叶章评 李琦钰                 ",
+      "alignment": null,
+      "runs": [
+        {
+          "text": "指导教师  ",
+          "font": "宋体",
+          "size_pt": 15.0,
+          "bold": null,
+          "italic": null,
+          "color": "000000"
+        },
+        {
+          "text": "    叶章评 李琦钰                 ",
+          "font": "宋体",
+          "size_pt": 15.0,
+          "bold": null,
+          "italic": null,
+          "color": "000000"
+        }
+      ]
+    },
+    {
+      "location": "document/paragraph[12]",
+      "style": "Normal",
+      "text": "职    称   高级工程师 助教                    ",
+      "alignment": null,
+      "runs": [
+        {
+          "text": "职    称  ",
+          "font": "宋体",
+          "size_pt": 15.0,
+          "bold": null,
+          "italic": null,
+          "color": "000000"
+        },
+        {
+          "text": " 高级工程师 助教                    ",
+          "font": "宋体",
+          "size_pt": 15.0,
+          "bold": null,
+          "italic": null,
+          "color": "000000"
+        }
+      ]
+    },
+    {
+      "location": "document/paragraph[13]",
+      "style": "Normal",
+      "text": "开题时间                       ",
+      "alignment": null,
+      "runs": [
+        {
+          "text": "开题时间  ",
+          "font": "宋体",
+          "size_pt": 15.0,
+          "bold": null,
+          "italic": null,
+          "color": "000000"
+        },
+        {
+          "text": "                     ",
+          "font": "宋体",
+          "size_pt": 15.0,
+          "bold": null,
+          "italic": null,
+          "color": "000000"
+        }
+      ]
+    },
+    {
+      "location": "document/paragraph[14]",
+      "style": "Normal",
+      "text": "",
+      "alignment": null,
+      "runs": []
+    },
+    {
+      "location": "document/paragraph[15]",
+      "style": "Normal",
+      "text": "",
+      "alignment": null,
+      "runs": []
+    },
+    {
+      "location": "document/paragraph[16]",
+      "style": "Normal",
+      "text": "",
+      "alignment": null,
+      "runs": []
+    },
+    {
+      "location": "document/paragraph[17]",
+      "style": "Normal",
+      "text": "",
+      "alignment": null,
+      "runs": []
+    },
+    {
+      "location": "document/paragraph[18]",
+      "style": "Normal",
+      "text": "",
+      "alignment": null,
+      "runs": []
+    },
+    {
+      "location": "document/paragraph[19]",
+      "style": "Normal",
+      "text": "",
+      "alignment": null,
+      "runs": []
+    },
+    {
+      "location": "document/paragraph[20]",
+      "style": "Normal",
+      "text": "",
+      "alignment": null,
+      "runs": []
+    },
+    {
+      "location": "document/paragraph[21]",
+      "style": "Normal",
+      "text": "",
+      "alignment": 1,
+      "runs": []
+    },
+    {
+      "location": "document/paragraph[22]",
+      "style": "正文首行缩进 21",
+      "text": "",
+      "alignment": 3,
+      "runs": []
+    }
+  ],
+  "tables": [
+    {
+      "index": 0,
+      "rows": 5,
+      "cols": 1,
+      "cells": [
+        {
+          "row": 0,
+          "col": 0,
+          "paragraphs": [
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[0]",
+              "style": "Normal",
+              "text": "开题报告字数不少于3500字，艺术类专业不少于2500字",
+              "alignment": null,
+              "runs": [
+                {
+                  "text": "开题报告字数不少于3500字，艺术类",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                },
+                {
+                  "text": "专业",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                },
+                {
+                  "text": "不少于2500字",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                }
+              ]
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[1]",
+              "style": "Normal",
+              "text": "1.本选题研究的目的及意义",
+              "alignment": null,
+              "runs": [
+                {
+                  "text": "1.",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                },
+                {
+                  "text": "本选题研究的目的及意义",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                }
+              ]
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[2]",
+              "style": "正文首行缩进 21",
+              "text": "这个地点需要这个能源需求、保证这个地点对应的安全、绿色环保、资源配置",
+              "alignment": null,
+              "runs": [
+                {
+                  "text": "这个地点需要这个能源需求、保证这个地点对应的安全、绿色环保、资源配置",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "FF0000"
+                }
+              ]
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[3]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[4]",
+              "style": "Normal",
+              "text": "2.本选题国内外研究状况综述",
+              "alignment": null,
+              "runs": [
+                {
+                  "text": "2.",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                },
+                {
+                  "text": "本选题国内外研究状况综述",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                }
+              ]
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[5]",
+              "style": "正文首行缩进 21",
+              "text": "国内外对于油库方向做了哪些先进的技术",
+              "alignment": null,
+              "runs": [
+                {
+                  "text": "国内外对于油库方向做了哪些先进的技术",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "FF0000"
+                }
+              ]
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[6]",
+              "style": "正文首行缩进 21",
+              "text": "基于一些设计上别人提出的好的条件（查知网pdd8元知网会员）",
+              "alignment": null,
+              "runs": [
+                {
+                  "text": "基于一些设计上别人提出的好的条件（查知网pdd8元知网会员）",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "FF0000"
+                }
+              ]
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[7]",
+              "style": "正文首行缩进 21",
+              "text": "现状模板写多条：张三（2023年）在这篇文献当中提到了什么什么东西，他认为这个油库应该采用一个什么样的防腐工艺",
+              "alignment": null,
+              "runs": [
+                {
+                  "text": "现状模板写多条：",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "FF0000"
+                },
+                {
+                  "text": "张三（2023年）在这篇文献当中提到了什么什么东西，他认为这个油库应该采用一个什么样的防腐工艺",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                }
+              ]
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[8]",
+              "style": "正文首行缩进 21",
+              "text": "基于你调查到的国内外对于油库工艺技术的了解写总结（三五行）：说别人举了一些防腐工艺，别人举了一些油库设计上的意见。所以综上所述，我认为在我这个论文中，要着重关注哪些东西，要强调哪些部分。",
+              "alignment": null,
+              "runs": [
+                {
+                  "text": "基于你调查到的国内外对于油库工艺技术的了解写总结（三五行）：",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "FF0000"
+                },
+                {
+                  "text": "说别人举了一些防腐工艺，别人举了一些油库设计上的意见。所以综上所述，我认为在我这个论文中，要着重关注哪些东西，要强调哪些部分。",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                }
+              ]
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[9]",
+              "style": "Normal",
+              "text": "3.本选题研究的主要内容及写作提纲",
+              "alignment": null,
+              "runs": [
+                {
+                  "text": "3.本选题研究的主要内容及写作提纲",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                }
+              ]
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[10]",
+              "style": "正文首行缩进 21",
+              "text": "写作提纲就是目录（周四交）：第一二三章细致到三级标题，如2.1.1",
+              "alignment": null,
+              "runs": [
+                {
+                  "text": "写作提纲就是目录（周四交）：第一二三章细致到三级标题，如2.1.1",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "FF0000"
+                }
+              ]
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[11]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[12]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[13]",
+              "style": "Normal",
+              "text": "4.主要参考文献",
+              "alignment": null,
+              "runs": [
+                {
+                  "text": "4.主要参考文献",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                }
+              ]
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[14]",
+              "style": "正文首行缩进 21",
+              "text": "至少15篇",
+              "alignment": null,
+              "runs": [
+                {
+                  "text": "至少15篇",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "FF0000"
+                }
+              ]
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[15]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[16]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[17]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[18]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[19]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[20]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[21]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[22]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[23]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[24]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[25]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[26]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[27]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[28]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[29]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[30]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[31]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[32]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[33]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[34]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[35]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[36]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[37]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[38]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[39]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[0]/cell[0]/paragraph[40]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "paragraphs": [
+            {
+              "location": "table[0]/row[1]/cell[0]/paragraph[0]",
+              "style": "Normal",
+              "text": "5.完成措施及进度安排",
+              "alignment": null,
+              "runs": [
+                {
+                  "text": "5.完成措施及进度安排",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                }
+              ]
+            },
+            {
+              "location": "table[0]/row[1]/cell[0]/paragraph[1]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[1]/cell[0]/paragraph[2]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "paragraphs": [
+            {
+              "location": "table[0]/row[2]/cell[0]/paragraph[0]",
+              "style": "Normal",
+              "text": "指导教师意见",
+              "alignment": null,
+              "runs": [
+                {
+                  "text": "指导教师意见",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                }
+              ]
+            },
+            {
+              "location": "table[0]/row[2]/cell[0]/paragraph[1]",
+              "style": "Normal",
+              "text": "   ",
+              "alignment": null,
+              "runs": [
+                {
+                  "text": "   ",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                }
+              ]
+            },
+            {
+              "location": "table[0]/row[2]/cell[0]/paragraph[2]",
+              "style": "Normal",
+              "text": "                    ",
+              "alignment": null,
+              "runs": [
+                {
+                  "text": "                    ",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                }
+              ]
+            },
+            {
+              "location": "table[0]/row[2]/cell[0]/paragraph[3]",
+              "style": "Normal",
+              "text": "                          ",
+              "alignment": null,
+              "runs": [
+                {
+                  "text": "                          ",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                }
+              ]
+            },
+            {
+              "location": "table[0]/row[2]/cell[0]/paragraph[4]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[2]/cell[0]/paragraph[5]",
+              "style": "Normal",
+              "text": "签名：",
+              "alignment": null,
+              "runs": [
+                {
+                  "text": "签名：",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                }
+              ]
+            },
+            {
+              "location": "table[0]/row[2]/cell[0]/paragraph[6]",
+              "style": "Normal",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[2]/cell[0]/paragraph[7]",
+              "style": "Normal",
+              "text": "                                                        年   月   日",
+              "alignment": null,
+              "runs": [
+                {
+                  "text": "                                                   ",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                },
+                {
+                  "text": "  ",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                },
+                {
+                  "text": "   年   月   日",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "paragraphs": [
+            {
+              "location": "table[0]/row[3]/cell[0]/paragraph[0]",
+              "style": "Normal",
+              "text": "专业意见",
+              "alignment": null,
+              "runs": [
+                {
+                  "text": "专业意见",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                }
+              ]
+            },
+            {
+              "location": "table[0]/row[3]/cell[0]/paragraph[1]",
+              "style": "Normal",
+              "text": "  ",
+              "alignment": 2,
+              "runs": [
+                {
+                  "text": "  ",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                }
+              ]
+            },
+            {
+              "location": "table[0]/row[3]/cell[0]/paragraph[2]",
+              "style": "Normal",
+              "text": "",
+              "alignment": 2,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[3]/cell[0]/paragraph[3]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[3]/cell[0]/paragraph[4]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[3]/cell[0]/paragraph[5]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[3]/cell[0]/paragraph[6]",
+              "style": "Normal",
+              "text": "                                签名：",
+              "alignment": 1,
+              "runs": [
+                {
+                  "text": "                        ",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                },
+                {
+                  "text": "        ",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                },
+                {
+                  "text": "签名：",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                }
+              ]
+            },
+            {
+              "location": "table[0]/row[3]/cell[0]/paragraph[7]",
+              "style": "Normal",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[3]/cell[0]/paragraph[8]",
+              "style": "Normal",
+              "text": "                                                        年   月   日",
+              "alignment": null,
+              "runs": [
+                {
+                  "text": "                                                        年   月   日",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "paragraphs": [
+            {
+              "location": "table[0]/row[4]/cell[0]/paragraph[0]",
+              "style": "Normal",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[4]/cell[0]/paragraph[1]",
+              "style": "Normal",
+              "text": "学院审核意见",
+              "alignment": null,
+              "runs": [
+                {
+                  "text": "学院审核意见",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                }
+              ]
+            },
+            {
+              "location": "table[0]/row[4]/cell[0]/paragraph[2]",
+              "style": "Normal",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[4]/cell[0]/paragraph[3]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[4]/cell[0]/paragraph[4]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[4]/cell[0]/paragraph[5]",
+              "style": "Normal",
+              "text": "          1.通过；        2.完善后通过；      3.不通过",
+              "alignment": null,
+              "runs": [
+                {
+                  "text": "          1.通过；        2.完善后通过；      3.不通过",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                }
+              ]
+            },
+            {
+              "location": "table[0]/row[4]/cell[0]/paragraph[6]",
+              "style": "Normal",
+              "text": "                                           ",
+              "alignment": null,
+              "runs": [
+                {
+                  "text": "                                           ",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                }
+              ]
+            },
+            {
+              "location": "table[0]/row[4]/cell[0]/paragraph[7]",
+              "style": "正文首行缩进 21",
+              "text": "",
+              "alignment": null,
+              "runs": []
+            },
+            {
+              "location": "table[0]/row[4]/cell[0]/paragraph[8]",
+              "style": "Normal",
+              "text": "      签名：",
+              "alignment": null,
+              "runs": [
+                {
+                  "text": "  ",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                },
+                {
+                  "text": " ",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                },
+                {
+                  "text": "   ",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                },
+                {
+                  "text": "签名：",
+                  "font": "Times New Roman",
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                }
+              ]
+            },
+            {
+              "location": "table[0]/row[4]/cell[0]/paragraph[9]",
+              "style": "Normal",
+              "text": "                                          ",
+              "alignment": null,
+              "runs": [
+                {
+                  "text": "                                          ",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                }
+              ]
+            },
+            {
+              "location": "table[0]/row[4]/cell[0]/paragraph[10]",
+              "style": "Normal",
+              "text": "年   月   日",
+              "alignment": null,
+              "runs": [
+                {
+                  "text": "年   月   日",
+                  "font": null,
+                  "size_pt": 12.0,
+                  "bold": null,
+                  "italic": null,
+                  "color": "000000"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "package_parts": [
+    {
+      "path": "[Content_Types].xml",
+      "bytes": 1816,
+      "sha256": "93517ef5a75c2906368d51e614651cd5931f884c055783c1424389ce4b89d527"
+    },
+    {
+      "path": "_rels/",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "_rels/.rels",
+      "bytes": 737,
+      "sha256": "514e1846381cb6bcfff105a4b0a17d666cf0ed1f0c120bff73b82226ab7ed977"
+    },
+    {
+      "path": "customXml/",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "customXml/_rels/",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "customXml/_rels/item1.xml.rels",
+      "bytes": 296,
+      "sha256": "80482f86e196171d66001e0e74d1900408a3aaf2463e54005d251b5f2db9a0b0"
+    },
+    {
+      "path": "customXml/item1.xml",
+      "bytes": 355,
+      "sha256": "67d47ce7900fe5c7d78121df82e7ce47d9b4678a212079f8c8ae6b8d6b17ced5"
+    },
+    {
+      "path": "customXml/itemProps1.xml",
+      "bytes": 327,
+      "sha256": "16c9a9ab07e137bbf93dbcfe36c21a778cdccdd1d2b152085354b53a2f17d1c1"
+    },
+    {
+      "path": "docProps/",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docProps/app.xml",
+      "bytes": 636,
+      "sha256": "75004ea88218b43d41d542e992a95d7c2661b888a0a833a0e45dc5e4f7188269"
+    },
+    {
+      "path": "docProps/core.xml",
+      "bytes": 683,
+      "sha256": "3c7317eba34128a1cc4fb828432e352e63814233e5cbdf21339c11de5707af16"
+    },
+    {
+      "path": "docProps/custom.xml",
+      "bytes": 747,
+      "sha256": "00a095c28b9b29c19c08f96befd550a06d3bd880a2d32f837ab8dfac818d3733"
+    },
+    {
+      "path": "word/",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "word/_rels/",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "word/_rels/document.xml.rels",
+      "bytes": 1206,
+      "sha256": "0ea82c2d554e1b076a74e4c857c8bcdd878c48cd82eedad154cfec2e0d3cf045"
+    },
+    {
+      "path": "word/document.xml",
+      "bytes": 116856,
+      "sha256": "963f4b5618c6ef5d5bbac74629ec198146077f4e5c5d9c26418d2eaf0c6fbde8"
+    },
+    {
+      "path": "word/fontTable.xml",
+      "bytes": 3651,
+      "sha256": "e8e2111353d7c89d60a25826ee076ee1b683d28b48eda64c334f5a8f22fff227"
+    },
+    {
+      "path": "word/footer1.xml",
+      "bytes": 9246,
+      "sha256": "dd4f155daa21af1637cf1082f5719aac9fd59d5877bdada4c55fc25fd3ca3c5b"
+    },
+    {
+      "path": "word/footer2.xml",
+      "bytes": 6870,
+      "sha256": "87b337cc315fc3771070d53043b1b9dac71bec109cd7bb4ea48225937b43ce2d"
+    },
+    {
+      "path": "word/header1.xml",
+      "bytes": 1482,
+      "sha256": "2ae88e70c7f734721428a4244b5bfc1e733c9078527af0805ddbb0392101ebda"
+    },
+    {
+      "path": "word/settings.xml",
+      "bytes": 4165,
+      "sha256": "9bc7153c19eab44809aa5dad78f5713f2fd6d9e82d03b1d116cd1e8b395fc218"
+    },
+    {
+      "path": "word/styles.xml",
+      "bytes": 32820,
+      "sha256": "b900bc7d912993af17e183f3215ee5837299e81347ee47c6c0b29d114048b88e"
+    },
+    {
+      "path": "word/theme/",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "word/theme/theme1.xml",
+      "bytes": 6436,
+      "sha256": "2157ebaa401af49c0c9b80ad88ccbad4dbe486136a0b3f4bddc77de976340c33"
+    }
+  ]
+}

@@ -1,0 +1,329 @@
+407
+完整性与可靠性
+Integrity & Reliability
+2020 年 4 月　第 39 卷 第 4 期网络出版时间：2020-02-19T10:19:26　　　　　　网络出版地址：http://kns.cnki.net/kcms/detail/13.1093.TE.20200218.1740.006.html
+火灾环境下邻近罐壁热辐射分布实验
+郭欣　康习锋
+中国人民警察大学消防指挥系
+摘要：油罐火灾蔓延的主要因素是油罐热辐射，在着火罐火焰热辐射作用下，邻近罐极易被引燃，造
+成整个罐区大面积起火。为了研究邻近罐罐壁热辐射分布规律，建立了油罐燃烧对邻近罐热辐射影
+响的小尺寸实验装置，开展了火灾环境下邻近罐壁热辐射分布的实验研究 。结果表明：在火灾环
+境下，邻近罐正对着火罐方向的罐壁受辐射作用最大 ，热辐射从罐顶到罐底逐渐降低 、从中心向两
+边呈轴对称降低 ；随着 L/D（L 为相邻两个油罐的距离 ，D 为油罐的直径）增大，邻近罐热辐射下
+降。实验数据为火灾环境下邻近罐的热辐射研究提供了参考 ，对防止邻近罐被引燃 ，做好油罐区
+火灾爆炸事故的预防具有重大意义。（图 5，表 1，参 24）
+关键词：油罐；火灾；热辐射；邻近罐；分布规律
+中图分类号：TE88         　　　　文献标识码：A　　　　DOI： 10.6047/j.issn.1000-8241.2020.04.007
+Experimental study on heat radiation distribution of adjacent tank 
+wall under fire conditions
+GUO Xin, KANG Xifeng
+Department of Fire Command, China People’s Police University
+Abstract: The main factor of oil tank fire spread should be attributed to the fire’s heat radiation. Affected by the heat 
+radiation transferred from the flame of the firing tank, adjacent tanks are easily ignited and may cause a widespread fire in 
+the entire tank farm. In order to study the distribution rule of heat radiation on tank wall when adjacent tanks are exposed to 
+heat radiation, the small-sized experimental device of the heat radiation influence of burning tank on adjacent tank a small-
+scale experimental device for the influence of tank combustion on the heat radiation of adjacent tanks was established to 
+conduct the experimental study on heat radiation distribution of adjacent tank wall under fire conditions. The experimental 
+results show that under fire conditions, the adjacent tank wall in front of the firing tank is most exposed to radiation. The heat 
+radiation drops gradually from the tank roof to the tank bottom and symmetrically from the center line to both sides. As the 
+L/D (L is the distance between two adjacent oil tanks, and D is the diameter of the oil tank) ratio increases, the heat radiation 
+on the adjacent tank decreases. The experimental data can provide a reference for the heat radiation research of adjacent 
+tanks under fire conditions, and is of great significance for preventing adjacent tanks from being ignited and preventing fire 
+and explosion accidents in tank farm. (5 Figures, 1 Table, 24 References)
+Key words: oil tank, fire, heat radiation, adjacent tank, distribution rule
+文章编号：1000-8241（2020）04-0407-05
+油罐一旦发生火灾， 热辐射由着火罐向邻近罐蔓
+延， 是导致油罐区大面积火灾连锁反应的主要原因
+[1-2]
+。
+因此， 研究邻近罐热辐射分布规律是评估油罐火灾危
+险性的重要方法
+[3-6]
+。针对国内外油罐燃烧实验的不
+足
+[7-10]
+， 开展了小尺寸油罐燃烧实验， 获得了邻近罐壁
+热辐射分布规律， 以期为邻近罐制定合理的冷却措施，
+尤其是对热辐射较高的重点部位进行有效冷却
+[11-15]
+。
+由于小尺寸油罐燃烧实验得到的热辐射分布规律与大
+型油罐相似
+[16-18]
+， 因此利用小尺寸实验装置研究油罐
+火灾发生过程以及火焰燃烧特性， 可为研究大型油罐
+火灾特点提供参考
+[19-24]
+。
+1　实验装置 
+油罐发生燃烧时邻近油罐热辐射实验装置主要包
+括油盘、 小尺寸油罐及数据采集系统 （图1） 。为节约
+
+408
+yqcy.paperopen.com
+完整性与可靠性
+Integrity & Reliability
+2020 年 4 月　第 39 卷 第 4 期
+2　实验步骤及现象
+2.1　实验工况
+油罐间距与油罐直径的比值  L/D 分别取 0.6、1.0、
+1.5。选取 9 种实验工况 （表1） 开展油罐燃烧实验， 在
+不同 L/D 值、 不同直径的油盘火作用下， 获得邻近罐
+热辐射的分布规律。
+2.2　实验步骤
+油罐燃烧对邻近罐罐壁热辐射的实验主要分为以
+下 4 个步骤。
+（1） 按照设定工况的间距布置油盘与小尺寸油罐，
+连接实验系统。油盘内加入油层厚度约 1 cm 的 93
+#
+汽油。相邻油罐内部充装水代替罐内油品， 水面距离
+油罐顶部 0.2 m。在测量好的探测点上， 布置热辐射传
+感器， 并与数据采集系统相连。为了确保实验过程安
+全， 备有泡沫灭火器。
+（2） 点燃油盘， 使用数据采集仪记录各测量点热
+辐射值。实验中， 每个工况的燃烧过程持续6～7 min，
+火焰形状呈圆柱体， 燃烧过程中产生大量浓烟。不同
+实验工况表明， 着火油盘的火焰高度随着油盘直径的
+增大而增大： 当油盘直径为0.4 m 时， 其火焰高度约
+1.5 m ； 当油盘直径为1.0 m 时， 其火焰高度约2.5 m；
+当油盘直径为 1.8 m 时， 其火焰高度约4 m。
+（3） 通过数据采集仪获得实验数据， 采集仪具有
+20 个测量通道， 可以记录并存储40 000 个数据， 能够
+同时记录通道号、 测量值、 燃烧时间、 累加计数等。采
+集数据时间设置为每 5 s 读取一次， 并对采集到的数
+据进行整理、 分析。
+（4） 每个工况的实验结束后， 将油盘残余燃料倒
+掉， 洗刷后重新倒入燃料， 按照实验工况调整与油罐间
+距， 进行下一个工况实验， 直至完成9 种工况的实验。
+实验成本， 在尽可能不影响实验结果的基础上， 采用相
+同材质、 直径的油盘代替油罐作为着火罐， 并用小尺寸
+油罐作为邻近罐。
+为研究不同直径着火罐对邻近罐热辐射的影响， 实
+验设计制作了 3种不同直径的圆形油盘作为着火罐： 直
+径分别为 0.4 m、1.0 m及 1.8 m， 高度均为0.2 m， 壁厚均
+为 3 mm， 其材质为普通铸铁。实验燃料为93
+#
+汽油。
+邻近油罐材质为 SPV490Q 钢 ，直 径1.8 m，高
+0.8 m，壁 厚6 mm。为了使油盘与邻近罐的高度保持
+一致， 将油盘放置于特制的铁架上， 罐顶距离地面0.6 m，
+与邻近罐顶高度一致 （图1） 。由于该实验模拟的是邻
+近罐受热辐射影响， 主要是罐壁吸热， 为了与大型油罐
+实际工况相接近， 将罐内充装了液体。基于实验成本、
+安全性等因素， 邻近罐内充装的液体介质为自来水， 其
+对实验结果影响较小， 充装水的高度为0.6 m。
+实验用的数据采集系统由热辐射传感器、 数据采
+集仪、 计算机及数据线等组成。其中， 数据采集仪为福
+禄克 2635A， 是具有通用输入模块的便携式采集仪， 可
+插入存储器卡存储实验数据。热辐射传感器量程为
+0~2 W/cm
+2
+， 其最大允许误差为2％。在邻近罐的罐
+顶、 罐底、 正中， 分别布置了3 个热辐射传感器， 用来测
+量罐壁辐射值 Q1、Q2、Q3。热辐射传感器布置方向为
+正对油盘的中心连线上 （图2）。
+图 1　油罐燃烧对邻近油罐热辐射的小尺寸实验装置示意图
+图 2　邻近罐热辐射传感器布置位置示意图
+表 1　油罐燃烧对邻近罐热辐射实验的 9 种工况
+油盘直径/m 工况序号 油罐间距/m L/D
+0.4
+1 0.24 0.6
+2 0.40 1.0
+3 0.60 1.5
+1.0
+4 0.60 0.6
+5 1.00 1.0
+6 1.50 1.5
+1.8
+7 1.08 0.6
+8 1.80 1.0
+9 2.70 1.5
+
+409
+yqcy.paperopen.com
+完整性与可靠性
+Integrity & Reliability
+（2） 在直径为1.0 m 的油盘点火后， 根据油罐探测
+点热辐射值变化情况 （图4） 可见： 直径为1.0 m 的油盘
+燃烧的邻近罐壁热辐射分布规律与直径为 0.4 m 的油
+盘相似， 即热辐射沿邻近罐罐顶到罐底呈下降趋势，Q1
+点热辐射值最大、Q3 处最小。当 L/D 为 0.6时，Q1 热
+辐射平均值为 8.6 kW/m
+2
+， 小于同等工况下直径为0.4 m
+的油盘热辐射平均值。这表明尽管油盘直径越大， 其
+热辐射作用越强， 但由于油罐间距增大， 邻近罐热辐射
+降低。由此表明， 罐间距对热辐射影响更加明显。
+（3） 在直径为1.8 m 的油盘点火后， 根据油罐探测
+点热辐射值变化情况 （图5）可 见 ： 直径为 1.8 m 油盘
+的热辐射分布规律与上述两种尺寸相似， 即热辐射沿
+邻近罐罐顶到罐底呈下降趋势。当点火油盘直径不变
+3　实验结果
+（1） 在直径为0.4 m 的油盘点火后， 根据油罐探测
+点热辐射值变化情况 （图3） 可见： 随着L/D 的增大， 直
+径为 0.4 m 的油盘燃烧后对邻近油罐的辐射整体呈现
+逐渐降低的趋势。当 L/D 为 0.6 时，Q1 热辐射平均值
+为 10.4 kW/m
+2
+；Q2、Q3 热辐射值较低， 这是由于油盘与
+邻近罐距离较近， 罐壁的遮挡导致处于火焰下方的热
+辐射值较低。随着 L/D 慢慢增大，Q2、Q3 热辐射值开
+始增大； 随着L/D 持续增大，Q1 热辐射值却出现下降
+趋势。在 3种不同的 L/D 工况下， 热辐射最强位置均
+为罐顶部的 Q1 点， 热辐射最弱位置为罐壁底部Q3 点。
+可见， 邻近罐壁热辐射沿罐顶到罐底呈下降趋势。
+图 3　直径为 0.4 m 的油盘着火情况下邻近罐罐壁热辐射
+分布规律
+（b）L/D 为 1.0
+（c）L/D 为 1.5
+（a）L/D 为 0.6 
+图 4　直径为 1.0 m 的油盘着火情况下邻近罐罐壁热辐射
+分布规律
+（a）L/D 为 0.6
+（b）L/D 为 1.0
+（c）L/D 为 1.5
+郭欣， 等： 火灾环境下邻近罐壁热辐射分布实验
+
+410
+yqcy.paperopen.com
+完整性与可靠性
+Integrity & Reliability
+2020 年 4 月　第 39 卷 第 4 期
+寸较小。今后应开展大尺寸油罐燃烧实验， 进一步研
+究其热辐射分布特点， 为邻近罐的冷却提供更加有效
+的技术支持。
+参考文献：
+[1] 杨世铭， 陶文铨. 传热学 [M]. 第 4 版. 北京： 高等教育出版，
+2012：43-45.
+YANG S M ，TAO W Q. Heat transfer[M]. 4th ed. Beijing ：
+Higher Education Publishing，2012：43-45.
+[2] 付智敏， 黄晓哲， 李元梅. 烃类池火灾热辐射量化分析模型探
+讨[J]. 中国安全科学学报，2010，20（8）：65-69. 
+FU Z M，HUANG X Z，LI Y M. Quantitative analysis model of 
+thermal radiation in hydrocarbon pool ﬁres[J]. Chinese Journal 
+of Safety Science，2010，20（8）：65-69.
+[3] 李耀庄， 杨志， 驳船池火灾的危险性分析[J]. 灾害学，2007，
+22（4）：25-28.
+LI Y Z，YANG Z. Risk analysis of barge pool ﬁre[J]. Disaster 
+Science，2007，22（4）：25-28.
+[4] PENG X，ZHOU J，QIN Y. Improvement of the temperature 
+distribution in continuous casting moulds through the 
+rearrangement of the cooling water slots[J]. Journal of Materials 
+Processing Technology，2005，167：508-514.
+[5] 王如君. 泄漏油火对邻近罐的危害特性研究 [J]. 中国安全生产
+科学技术，2006，2（4）：51-55. 
+WANG R J. Study on damage characteristics of leaking oil ﬁre to 
+adjacent tanks[J]. Science and Technology of Safety Production 
+in China，2006，2（4）：51-55.
+[6] 郭欣， 樊建春. 火灾环境下邻近油罐的热辐射分布规律模拟 [J].
+油气储运，2017，36（5）：495-501. 
+GUO X，FAN J C. Simulation on distribution laws of heat 
+radiation on the neighboring oil tank in ﬁre environment[J]. Oil & 
+Gas Storage and Transportation，2017，36（5）：495-501. 
+[7] SUSANA N E，ROSSANA C J，LUIS A G. Thermal effects of 
+ﬁre on a nearby fuel storage tank[J]. Journal of Loss Prevention 
+in the Process Industries，2019，62（10）：795-803.
+[8] ANGAN S. Optimal safe layout of fuel storage tanks exposed to 
+pool ﬁre： One dimensional deterministic modelling approach[J]. 
+Fire Technology，2019，55 （5）：1771-1799.
+[9] TSCHIRSCHWITZ R， KRENTEL D ，MARTIN K，  
+ENIS A， KARIM H， HARALD K ，et al. Hazards from 
+failure of CNG automotive cylinders in fire[J]. Journal of 
+时， 油罐整体热辐射随着 L/D 增大而降低。当 L/D 不
+变时， 油罐热辐射随着油盘直径减小而升高。其原因
+是： 随着油盘直径增大， 油盘与油罐间距也增大， 罐壁
+接收的热辐射减小。
+4　结论
+油罐燃烧对邻近罐罐壁热辐射实验结果表明， 邻
+近罐接收的热辐射沿罐顶到罐底逐渐下降， 其分布规
+律受罐间距影响较大。小尺寸油罐燃烧对邻近罐的辐
+射虽远小于大型油罐的热辐射， 但其辐射分布规律相
+同， 其研究结果弥补了中国油罐燃烧、 冷却实验数据的
+不足。但受实验成本、 实验场地的限制， 油盘、 油罐尺
+图 5　直径为 1.8 m 的油盘着火情况下邻近罐罐壁热辐射
+分布规律
+（a）L/D 为 0.6
+（b）L/D 为 1.0
+（c）L/D 为 1.5
+
+411
+yqcy.paperopen.com
+完整性与可靠性
+Integrity & Reliability
+Hazardous Materials ，2018，367：685 -688.
+[10] PANTOUSA D. Numerical study on thermal buckling of empty 
+thin-walled steel tanks under multiple pool -fire scenarios[J]. 
+Thin-Walled Structures，2018，131：1024-1029.
+[11] LEITE R M， CENTENO F. Effect of tank diameter on thermal 
+behavior of gasoline and diesel storage tanks ﬁres[J]. Journal of 
+Hazardous Materials，2018，342：1544-1550.
+[12] ZHAO B. Study on affecting factors of temperature -pressure -
+stress-coupled field of LPG tank under fire based on Legendre 
+wavelet ﬁnite element method[J]. Proceedings of the Institution 
+of Mechanical Engineers， 2017，231（3）：506-513.
+[13] LIU F， RUI X T. Study on launch dynamics of the tank 
+marching fire[J]. Journal of Shanghai Jiaotong University 
+（Science ）， 2016，21（4）：443-450.
+[14] 史鑫磊， 刘胜， 万勇， 刘少杰. 油罐区火灾燃烧特性及水喷淋防
+护作用仿真研究[J]. 工业安全与环保，2019，45（10）：48-51.
+SHI X L，LIU S，WAN Y，LIU S J. Simulation research on 
+flames characteristics and protection of water spray in fire 
+in oil tank regions[J]. Industrial Safety and Environmental 
+Protection，2019，45（10）：48-51. 
+[15] YU N S，YU A S. On the mechanism of a BLEVE occurrence 
+due to fire engulfment of tanks with overheated liquids[J]. 
+Journal of Loss Prevention in the Process Industries， 2015，36：
+799-808.
+[16] SANTOS F D S，LANDESMANN A. Thermal performance -
+based analysis of minimum safe distances between fuel storage 
+tanks exposed to ﬁre[J]. Fire Safety Journal，2014，69：694-703.
+[17] REBEC P，PLESEC J，KOLSEK J. Pool fire accident in an 
+aboveground LFO tank storage ：thermal analysis[J]. Fire 
+Safety Journal，2014，67：902-911.
+[18] SHI L，SHUAI J ，XU K. Fuzzy fault tree assessment based 
+on improved AHP for ﬁre and explosion accidents for steel oil 
+storage tanks[J]. Journal of Hazardous Materials， 2014，278：
+1112-1118.
+[19] HEYMES F ，APRIN L ，FORESTIER S， SLANGEN P ，
+JARRY J B，FRANCOIS H， et al. An experimental study 
+of an LPG tank at low ﬁlling level heated by a remote wall 
+ﬁre[J]. Journal of Loss Prevention in the Process Industries，
+2013，26（6）：683-691.
+[20] HEYMES F ，APRIN L ，FORESTIER S， SLANGEN P ，
+JARRY J B ，FRANCOIS H， et al. Impact of a distant 
+wildland ﬁre on an LPG tank[J]. Fire Safety Journal， 2013，
+61：1872-1882.
+[21] KASHKAROV S，LI Z Y，MOLKOV V. Blast wave from a 
+hydrogen tank rupture in a fire in the open：  Hazard distance 
+nomograms[J]. International Journal of Hydrogen Energy，
+2020，45（3）：1743-1750.
+[22] 黄坤， 李芹， 孔令圳， 徐洁. 风速对成品油库储罐池火灾热辐射
+分布的影响研究[J]. 热科学与技术，2019，18（5）：386-381.
+HUANG K ，LI Q，KONG L Z ，XU J. Influence of wind 
+velocity on heat radiation distribution in tank pool fire 
+of refined oil depot[J]. Journal of Thermal Science and 
+Technology，2019，18（5）：386-381.
+[23] 程亚星， 张峰. 火灾条件下水喷淋对相邻储罐热辐射防护的
+模拟研究 [J]. 青岛科技大学学报 （自然科学版） ，2019，40（5）：
+72-78.
+CHENG Y X， ZHANG F. Simulation study on thermal 
+radiation protection of adjacent  storage tanks by water spray 
+under fire condition[J]. Journal of Qingdao University of 
+Science and Technology（Natural Science Edition），2019，40（5）：
+72-78.
+[24] 程薇， 李乾， 马力， 杨小兵， 何松， 陈先锋. 全尺寸油罐区火灾爆
+炸灾害模拟与理论研究[J]. 爆破，2018，35（3）：29-34，97.
+CHENG W，LI Q，MA L，YANG X B，HE S，CHEN X F. 
+Simulation and theory study on ﬁre and explosion of full scale 
+oil tank[J]. Blasting，2018，35（3）：29-34，97.
+（收稿日期：2017-10-26； 修回日期：2020-02-15； 编辑： 李在蓉）
+基金项目：中国人民警察大学博士科研创新计划项目 “油罐罐壁
+失效有限元模拟和实验研究” ，BSKY2018005 SPV490Q； 中国人民
+警察大学中青年教师科研创新计划项目 “火灾环境下邻近油罐温度
+和热辐射与 L/D 关系模型研究” ，ZQN2018035。
+作者简介：郭欣， 女，1978 年生， 讲师，2017 年博士毕业于中国石
+油大学 （北京） 安全技术及工程专业， 现主要从事消防灭火技术的研
+究工作。地址： 河北省廊坊市安次区西昌路 220 号中国人民警察
+大学消防指挥系，065000。电话：13230652015。Email：107836154@
+qq.com
+郭欣， 等： 火灾环境下邻近罐壁热辐射分布实验

@@ -1,0 +1,976 @@
+Citation: Yang, Y.; Zhang, X.; Xie, S.;
+Qu, S.; Chen, H.; Xu, Q.; Chen, G.
+Design and Visual Implementation of
+a Regional Energy Risk Superposition
+Model for Oil Tank Farms. Energies
+2024, 17, 5775. https://doi.org/
+10.3390/en17225775
+Academic Editor: Krzysztof
+Skrzypkowski
+Received: 11 October 2024
+Revised: 11 November 2024
+Accepted: 13 November 2024
+Published: 19 November 2024
+Copyright: © 2024 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed under the terms and
+conditions of the Creative Commons
+Attribution (CC BY) license (https://
+creativecommons.org/licenses/by/
+4.0/).
+Article
+Design and Visual Implementation of a Regional Energy Risk
+Superposition Model for Oil Tank Farms
+Yufeng Yang1, Xixiang Zhang1, Shuyi Xie 2, Shanqi Qu 3,4, *, Haotian Chen3,4, *, Qiming Xu3,4 and Guohua Chen3,4
+1 Institute of Science and Technology, China Oil & Gas Pipeline Network Corporation, Langfang 065000, China;
+yangyf@pipechina.com.cn (Y.Y.); zhangxx11@pipechina.com.cn (X.Z.)
+2 State Key Laboratory of Oil and Gas Equipment, CNPC Tubular Goods Research Institute,
+Xi’an 710077, China; xieshuyi0810@gmail.com
+3 Institute of Safety Science & Engineering, South China University of Technology, Guangzhou 510640, China;
+202111080757@mail.scut.edu.cn (Q.X.); mmghchen@scut.edu.cn (G.C.)
+4 Guangdong Provincial Science and Technology Collaborative Innovation Center for Work Safety,
+Guangzhou 510640, China
+* Correspondence: 202321004012@mail.scut.edu.cn (S.Q.); 202321003990@mail.scut.edu.cn (H.C.)
+Abstract: Ensuring the safety of oil tank farms is essential to maintaining energy security and min-
+imizing the impact of potential accidents. This paper develops a quantitative regional risk model
+designed to assess both individual and societal risks in oil tank farms, with particular attention to
+energy-related risks such as leaks, fires, and explosions. The model integrates factors like day–night
+operational variations, weather conditions, and risk superposition to provide a comprehensive and
+accurate evaluation of regional risks. By considering the cumulative effects of multiple hazards,
+including those tied to energy dynamics, and the stability and validity of the model are researched
+through Monte Carlo simulations and case application. The results show that the model enhances the
+reliability of traditional risk assessment methods, making it more applicable to oil tank farm safety
+concerns. Furthermore, this study introduces a practical tool that simplifies the risk assessment pro-
+cess, allowing operators and decision-makers to evaluate risks without requiring in-depth technical
+expertise. The methodology improves the ability to safeguard oil tank farms, ensuring the stability
+of energy supply chains and contributing to broader energy security efforts. This study provides a
+valuable method for researchers and engineers seeking to enhance regional risk calculation efficiency,
+with a specific focus on energy risks.
+Keywords: energy security; oil tank farm; regional risk model; energy risk; quantitative risk assessment;
+visualization interface
+1. Introduction
+The aggregation of major hazards in the oil tank area significantly increases the risk
+of fire, explosion, or release of hazardous substances accidents. This poses significant
+challenges when it comes to the safety assessment of chemical storage facilities. On
+3 March 2023, a severe explosion occurred at the oil storage facility of the state-owned
+Indonesian oil company Pertamina, resulting in extensive damage, the deaths of at least
+19 individuals, and injuries to several others [ 1]. On 1 May 2023, an explosion and fire
+occurred at the Yanshan Chemical Industry Co., Ltd., a company specializing in the pro-
+duction of oxygen-based materials in Yantai, Shandong, China. The accident resulted in the
+deaths of 10 individuals and injury to one person [2]. In the event of such an occurrence, the
+immediate vicinity and surrounding infrastructure may be severely damaged, potentially
+leading to a cascading series of accidents [3]. Changes in injection and extraction pressures,
+along with various imbalance factors in oil product tank areas, combined with the external
+environmental corrosion of processing equipment and the impact of human factors on
+piping and equipment, can easily compromise the integrity of oil stations. If leaks occur in
+Energies 2024, 17, 5775. https://doi.org/10.3390/en17225775 https://www.mdpi.com/journal/energies
+
+Energies 2024, 17, 5775 2 of 18
+pipelines, tanks, or other facilities, they can quickly lead to fires and explosions. Further-
+more, the wastage of oil and gas resources and the environmental pollution resulting from
+widespread oil tank leaks pose significant threats to sustainable development [4]. Conse-
+quently, conducting a comprehensive risk assessment for chemical facilities, particularly
+one that considers the cumulative impact of multiple hazards, is of paramount importance
+for the scientific planning of safe and effective regional safety strategies.
+Quantitative risk assessment techniques have been increasingly used in numerous risk
+management decisions. It is particularly important to develop effective risk assessment
+methods, especially in highly populated and industrialized areas [5]. The current research
+in the field of Regional Quantitative Risk Assessment can be broadly divided into two main
+areas. First, the development and optimization of models for predicting the probability of
+major accidents and assessing their consequences. This includes the creation of models
+for specific types of accidents, such as fires and explosions, as well as the development
+of models for estimating the impact of such accidents. Zhang, H.Y. et al. investigated
+the thermal radiation characteristics of hydrogen jet fires, revealing the significant effects
+of the leak’s diameter and pressure on thermal radiation. Their findings provide critical
+support for the accurate assessment of hydrogen jet fire risks [ 6]. Jie Su et al. systemati-
+cally quantified regional risk relationships based on Bayesian rules and the law of total
+probability, conducting an in-depth study of the transmission relationships within regional
+risks [7]. Lee, K. et al. utilized DNA PHAST (Version 8.9) to generate quantitative data
+on the effects of a fire and explosion in a single blast event [ 8]. Second, there is a focus
+on understanding the cascading effects of accidents, which can be caused by a range of
+factors, including thermal radiation, pressure waves, and the dispersion of fragments.
+The second core indicator is the calculation of individual risk and societal risk. Major
+authorities, such as the Dutch Ministry of Environment and the UK Health and Safety
+Executive, have established differentiated individual risk standards based on regional char-
+acteristics and the actual conditions of the equipment in question [9]. Park, B. et al. used the
+RISKCURVES software (Gexcon, Norway) package to quantify the risks to the environment
+and (petroleum) chemical facilities posed by the storage and transportation of hazardous
+substances to surrounding populations and structures [ 10]. Kwak, H. et al. conducted
+a quantitative risk assessment using DNV SAFETI (Version 8.9) for hydrogen refueling
+stations operating at high pressures, demonstrating their safety [11]. Abdolhamidzadeh,
+B. et al. employed the Monte Carlo simulation method to investigate the differences in
+individual risks associated with single and multiple hazard sources [ 12]. Zhao, M. et al.
+developed a tool called RiskUMH (risk of urban major hazards) using GIS geoprocessing
+technology, effectively integrating emerging GIS techniques with risk assessment methods
+into a unified toolbox [13]. The approach of Rajeev et al. involved the integration of three
+key elements: scenario, frequency, and consequence information [14]. This allowed for a
+more detailed calculation of individual risks, expressed as the annual probability of death
+within a specified distance of a hazardous source. Tahmid et al. employed a geographical
+information system to assess the vulnerability and risk level of human and societal systems
+to chemical accidents [15]. The studies conducted by Rajeev et al. and Tahmid et al. have
+differing focuses but are nevertheless united in their objective of developing and applying
+risk assessment models [14,15].
+While previous research has significantly contributed to the visual representation of
+accident impacts within a defined area, there remains a need for more granular subdi-
+visions of regional accident risk levels. Further investigation is also required to deepen
+the understanding of how accidents influence risk assessment processes. In practical
+applications, several critical challenges have become evident. One notable limitation in
+calculating comprehensive regional risk is the large number of grid-based processing steps
+involved, particularly the intersection of accident consequence severity with occurrence
+probability, followed by the risk calculation for each grid. This process is often laborious,
+time-consuming, and prone to human error. Moreover, conventional risk assessment tools
+tend to require substantial financial investment and present a steep learning curve, limiting
+
+Energies 2024, 17, 5775 3 of 18
+their accessibility and utility. Thus, there is a pressing need for a standardized, efficient,
+and user-friendly risk calculation tool to facilitate the risk assessment process, particularly
+in high-stakes environments such as oil tank farms, where energy security is paramount.
+This study seeks to address these gaps by developing a detailed individual and societal risk
+assessment model, which integrates visual risk mapping to depict risk distribution across
+large oil tank farm areas. By generating individual risk equivalence lines and societal risk
+curves, this model offers a more precise and intuitive understanding of regional risk pat-
+terns. A case study of an oil tank accident, evaluated against the acceptable risk standards
+of the chemical industry, serves to validate the model’s practical application. This work
+aims to provide a scientific basis for the management of energy infrastructure and support
+informed decision-making during emergency situations. By enhancing the accuracy and
+efficiency of regional risk assessments, this study contributes to improved risk management
+practices in oil tank farms, ultimately reinforcing broader energy security efforts.
+2. Basic Model
+2.1. Individual Risk Calculation Model
+Individual risk is the frequency of exposure to hazards for unprotected persons at a
+particular location [16]. Individual risk has distinct geographic attributes and is visualized
+as risk contours at different levels on a geographic map in a regional risk assessment, which
+marks a specific level of risk shared by points within a region, rather than being specific to
+a particular individual. This paper calculates the individual risk for each grid point.
+The methodology for determining individual risk at a grid point is outlined in Figure 1.
+It starts by selecting the frequency of a loss of containment (LOC) event (fs). After this, a
+weather class “M” and a wind direction “ϕ” are chosen, considering both day and night
+divisions, with conditional probabilities represented as PM and Pϕ. Once the weather and
+wind parameters are set, the next step is to select an ignition event, applicable only to
+flammable substances, with its conditional probability denoted as Pi. This step determines
+whether an ignition occurs, influencing the severity of the consequences. The iterative
+process continues by determining the contributions of various factors to the individual risk
+at the grid point, according to Equation (1). If all possible ignition events, weather classes,
+and wind directions have been considered, the contributions are summed to obtain the
+total individual risk at the grid point, according to Equation (2). The leakage probability of
+equipment and facilities is determined in accordance with GB/T37243-2019 (Determination
+method of external safety distance for hazardous chemicals production units and storage
+installations) [17], and SH/T 3226-2024 (Standard for quantitative analysis of petrochemical
+process risk) [ 18], which define leakage scenarios and frequencies. To determine the
+probability of ignition, AQ/T3046-2013 (Guidelines for quantitative risk assessment of
+chemical enterprises) [19] provides recommended values, and an appropriate reference
+value can be selected based on the requirements of the risk assessment method.
+∆IR S,M,ϕ,i = fS × PM × Pϕ × Pi × Pd(y−1) (1)
+IR = ∑
+S
+∑
+M
+∑
+ϕ
+∑
+i
+∆IR S,M,ϕ,i (2)
+where fs is the frequency of a loss of containment, PM is the probability of a weather class,
+Pϕ is the probability of obtaining a wind direction, Pi is the conditional probability of an
+ignition event, and Pd is the individual lethality probability.
+
+Energies 2024, 17, 5775 4 of 18
+Energies 2024, 17, x FOR PEER REVIEW 4 of 18 
+ 
+ 
+where fs is the frequency of a loss of containment, PM is the probability of a weather class, 
+Pϕ is the probability of obtaining a wind direction, Pi is the conditional probability of an 
+ignition event, and Pd is the individual lethality probability. 
+The individual lethality probability Pd is calculated according to Equations (3) and (4). 
+50.5 1
+2
+r
+d
+PP erf  −= ×+  
+ (3) 
+( )
+2
+0
+2 X terf x e dt
+π
+−= ∫  (4) 
+The changing probit variable of a person under overpressure is calculated by 
+Equation (5), 
+( )10.462 1.35 lnrsPP= − +×  (5) 
+where, Ps is the overpressure, bar. 
+ 
+Figure 1. Procedure for calculating individual risk IR at grid points. 
+The individual lethality probability of a person exposed to thermal radiation is 
+determined using diﬀerent ellipses in Figure 2, each representing varying radiation 
+intensities as calculated by DNV SAFETI (Version 9.0) [20].The highest radiation intensity 
+is observed in the central area, where the lethality reaches 1.0, indicating that almost all 
+Figure 1. Procedure for calculating individual risk IR at grid points.
+The individual lethality probability Pd is calculated according to Equations (3) and (4).
+Pd = 0.5 ×
+
+1 + er f
+ Pr − 5√
+2
+
+(3)
+er f (x) = 2√π
+Z X
+0
+e−t2
+dt (4)
+The changing probit variable of a person under overpressure is calculated by Equation (5),
+Pr = −10.462 + 1.35 × ln(Ps) (5)
+where, Ps is the overpressure, bar.
+The individual lethality probability of a person exposed to thermal radiation is deter-
+mined using different ellipses in Figure 2, each representing varying radiation intensities as
+calculated by DNV SAFETI (Version 9.0) [20]. The highest radiation intensity is observed in
+the central area, where the lethality reaches 1.0, indicating that almost all individuals within
+this zone will not survive. As the distance from the center increases, both radiation intensity
+and lethality decrease accordingly. Figure 2 shows that radiation intensity is greatest within
+the innermost ellipse, while outside the outermost ellipse, the radiation level drops to
+zero. Between these ellipses, the corresponding lethality probability is calculated through
+interpolation of the specific radiation intensities.
+
+Energies 2024, 17, 5775 5 of 18
+Energies 2024, 17, x FOR PEER REVIEW 5 of 18 
+ 
+ 
+radiation level drops to zero. Between these ellipses, the corresponding lethality probabil-
+ity is calculated through interpolation of the speciﬁc radiation intensities. 
+ 
+Figure 2. Interpolation between radiation ellipses and the corresponding probabilities of lethality. 
+2.2. Societal Risk Calculation Model 
+Where a population is exposed to risk, a si mple aggregation of the individual level 
+of risk by multiplying by the population exposed does not reveal all the possible risks [21]. 
+Therefore, the concept of societal risk needs to be introduced. Societal risk is the relation-
+ship between the probability of an accident occurring and the number of accident casual-
+ties [16]. ISO 31000 de ﬁned societal risk as the relationship between the frequency of oc-
+currence of a consequence (F) and the number of people bearing the consequences (N). 
+Societal risk possesses numerous measures [22]. ISO 31000 provides the most commonly 
+used characterization method, the F-N curve, which helps to understand the consequences 
+of risk and its causes and provides a basis for management decisions. This paper primarily 
+focuses on the consequences of leakage in large atmospheric oil tanks, where the storage 
+medium is crude oil, a ﬂammable substance. Therefore, Equation (6) is used to determine 
+the frequency of leakage accident consequences in large oil storage tanks, denoted as F. 
+s oF fP=  (6)
+where Po is the probability of an accident consequence. 
+The value of Po varies with the type of release, the state of the material, the type of 
+ignition, and the type of accident. As shown in Table 1, DNV SAFETI v.9.0 analyzed the 
+eﬀect of these factors on the value of Po using an event tree [20]. 
+Table 1. Table of values for the probability of accident consequence Po. 
+Event Tree Branch 1 Branch 2 Branch 3 Branch 4 Po 
+ Independent BLEVE    Pb 
+ Independent Pool Fire    PwssPp 
+Continuous release,  
+No Rainout 
+Immediate BLEVE   PsPwssPblPi 
+Explosion   PsPwssPePi 
+Not immediate Delayed ignition Explosion  (1 − Pi)PwssPePdi 
+Figure 2. Interpolation between radiation ellipses and the corresponding probabilities of lethality.
+2.2. Societal Risk Calculation Model
+Where a population is exposed to risk, a simple aggregation of the individual level of
+risk by multiplying by the population exposed does not reveal all the possible risks [21].
+Therefore, the concept of societal risk needs to be introduced. Societal risk is the relationship
+between the probability of an accident occurring and the number of accident casualties [16].
+ISO 31000 defined societal risk as the relationship between the frequency of occurrence
+of a consequence (F) and the number of people bearing the consequences (N). Societal
+risk possesses numerous measures [ 22]. ISO 31000 provides the most commonly used
+characterization method, the F-N curve, which helps to understand the consequences of
+risk and its causes and provides a basis for management decisions. This paper primarily
+focuses on the consequences of leakage in large atmospheric oil tanks, where the storage
+medium is crude oil, a flammable substance. Therefore, Equation (6) is used to determine
+the frequency of leakage accident consequences in large oil storage tanks, denoted as F.
+F = fsPo (6)
+where Po is the probability of an accident consequence.
+The value of Po varies with the type of release, the state of the material, the type of
+ignition, and the type of accident. As shown in Table 1, DNV SAFETI v.9.0 analyzed the
+effect of these factors on the value of Po using an event tree [20].
+Nedf|o is the total number of fatalities in the accident. It is obtained by summing the
+number of fatalities calculated from all grids, as shown in Equations (7) and (8), and the
+gridding of the area risk in question, which will be mentioned later.
+Nx,y|o = Nx,yPd,FN,x,y|o (7)
+Ned f |o = ∑
+All calculation squares
+Nx,y|o (8)
+where Nx,y|o is the number of fatalities per grid cell centered on x,y, Nx,y is the number of
+people within the grid cell centered on x,y, and Pd is the probability of death of a person
+per grid cell centered on x,y.
+
+Energies 2024, 17, 5775 6 of 18
+Table 1. Table of values for the probability of accident consequence Po.
+Event Tree Branch 1 Branch 2 Branch 3 Branch 4 Po
+Independent BLEVE Pb
+Independent Pool
+Fire PwssPp
+Continuous release,
+No Rainout
+Immediate BLEVE PsPwssPblPi
+Explosion PsPwssPePi
+Not immediate Delayed ignition Explosion (1 − Pi)PwssPePdi
+Instantaneous release,
+No Rainout
+Immediate BLEVE PwssPbPi
+Explosion PwssPePi
+Not immediate Delayed ignition Explosion (1 − Pi)PwssPePdi
+Continuous release,
+Rainout
+Immediate
+Not short Pool fire (1 − Ps)PwssPi
+Short release BLEVE and pool fire PsPwssPbpPi
+BLEVE alone PsPwssPblPi
+Explosion and pool
+fire PsPwssPepPi
+Explosion alone PsPwssPePi
+Pool fire alone PsPwssPpPi
+Not immediate Dispersion Delayed Explosion (1 − Pi)PwssPePdi
+Residual Pool fire (1 − Pi)PwssPrpPirp
+Instantaneous release,
+Rainout
+Immediate
+BLEVE and pool fire PwsPbpPi
+BLEVE alone PwsPblPi
+Explosion and pool
+fire PwsPepPi
+Explosion alone PwsPePi
+Pool fire alone PwsPpPi
+Not immediate Dispersion Delayed Explosion (1 − Pi)PwsPePdi
+Residual Pool fire (1 − Pi)PwsPrpPirp
+After completing the modeling of F and N, the next step is to construct the F-N curve.
+As shown in Figure 3, constructing the F-N curve mainly includes ten steps:
+(1) Grid the risk area at an appropriate density.
+(2) Determine the weather conditions in the region and the frequency of leaks from each
+tank.
+(3) Consider all the types of accidents that may occur in the region and add data on the
+consequences of the accidents, such as thermal radiation, explosion overpressure, etc.,
+to the grid.
+(4) Select one of the weather classes.
+(5) Select one of the accident types that may occur in that weather class.
+(6) Select a grid and calculate the probability of death Pd based on the consequences of
+the accident, and then get the number of fatalities Nx,y|o in a single grid point.
+(7) Repeat steps (4)–(6) until all grid deaths have been calculated.
+(8) Add up all the grid fatalities to get the total number of fatalities N.
+(9) Calculate the frequency F of the accident.
+(10) Repeat steps (4)–(9), considering all weather classes, wind directions, and accident
+types. Use the calculated N and F to plot the F-N curve.
+
+Energies 2024, 17, 5775 7 of 18
+Energies 2024, 17, x FOR PEER REVIEW 7 of 18 
+ 
+ 
+ 
+Figure 3. F-N curve plotting process. 
+3. Methods 
+The methodology of this study comprises four interconnected steps. First, the 
+assessment’s scope and objectives are deﬁned, guiding data collection and scenario 
+Figure 3. F-N curve plotting process.
+
+Energies 2024, 17, 5775 8 of 18
+3. Methods
+The methodology of this study comprises four interconnected steps. First, the assess-
+ment’s scope and objectives are defined, guiding data collection and scenario construction.
+Next, essential data are gathered, including storage medium properties, tank specifications,
+and meteorological and geographic information, which serve as the foundation for scenario
+development and calculations. Following this, accident scenarios are created based on the
+defined objectives and collected data, and appropriate computational models are selected
+for analysis, providing detailed inputs for program development. Finally, all input data
+and scenario models are integrated into the program for calculations. The results, including
+risk distribution and curves, are presented through a visual interface, allowing users to
+clearly understand the risk assessment outcomes.
+3.1. Design Process
+3.1.1. Evaluation Objectives and Data Collection
+The design process for risk assessment in oil product tank farms begins with defining
+the objectives and scope of the assessment, including the number and layout of storage
+tanks, the location of surrounding facilities, and environmental conditions. Normally,
+gasoline and diesel are relatively stable substances, and the primary type of accident fol-
+lowing a leakage is a fire [23]. By identifying the sources of risk, a foundation is established
+for subsequent accident analysis. Both internal data, such as the characteristics of the
+storage medium (e.g., flash point, ignition point) and the physical properties of the tanks
+(e.g., material, dimensions, fill rate), and external data, including meteorological conditions
+(e.g., wind speed, wind direction, day–night temperature variations) and geographical
+information (e.g., topography, distribution of neighboring facilities), must be collected.
+These data are typically derived from historical accident records, equipment maintenance
+logs, and environmental monitoring results, and the quality of the data directly influences the
+reliability of the assessment results. During the data collection stage, pre-processing—such
+as handling outliers and converting data formats—is necessary to ensure accuracy . The pro-
+cessed data are then used as inputs for models that support the construction and calculation
+of accident scenarios.
+3.1.2. Accident Scenario Construction
+Once the data are prepared, accident scenarios are constructed to analyze potential
+types of accidents (e.g., leaks, pool fires, explosions). Various scenarios are developed based
+on the actual data. For each scenario, appropriate computational models are selected for
+analysis. For instance, in the case of thermal radiation from pool fires, a solid flame model
+is employed to calculate radiation intensity by inputting parameters such as combustion
+rate and flame emissivity. In gas cloud explosion scenarios, the TNO multi-energy method
+is applied to predict explosion overpressure, taking into account factors like explosion in-
+tensity and the distance between the explosion source and the target. These calculations are
+executed through programming to ensure both the efficiency and accuracy of the models.
+3.2. Program Development
+3.2.1. Individual Risk Architecture
+The individual risk calculation process is articulated through a modular framework,
+implemented using MATLAB App Designer (MATLAB 2023b). The first module focuses on
+tank parameters, considering critical aspects such as pressure, temperature, and the nature
+of the substance stored. This module assesses the probability of fatality for individuals in the
+event of an accident, establishing a fundamental determinant of individual risk. Following
+this, the weather factors module introduces the probabilities of various meteorological
+conditions, examining their influence on the dispersion and consequences of accidents.
+For example, wind speed and direction can significantly affect how hazardous materials
+spread, impacting the risk zones for individuals. The final module, dedicated to plotting,
+creates contour maps that visually represent the risk levels in the vicinity of the tanks,
+
+Energies 2024, 17, 5775 9 of 18
+where each contour line corresponds to a specific risk value. This visualization is essential
+for understanding how risk fluctuates with distance from the source. Ultimately, the main
+function synthesizes the results from these modules, culminating in a thorough assessment
+of individual risk. The entire application is designed with user interaction in mind, allowing
+for real-time data input and visual feedback through the MATLAB App Designer interface.
+In conducting a risk assessment of an oil tank farm, the core of the risk calculation
+relies on a detailed consequence analysis of the accident scenario. As illustrated in Figure 4,
+this process requires the input of several key parameters (Refer to Appendix A, Table A1):
+failure frequency fs, immediate ignition probability Pi, thermal radiation and overpressure
+matrices (early pool fire thermal radiation matrix E, late pool fire thermal radiation matrix
+L, explosion overpressure matrix O), weather parameters including wind direction and
+daytime and nighttime wind frequency (Pday, Pnight), and mapping parameters such as grid
+size Gs and grid step. The system automatically integrates these inputs and executes a
+complex computational algorithm to generate an i × i matrix. This matrix simulates and
+quantifies the probability of fatal injuries to individuals at different locations under specific
+conditions, Pd, through iterative calculations, where each cell represents a risk state based
+on various factors such as leakage source location, wind direction, and wind speed. To
+visualize and present the calculation results, the program presents the user-input data in a
+tabular format and supports hierarchical data analysis, enabling the comparison of risks
+across different storage tanks. Additionally, the program generates statistical tables that are
+further analyzed using contour plots, providing a detailed assessment of individual risks
+at each grid point.
+Energies 2024, 17, x FOR PEER REVIEW 10 of 18 
+ 
+ 
+ 
+Figure 4. Individual risk matrix calculation. 
+This study primarily analyzes the eﬀects of pool ﬁres and explosions resulting from 
+oil tank leaks, with calculations for thermal radiation intensity and explosion 
+overpressure values conducted using MATLAB 2023 b. The calculations for thermal 
+radiation and explosion overpressure were performed separately, and their results were 
+incorporated as input parameters for the assessment of individual risk. This 
+comprehensive approach ensures a thorough evaluation of potential hazards associated 
+with oil tank leak s. During the computation process, given the potential for a large 
+number of tanks, the program incorporates a mechanism to accumulate and sum the 
+results of each iteration, ensuring eﬃcient handling of consequence accumulation even 
+with a high number of ta nks. Additionally, the calculation process is optimized into two 
+stages: one dedicated to cumulative summation and the other to direct algebraic 
+operations, further enhancing computational eﬃciency. 
+3.2.2. Societal Risk Architecture 
+In contrast to the individual risk assessment, the societal risk assessment considers 
+the impact of the consequences of the BLEVE ﬁreball accident. The TNO ﬁreball method 
+is one of the most commonly used models for calculating thermal radiation from the 
+BLEVE ﬁreball [22]. Therefore, in this paper, the TNO ﬁreball method is used to calculate 
+the thermal radiation consequences. 
+Figure 4. Individual risk matrix calculation.
+
+Energies 2024, 17, 5775 10 of 18
+The primary methods of assessing pool fires include point source methods, solid flame
+modeling, and computational fluid dynamics (CFD) methods, with the solid flame and
+CFD methods being predominantly recommended in the relevant standards. The CFD
+model of fire-driven fluid flow is specifically included in the U.S. Federal Safety Standards
+for evaluating thermal radiation from LNG plants [24]. Gansu Shen et al. [ 25] proposed
+an improved solid flame model. This model corrects the flame diameter by considering
+flame height and flame volume. The improved model can better predict thermal radiation
+from heptane pool fires. It works effectively in both the near and far fields. In this study,
+the solid flame model was selected for calculating thermal radiation consequences, and the
+calculations were implemented through custom code.
+The main methods of calculating gas cloud explosion loads include the TNT equivalent
+method, BST method, TNO multi-energy method, and computational fluid dynamics (CFD)
+method. The TNT equivalent method estimates the explosion load by equating the energy
+released from a gas explosion to an equivalent amount of TNT and predicting the explosion
+effect based on TNT explosions. However, due to the significant difference in energy
+release rates between TNT explosions and gas cloud explosions, the TNT equivalent
+method is unsuitable for predicting gas explosion overpressure. The BST and TNO multi-
+energy methods predict explosion overpressure based on similar principles, both requiring
+the selection of an explosion intensity curve, followed by determining the overpressure
+according to the distance between the explosion source and the target point. The BST
+method takes into account factors such as flame propagation constraints, obstacle density,
+and fuel reactivity, using these to determine flame propagation speeds and select the
+corresponding explosion wave intensity curve. The TNO multi-energy method incorporates
+factors such as ignition source strength, explosion blockage, and constraint levels into its
+explosion intensity rating. Tsukada et al. studied and implemented the TNO explosion
+load prediction method to calculate combustible cloud volumes associated with predefined
+overpressure values [26]. Therefore, in this paper, the TNO multi-energy method was
+chosen to calculate the consequences of explosion overpressure shockwaves, and the
+calculations were implemented through custom code.
+This study primarily analyzes the effects of pool fires and explosions resulting from
+oil tank leaks, with calculations for thermal radiation intensity and explosion overpres-
+sure values conducted using MATLAB 2023b. The calculations for thermal radiation and
+explosion overpressure were performed separately, and their results were incorporated
+as input parameters for the assessment of individual risk. This comprehensive approach
+ensures a thorough evaluation of potential hazards associated with oil tank leaks. During
+the computation process, given the potential for a large number of tanks, the program incor-
+porates a mechanism to accumulate and sum the results of each iteration, ensuring efficient
+handling of consequence accumulation even with a high number of tanks. Additionally, the
+calculation process is optimized into two stages: one dedicated to cumulative summation
+and the other to direct algebraic operations, further enhancing computational efficiency.
+3.2.2. Societal Risk Architecture
+In contrast to the individual risk assessment, the societal risk assessment considers
+the impact of the consequences of the BLEVE fireball accident. The TNO fireball method is
+one of the most commonly used models for calculating thermal radiation from the BLEVE
+fireball [22]. Therefore, in this paper, the TNO fireball method is used to calculate the
+thermal radiation consequences.
+As shown in Figure 5, the input parameters of societal risk include (Refer to
+Appendix A, Table A1): the failure frequency ( fs), population matrix ( population), im-
+mediate ignition probability (Pi), thermal radiation and explosion overpressure matrices
+(early pool thermal radiation matrix (E), late pool thermal radiation matrix (L), explosion
+overpressure matrix (O), BLEVE thermal radiation matrix B), weather parameters (daytime
+and nighttime wind direction and frequency Pday, Pnight), and mapping parameters (grid
+size Gs, grid step). Similar to the individual risk calculation, the societal risk visualization
+
+Energies 2024, 17, 5775 11 of 18
+interface stores the user input parameters in the form of tables, which are called in the
+background to calculate the number of fatalities (N) and frequency (F) for different weather
+levels (M), wind directions (ϕ), and ignition events (i). After completing the calculations for
+all accident types, an I × 2 F-N matrix is obtained. Sorting the matrix by N values in ascend-
+ing order, the F values are cumulatively added row by row to calculate the frequency for
+accidents with more than N fatalities. This process is repeated until the last row, resulting
+in an F-N matrix where F decreases as N increases. Finally, the F-N curve can be obtained
+by plotting the corresponding N and F in the matrix on the logarithmic scale.
+Energies 2024, 17, x FOR PEER REVIEW 11 of 18 
+ 
+ 
+As shown in Figure 5, the input parameters of societal risk include(Refer to Appendix 
+A, Table A1): the failure frequency (fs), population matrix (population), immediate ignition 
+probability ( Pi), thermal radiation and explosion overpressure matrices (early pool 
+thermal radiation matrix ( E), late pool thermal radiation matrix ( L), explosion 
+overpressure matrix ( O), BLEVE thermal radiation matrix B), weather parameters 
+(daytime and nighttime wind direction and frequency Pday, Pnight), and mapping 
+parameters (grid size Gs, grid step). Similar to the individual risk calculation, the societal 
+risk visualization interface stores the user input parameters in the form of tables, which 
+are called in the background to calculate the number of fatalities (N) and frequency (F) for 
+diﬀerent weather levels (M), wind directions (ϕ), and ignition events (i). After completing 
+the calculations for all accident types, an I × 2 F-N matrix is obtained. Sorting the matrix 
+by N values in ascending order, the F values are cumulatively added row by row to 
+calculate the frequency for accidents with more than N fatalities. This process is repeated 
+until the last row, resulting in an F-N matrix where F decreases as N increases. Finally, the 
+F-N curve can be obtained by plotting the corresponding N and F in the matrix on the 
+logarithmic scale. 
+ 
+Figure 5. Societal risk matrix calculation. 
+3.3. Outcome Visualization 
+The user interface (UI), as shown in Figure 6 and Figure 7, consists of three input 
+modules for collecting consequence parameters, weather conditions, and plotting 
+preferences, respectively, along with a results display panel. The results panel intuitively 
+Figure 5. Societal risk matrix calculation.
+3.3. Outcome Visualization
+The user interface (UI), as shown in Figures 6 and 7, consists of three input mod-
+ules for collecting consequence parameters, weather conditions, and plotting preferences,
+respectively, along with a results display panel. The results panel intuitively presents
+individual risk contour plots and F-N curves, while also integrating a data export function.
+Additionally, it supports the simultaneous display of graphs and tables, meeting user needs
+for comprehensive analysis and reporting.
+
+Energies 2024, 17, 5775 12 of 18
+Energies 2024, 17, x FOR PEER REVIEW 12 of 18 
+ 
+ 
+presents individual risk contour plots and F-N curves, while also integrating a data export 
+function. Additionally, it supports the simultaneous display of graphs and tables, meeting 
+user needs for comprehensive analysis and reporting. 
+According to the Chinese Standard GB 36894- 2018 (Risk criteria for hazardous 
+chemicals production unit and storage installations) [27], Table 2 provides color- coded 
+levels for individual risk contour plots to enhance clarity: the 3  × 10−5 contour is marked 
+in red, indicating a higher risk zone; the 1  × 10−6 contour appears in orange for an 
+intermediate risk level; and the 3 × 10−7 contour is displayed in yellow, indicating a lower 
+risk zone. Areas with acceptable risks of below 3 × 10−7 are represented in green, providing 
+a clear visual distinction between varying levels of risk. 
+Table 2. Standards for Acceptable Individual Risk in China [27]. 
+Protective Target Individual Risk Benchmark (Times/Year)< 
+New Facilities Using Facilities 
+General protective targets of Category III (population < 30) 1 × 10−5 3 × 10−5 
+General protective targets of Category II (30 ≤ population < 100) 3 × 10−6 1 × 10−5 
+High sensitivity protective targets; Important protective targets; 
+General protective targets of Category I (population ≥ 100) 3 × 10−7 3 × 10−6 
+ 
+Figure 6. Calculation interface and contour distribution of individual risk for an oil tank farm. 
+Figure 6. Calculation interface and contour distribution of individual risk for an oil tank farm.
+Energies 2024, 17, x FOR PEER REVIEW 13 of 18 
+ 
+ 
+ 
+Figure 7. Calculation interface and F-N curve of societal risk for an oil tank farm. 
+4. Case Study 
+The example is based on real data from a speciﬁc region in China. The case involves 
+a crude oil storage depot with a total capacity of 6 million m3. The tank group consists of 
+six tanks, labeled T1, T2, T3, T4, T5, and T6, each with a capacity of 1 million m3. The target 
+tanks for  the accident consequence calculations are T1, T2, and T3, within a ﬁre 
+embankment measuring 108 m by 108 m. Environmental conditions include an average 
+annual temperature of 23.3 °C, 80% air humidity, 1.16 kg/m 3 air density, and 101,325 Pa 
+atmospheric pressure. Weather and wind parameters for this area are listed in Table 3 and 
+the speciﬁc parameters for the storage tanks are provided in Table 4. 
+Table 3. Annual average wind frequency. 
+Time Period Weather Type Wind Direction 
+N NNE NE ENE E ESE SE SSE S SSW SW WSW W WNW NW NNW 
+Daytime 
+0.1/F 1.2 0.8 1.24 1.63 2.77 2.8 2.1 1.2 1.7 3.3 3.3 2.03 1.6 1.93 2.63 1.64 
+1.5/D 1.2 0.8 1.24 1.63 2.77 2.8 2.1 1.2 1.7 3.3 3.3 2.03 1.6 1.93 2.63 1.64 
+5/D 1.2 0.8 1.24 1.63 2.77 2.8 2.1 1.2 1.7 3.3 3.3 2.03 1.6 1.93 2.63 1.64 
+Nighttime 
+0.1/F 1.2 0.8 1.24 1.63 2.77 2.8 2.1 1.2 1.7 3.3 3.3 2.03 1.6 1.93 2.63 1.64 
+1.5/D 1.2 0.8 1.24 1.63 2.77 2.8 2.1 1.2 1.7 3.3 3.3 2.03 1.6 1.93 2.63 1.64 
+5/D 1.2 0.8 1.24 1.63 2.77 2.8 2.1 1.2 1.7 3.3 3.3 2.03 1.6 1.93 2.63 1.64 
+Table 4. Tank and failure parameters. 
+Tank Parameters Failure Parameters 
+Height (m) 21.8 Leak height (m) 10 
+Radius (m) 40 Leakage hole diameter (m) 0.025 
+Material type Crude oil  
+(dodecane, N-HEXANE) Failure probability 0.0001 
+Figure 7. Calculation interface and F-N curve of societal risk for an oil tank farm.
+
+Energies 2024, 17, 5775 13 of 18
+According to the Chinese Standard GB 36894-2018 (Risk criteria for hazardous chem-
+icals production unit and storage installations) [27], Table 2 provides color-coded levels
+for individual risk contour plots to enhance clarity: the 3 × 10−5 contour is marked in red,
+indicating a higher risk zone; the 1 × 10−6 contour appears in orange for an intermediate
+risk level; and the 3 × 10−7 contour is displayed in yellow, indicating a lower risk zone.
+Areas with acceptable risks of below 3 × 10−7 are represented in green, providing a clear
+visual distinction between varying levels of risk.
+Table 2. Standards for Acceptable Individual Risk in China [27].
+Protective Target Individual Risk Benchmark (Times/Year)<
+New Facilities Using Facilities
+General protective targets of Category III (population < 30) 1 × 10−5 3 × 10−5
+General protective targets of Category II (30 ≤ population < 100) 3 × 10−6 1 × 10−5
+High sensitivity protective targets; Important protective targets;
+General protective targets of Category I (population ≥ 100) 3 × 10−7 3 × 10−6
+4. Case Study
+The example is based on real data from a specific region in China. The case involves
+a crude oil storage depot with a total capacity of 6 million m 3. The tank group consists
+of six tanks, labeled T1, T2, T3, T4, T5, and T6, each with a capacity of 1 million m3. The
+target tanks for the accident consequence calculations are T1, T2, and T3, within a fire
+embankment measuring 108 m by 108 m. Environmental conditions include an average
+annual temperature of 23.3 ◦C, 80% air humidity, 1.16 kg/m3 air density, and 101,325 Pa
+atmospheric pressure. Weather and wind parameters for this area are listed in Table 3 and
+the specific parameters for the storage tanks are provided in Table 4.
+Table 3. Annual average wind frequency.
+Time Period Weather
+Type
+Wind Direction
+N NNE NE ENE E ESE SE SSE S SSW SW WSW W WNW NW NNW
+Daytime
+0.1/F 1.2 0.8 1.24 1.63 2.77 2.8 2.1 1.2 1.7 3.3 3.3 2.03 1.6 1.93 2.63 1.64
+1.5/D 1.2 0.8 1.24 1.63 2.77 2.8 2.1 1.2 1.7 3.3 3.3 2.03 1.6 1.93 2.63 1.64
+5/D 1.2 0.8 1.24 1.63 2.77 2.8 2.1 1.2 1.7 3.3 3.3 2.03 1.6 1.93 2.63 1.64
+Nighttime
+0.1/F 1.2 0.8 1.24 1.63 2.77 2.8 2.1 1.2 1.7 3.3 3.3 2.03 1.6 1.93 2.63 1.64
+1.5/D 1.2 0.8 1.24 1.63 2.77 2.8 2.1 1.2 1.7 3.3 3.3 2.03 1.6 1.93 2.63 1.64
+5/D 1.2 0.8 1.24 1.63 2.77 2.8 2.1 1.2 1.7 3.3 3.3 2.03 1.6 1.93 2.63 1.64
+Table 4. Tank and failure parameters.
+Tank Parameters Failure Parameters
+Height (m) 21.8 Leak height (m) 10
+Radius (m) 40 Leakage hole diameter (m) 0.025
+Material type Crude oil
+(dodecane, N-HEXANE) Failure probability 0.0001
+Material quality (kg) 8.65 × 107 Immediate ignition probability 0.065
+Number of failed tanks 3
+Consequence data (early pool fire,
+late pool fire, blast overpressure,
+BLEVE)
+Calculated from Algorithm
+Currently , countries such as the United Kingdom, the United States, the Netherlands,
+Norway , Australia, Hong Kong, Singapore, and Malaysia have established individual risk
+tolerance standards. According to the British Health and Safety Commission and the British
+Chemical Industry Association, an individual risk exceeding 1.0× 10−3 per year is deemed
+unacceptable while an individual risk below 1.0× 10−5 per year is considered acceptable. In
+China, individual risk tolerance standards have been formulated according to GB 36894-2018
+
+Energies 2024, 17, 5775 14 of 18
+(Risk criteria for hazardous chemicals production unit and storage installations) [27], which
+stipulate that individual risk in chemical areas must fall outside the 1.0× 10−5 contour range
+(represented by the orange line). In the case of this oil tank area, the maximum individual
+risk is calculated to be 1.52108× 10−5. Using the same parameters, verification analysis was
+conducted with DNV SAFETI software, resulting in a maximum individual risk value of
+1.46583 × 10−5 for the area.The relative error compared to the calculated value is 3.769%.
+Figure 6, as compared with Table 2, shows that apart from the storage tank area, all other
+locations remain within the lower risk contour of 3× 10−6 for individual risk. This indicates
+that the individual risk to surrounding sensitive targets remains within an acceptable range.
+Assuming that the failure frequency and ignition probability follow normal distributions
+with means of 0.0001 and 0.065 and standard deviations of 0.00002 and 0.013, respectively,
+Monte Carlo simulations were performed to generate 1000 sets of input samples and the
+corresponding outputs (individual risk maxima). The Cumulative Distribution Function
+(CDF) is obtained as shown in Figure 8, the red and blue shaded areas represent the
+95% confidence intervals. This proves the quality of the data and the reliability of the
+model output.
+Energies 2024, 17, x FOR PEER REVIEW 14 of 18 
+ 
+ 
+Material quality (kg) 8.65 × 10 7 Immediate ignition probability 0.065 
+Number of failed tanks 3 Consequence data (early pool fire, late pool 
+fire, blast overpressure, BLEVE) 
+Calculated from 
+Algorithm 
+Currently, countries such as the United Kingdom, the United States, the Netherlands, 
+Norway, Australia, Hong Kong, Singapore, and Malaysia have established individual risk 
+tolerance standards. According to the British Health and Safety Commission and the Brit-
+ish Chemical Industry Association, an individual risk exceeding 1.0 × 10 −3 per year is 
+deemed unacceptable while an individual risk below 1.0 × 10 −5 per year is considered ac-
+ceptable. In China, individual risk tolerance standards have been formulated according to 
+GB 36894-2018 (Risk criteria for hazardous chemicals production unit and storage instal-
+lations) [27], which stipulate that individual risk in chemical areas must fall outside the 
+1.0 × 10
+−5 contour range (represented by the orange line). In the case of this oil tank area, 
+the maximum individual risk is calculated to be 1.52108 × 10−5. Using the same parameters, 
+veriﬁcation analysis was conducted with DNV SAFETI software, resulting in a maximum 
+individual risk value of 1.46583 × 10−5 for the area. The relative error compared to the cal-
+culated value is 3.769%. Figure 6, as compared with Table 2, shows that apart from the 
+storage tank area, all other locations remain within the lower risk contour of 3 × 10 −6 for 
+individual risk. This indicates that the individual risk to surrounding sensitive targets re-
+mains within an acceptable range. Assuming that the failure frequency and ignition prob-
+ability follow normal distributions with means of 0.0001 and 0.065 and standard devia-
+tions of 0.00002 and 0.013, respectively, Monte Carlo simulations were performed to gen-
+erate 1000 sets of input samples and the corresponding outputs (individual risk maxima). 
+The Cumulative Distribution Function (CDF) is  obtained as shown in Figure 8, the red 
+and blue shaded areas represent the 95% con ﬁdence intervals. This proves the quality of 
+the data and the reliability of the model output.  
+ 
+Figure 8. CDF of maximum individual values (1000 samples). 
+For societal risk, IEC 31010 speciﬁes that the F-N curve should follow the As Low As 
+Reasonably Practicable (ALARP) principle, which divides societal risk into intolerable, 
+ALARP, and broadly acceptable regions using two baseline lines [28]. The baseline selec-
+tion depends on the risk area, and GB 36894-2018 named benchmarks as “negligible line” 
+and “intolerable line”, and provides acceptable risk criteria for chemical areas [27]. 
+In order to investigate the eﬀects of diﬀerent input parameters on the model output, 
+three leakage hole diameters (25 mm, 75 mm, and 100 mm) were selected as leakage 
+Figure 8. CDF of maximum individual values (1000 samples).
+For societal risk, IEC 31010 specifies that the F-N curve should follow the As Low
+As Reasonably Practicable (ALARP) principle, which divides societal risk into intolerable,
+ALARP , and broadly acceptable regions using two baseline lines [28]. The baseline selection
+depends on the risk area, and GB 36894-2018 named benchmarks as “negligible line” and
+“intolerable line”, and provides acceptable risk criteria for chemical areas [27].
+In order to investigate the effects of different input parameters on the model output,
+three leakage hole diameters (25 mm, 75 mm, and 100 mm) were selected as leakage
+scenarios for case studies. As shown in Table 5, GB/T37243-2019 provides suggested
+values for the frequency of small, medium, and large leaks in atmospheric tanks per
+year. Meanwhile, the accident consequences under these leak scenarios were simulated
+and substituted into the constructed model to analyze the influence of different input
+parameters on the results of regional risk calculations.
+Table 5. Frequency of leaks from atmospheric storage tanks [17].
+Hole Leakage
+(0~5 mm)
+Medium-Sized Hole
+Leakage (5~50 mm)
+Nozzle Leakage
+(50~100 mm)
+atmospheric storage
+tank 4 × 10−5 1 × 10−4 1 × 10−5
+
+Energies 2024, 17, 5775 15 of 18
+Figure 9 presents individual risk modeling results for two spill scenarios (correspond-
+ing to the first case in Figure 6). The 25 mm aperture scenario shows more frequent spills
+and higher individual risk peaks, though with a relatively limited range of spill conse-
+quences. Conversely, the 75 mm and 100 mm aperture leaks, with identical spill frequencies,
+exhibit a broader range of spill consequences but lower individual risk peaks, staying below
+the 1.0 × 10−5 contour level. Figure 10 shows the societal risk modeling outputs for the
+three spill scenarios, where despite the more frequent 25 mm hole diameters leaks, the
+overall social risk is smaller and in the ALARP zone due to the relatively smaller impacts
+of the spill consequences. In contrast, the 75 mm and 100 mm hole diameters leak scenarios
+have the same frequency of leaks and the societal risk is mostly in the ALARP zone with
+more similar risk results. However, larger leak apertures imply more severe consequences
+of the leaks, so that the maximum number of deaths for the 100 mm leak scenario reaches
+120, which is more than double that for the 75 mm leak scenario, and the risk is also slightly
+higher overall.
+Energies 2024, 17, x FOR PEER REVIEW 15 of 18 
+ 
+ 
+scenarios for case studies. As shown in Table 5, GB/T37243-2019 provides suggested val-
+ues for the frequency of small, medium, and large leaks in atmospheric tanks per year. 
+Meanwhile, the accident consequences under these leak scenarios were simulated and 
+substituted into the constructed model to analyze the inﬂuence of diﬀerent input param-
+eters on the results of regional risk calculations. 
+Table 5. Frequency of leaks from atmospheric storage tanks [17]. 
+ Hole Leakage 
+(0~5 mm) 
+Medium-Sized Hole 
+Leakage (5~50 mm) 
+Nozzle Leakage 
+(50~100 mm) 
+atmospheric storage tank 4 × 10 −5 1 × 10 −4 1 × 10 −5 
+Figure 9 presents individual risk modeling results for two spill scenarios (corre-
+sponding to the ﬁrst case in Figure 6). The 25 mm aperture scenario shows more frequent 
+spills and higher individual risk peaks, though with a relatively limited range of spill con-
+sequences. Conversely, the 75 mm and 100 mm aperture leaks, with identical spill fre-
+quencies, exhibit a broader range of spill cons equences but lower individual risk peaks, 
+staying below the 1.0 × 10−5 contour level. Figure 10 shows the societal risk modeling out-
+puts for the three spill scenarios, where despite the more frequent 25 mm hole diameters 
+leaks, the overall social risk is smaller and in the ALARP zone due to the relatively smaller 
+impacts of the spill consequences. In contrast, the 75 mm and 100 mm hole diameters leak 
+scenarios have the same frequency of leaks an d the societal risk is mostly in the ALARP 
+zone with more similar risk results. Howeve r, larger leak apertures imply more severe 
+consequences of the leaks, so that the ma ximum number of deaths for the 100 mm leak 
+scenario reaches 120, which is more than double that for the 75 mm leak scenario, and the 
+risk is also slightly higher overall. 
+ 
+ 
+(a) ( b) 
+Figure 9. Individual risk outcomes in diﬀerent spill scenarios. (a) 75 mm hole diameter leak scenar-
+ios; (b) 100 mm hole diameter leak scenarios. 
+Figure 9. Individual risk outcomes in different spill scenarios. (a) 75 mm hole diameter leak scenarios;
+(b) 100 mm hole diameter leak scenarios.
+Energies 2024, 17, x FOR PEER REVIEW 16 of 18 
+ 
+ 
+ 
+Figure 10. Social risk outcomes in diﬀerent spill scenarios. 
+5. Conclusions 
+In this paper, individual and societal risk models were developed and integrated 
+with weather conditions, grid division methods, and multiple risk superposition calcula-
+tions to assess complex oil tank leakage scenarios. The key conclusions are as follows: 
+(1) The proposed methodology e ﬀectively incorporates diurnal variations and weather 
+factors into the risk assessment framework, o ﬀering a more nuanced and reliable 
+evaluation of both individual and societal risks. This approach provides a practical 
+tool for engineering applications, particularly in environments like oil tank farms, 
+where maintaining energy security is of paramount importance. 
+(2) The model simpli ﬁes traditionally complex risk assessment processes, o ﬀering a 
+user-friendly and eﬃcient platform for risk analysis. By visually mapping risks and 
+integrating multiple risk factors, it enhances both the accuracy and clarity of assess-
+ments, thus contributing to the safer op eration of oil tank farms and supporting 
+broader energy supply security. 
+(3) While the application of the model to case studies has demonstrated its capability to 
+visually display key quantitative indicators such as individual and societal risk, the 
+accuracy of the results is dependent upon the quality and completeness of the input 
+data. Future research should prioritize improving data acquisition and processing 
+methods to enhance data quality and eﬀectively manage uncertainties. Additionally, 
+expanding the model’s application to a wider range of industrial settings will further 
+strengthen its role in safeguarding energy infrastructure. Integrating advanced mod-
+eling techniques, such as machine learning algorithms, could also signi ﬁcantly im-
+prove the predictive capabilities of risk assessments. 
+Author Contributions: Conceptualization, Y.Y. and X.Z.; Meth odology, S.X., Q.X. and G.C.; Writ-
+ing—original draft, S.Q. and H.C. All authors have read and agreed to the published version of the 
+manuscript. 
+Funding: This research was supported by Research on Deepening the Application of Integrity Man-
+agement for Large Storage Tanks (No. AQWH202208). This research was supported by Deepening 
+research on pipeline risk assessment based on multi-source data (No. AQWH202302), This research 
+was supported by Guangdong Basic and Applied Basic Research Foundation (No 2024A1515011123). 
+Data Availability Statement: The original contributions presented in the study are included in the 
+article, further inquiries can be directed to the corresponding author. 
+Figure 10. Social risk outcomes in different spill scenarios.
+5. Conclusions
+In this paper, individual and societal risk models were developed and integrated with
+weather conditions, grid division methods, and multiple risk superposition calculations to
+assess complex oil tank leakage scenarios. The key conclusions are as follows:
+
+Energies 2024, 17, 5775 16 of 18
+(1) The proposed methodology effectively incorporates diurnal variations and weather
+factors into the risk assessment framework, offering a more nuanced and reliable
+evaluation of both individual and societal risks. This approach provides a practical
+tool for engineering applications, particularly in environments like oil tank farms,
+where maintaining energy security is of paramount importance.
+(2) The model simplifies traditionally complex risk assessment processes, offering a
+user-friendly and efficient platform for risk analysis. By visually mapping risks
+and integrating multiple risk factors, it enhances both the accuracy and clarity of
+assessments, thus contributing to the safer operation of oil tank farms and supporting
+broader energy supply security.
+(3) While the application of the model to case studies has demonstrated its capability to
+visually display key quantitative indicators such as individual and societal risk, the
+accuracy of the results is dependent upon the quality and completeness of the input
+data. Future research should prioritize improving data acquisition and processing
+methods to enhance data quality and effectively manage uncertainties. Additionally,
+expanding the model’s application to a wider range of industrial settings will further
+strengthen its role in safeguarding energy infrastructure. Integrating advanced model-
+ing techniques, such as machine learning algorithms, could also significantly improve
+the predictive capabilities of risk assessments.
+Author Contributions: Conceptualization, Y.Y. and X.Z.; Methodology, S.X., Q.X. and G.C.;
+Writing—original draft, S.Q. and H.C. All authors have read and agreed to the published version of
+the manuscript.
+Funding: This research was supported by Research on Deepening the Application of Integrity Man-
+agement for Large Storage Tanks (No. AQWH202208). This research was supported by Deepening
+research on pipeline risk assessment based on multi-source data (No. AQWH202302), This research
+was supported by Guangdong Basic and Applied Basic Research Foundation (No. 2024A1515011123).
+Data Availability Statement: The original contributions presented in the study are included in the
+article, further inquiries can be directed to the corresponding author.
+Conflicts of Interest:Authors Y ufeng Y ang and Xixiang Zhang were employed by China Oil & Gas Pipeline
+Network Corporation. The remaining authors declare that the research was conducted in the absence of any
+commercial or financial relationships that could be construed as a potential conflict of interest.
+Appendix A
+Table A1. Parameters used in the calculation procedure.
+Name Units Description
+n - Number of tanks that failed
+fs - Failure frequency
+Pi - Ignition probability
+E,L kW/m2 Thermal radiation matrix for early pool fire and late pool fire, which can be obtained from
+the pool fire solid flame calculation model
+O bar The shock wave overpressure matrix, which can be obtained from the vapor cloud explosion
+(VCE) TNO calculation model
+B kW/m2 BLEVE thermal radiation matrix
+Pday - Percentage of daytime
+Pnight - Percentage of nighttime
+PM - Select a weather class, with wind frequency matrix for 16 sectors
+Gs - Grid size. Enter 100 to generate a grid space of 100 × 100 units
+step m Grid step, unit length of the grid
+population - Population matrix
+Pd - The probability of death at the grid point
+References
+1. CTS News. At Least 17 Dead, 50 Injured in Oil Depot Explosion at Indonesia’s State-1un Oil Company. Available online:
+https://www.chinatimes.com/realtimenews/20230304001159-260408?chdtv (accessed on 27 August 2024).
+
+Energies 2024, 17, 5775 17 of 18
+2. Investigation Report on the “5 ·1” Major Explosion and Fire Accident in Sinochem Liaocheng Luxi Hydrogen Peroxide New
+Material Technology, Co. Available online: http://yjt.shandong.gov.cn/zwgk/zdly/aqsc/sgxx/202404/t20240419_4720072.html
+(accessed on 27 August 2024).
+3. Swuste, P .; van Nunen, K.; Reniers, G.; Khakzad, N. Domino Effects in Chemical Factories and Clusters: An Historical Perspective
+and Discussion. Process. Saf. Environ. Prot. 2019, 124, 18–30. [CrossRef]
+4. Meng, G.; Hu, H. Research on Multi-Point Monitoring Data Grid Model and Inversion Positioning Method for Gas Leakage in Oil
+and Gas Stations. Sustainability 2024, 16, 1638. [CrossRef]
+5. Bartolozzi, V .; Bajardi, S.; Vasile, F.; Marino, S. Safety Integrated Area Analysis: A Recent Case Study. In Proceedings of the
+Cisap4: 4th International Conference on Safety & Environment in Process Industry, Florence, Italy, 7–10 March 2010; Buratti, S.S.,
+Ed.; Aidic Servizi Srl: Milan, Italy; Volume 19, pp. 457–462.
+6. Zhang, H.; Cao, X.; Yuan, X.; Wu, F.; Wang, J.; Zhang, Y.; Li, Q.; Liu, H.; Huang, Z. Study on Thermal Radiation Characteristics
+and the Multi-Point Source Model of Hydrogen Jet Fire. Appl. Sci. 2024, 14, 7098. [CrossRef]
+7. Su, J.; Zhang, X.; Zhou, L.; Yin, Y. A Quantitative Analysis Pattern for Regional Risk Conduction. J. Phys. Conf. Ser. 2019,
+1419, 012032. [CrossRef]
+8. Lee, K.; Kang, C. Expansion of Next-Generation Sustainable Clean Hydrogen Energy in South Korea: Domino Explosion Risk
+Analysis and Preventive Measures Due to Hydrogen Leakage from Hydrogen Re-Fueling Stations Using Monte Carlo Simulation.
+Sustainability 2024, 16, 3583. [CrossRef]
+9. Jonkman, S.N.; Jongejan, R.; Maaskant, B. The Use of Individual and Societal Risk Criteria Within the Dutch Flood Safety
+Policy—Nationwide Estimates of Societal Risk and Policy Applications. Risk Anal. Int. J. 2011, 31, 282–300. [CrossRef] [PubMed]
+10. Park, B.; Kim, Y.; Lee, K.; Paik, S.; Kang, C. Risk Assessment Method Combining Independent Protection Layers (IPL) of Layer of
+Protection Analysis (LOPA) and RISKCURVES Software: Case Study of Hydrogen Refueling Stations in Urban Areas. Energies
+2021, 14, 4043. [CrossRef]
+11. Kwak, H.; Kim, M.; Min, M.; Park, B.; Jung, S. Assessing the Quantitative Risk of Urban Hydrogen Refueling Station in Seoul,
+South Korea, Using SAFETI Model. Energies 2024, 17, 867. [CrossRef]
+12. Abdolhamidzadeh, B.; Abbasi, T.; Rashtchian, D.; Abbasi, S.A. Corrigendum to “A New Method for Assessing Domino Effect in
+Chemical Process Industry” [J. Hazard. Mater . 2010, 182, 416–426]. J. Hazard. Mater. 2010, 184, 877. [CrossRef] [PubMed]
+13. Zhao, M.; Liu, X. Reprint of: Regional Risk Assessment for Urban Major Hazards Based on GIS Geoprocessing to Improve Public
+Safety. Saf. Sci. 2017, 97, 112–119. [CrossRef]
+14. Rajeev, K.; Soman, S.; Renjith, V .; George, P . Human Vulnerability Mapping of Chemical Accidents in Major Industrial Units in
+Kerala, India for Better Disaster Mitigation. Int. J. Disaster Risk Reduct. 2019, 39, 101247. [CrossRef]
+15. Tahmid, M.; Dey, S.; Syeda, S.R. Mapping Human Vulnerability and Risk Due to Chemical Accidents.J. Loss Prev. Process Ind.
+2020, 68, 104289. [CrossRef]
+16. Dormohammadi, A.; Zarei, E.; Delkhosh, M.B.; Gholami, A. Risk Analysis by Means of a QRA Approach on a LPG Cylinder
+Filling Installation. Process Saf. Prog. 2014, 33, 77–84. [CrossRef]
+17. GB/T 37243-2019 ; Determination Method of External Safety Distance for Hazardous Chemicals Production Units and Stor-
+age Installations. National Standards of People’s Republic of China: Beijing, China, 2019. Available online: https://www.
+chinesestandard.net/Related.aspx/GBT37243-2019 (accessed on 20 September 2024).
+18. SH/T 3226-2024; Standards for Quantitative Analysis of Petrochemical Processes Risks. Ministry of Industry and Information
+Technology: Beijing, China, 2024. Available online: http://www.standardcn.com/standard_bp/BPG_ReadFile.asp?FID=20861
+(accessed on 20 September 2024).
+19. AQ/T 3046-2013; Guidelines for Quantitative Risk Assessment of Chemical Enterprises. National Standardization Technical
+Committee of Safety Production Technical Committee on Chemical Safety: Beijing, China, 2013. Available online: https:
+//www.chinesestandard.net/Related.aspx/AQT3046-2013 (accessed on 20 September 2024).
+20. DNV . The MPACT Risk Model Theory. Available online: https://myworkspace.dnv.com/download/public/phast/technical_
+documentation/09_risk/MPACT%20Risk%20Model%20Theory.pdf (accessed on 20 September 2024).
+21. ISO 31000:2018 ; Risk Management—Guidelines. ISO: Geneva, Switzerland, 2018. Available online: https://www.iso.org/
+standard/65694.html (accessed on 20 September 2024).
+22. Guelzim, A.; Chakir, B.A.; Ettahir, A.; Mbarki, A. Use of Statistical Tools for Comparison between Different Analytical and
+Semi-Empirical Models of the Bleve Fireball. Front. Heat Mass T ransf. 2023, 21, 125–140. [CrossRef]
+23. Zhao, J.; Wu, M.; Lu, H.; Li, G.; Xu, Y.; Tian, M. Quantitative Risk Assessment of an Oil-Gas-Hydrogen-Electricity Integrated
+Energy Station in China. ACS Omega 2024, 9, 38887–38896. [CrossRef] [PubMed]
+24. Carboni, M.; Pio, G.; Mocellin, P .; Vianello, C.; Maschio, G.; Salzano, E. On the Flash Fire of Stratified Cloud of Liquefied Natural
+Gas. J. Loss Prev. Process Ind. 2022, 75, 104680. [CrossRef]
+25. Tsukada, R.I.; Shiguemoto, D.A.; Vianna, S.S. The TNO Multi-Energy Method Combined to Mathematical Programming and
+Computational Fluid Dynamics for Optimisation of Gas Detectors. J. Loss Prev. Process Ind. 2023, 83, 105035. [CrossRef]
+26. Shen, G.; Zhou, K.; Wu, F.; Jiang, J.; Dou, Z. A Model Considering the Flame Volume for Prediction of Thermal Radiation from
+Pool Fire. Fire T echnol.2019, 55, 129–148. [CrossRef]
+
+Energies 2024, 17, 5775 18 of 18
+27. GB 36894-2018; Risk Criteria for Hazardous Chemicals Production Unit and Storage Installations. National Standards of People’s
+Republic of China: Beijing, China. Available online: https://www.chinesestandard.net/Related.aspx/GB36894-2018 (accessed on
+20 September 2024).
+28. IEC 31010:2019; Risk Management—Risk Assessment Techniques. ISO: Geneva, Switzerland, 2019. Available online: https:
+//www.iso.org/standard/72140.html (accessed on 30 June 2019).
+Disclaimer/Publisher’s Note: The statements, opinions and data contained in all publications are solely those of the individual
+author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to
+people or property resulting from any ideas, methods, instructions or products referred to in the content.

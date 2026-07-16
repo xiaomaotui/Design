@@ -1,0 +1,1127 @@
+ 
+ 
+ 
+ 
+Environments 2026, 13, 41 https://doi.org/10.3390/environments13010041 
+Article 
+Monitoring Industrial VOC Emissions and Geospatial Analysis 
+Sebastian Barbu Barbes, Ana Cornelia Badea and Vlad Iordache * 
+Doctoral School, Technical University of Civil Engineering of Bucharest, 020396 Bucharest, Romania;  
+sebastian-barbu.barbes@phd.utcb.ro (S.B.B.); ana.badea@utcb.ro (A.C.B.) 
+* Correspondence: vlad.iordache@utcb.ro 
+Abstract 
+Volatile organic compounds (VOCs) emissions from petroleum product storage pose not 
+only a signiﬁcant environmental concern but also a potential threat to occupational health. 
+This study investigates geospatial analysis of VOCs on an industrial platform in Romania, 
+utilizing a combination of portable ﬁeld detectors and geostatistical modeling techniques. 
+For more than 10 months, we conducted measurements at 41 georeferenced sampling 
+points across three operational zones, using FID/PID instruments calibrated and validated 
+in accordance with national standards. To evaluate dispersion conditions, meteorological 
+data were simultaneously collected. VOC co ncentrations were measured under varying 
+meteorological scenarios and analyzed using the Empirical Bayesian Kriging (EBK) 
+method in ArcGIS Pro 3.1.0. Maximum concentrations reached up to 229.46 mg/m
+3 in cen-
+tral tank areas, with some point samples exce eding this level. Peripheral zones generally 
+showed values below 65 mg/m3, although concentrations above 100 mg/m3 were still ob-
+served at 10% of the monitoring sites. The re sults indicate apparent spatial clustering of 
+elevated VOC levels, particularly under low wind speed and high humidity. Our study 
+highlights the relevance of continuous monitoring and site-speci ﬁc mitigation strategies 
+in high-risk industrial settings in Romania. 
+Keywords: petroleum product storage; VOCs; FID/PID; GIS; EBK; industrial emissions; 
+air pollution monitoring 
+ 
+1. Introduction 
+Volatile organic compounds (VOCs) are key pollutants in industrial environments, 
+particularly in petroleum product handling an d storage facilities [1,2]. These emissions 
+pose signiﬁcant risks to air quality and occupational health. Previous research has high-
+lighted the lack of continuous VOC monitoring in such industrial contexts across Romania 
+[3]. Only a few studies have addressed this issue, including one carried out in Ploie ști, a 
+major Romanian center for petroleum reﬁning and petrochemical production [4,5]. Sanda 
+et al. [4] analyzed benzene levels and some associated health risks over a three-year mon-
+itoring period (2019–2021), emphasizing the temporal dynamics of benzene and its corre-
+lation with potential health  outcomes. The air monitoring campaigns conducted in two 
+cities in western Romania underscore the importance of determining BTEX (benzene, tol-
+uene, ethylbenzene, and xylenes) in areas with industrial activities, highlighting the need 
+for further investigations to identify and control pollutant emission sources and improve 
+urban air quality for support strategies [6,7]. 
+Academic Editors: Valerio Paolini 
+and Francesco Petracchini 
+Received: 20 November 2025 
+Revised: 22 December 2025 
+Accepted: 6 January 2026 
+Published: 8 January 2026 
+Copyright: © 2026 by the authors. 
+Licensee MDPI, Basel, Switzerland. 
+This article is an open access article 
+distributed under the terms and 
+conditions of the Creative Commons 
+Attribution (CC BY) license. 
+
+Environments 2026, 13, 41 2 of 25 
+ 
+https://doi.org/10.3390/environments13010041 
+Many approaches emphasize the importance of conducting detailed assessments di-
+rectly within industrial areas, where multiple emission sources and meteorological factors 
+signiﬁcantly inﬂuence VOC dispersion. These ﬁndings provide signiﬁcant support for the 
+objectives of the present study, underscori ng its importance and potential impact. The 
+reﬁneries are recognized as important sources of air pollutants, including highly concen-
+trated volatile compounds and particulate ma tter, which signi ﬁcantly degrade local air 
+quality [5]. The emissions from oil reﬁneries primarily consist of hydrocarbons, in partic-
+ular BTEX, which are the most signi ﬁcant because of their toxicity and persistence in the 
+industrial environment [8]. A recent study that compared active and passive sampling 
+methods for monitoring VOCs at industrial sites in northern Italy is particularly notewor-
+thy. Borrelli et al. reported that active sampling methods deliver higher-resolution data 
+but are aﬀected by environmental humidity. In contrast, passive systems oﬀer cost-eﬀec-
+tive and consistent coverage, particularly for organic compounds [9]. Monitoring VOCs 
+in industrial environments presents speciﬁc challenges due to the wide range of concen-
+trations, from very low levels in ambient air in neighboring areas or at the fenceline to 
+very high levels near emission sources, such as gasoline storage tanks, petroleum product 
+loading and unloading zones, or petroleum transport terminals. To address these chal-
+lenges, FID- and PID-based detector systems are particularly suitable for industrial envi-
+ronments. The FID provides robust quantiﬁcation of total hydrocarbons over a wide con-
+centration range. It is less sensitive to humidity, while the PID o ﬀers high sensitivity to 
+low-level VOCs and rapid response times. The combined use of FID–PID instruments fos-
+ters a comprehensive detection approach, reducing uncertainty caused by interfering 
+gases and advancing data quality in heterogeneous industrial settings, such as petroleum 
+storage facilities. Also, the presence of interfering gases (e.g., CO, NOx, O
+3, or other non-
+hazardous compounds) requires sensors with hi gh selectivity and sensitivity to reliably 
+detect these pollutants under variable environmental conditions [10,11]. The need for ac-
+curate and timely VOC monitoring in industrial areas is critical, particularly in zones im-
+mediately adjacent to urbanized areas where strict environmental regulations apply [12]. 
+Research studies increasingly incorporate sp atial analyses using various modeling tech-
+niques, with GIS-based approaches frequently employed to examine the dispersion of air 
+pollutants. However, most research has focused on urban environments rather than in-
+dustrial areas. Sidharthan et al. [13] studied the spatial variation in air pollutants using 
+GIS modeling. Their work demonstrates that GIS technology can be frequently utilized to 
+investigate pollution concentrations both spat ially and temporally, and to evaluate their 
+impact on the air quality index. Additionally, Lee et al. [14] conducted fenceline monitor-
+ing at industrial sites, particularly petrochemical and re ﬁnery facilities, to measure VOC 
+emissions in real time, demonstrate how pollution varies across the area, and create digital 
+maps to help identify high-risk zones. Rashidi et al. [15] studied VOC emissions from sev-
+eral gas stations in a major city in western Iran. They used ArcGIS to visualize and analyze 
+the spatial distribution of VOC concentrations , identifying hotspots and areas of higher 
+exposure risk. The mean VOC concentrations were 3.58 mg/m
+3 in summer and 2.53 mg/m3 
+in winter, with the highest levels observed at one of the monitored stations. Spatial anal-
+ysis showed that VOCs emitted from these stations contributed to elevated concentrations 
+in the city’s central square. Choi and Chong [16] showed that geospatial integration meth-
+ods signiﬁcantly improve air quality assessment compared to earlier approaches, such as 
+those by Kianisadr et al. [17]. Using GIS methodology, the authors mapped pollutant dis-
+tributions across 45 monitoring stations du ring the summer and winter of 2016 from 
+Khorramabad (Iran). The resulting maps enabled the identiﬁcation of areas with varying 
+human health risks and facilitated the calculation of air quality indices for selected loca-
+tions. Another recent study employed GIS-ba sed analysis to investigate VOCs in indus-
+trial and residential areas of Bucheon, Korea, using mobile laboratory measurements and 
+
+Environments 2026, 13, 41 3 of 25 
+ 
+https://doi.org/10.3390/environments13010041 
+mass spectrometry to assess three-dimensional spatial distributions [18,19]. Additionally, 
+Choi et al. [20] created air pollution maps using GIS methods around an industrial com-
+plex and its surroundings, employed SIFT-MS for real-time VOC measurement, and iden-
+tiﬁed the major substances contributing to pollution. 
+This study aims to assess VOC pollution at a major Romanian chemical platform, 
+focusing on petroleum storage tanks, access roads, and loading and unloading ramps [21]. 
+An integrated approach combining ﬁeld measurements and ge ospatial methods was 
+adopted to evaluate air quality and VOCs di spersion. The main stages of the study in-
+cluded ﬁeld measurements at key points, calibration and veriﬁcation of portable sensors, 
+systematic data recording under varying en vironmental conditions, GIS-based spatial 
+analysis, evaluation of containment structures, correlation analysis with tank features, 
+and integration of ﬁeld and spatial data to conduct a comprehensive air quality assess-
+ment. The study speci ﬁcally focuses on: (1) analyzing spatial pa tterns around storage 
+tanks; (2) assessing the e ﬀect of containment dikes on VO Cs dispersion; and (3) investi-
+gating correlations between pollutant accumulation and tank operations, which have not 
+been previously analyzed in research studies carried out in Romania. 
+Our study is a novel contribution by inte grating in situ VOC monitoring with ad-
+vanced spatial analysis at one of Romania’s petroleum re ﬁning platforms. This topic has 
+received limited scientiﬁc attention to date. Unlike previous studies that rely primarily on 
+modeled or generic urban/industrial emissions, our work provides reproducible measure-
+ment data from three monitoring zones over nine months. Additionally, this study estab-
+lishes a transparent computational framework for converting ppmV sensor readings to 
+mg/m
+3 under actual conditions and to g/Nm3 for BAT-AEL comparisons, while explicitly 
+addressing uncertainties associated with the TVOC-to-NMVOC proxy conversion. These 
+aspects enable a more accurate spatial representation of VOC distribution and risk areas 
+within re ﬁnery facilities, contributing novel in sights to GIS-based VOC mapping and 
+management. Similar research articles have primarily focused on urban air quality [22,23] 
+or indoor air of buildings [24,25]. This wo rk directly investigates emission dynamics 
+within industrial zones, oﬀering new insights into pollutant dispersion pa tterns and po-
+tential accumulation hotspots. The ﬁndings are expected to support improved environ-
+mental management and decision-making processes for industrial operators and local au-
+thorities, thereby enhancing occupational safety and providing industrial operators with 
+a sense of security and protection. 
+2. Experiments 
+2.1. Study Area 
+The experimental area is located in Romania, near the boundary of Navodari town, 
+and approximately 200 m from the Black Sea coast (Figure 1). The entire industrial plat-
+form covers an area of 2 km
+2, while the experimental zone , comprising the petroleum 
+product storage tank park, spans approximately 0.5 km 2. The petrochemical complex is 
+located on a coastal cordon characterized by generally low terrain. The region has a pre-
+dominantly continental climate, moderated by the sea along a 10- to 15-km wide coastal 
+strip. The local annual average temperature is 11.2 °C. Sea breezes shift between day and 
+night: in summer, daytime winds blow from the sea toward the land and reverse at night, 
+whereas in winter, cooler land temperatures generate winds from the land toward the sea. 
+The temperature increases to 32–35 °C in summer, while winter averages around +1.1 °C. 
+Frequently, these temperature values generate upward air currents that facilitate the 
+dispersion of pollutants into higher atmos pheric layers. The annual mean humidity is 
+81%, inﬂuenced by continuous sea evaporation, which helps prevent excessive summer 
+heat. Precipitation is generally low and stable, with yearly totals below 400 mm [26]. 
+
+Environments 2026, 13, 41 4 of 25 
+ 
+https://doi.org/10.3390/environments13010041 
+The sampling area lies between latitudes 44°20′12″ N and 44°20′30″ N and longitudes 
+28°38′56″ E and 28°39′6″ E, and is divided into three distinct zones, as shown in Figure 1. 
+The research was conducted at an oil re ﬁnery located near both urban and ecological 
+zones. The monitoring network consisted of 41 sampling points, distributed across three 
+sites, each characterized by speciﬁc operational activities and storage tank arrangements. 
+The criteria for selecting the three monitoring sites were based on the identiﬁcation of: (a) 
+areas comprising stationary sources of pollution (petroleum product storage tanks oper-
+ating under steady-state conditions); (b) areas with lower levels of pollution (access roads 
+within the industrial platform); (c) areas adjacent to sources with constant emissions over 
+time. Table 1 shows the key characteristics of the experimental area. 
+ 
+Figure 1. Experimental location. The dots indicate the sampling points in sites 1, 2, and 3. 
+Table 1. Key features of the work sites. 
+Site 
+No. Site Area (m2) No. of 
+Sampling Points 
+No. 
+Tanks 
+Tank Capacity 
+(m3) 
+Petroleum 
+Product 
+1 8100 15 4 5000 
+gasoline 2 30,000 14 4 10,000 
+3 6700 12 2 3500 
+2.2. VOC Emission Sources 
+Petroleum storage tank farms are critical points in the fuel distribution chain and are 
+prone to signiﬁcant VOC emissions that can degrade air quality and aﬀect nearby ecosys-
+tems. Atmospheric pollutants in crude oil re ﬁneries mainly originate from storage tank 
+farms, petroleum loading and unloading areas, transport systems (road, rail, and marine), 
+process installations, cooling towers, open-surface separator basins, dynamic equipment, 
+pipelines, valves, ﬂanges, and test connections. Storage tanks are constructed as vertical 
+cylindrical tanks and are the most commonly used type for storing petroleum products. 
+They operate at atmospheric pressure. These tanks are made from welded steel sheet 
+plates. The tanks are equipped with a ﬁxed steel or aluminum roof, an internal ﬂoating 
+
+
+Environments 2026, 13, 41 5 of 25 
+ 
+https://doi.org/10.3390/environments13010041 
+aluminum roof, or an external steel ﬂoating roof with double sealing. Vertical cylindrical 
+tanks with ﬂoating roofs are designed so that the roof ﬂoats on the surface of the stored 
+liquid, and the space between the roof and the tank shell contains a double seal that min-
+imizes the release of volatile organic compounds into the atmosphere. The tanks include 
+the following components: loading/unloading connections, manway holes, level indica-
+tors and sampling ports, roof hatches, vent valves, hydraulic safety valves, ﬂame arresters, 
+water-cooling systems, and foam ﬁre-suppression systems. Each tank farm in a liquid hy-
+drocarbon storage facility must be equipped with a containment dike, in which tanks are 
+positioned at safe distances from the access road and can retain accidental product spills 
+from the storage tanks. The capacity of the containment dike depends on the total capacity 
+of the tank group. The design of a gasoline storage tank is carried out in accordance with 
+the API 650 standards [27]. 
+The study zones were deﬁned based on the tank type, the speci ﬁc stored petroleum 
+product (e.g., gasoline), the product level in each tank, and the tank’s location relative to 
+the access roads on the industrial platform. An  origin point (e.g., the corner of the tank 
+park) was chosen as the refere nce (Oxy) of each zone, from which distances to the VOC 
+concentration measurement points were computed. The practical approach allowed the 
+spatial distribution of measurements to be analyzed relative to a local reference. The dis-
+tances between the monitoring points (Xi, Yi) and the reference point were calculated 
+based on their coordinates using the Stereo 1970 projected coordinate system [28]. The ΔX 
+and ΔY values represent the diﬀerences along the X and Y axes relative to the Oxy plane 
+(Equations (1) and (2)). Simultaneously, the ﬁeld distance corresponds to the Euclidean 
+distance (ED) derived from these coordinate diﬀerences (Equation (3)). 
+ΔX=X
+୧−  X ଴; (1)
+where i ∈ ሾ1, 15ሿ (zone 1); [1, 14] (zone 2), and [1, 12] (zone 3) 
+ΔY = Y୧−  Y଴; (2)
+where i ∈ ሾ1, 15ሿ (zone 1); [1, 14] (zone 2), and [1, 12] (zone 3) 
+dሺP୧,O x yሻ= ඥ(∆X)ଶ+( ∆Y)ଶ (3)
+where d(P୧,Oxy)—the Euclidean distance (m); P୧—the measured point of location (X୧,Y୧); 
+ΔX, ΔY—the relative horizontal and vertical displacement to the reference point (Oxy). 
+All spatial layers were referenced to the coordinate system Stereo 1970 (EPSG:31700), 
+a planar Cartesian projection that ensures metric accuracy for distances and areas [28]. 
+Figures S1–S3 from the Supplementary Materials illustrate these zones of interest. 
+2.3. VOCs Monitoring 
+The diversity and complexity of hydrocarbons emi tted during the storage, transfer, 
+and handling of fuels present signi ﬁcant challenges for accurately assessing their impact 
+on air quality [5]. In practice, direct measurement techniques using FIDs (ﬂame ionization 
+detectors) or PIDs (photoionization detectors) are commonly employed to monitor VOCs. 
+Continuous or periodic monitoring using both  techniques is therefore a critical compo-
+nent of air quality management in petroleum storage and distribution operations. The U.S. 
+EPA and European standardized procedures for instrument calibration and quality assur-
+ance facilitate the accurate quanti ﬁcation of VOC emissions, enable the identi ﬁcation of 
+fugitive or leak sources, and support comp liance with regulatory air quality standards 
+[29,30]. European and Romanian legislation have established concentration limits for cer-
+tain individual compounds (e.g., benzene, to luene, and styrene), primarily related to in-
+door air quality. In contrast, for outdoor workplace environments, volatile compounds 
+
+Environments 2026, 13, 41 6 of 25 
+ 
+https://doi.org/10.3390/environments13010041 
+are grouped into categories such as total volatile organic compounds (TCOV), without 
+speciﬁc legislative limits [31,32]. Nevertheless, the sensors used must be capable of meas-
+uring not only the chemical compounds themselves but also their widely varying concen-
+tration ranges. These ranges extend from  a few micrograms per cubic meter (µg/m 3) in 
+ambient air to several hundred µg/m3, and from single units to tens or even tens of thou-
+sands of milligrams per cubic meter (mg/m3) in industrial emissions. 
+2.4. Measurement Devices 
+In the Romanian oil reﬁnery industry, dual-detector systems (FID and PID) are com-
+monly employed. These systems allow rapid and e ﬃcient measurement of a wide range 
+of organic and inorganic vapors, outperformin g single-detector devices. For this study, 
+two portable analyzers were used: 
+1. Thermo Scienti ﬁc TVA-1000B (Waltham, MA, USA)—a dual FID/PID device with 
+measurement ranges of 0.5–2000 ppm (PID) and 0.5–5000 ppm (FID), 3.5 s response 
+time, ±2.5 ppm accuracy, repeatability of ±1% (PID) and ±2% (FID), ﬂow rate of 1000 
+mL/min, and eight hours operating time. Standard calibration was performed using 
+methane (FID) and isobutylene (PID). 
+2. Dräger Multi-PID 2 (Ion-Science, Fowlmere, UK)—featuring 1 ppb resolution, 0–
+20,000 ppm measurement range, <2 s response time, standard 100 ppm calibration 
+with customizable isobutylene calibration, 220 mL/min ﬂow rate, and a 10.6 eV PID 
+lamp (additional 11.7 eV lamps available). 
+The TVA-1000B equipment (Thermo Fisher Scienti ﬁc, Inc., Waltham, MA, USA) is 
+primarily employed in points/z ones with expected high VOC concentrations (e.g., tank 
+roofs, vents, and loading/unloading areas). At the same time, the Dräger Multi-PID 2 (Ion 
+Science Ltd., Fowlmere, UK) is used for lower concentration ranges. This complementary 
+deployment ensured coverage of both high-intensity emission sources and background 
+industrial levels, enhancing data robustness and reproducibility. The portable analyzers 
+used for VOC monitoring comply with ATEX and IECEx standards [33,34], guaranteeing 
+safe operation in potentially explosive atmospheres. 
+2.5. Data Collection 
+Measurements were conducted over one year (September 2023–August 2024) under 
+varying meteorological conditions. Each sampling campaign was organized to capture a 
+representative range of weather conditions (windy, calm, and humid days), enabling eval-
+uation of the inﬂuence of meteorology on VOC dispersion. On each sampling day, hourly 
+measurement sessions were conducted to pr imarily capture diurnal variations: in the 
+morning (08:00–12:00) and, less frequently, in the afternoon (13:00–16:00). Each monitor-
+ing point was sampled 10–20 times per session. Measurements of VOC concentrations 
+were performed at a height of 1.4 m above the ground, which is representative of potential 
+human exposure near emission sources. Simultaneously with the VOC measurements, 
+other atmospheric parameters, including air temperature, wind speed and direction, and 
+humidity, were recorded using a local meteorological station. Although measurements 
+were conducted under a range of meteorologic al conditions, spatial analysis using the 
+EBK method was con ﬁned to datasets from stable storage phases and quasi-stationary 
+atmospheric conditions (low, moderate, and constant wind speed; no precipitation; stable 
+atmospheric pressure). These conditions are crucial for maintaining spatial coherence and 
+ensuring the scienti ﬁc validity of the interpolation. The measurement protocol ensured 
+safety and data reliability, and consisted of general procedures and ﬁeld campaign stages.  
+General Procedures (applied at each monitoring session) include:  
+  
+
+Environments 2026, 13, 41 7 of 25 
+ 
+https://doi.org/10.3390/environments13010041 
+(1) Preparation and Instrument Setup 
+• Accessing the designated monitoring areas via safe routes and in compliance with 
+ATEX/IECEx safety procedures; 
+• Visual inspection and calibration of the portable analyzers (TVA-1000B and Dräger 
+Multi-PID 2) before each measurement session (FID/PID measurements provide 
+TVOC values, reﬂecting the total carbon content of volatile compounds, without dis-
+tinguishing individual chemical species, and methane or isobutylene emissions are 
+negligible in gasoline storage and loading operations). 
+(2) Validate the Measurement Procedure 
+• Activating the an alyzers and con ﬁrming stable responses, allowing 10–15 s for the 
+system to reach steady-state before measurements. 
+• Performing a brief test run to ensure pr oper instrument function and procedural 
+readiness. 
+(3) Field Campaign Stages 
+The campaign was structured into two main stages, with measurement times selected 
+based on meteorological conditions: 
+(a) Preliminary Testing (September - November  2023) for VOC concentrations around 
+storage tanks (four points) and on the tank roofs (e.g., ﬁve points, of which four were 
+located around the central ventilation ﬁttings, and one at the peripheral vent); 
+(b) Main Testing (December 2023 – August 2024) for VOC concentrations at 41 sampling 
+points (10–15 values per point). 
+The atmospheric parameters considered in  the study were: wind direction, wind 
+speed (m/s), air temperature (°C), relative humidity (%), and atmospheric pressure 
+(mbar).  
+The experimental data were grouped into four classes of atmospheric conditions: 
+• Low humidity conditions (relative humidity = 48.72%; wind speed = 2.94 m/s; wind 
+direction = NW; air temperature = 21.29 °C) on 2 November 2023, 13:45–14:20. 
+• Calm atmosphere (wind speed = 0.5 m/s; wind direction = WSW; air temperature = 
+10.34 °C; relative humidity = 97%) on 14 December 2023, 10:00–11:00 a.m. 
+• High humidity conditions (relative humi dity = 99%; wind direction = WSW; wind 
+speed = 0.9 m/s; air temperature = 5.27 °C) on 18 January 2024, 08:00–09:00 a.m. 
+• Variable conditions in short intervals of 5–10 min (wind speed = 2.5 m/s; wind direc-
+tion = SSE; air temperature = 6.4 °C; relative humidity = 80%), between 14:55 and 15:45 
+on 20 March 2024. 
+The calendar of the monitoring period is presented in Table 2. 
+Table 2. VOCs monitoring schedule. 
+Date/Period Time Measurement Objectives 
+8 September 2023 01–02 p.m. 9 points at a single tank: 5 points on the tank’s 
+roof; 4 points around the tank 
+2 November 2023 02–03 p.m. 16 points around four tanks 
+14 December 2023 10–11 a.m. 
+41 points around tanks at  
+1.4 m above ground level: 
+zone 1–15 points (z1M01 to z1M15);  
+zone 2–14 points (z2M01 to z2M14);  
+zone 3–12 points (z3M01 to z3M12). 
+January 2024 (20 days) 08–12 a.m. March 2024 (21 days) 
+May 2024 (20 days) 
+08–11 a.m. June 2024 (19 days) 
+July 2024 (23 days) 
+August 2024 (21 days) 
+
+Environments 2026, 13, 41 8 of 25 
+ 
+https://doi.org/10.3390/environments13010041 
+Hourly atmospheric data corresponding to the calendar dates and measurement in-
+tervals were retrieved from the on-site meteorological station (44°20′24.32″ N, 28°38′48.96″ 
+E) located within the industrial platform. 
+2.6. Data Analysis 
+The VOC concentration data recorded in the three monitored zones (zone 1, zone 2, 
+and zone 3) during the period December 2023–August 2024 yielded 125 data series, which 
+were subsequently subjected to the following processing stages: 
+(1) Conversion of the recorded values from ppmV to g/m3, to allow comparison with the 
+thresholds established by EU Decision 2 427/2022 concerning the implementation of 
+Best Available Techniques (BAT) for industrial emission control [35]. This decision 
+speciﬁes the reference range for non-methane VOC (NMVOC) concentrations result-
+ing from loading and unloading operations involving volatile petroleum fractions, 
+namely between 0.15 and 10 g/Nm3 (hourly average). 
+VOC concentrations measured in ppmV were converted to g/m 3 using an ideal gas 
+approximation: 
+𝐶 ቀg
+mଷቁ=C  (ppmV)
+𝑀௔തതതത( g
+mol)
+𝑉௠( mଷ
+mol)
+× 1 0ିଷ (4)
+where C—VOC concentration; (𝑀௔തതതത)—average molar mass of the gasoline vapor mixture; 
+Vm—molar volume at measurement conditions (20 °C and 1 atm). 
+A temperature of 20 °C was selected as the representative average of ambient condi-
+tions during the monitoring campaign. The values considered are: 1 ppmV = 1 × 10−6 (v/v); 
+(𝑀௔തതതത) = 110 g/mol; Vm = 24.05 × 10−3 m3/mol. 
+The molar mass of the petroleum products during the measurement campaign 
+ranged from 104 to 116 g/mol, as reported in the product technical datasheets. An average 
+molar mass of gasoline vapors was adop ted as a representative value for C 5–C12 hydro-
+carbons. Concentration values were expressed in mg/m3 to facilitate the interpretation of 
+results. Accordingly, the conversion factor of 4.57 used to approximate VOC concentra-
+tions in mg/m3 reﬂects the actual ﬁeld conditions and ensures methodological consistency, 
+whereas a conversion factor of 4.91 was applied for standard conditions corresponding to 
+BAT-AEL values (0 °C, 1 atm) [36,37]. 
+(2) Comparison of VOC concentrations (expressed in mg/m 3) recorded as atmospheric 
+emissions with reference values applied in industrial practice. In the absence of an 
+explicit legislative framework regulating maximum admissible VOC emissions at ei-
+ther the national or international level, the classi ﬁcation proposed by Tecamgroup 
+Industrial was used as a reference [38]. This classiﬁcation distinguishes the following 
+emission levels: low (<0.3 mg/m 3), acceptable (0.3–0.5 mg/m 3), borderline (0.5–1 
+mg/m3), and high (1–3 mg/m3). 
+(3) Descriptive statistical analysis of the data series, including the determination of min-
+imum, maximum, and hourly mean VOC concentrations, aimed at providing an 
+overall characterization of their distribution across the three monitored zones. 
+(4) Selection of days with the highest VOC co ncentrations for EBK spatial analysis. Of 
+the 125 monitoring days, nine were selected. These comprised four winter days (De-
+cember and January), two spring days (March and May), and three summer days 
+(June, July, and August) to analyze the spatial distribution of pollution under condi-
+tions that signi ﬁcantly a ﬀect industrial air quality. Criteria-based selection of nine 
+days used for EBK analysis is presented in  Table 3. The selection of days used for 
+EBK spatial analysis was based on a combination of meteorological representative-
+ness, operational conditions, and data completeness. This approach aims to ensure 
+
+Environments 2026, 13, 41 9 of 25 
+ 
+https://doi.org/10.3390/environments13010041 
+the data re ﬂects typical atmospheric condit ions, which should instill con ﬁdence in 
+the analysis for the audience. 
+(5) Spatial interpolation of the data was performed using the EBK method in ArcGIS Pro 
+(version 3.1.0, 2023 Esri Inc., Redlands, CA, USA), taking into consideration the meth-
+odological aspects and justiﬁcations presented in Section 3. 
+Table 3. Criteria-based selection of days used for EBK analysis. 
+No. Season Day Time 
+(a.m.) 
+Windward 
+Direction 
+Wind Speed 
+(m/s) 
+Wind  
+Variability 
+AT/AH * 
+(°C/%) 
+Atmospheric 
+Stability 
+Tank 
+Operational 
+State  
+D1. winter 14 December 2023 10–11 WSW 0.5 low 10.4/9 7 very stable idle mode 
+D2. winter 3 January 2024 08–09 WSW 1. 7 moderate 3. 7/94 neutral idle mode 
+D3. winter 4 January 2024 08–09 W 2.6 moderate 6.4/95 slightly unstable draining 
+D4. winter 31 January 2024 09–10 NNE 0.2 low −0.3/99 very stably loading 
+D5. spring 15 March 2024 08–09 NNE 0.8 low 5.6/93 weakly stable revision 
+D6. spring 31 May 2024 09–10 SSE 1.6 moderate 20.6/89 neutral idle mode 
+D7. summer 28 June 2024 10–11 NNE 2.0 moderate 26.6/61 slightly unstable loading 
+D8. summer 31 July 2024 09–10 NNE 1.1 moderate 24.9/56 neutral draining 
+D9. early autumn 29 August 2024 10–11 ENE 1.6 moderate 20.0/99 neutral revision 
+* AT/AH—Air Temperature/Air Humidity. 
+3. Spatial Analysis Method 
+Methodology 
+ArcGIS Pro software has introduced variou s extensions for geostatistical analysis. 
+One of the most commonly used spatial inte rpolation methods in GIS is IDW (Inverse 
+Distance Weighting). This approach estimates the concentration value at a known point 
+using weighted contributions from surrounding points. An alternative technique is EBK 
+(Empirical Bayesian Kriging), an advanced spatial interpolation method developed by 
+ESRI and available in ArcGIS Pro [39]. It helps create digital maps of pollutant distribu-
+tions, supporting environmental assessments and risk analyses in the industrial complex, 
+and can also be applied to other ﬁelds and applications. VOC concentrations were spa-
+tially analyzed using EBK in ArcGIS Pro, version 3.1.0 (Esri). EBK is an advanced spatial 
+interpolation method used to predict unknown values across a geographic area from a set 
+of known data points (e.g., measured VOC co ncentrations within the monitoring area). 
+EBK improves upon classical Kriging techniqu es by automatically incorporating the un-
+certainty of semivariogram model parameters into the interpolation process [40–42]. Con-
+ventional Kriging is a geostatistical spatial interpolation method that estimates unknown 
+values at a given location based on measured values at nearby points, while accounting 
+for the spatial structure of the data, i.e., the correlation of values as a function of distance 
+[20]. Kriging provides not only an estimate but also a measure of uncertainty (standard 
+error) for each predicted point. 
+Kriging interpolation estimated the value at  a known location as a weighted linear 
+combination of nearby known values, expressed by Equations (5) and (6): 
+𝑍
+መ൫𝑃(௫,௬)൯= ∑ 𝜆௜
+௡
+௜ୀଵ 𝑍൫𝑃௜(௫೔,௬೔)൯  (5)
+where 
+𝑍መ൫𝑃(𝑥,𝑦)൯  = the estimated value at the prediction point, mg/m 3; 
+𝑍൫𝑃௜(௫೔,௬೔)൯ = the measured value at point 𝑃௜(௫೔,௬೔), mg/m3; 
+(x,y) = the coordinates of the prediction location; 
+𝜆௜  = the Kriging weight assigned to each measured point; 
+n = the number of measured points in the neighborhood of the interpolation point. 
+The Kriging weights (𝜆௜) satisfy the constraint: 
+
+Environments 2026, 13, 41 10 of 25 
+ 
+https://doi.org/10.3390/environments13010041 
+∑ 𝜆௜
+௡
+௜ୀଵ =1   (6)
+The Kriging weight ( 𝜆௜)  is determined from the semivariogram, which quanti ﬁes 
+spatial correlation (7) or the equivalent form (8): 
+𝛾 (ℎ) =
+ଵ
+ଶ ୒(୦) ∑ ቂ𝑍൫𝑃௜(௫೔,௬೔)൯−𝑍 ቀ𝑃௝(௫ೕ,௬ೕ)ቁቃ
+ଶ
+(௜,௝)
+ฮ௉೔ି௉ೕฮ
+  (7)
+where 
+𝛾 (ℎ) = semivariogram function; 
+h = lag distance (spatial separation between coordinate pairs of points), m; 
+N(ℎ) = number of pairs of points separated by distance h; 
+i, j = the indices of the measured points forming pairs separated by the distance h; 
+ฮ𝑃௜−𝑃௝ฮ = the Euclidean distance between the two points, corresponding to the h, m; 
+𝑍൫𝑃௜(௫೔,௬೔)൯, 𝑍 ቀ𝑃௝(௫ೕ,௬ೕ)ቁ = the measured values at those locations, mg/m3. 
+𝛾 (ℎ) =
+ଵ
+ଶ ୒(୦)  ∑ ൣ𝑍൫𝑃௜(௫೔,௬೔)൯−𝑍 (𝑃௜+ ℎ)൧
+ଶே(௛)
+௜ୀଵ   (8)
+where 
+𝑃௜+ ℎ = (𝑥௜ + ℎ௫, 𝑦௜ + ℎ௬). 
+In the EBK method, semivariogram parameters are treated as random variables. Mul-
+tiple realizations are generated using restri cted maximum likelihood, producing a set of 
+predictions. 𝑍መ௝൫𝑃(௫,௬)൯. The EBK prediction is the mean of all realizations by (9): 
+𝑍መா஻௄൫𝑃(௫,௬)൯= ቀ
+ଵ
+௠ቁ∑ 𝑍መ௝
+௠
+௝ୀଵ ൫𝑃(௫,௬)൯  (9)
+where 
+m = the number of simulations. 
+The associated prediction variance includes both the Kriging variance of the simula-
+tion and the semivariogram uncertainty (10): 
+𝜎ଶ
+ா஻௄൫𝑃(௫,௬)൯= ቀ
+ଵ
+௠ቁ∑ 𝜎௝
+ଶ௠
+௝ୀଵ ൫𝑃(௫,௬)൯+ 𝑉𝑎𝑟ൣ𝑍ఫ෡൫𝑃(௫,௬)൯൧  (10)
+where 
+𝜎2ா஻௄൫𝑃(௫,௬)൯ = the EBK variance for all simulations, (mg/m3)2. 
+The EBK method generates di ﬀerent semivariogram models to describe spatial cor-
+relation. Semivariograms can take several theoretical forms depending on the spatial 
+structure of the data. Common semivariograms include: (1) Linear: γ(h) = Nugget + b|ℎ|; 
+(2) Power: γ(h) = Nugget + b |ℎ|ఈ, and (3) Thin Plate Spline: γ(h) = Nugget + b |ℎଶ|𝑙𝑛(|ℎ|); 
+where Nugget = the baseline variance at inﬁnitesimal separation, 𝑏 = the slope parameter, 
+and α = the exponent (for the Power model). 
+A detailed description of the EBK method , its implementation steps, and its ad-
+vantages is available in the online document ation of the ArcGIS Pro (Geostatistical Ana-
+lyst) on Esri’s oﬃcial website [40,41]. The resulting digital raster representations illustrate 
+the estimated spatial distribution of VOC concentrations, allowing the identi ﬁcation of 
+high-risk pollution zones and the depiction of emission gradients between the monitored 
+points. 
+A GIS-based work ﬂow (Figure S4) was implemented in ArcGIS Pro using Model-
+Builder to ensure reproducibility of the sp atial analysis. VOC point measurements were 
+ﬁrst ﬁltered to select monitoring  days corresponding to peak concentration events, and 
+
+Environments 2026, 13, 41 11 of 25  
+https://doi.org/10.3390/environments13010041 
+then EBK interpolation was used to generate  continuous concentration surfaces. The re-
+sulting rasters were further analyzed using zonal statistics and visualized in 2D, high-
+lighting the workﬂow’s role in supporting precise, reproducible spatial analysis. 
+4. Results 
+In this section, the data are presented in two complementary stages. First, the hourly-
+average VOC concentrations recorded on 14 December 2023 are analyzed, with values 
+expressed in ppmV as measured in the ﬁeld. Subsequently, the data are interpolated using 
+the EBK method and converted to g/m 3 to enable comparison with similar ﬁndings re-
+ported in other research studies or legislative requirements. 
+4.1. VOC Concentration Levels 
+The recorded data provide both quantitative and visual insights into the spatial dis-
+tribution of VOCs across the three designated operational zones. Figure 2 illustrates the 
+distributions for Zones 1–3, highlighting localized emission hotspots and concentration 
+gradients. The tank covers represent diﬀerent storage tanks within the monitored area. 
+  
+(a) ( b) 
+ 
+(c) 
+Figure 2. VOCs Distribution on 14 December 2023. (a)—Zone 1; (b)—Zone 2; (c)—Zone 3. 
+This ﬁrst complete dataset, obtained under re al operating conditions and expressed 
+in ppmV, reveals apparent heterogeneity in VOC dispersion, re ﬂecting the combined in-
+ﬂuence of emission-source geometry, surface roughness, and prevailing meteorological 
+conditions. Considering the meteorological ch aracteristics on 14 December 2023 (10:00–
+11:00, WSW at 0.5 m/s, air temperature 10.4 °C, relative humidity 97%), the measured 
+concentrations of VOCs in Zone 1 (Figure 2a ) were generally low, ranging from 1 to 15 
+
+
+Environments 2026, 13, 41 12 of 25 
+ 
+https://doi.org/10.3390/environments13010041 
+ppmV throughout the monitoring period. The highest concentrations were recorded at 
+points z1M15 (x = 2 m, y = 21 m) and z1M08 (x = 60 m, y = 39 m), both of which reached 
+approximately 15 ppmV. This peripheral area was not directly a ﬀected by petroleum 
+product handling operations on that day,  and favorable atmospheric conditions 
+contributed to pollutant dilution and dispersion. Zone 2 (Figure 2b) exhibited 
+intermediate concentrations, with a minimum of 10.20 ppmV at z2M12 (x = 117 m, y = 198 
+m) and a maximum of 30.10 ppmV at z2M14 (x = 117 m, y = 229 m), near the containment 
+dike. The elevated levels in this area suggest localized accumulation due to reduced air 
+circulation, while overall concentrations reﬂect moderate emission intensity inﬂuenced by 
+site topography and micro-scale meteorological conditions. Zone 3 (Figure 2c) displayed 
+the highest VOC concentrations, exceeding 50 ppmV at several central monitoring points 
+near the tank area, with a maximum of 60.64 ppmV at z3M05 (x = 37 m, y = 66 m). Con-
+centrations decreased with distance from the source, except at speciﬁc points z3M04 (x = 
+5 m, y = 66 m), indicating complex dispersion pa tterns shaped by wind speed, humidity, 
+and temperature. The spatial distribution suggests a signi ﬁcant emission source in prox-
+imity to the storage tanks. Peripheral sector s consistently recorded lower values (<15 
+ppmV). The VOC concentrations in Zone 1 were signiﬁcantly lower, while those in Zone 
+2 were intermediate compared to those in Zone 3. These ﬁndings, particularly in relation 
+to the Romanian Law No. 264/2017 [32], underscore the importance and relevance of our 
+study. It is noteworthy that in Zones 1 an d 2, VOC concentrations were generally below 
+the permissible limits for peripheral areas of the industrial platform (<30 ppmV), corre-
+sponding to the accepted levels for secondary storage areas and zones with limited petro-
+leum product handling. These results are also signi ﬁcant in the context of European leg-
+islation for industrial emissions, including VOC management and treatment in the chem-
+ical sector [35]. The preliminary observations allow the identi ﬁcation of areas with ele-
+vated emissions and provide the foundation for subsequent spatial modeling using GIS 
+applications. 
+4.2. Spatial Interpolation with EBK 
+Due to the heterogeneity of the data series recorded between December 2023 and 
+August 2024 for the 41 measurement points in Zones 1, 2, and 3, a proper evaluation is 
+complicated using simple statistical analysis. To interpret pollutant dispersion, data series 
+were created by averaging VOC concentration values recorded during the hourly inter-
+vals on the monitoring days. Only days with complete datasets, deﬁned as uninterrupted 
+and quality-controlled VOC measurements across all monitoring locations and sensors, 
+were retained for EBK spatial analysis. The results were analyzed using the geostatistical 
+method (EBK), which allows estimation of po llutant concentrations at all positions be-
+tween the monitoring points. The digital re presentations obtained through EBK interpo-
+lation are raster-type and depict the estimated spatial distribution of VOC concentrations. 
+The results of EBK interpolation for the nine days mentioned in Section 2.4 are presented 
+in Figures 3–11, where the arrows show direction and wind speed. EBK interpolation al-
+lows the identi ﬁcation of areas with elevated pollut ion risk and highlights the emission 
+gradient between the monitored points. 
+
+Environments 2026, 13, 41 13 of 25 
+ 
+https://doi.org/10.3390/environments13010041 
+ 
+Figure 3. EBK interpolation on 14 December 2023. 
+ 
+Figure 4. EBK interpolation on 3 January 2024. 
+
+
+Environments 2026, 13, 41 14 of 25 
+ 
+https://doi.org/10.3390/environments13010041 
+ 
+Figure 5. EBK interpolation on 4 January 2024. 
+ 
+Figure 6. EBK interpolation on 31 January 2024. 
+
+
+Environments 2026, 13, 41 15 of 25 
+ 
+https://doi.org/10.3390/environments13010041 
+ 
+Figure 7. EBK interpolation on 15 March 2024. 
+ 
+Figure 8. EBK interpolation on 31 May 2024. 
+
+
+Environments 2026, 13, 41 16 of 25 
+ 
+https://doi.org/10.3390/environments13010041 
+ 
+Figure 9. EBK interpolation on 28 June 2024. 
+ 
+Figure 10. EBK interpolation on 31 July 2024. 
+
+
+Environments 2026, 13, 41 17 of 25 
+ 
+https://doi.org/10.3390/environments13010041 
+ 
+Figure 11. EBK interpolation on 29 August 2024. 
+5. Discussion 
+5.1. Hourly Variation in VOC Concentrations 
+The EBK raster in Figure 3 indicates that Zone 3 exhibits the highest concentration 
+(113–136 mg/m3), located in the northwestern part of the site. This area contains the most 
+signiﬁcant number of densely distributed measurement points (z3M05, z3M06, z3M09), 
+suggesting an intense source of pollution, most likely due to loading/unloading activities 
+or damage to elements of the internal ﬂoating roof on 14 December 2023, when the petro-
+leum product level was 30% of the capacity of two storage tanks of 3500 m3 each. In Zone 
+2, lower concentrations (70–97 mg/m3) were recorded around two 10,000 m3 storage tanks, 
+while in Zone 1, the lowest concentrations (52–62 mg/m 3) were observed in the southern 
+part of the site. Therefore, VOC pollution intensity is higher in the northern and north-
+western areas of the site, primarily due to petroleum loading/unloading operations or the 
+positioning of emission sources relative to the dominant wind direction during the 10–11 
+a.m. interval on 14 December 2023. The EBK raster in Figure 4 indicates a moderate to 
+high VOC concentration in the vicinity of the 3500 m
+3 storage tanks located in the eastern 
+part of Zone 3. The WSW wind direction fa vored pollutant dispersion towards the NE, 
+which explains the expansion of the impact area  in that direction. The relatively low av-
+erage hourly temperature (3.7 °C) and high humidity (94%) contributed to the partial stag-
+nation of pollutants in the lower air layer. Elevated values may be associated with reduced 
+atmospheric ventilation, although the wind speed (1.7 m/s) was higher than on 14 Decem-
+ber 2023. The EBK raster in Figure 5 shows a reduction in concentrations on 4 January 
+2024, compared to the previous day, particular ly in the central part of Zone 3. However, 
+there is a higher increase in the eastern part of Zone 1. The stronger wind speed (2.6 m/s) 
+and westerly direction contributed to more eﬃcient VOC dispersion, reducing local accu-
+mulations. The slight increase in temperatur e relative to 3 January 2024 favored faster 
+
+
+Environments 2026, 13, 41 18 of 25 
+ 
+https://doi.org/10.3390/environments13010041 
+evaporation of pollutants, an eﬀect that was partially oﬀset by good atmospheric circula-
+tion. A subtle tendency of accumulation is al so observed in the western part of Zone 1, 
+along the direction of wind movement (W). On  31 January 2024, a high accumulation of 
+VOC emissions was observed in the eastern parts of Zones 1 and 2, near tanks with capac-
+ities of 5000 m3 (Zone 1) and 10,000 m 3 (Zone 2), as shown in the EBK raster in Figure 6. 
+The very low wind speed (0.2 m/s) and relatively high atmospheric pressure (1033 mbar) 
+created thermal inversion and stagnation conditions, favoring the accumulation of pollu-
+tants at ground level. The 99% humidity and negative temperature ( −0.23 °C) further ac-
+centuated the lack of dispersion, resulting in maximum concentration values in the imme-
+diate vicinity of the emission sources. The EBK  raster in Figure 7 highlights a relatively 
+moderate distribution of VOC concentrations  across the three monitored zones, with 
+higher values localized in Zone 3. Most concentrations in this zone range between 10 and 
+45 mg/m 3, but a maximum VOC concentration was recorded at point z3M09 (125.09 
+mg/m3), located in the immediate vicinity of the 3500 m 3 storage tank. In Figure 8, a sig-
+niﬁcant increase in VOC concentrations is observed in the central part of Zone 3, across 
+two areas extending from southwest to northeast, suggesting possible pollutant transport 
+in this direction. A high-concentration zone is highlighted, possibly located between two 
+storage tanks with ﬁxed and ﬂoating roofs (capacity 3500 m 3), with interpolated values 
+exceeding 40 mg/m3. The EBK raster for 28 June 2024, shown in Figure 9, indicates a sig-
+niﬁcant pollution peak in Zone 3, over relati vely large areas, with VOC concentrations 
+exceeding 50 mg/m3 in the western and northwestern parts of the site. Also, the EBK raster 
+for 31 July 2024 (Figure 10) shows signiﬁcant spatial variation in the northern part of Zone 
+3, with clearly de ﬁned areas of accumulation near the ﬁxed- and ﬂoating-roof tanks. On 
+29 August 2024, under light wind conditions (1.6 m/s) from the ENE, lower temperature 
+(20.08 °C) compared to 31 July 2024, and high atmospheric humidity (99%), VOC concen-
+trations were higher in the eastern and northeastern parts of the site (Zones 2 and 3). 
+5.2. Variation in VOC Concentrations by Measurement Session 
+The distribution of VOCs in the industrial park suggests a signiﬁcant risk to air qual-
+ity and public health, especially under similar meteorological conditions. The results con-
+ﬁrm that meteorological parameters signiﬁcantly inﬂuence pollutant dispersion, particu-
+larly wind speed and direction, and air temperature. 
+Stable meteorological conditions,  characterized by very low wind speeds, high at-
+mospheric pressure, and elevated relative humidity, favored VOC accumulation near 
+emission sources (e.g., tank ventilation systems). The most representative case of such 
+conditions occurred on 31 January 2024 (Figure 6), when the wind speed dropped to 0.2 
+m/s, atmospheric pressure reached 1033 mbar, and relative humidity was 99%, accompa-
+nied by a negative air temperature ( −0.23 °C). This combination created near-stagnant, 
+thermally inverted conditions, resulting in the highest VOC concentrations across all mon-
+itored zones. Under these conditions, high VOC accumulation was observed in the eastern 
+parts of Zone 1 and Zone 2, particularly near storage tanks with capacities of 5000 m
+3 and 
+10,000 m3, respectively. The EBK raster revealed sharply localized concentration peaks 
+near the emission sources, indicating minimal atmospheric dispersion and strong source 
+dominance. Similar accumulation tendencies were also observed on 14 December 2023 
+(Figure 3), when low wind speed (0.5 m/s) and stable conditions led to elevated VOC con-
+centrations in Zone 3, with values ranging from 113 to 136 mg/m
+3. These concentrations 
+were spatially clustered around densely distributed measurement points (z3M05, z3M06, 
+z3M09), suggesting intense emissions associated with loading and unloading operations 
+or potential issues related to ﬂoating roof elements. 
+Dynamic dispersion conditions, associated with higher wind speeds and improved 
+atmospheric ventilation, resulted in a noticeable reduction in local VOC accumulation and 
+
+Environments 2026, 13, 41 19 of 25 
+ 
+https://doi.org/10.3390/environments13010041 
+a broader spatial spread of pollutants. This behavior is illustrated by the measurements 
+conducted on 4 January 2024 (Figure 5), when wind speed increased to 2.6 m/s from the 
+west. Under these conditions, VOC concentrations decreased in the central part of Zone 
+3, indicating more eﬃcient dilution. At the same time, moderate increases were observed 
+along the wind transport direction in the east ern part of Zone 1. A similar dispersion-
+driven pattern was observed on 3 January 2024 (Figure 4), when a wind speed of 1.7 m/s 
+from the WSW favored pollutant transport towa rd the northeastern part of the site. Alt-
+hough the average temperature was relatively low (3.7 °C), the increased wind speed pre-
+vented substantial accumulation, resulting in  moderate concentration levels distributed 
+along the dominant airﬂow path. During the summer monitoring campaign, dynamic dis-
+persion conditions were evident on 28 June 2024 (Figure 9), when wind speeds reached 
+2.0 m/s and temperatures exceeded 35 °C. Despite enhanced atmospheric mixing, a sig-
+niﬁcant pollution peak was observed in Zone 3, particularly near storage tanks equipped 
+with ﬁxed and ﬂoating roofs. This suggests that under dynamic conditions, high VOC 
+concentrations are more indicative of localized emission events or operational anomalies 
+than of meteorological stagnation alone. A seasonal comparison of VOC spatial distribu-
+tions reveals apparent di ﬀerences in emission behavior and dispersion e ﬃciency across 
+winter, spring, and summer periods (Table 4). 
+Table 4. Seasonal and zonal VOC concentrations based on recorded maxima. 
+Zone Season Day Concentration 
+(mg/m3) 
+Meteorological 
+Condition 
+Dominant  
+VOC Spatial Pattern Key Factors 
+z1 winter 31 January 
+2024 >160 stable (thermal  
+inversion) 
+accumulation near emis-
+sion sources 
+wind speed—0.2 m/s 
+air temperature < 0 °C 
+z1 summer 31 July 2024 <30 neutral low and spatially  
+uniform concentrations 
+reduced influence of 
+sources 
+z2 winter 14 Decem-
+ber 2023 70–97 stable moderate accumulation 
+around tanks 
+low wind speed and 
+proximity to tanks 
+z2 late summer 29 August 
+2024 >70 neutral,  
+high humidity 
+accumulation in  
+East sector 
+reduced  
+vertical dispersion 
+z3 winter 14 Decem-
+ber 2023 113–136 stable hotspot in the NW sector loading activities 
+z3 early spring 15 March 
+2024 125 weakly stable localized intensity  
+core near tanks 
+local source  
+dominance 
+z3 summer 28 June 2024 >50 dynamic high-concentration  
+areas in the NW sector 
+operational emissions 
+outweigh dispersion 
+During the winter season, stable atmospheric conditions frequently led to pro-
+nounced VOC accumulation near emission sources, as observed on 14 December 2023 and 
+31 January 2024. In contrast, winter days with moderate winds (e.g., 3–4 January 2024) 
+exhibited lower concentrations and more elongated dispersion patterns aligned with the 
+prevailing wind direction. In spring, VOC di stributions showed increased spatial varia-
+bility. On 15 March 2024 (Figure 7), a localized accumulation core was identi ﬁed in the 
+NW part of Zone 3, while the surrounding areas exhibited lower, more uniform concen-
+trations. On 31 May 2024 (Figure 8), the EBK raster indicated a broader dispersion pattern 
+oriented along the SW–NE axis, likely inﬂuenced by SSE winds and operational activities 
+related to fuel handling and transshipment. During the summer period, higher tempera-
+tures favored enhanced evaporation of volatile compounds, resulting in higher VOC con-
+centrations. On 31 July 2024 (Figure 10), stable meteorological conditions (wind speed 1.1 
+m/s, NNE direction) led to localized accumula tion near storage tanks in Zone 3, while 
+Zone 1 remained less aﬀected. On 29 August 2024, high relative humidity (99%) combined 
+
+Environments 2026, 13, 41 20 of 25 
+ 
+https://doi.org/10.3390/environments13010041 
+with moderate wind speed (1.6 m/s) resulted in elevated VOC concentrations in the E and 
+NE parts of the site, particularly near the 3500 m3 storage tanks. 
+A comparative analysis of VOC pollution reported in various studies for industrial 
+(oil reﬁnery), urban, and rural areas due to signiﬁcant diﬀerences in both emission levels 
+and primary pollution sources. Maximum VOC concentrations were recorded in Izmir, 
+Turkey (135.9 ppb in an industrial area during 2000–2001) [43], in Guangzhou, China 
+(64.41 ppb in an urban area in 2004), and in Xinken, China (41.3 ppb in a rural area in 2004) 
+[44]. In urban areas, emission levels are generally lower than those in oil-related industrial 
+zones [45–47]. Regarding VOC levels speci ﬁcally in industrial areas, the concentrations 
+measured during our experimental campaign were higher than those reported in the sim-
+ilar studies: 60.64 ppm in Zone 3 (14 December 2023), 32.04 ppm in Zone 2 (15 November 
+2023), and 15.62 ppm in Zone 1 (20 February 2024), compared to 1.434 ppm recorded at 
+Lynchburg Ferry/Houston Ship Channel in summer 2018 [45]. Prolonged exposure to 
+VOCs in oil-related industrial areas can lead to serious health issues, including respiratory 
+diseases and cancer. Temporal variations in VOC concentrations from petroleum indus-
+tries are highly sensitive to seasonal change s. This observation is supported by higher 
+values in summer, followed by sudden temperat ure increases of 10–15 °C, likely due to 
+enhanced evaporation of volatile compounds at higher temperatures. Additionally, VOC 
+concentrations are generally higher during the daytime, particularly at midday and in the 
+afternoon, mainly when repeated pollutant accumulation occurs [48]. 
+The results highlight the usefulness of sp atial interpolation using the EBK method 
+for identifying high-risk areas for atmospheric pollution in industrial environments, as 
+well as the decisive role of meteorological conditions in controlling the dispersion of VOC 
+concentrations. The EBK raster accurately re ﬂects localized pollutant accumulations, 
+demonstrating the robustness of the method under static meteorological conditions. The 
+signiﬁcant advantage of this approach is that the EBK method does not rely solely on a 
+speciﬁc distribution of values, which makes it ideal for spatial modeling of environmental 
+data characterized by high variability and nonlinear behavior. Compared to classical par-
+ametric methods, such as multiple linear regression, EBK is be tter able to capture local 
+accumulation and dispersion phenomena of pollutants. EBK spatial models revealed dis-
+tinct concentration gradients and pollutant ho tspots, particularly under meteorological 
+conditions limiting dispersion. Raster maps hi ghlighted areas of elevated risk near tank 
+vents and loading valves. The results demonstrate that the proposed EBK-based frame-
+work, with FID measurements under ﬁeld conditions, provides a practical approach for 
+high-resolution VOC mapping in complex industrial environments [49]. 
+5.3. Compliance Evaluation 
+The comparison of measured VOC concentrat ions with legislative reference ranges 
+should be interpreted with caution. Legislative gaps in emission limits for NMVOCs in 
+Romanian industrial zones were noted [50]. Furthermore, discrepancies were observed 
+between local practices and the requirements of EU Directive 2010/75/EU, indicating the 
+need for harmonized monitoring frameworks [51]. The comparison serves as an order-of-
+magnitude assessment rather than a direct regulatory equivalence. Although TCOV emis-
+sion concentrations measured at 1.4 m above gasoline storage tanks during the monitoring 
+period did not exceed the BAT-associated em ission levels (BAT-AELs), short-term con-
+centration peaks remain relevant for assessing occupational and environmental risks. Ac-
+cording to Directive 2010/75/EU and Commission Implementing Decision 2014/738/EU, 
+BAT-AELs for VOC emissions from petroleum product storage and transfer activities gen-
+erally fall within the regulatory limits speci ﬁed in Section 2.6, while for high-risk sub-
+stances such as benzene, the occupational ex posure limit is set at one ppm or 3.54 × 10
+−3 
+g/Nm3 (8 h-Time-Weighted Average). Therefore, maintaining equipment tightness and 
+
+Environments 2026, 13, 41 21 of 25 
+ 
+https://doi.org/10.3390/environments13010041 
+implementing vapor recovery systems in accordance with Law No. 264/2017 are essential 
+to protect both workers’ health and nearby  populations, even when overall compliance 
+with regulatory limits is achieved, as highlighted in guidance on re ﬁnery air emissions 
+management and the cross-border impacts of oil re ﬁnery emissions [52,53]. The absence 
+of real-time enforcement mechanisms also reduces the eﬀectiveness of compliance control. 
+Our ﬁndings indicate that although the monitored zones generally comply with ex-
+isting regulatory standards, the health and safety risks posed by VOC levels exceeding 
+limits in some areas are signi ﬁcant. In contrast, several locations in adjacent areas of the 
+industrial site have record ed VOC concentrations exceed ing the recommended limits at 
+various times [54]. The detected VOC levels pose signi ﬁcant risks to population health 
+and safety, as well as to surrounding communities. To mitigate these risks, we recommend 
+enhancing continuous VOC monitoring programs at the Romanian oil reﬁnery and apply-
+ing preventive measures to minimize poll utant exposure. Moreover, raising awareness 
+and providing targeted training for workers and residents are essential components of 
+eﬀective risk reduction. This study highlights the critical role of robust risk management 
+strategies in addressing VOC exposure in occupational and environmental contexts. Thus, 
+our results emphasize the necessity of regularly updating and rigorously enforcing regu-
+latory frameworks grounded in the latest scientiﬁc evidence to ensure adequate protection 
+of worker health and environmental quality. 
+Furthermore, strengthening regulatory alignment and introducing mandatory con-
+tinuous monitoring obligations could subs tantially improve compliance with interna-
+tional air quality standards. Currently, the absence of standardized methodologies for 
+VOC dispersion assessment in Romania limits the comparability of local data with inter-
+national datasets [55]. The development of integrated monitoring systems that combine 
+satellite data with IoT-based sensors oﬀers a promising approach to closing these compli-
+ance gaps and supporting more informed decision-making for industrial emission control. 
+6. Conclusions 
+This study demonstrates the feasibility of  integrating sensor-based VOC detection 
+with spatial modeling to evaluate emissions from petroleum-handling facilities. Results 
+highlight the need for stricter monitoring protocols and adaptive management strategies 
+to protect worker health and environmental quality. Our study advances air quality mon-
+itoring in industrial settings by applying EBK to spatially assess VOC concentrations. EBK 
+integrates uncertainty and spatial variability, resulting in distribution maps that more ac-
+curately capture the complexity of pollutant dispersion. 
+A straightforward analysis of the recorded data indicates that VOC dispersion across 
+the industrial platform is highly heterogeneous. It is strongly inﬂuenced by proximity to 
+emission sources (tanks and other industrial equipment), terrain conﬁguration, and local 
+meteorological conditions, including wind speed, direction, and relatively elevated tem-
+peratures (around 10 °C on 14 December 2023). Among the monitored zones, Zone 3 was 
+identiﬁed as critical, requiring continuous monitoring, emission reduction measures, and 
+potentially remediation interventions. The an alysis further shows that pollutant disper-
+sion is primarily governed by local meteorology. Low wind speeds combined with high 
+atmospheric pressure, as observed on 31 January 2024, led to pollutant accumulation near 
+emission sources, whereas stronger winds and moderate pressure improved dispersion. 
+During the warmer months of May through August 2024, VOC concentrations generally 
+decreased compared to December and January,  due to elevated temperatures and more 
+dynamic atmospheric conditions that enhanced pollutant dispersion. Nonetheless, local-
+ized accumulations were still detected near storage tanks and operational areas, demon-
+strating that meteorological and operational factors can create high-risk zones even dur-
+ing warmer periods. This seasonal co mparison underscores the combined in ﬂuence of 
+
+Environments 2026, 13, 41 22 of 25 
+ 
+https://doi.org/10.3390/environments13010041 
+temperature, wind patterns, and industrial activities on VOC distribution throughout the 
+year. 
+The EBK geostatistical method proved eﬀective in mapping high-risk areas and iden-
+tifying local concentration pa tterns, even when ﬁeld data were unevenly distributed 
+across the study area. VOC levels in the re ﬁnery were substantially higher than those re-
+ported in urban or rural areas, highlighting signi ﬁcant environmental and health risks. 
+Seasonal and diurnal variations further modulate emission pa tterns. High VOC concen-
+trations (>50 ppmV = 229 mg/m 3) pose substantial risks to human health and industrial 
+safety, particularly under conditions of ac cumulation or limited dispersion. While EBK 
+demonstrated robustness in spatially representing VOC dispersion, its accuracy depends 
+on ﬁeld conditions and continuous monitoring. 
+The integration of real-time sensor networ ks could further enhance responsiveness 
+to pollution events and improve industrial emission management. Scientiﬁcally, the study 
+contributes to the development of a spatia lly explicit methodology for VOC assessment 
+in complex industrial environments. From a socio-economic perspective, the outcomes 
+may guide risk mitigation strategies and promote compliance with national and European 
+environmental regulations. 
+Supplementary Materials: The following supporting information can be downloaded at 
+https://www.mdpi.com/article/10.3390/environments13010041/s1. Figure S1: Zone 1 map of the 
+studied area. Layer referenced to the Stereo 1970 coordinate system. Figure S2: Zone 2 map of the 
+studied area. Layer referenced to the Stereo 1970 coordinate system. Figure S3: Zone 3 map of the 
+studied area. Layer referenced to the Stereo  1970 coordinate system. Figure S4: Work ﬂow diagram 
+for EBK analysis in ArcGIS Pro. 
+Author Contributions: Conceptualization, S.B.B.; methodology, A.C.B. and V.I.; software, S.B.B.; 
+validation, A.C.B. and V.I.; formal analysis, S.B.B. and V.I.; investigation, V.I.; resources, S.B.B. and 
+A.C.B.; data curation, V.I.; writing—original draft preparation, S.B.B.; writing—review and editing, 
+A.C.B. and V.I.; visualization, A.C.B.; supervision,  V.I.; project administration, V.I.; funding acqui-
+sition, S.B.B. and A.C.B. All authors have read and agreed to the published version of the manuscript. 
+All three authors are the main authors. 
+Funding: This research received no external funding. 
+Data Availability Statement: The original contributions presented in this study are included in the 
+article/Supplementary Material. Further inquiries can be directed to the corresponding author. 
+Acknowledgments: The authors gratefully acknowledge the support of the Doctoral School of the 
+Technical University of Civil Engineering, Buchar est (Romania), for providing access to the EBK 
+spatial analysis tool used in this research and the support team involved in site data collection from 
+the industrial platform. 
+Conﬂicts of Interest: The author declares no conﬂicts of interest. 
+References 
+1. Bílek, J.; Maršolek, P.; Bílek, O.; Bu ček, P. Field Test of Mini Photoionization De tector-Based Sensors—Monitoring of Volatile 
+Organic Pollutants in Ambient Air. Environments 2022, 9, 49. 
+2. Spinelle, L.; Gerboles, M.; Kok, G.; Persij n, S.; Sauerwald, T. Review of Portable  and Low-Cost Sensors for the Ambient Air 
+Monitoring of Benzene and Other Volatile Organic Compounds. Sensors 2017, 17, 1520. 
+3. Barbulescu, A.; Barbes, S.B.; Barbes, L.; Dumitriu, C.S. Investigation of VOC Series Collected in a Reﬁnery and Their Classiﬁca-
+tion Based on Statistical Features. Appl. Sci. 2024, 14, 11921. 
+4. Sanda, M.; Dunea, D.; Iordache, S.; Pohoata, A.; Glod-Lendvai, A.-M.; Onutu, I. A Three-Year Analysis of Toxic Benzene Levels 
+and Associated Impact in Ploieşti City, Romania. Toxics 2023, 11, 748. 
+
+Environments 2026, 13, 41 23 of 25 
+ 
+https://doi.org/10.3390/environments13010041 
+5. Bodor, K.; Szép, R.; Bodor, Z. Time series analysis of the air pollution around Ploiesti oil re ﬁning complex, one of the most 
+polluted regions in Romania. Sci. Rep. 2022, 12, 11817. 
+6. Popitanu, C.; Cioca, G.; Copolovici, L.; Iosif, D.; Munteanu, F.-D.; Copolovici, D. The Seasonality Impact of the BTEX Pollution 
+on the Atmosphere of Arad City, Romania. Int. J. Environ. Res. Public Health 2021, 18, 4858. 
+7. Barbulescu, A.; Barbes, L. Statistical assessment and modeling of benzene level in atmosphere in Timiș County, Romania. Int. J. 
+Environ. Sci. Technol. 2022, 19, 817–828. 
+8. Ragothaman, A.; Anderson, W.A. Air Quality Impacts of Petroleum Reﬁning and Petrochemical Industries. Environments 2017, 
+4, 66. 
+9. Borrelli, R.; Cecconi, A.; Oldani, A.; Fuin, F.; Emiliani, R.; Cacciari, F.; Vecchio, A.; Lanari, C.; Villani, F.; Bonfedi, G.; et al. Field 
+Comparison of Active and Passive Soil Gas Sampling Te chniques for VOC Monitoring at Contaminated Sites. Environments 
+2025, 12, 141. 
+10. Schütze, A.; Baur, T.; Leidinger, M.; Reimringer, W.; Jung, R.; Co nrad, T.; Sauerwald, T. Highly Sensitive and Selective VOC 
+Sensor Systems Based on Semiconductor Gas Sensors: How to? Environments 2017, 4, 20. 
+11. Spinelle, L.; Gerboles, M.; Kok, G.; Sauerwald, T. Review of Low-Cost Sensors for the Ambi ent Air Monitoring of Benzene and Other 
+Volatile Organic Compounds; EUR 27713; JRC98368; Publications Oﬃce of the European Union: Luxembourg, 2015. 
+12. Langford, V.S.; Cha, M.; Milligan, D.B.; Lee, J. Adoption of SIFT-MS for VOC Pollution Monitoring in South Korea. Environments 
+2023, 10, 201. 
+13. Sidharthan, K.; Gandhimathi, A.; Akshayaa, M. Spatial Variation of Air Pollutants by Using GIS Modelling. Glob. NEST J. 2024, 
+26, 1–6. 
+14. Lee, H.E.; Yoon, S.J.; Kim, J.H. Analysis of VOC Emission Characteristics in the Petrochemical Industry and Study on Fenceline 
+Monitoring Techniques. Atmosphere 2025, 16, 543. 
+15. Rashidi, R.; Faridan, M.; Kamarehie, B.; Azimi, F. Evaluation of the volatile organic compounds (VOCs) concentration in the 
+city of Khorramabad gas stations using AERMOD and ArcGIS. J. Air Pollut. Health 2021, 6, 265–274. 
+16. Choi, K.; Chong, K. Modiﬁed Inverse Distance Weighting Interpolation for Particulate Matter Estimation and Mapping. Atmos-
+phere 2022, 13, 846. 
+17. Kianisadr, M.; Ghaderpoori, M.; Jafari, A.; Kamarehie, B.; Karami, M. Zoning of air quality index (PM10 and PM2.5) by Arc-GIS 
+for Khorramabad city, Iran. Data Brief 2018, 19, 1131–1141. 
+18. Kim, M.; Kim, D.; Seo, J.-Y.; Park, D. GIS-Based Analysis of  Volatile Organic Compounds in Bucheon, Korea, Using Mobile 
+Laboratory and Proton-Transfer-Reaction Time-of-Flight Mass Spectrometry Methods. Toxics 2024, 12, 511. 
+19. Kim, M.K.; Kim, D.H.; Jang, Y.L.; Lee, J.Y.; Ko, S.W.; Kim, K.H.; Park, C.S.; Park, D.S. Determination of the spatial distribut ion 
+of air pollutants in Bucheon, Republic of Korea, in winter using a GIS-based mobile laboratory. Toxics 2023, 11, 932. 
+20. Choi, S.W.; Park, S.W.; Cha Yw Lee, S.I.; Yoo, E.C. The charateristics of air pollutants distribution around industrial complexes 
+using real-time mobile atmospheric measuremnt system. J. Korean Soc. Environ. Eng. 2021, 43, 476–489. 
+21. Barbes, S.-B.; Badea, A.C.; Iordache, V. Volatile Organic Compounds Losses Simulation During Storage of Gasoline. IOP Conf. 
+Ser. Earth Environ. Sci. 2023, 1185, 012009. 
+22. Maji, S.; Yadav, R.; Beig, G.; Gunthe, S.S.; Ojha, N. On the Processes Governing the Variability of PTR-MS Based VOCs and 
+OVOCs in Diﬀerent Seasons of a Year over Hillocky Mega City of India. Atmos. Res. 2021, 261, 105736. 
+23. Enciso-Díaz, W.C.; Zafra-Mejía, C.A.; Hernández-Peña, Y.T. Glob al Trends in Air Pollution Modeling over Cities Under the 
+Inﬂuence of Climate Variability: A Review. Environments 2025, 12, 177. 
+24. Zimmerman, J.H.; Schumacher, B.; Lutes, C.C.; Cosky, B.; Hayes, H. Long-Term Performance of Passive Volatile Organic Com-
+pounds (VOCs) Samplers for Indoor Air. Environments 2025, 12, 267. 
+25. Marzocca, A.; Di Gilio, A.; Farella, G.; Giua, R.; De Genn aro, G. Indoor Air Quality Assessment and Study of Di ﬀerent VOC 
+Contributions within a School in Taranto City, South of Italy. Environments 2017, 4, 23. 
+26. Dinu, I. Considerations concerning the possibility of contamination in the area of the Poarta Alb ă–Midia–Năvodari Canal. Ge-
+oEcoMarina 2009, 15, 63–70. 
+27. American Petroleum Institute (API). API Standard 650: Welded Tanks for Oil Storage, 13th ed.; API Publishing Services: Washing-
+ton, DC, USA, 2020. 
+28. National Agency for Cadastre and Land Registration (ANCPI). Romanian National Geodetic Reference System—Stereo 70 Projection 
+(Dealul Piscului 1970, EPSG:31700) ; ANCPI: Bucharest, Romania, 2019. Available online: h ttps://epsg.io/31700 (accessed on 15 
+January 2025). 
+
+Environments 2026, 13, 41 24 of 25 
+ 
+https://doi.org/10.3390/environments13010041 
+29. Whitaker, D.; Oliver, K.; Turner, D.; MacGregor, I.; Shelow, D. Method TO-15A: Determination of Volatile Organic Compounds 
+(VOCs) in Air Collected in Specially-Prepared Canisters; U.S. EPA O ﬃce of Research and Development: Washington, DC, USA, 
+2019. Available online: https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P100YDPO.TXT (accessed on 26 September 2025). 
+30. BS EN 14662-1:2024 ; Ambient Air Quality—Standard Method for Measur ement of Benzene Concentrations—Part 1: Pumped 
+Sampling Followed by Thermal Desorption and Gas Chromatography. British Standards Institution: London, UK, 2024. 
+31. Council Decision (EU) 2017/1757 of 17 July 2017 on the Acceptance, on Behalf of the European Union, of an Amendment to the 
+1999 Protocol to the 1979 Convention on Long-Range Transboundary Air Pollution to Abate Acidiﬁcation, Eutrophication and 
+Ground-Level Ozone. Oﬀ. J. Eur. Union  2017, L248, 3–5. Available online: h ttps://eur-lex.europa.eu/legal-con-
+tent/EN/TXT/PDF/?uri=CELEX:32017D1757 (accessed on 20 September 2025). 
+32. Law No. 264 of 20 December 2017 on Establishing Technical Requirements for Limiting Emi ssions of Volatile Organic Com-
+pounds (VOCs) Resulting from the Storage of Petrol and Its Distribution from Terminals to Service Stations, as well as During 
+Vehicle Refuelling at Service Stations. O ﬃcial Monitor of Romania 2017, Part I, No. 1052. Available online: h ttps://legis-
+latie.just.ro/Public/DetaliiDocumentAﬁs/196201 (accessed on 20 September 2025). 
+33. European Parliament and Council of the European Union. Direct ive 2014/34/EU of 26 February 2014 on the Harmonisation of 
+the Laws of the Member States Relating to Equipment and Protective Systems Intended for Use in Potentially Explosive Atmos-
+pheres (Recast). Oﬀ. J. Eur. Union 2014, L96, 309–356. Available online: https://eur-lex.europa.eu/eli/dir/2014/34/oj/eng (accessed 
+on 8 November 2025). 
+34. International Electrotechnical Commission (IEC). IECEx System—IEC System for Certiﬁcation to Standards Relating to Equip-
+ment for Use in Explosive Atmospheres. In IECEx 02: Rules of Procedure ; IEC: Geneva, Swi tzerland, 2023. Available online: 
+https://www.iecex.com (accessed on 8 November 2025). 
+35. EU. Commission Implementing Decision (EU) 2022/2427 of 6 December 2022 Establishing the Best Available Techniques (BAT) 
+Conclusions, Under Directive 2010/75/EU of the European Parliament and of the Council on Industrial Emissions, for Common 
+Waste Gas Management and Treatment Systems in the Chemical Sector. 2022. Available online: https://eur-lex.europa.eu/legal-
+content/RO/TXT/?uri=CELEX%3A32022D2427 (accessed on 24 January 2025). 
+36. Aguiar, E.F.K.; Roig, H.L.; Mancini, L.H.; Botelho de Carvalho, E.N.C. Low-Cost Sensors Calibration for Monitoring Air Quality 
+in the Federal District—Brazil. J. Environ. Prot. 2015, 6, 173–189. 
+37. Kezic, S.; Nunez, R.; Babi ć, Ž.; Hallmann, S.; Havmose, M.S.; Johansen, J.D.; John, S.M.; Macan, M.; Symanzik, C.; Uter, W.; et 
+al. Occupational Exposure of Hairdressers to Airborne Hazardous Chemicals: A Scoping Review. Int. J. Environ. Res. Public 
+Health 2022, 19, 4176. 
+38. Tecam. VOCs-TECAM. 2024. Available online: https://tecamgroup.com/category/vocs/ (accessed on 10 March 2025). 
+39. ArcGIS Pro. EBK Regression Prediction (G eostatistical Analyst). Available online: h ttps://pro.arcgis.com/en/pro-app/3.4/tool-
+reference/geostatistical-analyst/ebk-regression-prediction.htm (accessed on 15 January 2025). 
+40. Esri. Empirical Bayesian Kriging (Geostatistical Anal yst). ArcGIS Pro Documentation. Available online: 
+https://pro.arcgis.com/en/pro-app/3.4/tool-reference/geostatistical-analyst/empirical-bayesian-kriging.htm (accessed on 1 Octo-
+ber 2025). 
+41. Esri. What Is Empirical Bayesian Kriging?—ArcGIS Pro. ArcGIS Pro Documentation. Available online: 
+https://pro.arcgis.com/en/pro-app/latest/help/analysis/geostatistical-analyst/what-is-empirical-bayesian-kriging-.htm (ac-
+cessed on 1 October 2025). 
+42. Krivoruchko, K. Evaluation of Empirical Bayesian Kriging. Spat. Stat. 2019, 29, 81–100. 
+43. Cetin, E.; Odabasi, M.; Seyﬁoglu, R. Ambient volatile organic compound (VOC) concentrations around a petrochemical complex 
+and a petroleum reﬁnery. Sci. Total Environ. 2003, 312, 103–112. 
+44. Liu, Y.; Shao, M.; Lu, S.; Chang, C.; Wang, J.-L.; Chen, G. Vo latile Organic Compound (VOC) measurements in the Pearl River 
+Delta (PRD) region, China. Atmos. Chem. Phys. 2008, 8, 1531–1545. 
+45. Sadeghi, B.; Pouyaei, A.; Choi, Y.; Rappenglueck, B. Inﬂuence of seasonal variability on source characteristics of VOCs at Hou-
+ston industrial area. Atmos. Environ. 2022, 277, 119077. 
+46. Baltrenas, P.; Baltrenaite, E.; Sereviciene, V.; Pereira, P. Atmospheric BTEX concentrations in the vicinity of the crude oil reﬁnery 
+of the Baltic region. Environ. Monit. Assess. 2011, 182, 115–127. 
+47. Lee, D.K.; Park, J.-M.; Jang, J.-H.; Jung, J.-S.; Kim, M.-K.; He o, J.; Park, D. Spatiotemporal Assessment of Benzene Exposure 
+Characteristics in a Petrochemical Industrial Area Using Mobile-Extraction Diﬀerential Optical Absorption Spectroscopy (Me-
+DOAS). Toxics 2025, 13, 655. 
+
+Environments 2026, 13, 41 25 of 25 
+ 
+https://doi.org/10.3390/environments13010041 
+48. Barbeş, S.-B.; B ărbulescu, A.; Barbe ș, L. Assessing Benzene and TVOC Pollution and the Carcinogenic and Noncarcinogenic 
+Risks to Workers in an Industrial Plant in Southeastern Romania. Toxics 2024, 12, 187. 
+49. Horiba. Technical Documentation for FID and PID Detectors. 2024. Available online: https://www.horiba.com/int/process-and-
+environmental/measuring-principles/ﬁd/ (accessed on 25 May 2025). 
+50. RO Government. Law 104/2011 on Ambient Air Quality. Law 264/ 2017 on Air Quality Standards. Romania. Available online: 
+https://www.calitateaer.ro/public/home-page/?__locale=en (accessed on 15 January 2025). 
+51. European Parliament and Council. Directive 2010/75/EU on Industrial Emissions (Integrated Pollution Prevention and Control), 
+Oﬃcial Journal of the European Union. 2010. Available online: h ttps://eur-lex.europa.eu/legal-con-
+tent/EN/TXT/?uri=CELEX%3A02010L0075-20240804 (accessed on 25 September 2025). 
+52. Oil Reﬁnery Emissions, A Cross-Border Impact Issue. Available online: h ttps://kunakair.com/oil-reﬁnery-emissions/ (accessed 
+on 15 December 2025). 
+53. Reﬁnery Air Emissions Management. Guidance Document  for the Oil and Gas Industry. Available online: 
+https://www.ipieca.org/resources/reﬁnery-air-emissions-management (accessed on 15 December 2025). 
+54. Bărbulescu, A.; Barbe ş, L. Characterization of the Concentrations of Volatile Organic Compounds in the Romanian Li ttoral 
+using General Regression Neural Networks: A Case Study. Anal. Lett. 2016, 49, 387–399. 
+55. Jovanovic Andersen, Z.; Badyda, A.; Tzivian, L.; Dzhambov, A.M.; Paunovic, K.; Savic, S.; Jacquemin, B.; Dragic, N. Air Pollu-
+tion Inequalities in Europe: A Deeper Understanding of Challenges in Eastern Europe and Pathways Forward Towards Closing 
+the Gap between East and West. Environ. Epidemiol. 2025, 9, e383. 
+Disclaimer/Publisher’s Note: The statements, opinions and data contained in all publications are solely those of the individual au-
+thor(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any inju ry to 
+people or property resulting from any ideas, methods, instructions or products referred to in the content. 

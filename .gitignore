@@ -1,0 +1,9 @@
+# Office/WPS temporary files
+~$*
+*.tmp
+*.bak
+
+# Reproducible working and rendering caches
+03_过程文件/00_工作缓存/
+03_过程文件/05_PDF渲染缓存/
+

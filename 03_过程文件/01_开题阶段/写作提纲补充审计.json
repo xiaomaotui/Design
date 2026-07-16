@@ -1,0 +1,17 @@
+{
+  "required_items_present": {
+    "抗风圈": true,
+    "HSE": true,
+    "防火": true,
+    "防爆": true,
+    "防雷电": true,
+    "防震": true,
+    "防泄漏": true,
+    "输油泵选型": true,
+    "泵的装卸能力校核": true
+  },
+  "economic_word_absent": true,
+  "backup": "D:\\毕业论文\\03_过程文件\\01_开题阶段\\用户修改稿备份\\张淑鑫_浙江平湖油库工艺设计_开题报告_用户删改后备份.docx",
+  "output": "D:\\毕业论文\\04_最终成品\\01_开题报告\\张淑鑫_浙江平湖油库工艺设计_开题报告.docx",
+  "economic_replacements": 5
+}

@@ -1,0 +1,795 @@
+ 
+ 
+ 
+ 
+ 
+Appl. Sci. 2026, 16, 1851 https://doi.org/10.3390/app16041851 
+Article 
+Assessing VOC Dispersion from Hydrocarbon Storage  
+Tanks: A Case Study on Emission Temporal Resolution 
+Francesca Tagliaferri *, Selena Sironi and Marzio Invernizzi 
+Politecnico di Milano, Department of Chemistry, Materials and Chemical Engineering “Giulio Natta”, Piazza 
+Leonardo da Vinci 32, 20133 Milano, Italy; selena.sironi@polimi.it (S.S.); marzio.invernizzi@polimi.it (M.I.) 
+* Correspondence: francesca.tagliaferri@polimi.it 
+Abstract 
+Volatile Organic Compound emissions from hydrocarbon storage tanks are a key source 
+of industrial air pollution and odour nuisance. This study evaluates odour impact predic-
+tions using annual average emissions versus time -resolved emissions from fixed roof 
+tanks and external floating roof tanks that store different hydrocarbon products, including 
+crude oil and refined products such as gasoline, diesel, kerosene, fuel oil, and bitumen. 
+Odour emission rates are derived from field measurements and laboratory da ta and im-
+plemented in CALPUFF dispersion modelling. The results show that for fixed roof tanks, 
+time-resolved emissions predict odour separation distances up to four times greater than 
+annual averages, with central domain differences reaching 300% and boundary variations 
+between 50–100%. In contrast, floating roof tanks show minimal variation (<10%) between 
+the two methods. These findings highlight that odour perception is driven by short -term 
+peaks rather than long -term averages and that using annualized e missions may signifi-
+cantly underpredict odour impacts, especially for fixed roof tanks. Accurate temporal 
+characterization is thus essential for realistic odour assessments and effective regulatory 
+compliance. 
+Keywords: dispersion modelling ; CALPUFF; hydrocarbon storage; odour emission ; 
+tanks; VOCs 
+ 
+1. Introduction 
+Volatile Organic Compound (VOC) emissions from Oil & Gas operations represent a 
+significant source of industrial air pollution, impacting air quality and the environment 
+around these facilities [1–4]. For instance, refineries, which process crude oil into various 
+petroleum products, release a variety of VOCs during different stages of production, in-
+cluding storage, transfer, and processing [5,6]. Petrochemical plants also use hydrocar-
+bons for the production of specific organic molecules [7,8]. These emissions not only con-
+tribute to the formation of ground -level ozone and smog but may also impact local com-
+munities through odorous compounds that can affect the quality of life [9 –12]. 
+Combustion processes, such as those in boilers, heaters, and flares, release odorous 
+sulfur compounds and other VOCs. Likewise, product loading and unloading operations 
+contribute to odour emissions due to the handling and transfer of raw materials and re-
+fined products. Wastewater treatment within Oil  & Gas facilities also generates VOC 
+emissions, as inlet water may contain sulfur compounds and other volatile substances 
+Academic Editor: Regina Duarte 
+Received: 12 January 2026 
+Revised: 10 February 2026 
+Accepted: 11 February 2026 
+Published: 12 February 2026 
+Copyright: © 2026 by the author. 
+Licensee MDPI, Basel, Switzerland. 
+This article is an open access article 
+distributed under the terms and 
+conditions of the Creative Commons 
+Attribution (CC BY) license. 
+
+Appl. Sci. 2026, 16, 1851 2 of 17 
+ 
+https://doi.org/10.3390/app16041851 
+with a high odour potential [13 –15]. Understanding the dynamics of VOC emissions is 
+crucial for effective regulatory measures and public health protection [16,17]. 
+One of the most significant sources of odorous emissions in the Oil & Gas sector is 
+the storage and handling of crude oil and refined products [18 –20]. These storage tanks 
+are designed to store volatile materials, and due to temperature fluctuations, pressure 
+changes, and handling activities, VOCs can be released into the at mosphere. There are 
+two main types of storage tanks that may release VOC in the atmosphere: Fixed Roof 
+Tanks (FRTs) and External Floating Roof Tanks (EFRTs). 
+FRTs, characterized by their static, immovable roof, create a confined gaseous head-
+space above the liquid product, where vapours can accumulate. As the tank is filled and 
+the liquid level rises, the vapour space is compressed, forcing the release of VOCs through 
+vapour displacement. This process, known as “working losses”, represents the primary 
+emission contributor [14,21]. In addition, FRTs also experience emissions due to “standing 
+losses”, essentially caused by the daily thermal cycle. These losses occu r when tempera-
+ture changes cause the vapour in the tank to expand and contract, releasing small amounts 
+of VOCs [22]. According to Invernizzi et al. [13], standing losses are a minor contributor 
+to operational FRTs to total emissions, compared to working losses. 
+In contrast, EFRTs are designed to minimize vapour accumulation by featuring a 
+movable roof that floats directly on the liquid surface, thereby reducing the headspace 
+and limiting the potential for vapour formation. However, these tanks are not completely 
+sealed, and VOC emissions can still occur at the points where the floating roof meets the 
+tank wall, known as “rim seal losses”, as well as at various openings and fittings on the 
+roof, such as manholes and vents, referred to as “deck fitting losses”. Both  types of emis-
+sions are influenced by temperature and pressure fluctuations, which can cause minor 
+movements of the roof or create small gaps, allowing VOCs to escape. Additionally, work-
+ing losses in EFRTs arise when the roof moves downward due to the film of liquid adher-
+ing to the tank walls. As the liquid evaporates, this leads to the displacement of vapour 
+and, consequently, VOC emissions [23–26]. 
+Numerous studies have investigated VOC emissions from hydrocarbon storage 
+tanks, primarily focusing on their contribution to air pollution and their environmental 
+impact on surrounding areas [24,27–31]. However, research specifically addressing odour 
+emissions from these tanks is extremely limited. The few existing studies on hydrocarbon-
+related odour emissions generally focus on either methodology for estimating emissions 
+[13,14], without addressing atmospheric dispersion, or modelling approaches to assess  
+the impact of an entire site [32–34]. To date, the odour impact of storage tanks as individ-
+ual sources has not been systematically evaluated, despite their potential contribution to 
+odour nuisance in nearby communities. 
+In the context of odorous gas emissions, it is essential to recognize that the concen-
+tration of a substance advected by a turbulent boundary layer flow often exhibits substan-
+tial fluctuations around its mean value [35]. Unlike traditional air pollutants, w hich are 
+typically regulated based on long-term average concentrations, odour impacts are primar-
+ily assessed using short-term peak concentrations and percentiles [36,37]. This difference 
+is key, as odour nuisance is a transient phenomenon driven by brief, high-concentration 
+spikes, rather than continuous exposure. As such, a more granular approach to emission 
+input data is necessary to capture these peaks, which are crucial to understand odorous 
+emissions and their impact. This is particularly significant for hydrocarbon storage tanks, 
+which display a discontinuous emission pattern, characterised by sporadic yet intense re-
+lease events throughout the year, that can lead to odour nuisance. Consequently, relying 
+solely on a constant annual emission rate may obs cure critical information about odour 
+impact on receptors , with the risk of underestimating the peak events that define actual 
+odour perception and possible nuisance [38–40]. 
+
+Appl. Sci. 2026, 16, 1851 3 of 17 
+ 
+https://doi.org/10.3390/app16041851 
+This study aims to quantify the odour impact of oil refinery storage tanks, leveraging 
+high-resolution temporal emission data to improve the accuracy of odour dispersion mod-
+elling. By comparing odour impact predictions obtained using annual average emissio ns 
+versus temporally resolved emissions, this study highlights how different approaches to 
+emission characterization can lead to significantly different outcomes. The Odour Emis-
+sion Rates (OERs) used in the simulations are derived from real measurements co llected 
+through field campaigns at industrial sites (for FRTs) or laboratory experiments (for 
+EFRTs). 
+The simulations were performed using the CALPUFF dispersion model, selected due 
+to its widespread application in regulatory frameworks [41,42] and its recognition by 
+agencies such as the US-EPA [43,44]. CALPUFF’s capacity to incorporate temporally and 
+spatially resolved emission data and its ability to handle non-steady-state conditions and 
+simulate short-term odour peaks make it particularly appropriate for evaluating the var-
+iability and intensity of odour nuisance events [45–49]. 
+This study advances the estimation of odour emissions from hydrocarbon storage 
+tanks, extending existing research on the influence of temporal variability in emission 
+rates on odour impact assessments. Previous works have demonstrated that assuming 
+constant emissions may lead to underestimation of impact areas [38,49,50]. However, 
+these studies focused on generic modelling scenarios or agricultural sources, whereas no 
+research has yet examined this aspect for odorous emissions from Oil & Gas operations.  
+In this context, the present work provides a novel contribution by applying the con-
+cept of temporally resolved emissions to industrial hydrocarbon storage tanks, where 
+odorous releases are highly intermittent and process -dependent, and by distinguishing 
+between FRTs and EFRTs, which exhibit markedly different emission dynamics. The 
+study provides a quantitative comparison of how predicted odour impacts vary between 
+these two tank types when using emission data with different temporal resolutions, thus 
+illustrating the extent to which simplified, time -constant approaches can distort the as-
+sessment results. 
+2. Materials and Methods 
+2.1. CALPUFF Model 
+CALPUFF [51] is an advanced three -dimensional, non -stationary Lagrangian puff 
+dispersion model, designed to simulate the atmospheric transport and dispersion of pol-
+lutants, including gases, aerosols, and particulate matter. It is particularly suited in cas e 
+of complex orographic terrain and coastal influences. 
+The model simulates pollutant dispersion through discrete puffs, each containing a 
+fraction of the total emission mass. As they travel, these puffs expand horizontally and 
+vertically from the plume’s centerline, following a normal distribution according to Equa-
+tions (1) and (2): 
+C(x, y, z) =
+Q
+2πσxσy
+g [exp(−
+1
+2 (
+da
+σx
+)
+2
+)] [exp(−
+1
+2 (
+dc
+σy
+)
+2
+)]  (1) 
+g = 2
+σz√2π
+∑ exp[−(He + 2nh)2
+2σz2 ] (2) 
+where C [g/m3] is the concentration at (x, y, z); Q [g] is the pollutant mass; σx, σy, and 
+σz [m] are the Gaussian distribution standard deviations in the along -wind, cross-wind, 
+and vertical directions; da and dc [m] indicate the distances from the puff barycenter to 
+the receptor in the along-wind and cross-wind directions; He [m] is the puff barycenter’s 
+height relative to the ground; h [m] is the mixing-layer height; g [m−1] is the vertical com-
+ponent of the Gaussian formulation, including the effects of ground and inversion layer 
+
+Appl. Sci. 2026, 16, 1851 4 of 17 
+ 
+https://doi.org/10.3390/app16041851 
+reflections; and n is an integer index accounting for multiple reflections in the vertical 
+direction. 
+CALPUFF can account for various meteorological phenomena, including variations 
+in wind speed, direction, and atmospheric stability. The meteorological fields required by 
+CALPUFF are provided by CALMET [52], a diagnostic meteorological preprocessor that 
+integrates local and regional data, such as terrain information, observational data, and 
+weather forecast outputs. CALMET generates high-resolution wind, temperature, and sta-
+bility profiles to simulate pollutant dispersion under a variety of conditions. 
+Moreover, it also includes options for simulating pollutant removal processes, like 
+dry and wet deposition, as well as the plume rise phenomenon. It offers flexibility in sim-
+ulating plume rise by providing different algorithms, including the empirical Brig gs for-
+mulation and a numerical plume rise method. 
+2.2. Site Description and Meteorological Data 
+All simulations were performed using CALPUFF version 7.2.1 on an annual basis, 
+with a time step of 3600 s. 
+Chemical transformation processes were not activated, as commonly assumed in 
+odour dispersion modelling, where pollutants are treated as chemically inert. Dry and wet 
+deposition processes were also not included; this assumption is conservative with respect 
+to predicted ground -level concentrations. Building downwash effects were not consid-
+ered. 
+The dispersion option MDISP was set to 2, whereby horizontal and vertical disper-
+sion coefficients are determined on the basis of micrometeorological parameters provided 
+by the meteorological preprocessor, allowing for a physically based representation of a t-
+mospheric turbulence and stability effects. 
+Default CALPUFF values were adopted for the minimum size of newly generated 
+puffs, with SYMIN = SZMIN = 1. 
+The computational domain is located in northern Italy (SW corner: 487.632 km UTM 
+E, 4997.350 km UTM N, UTM zone 32), covering an area of 6 km × 6 km, with a grid reso-
+lution of 100 m. This area is characterized by relatively flat terrain, with an average eleva-
+tion of approximately 90 m above sea level. The land use data used for the simulation 
+were sourced from the CORINE CLC 2018 (100 m resolution) land cover database, while 
+the terrain elevation data were obtained from the SRTM Global (30 m resolution) dataset. 
+To generate the three -dimensional wind field for the simulation, the meteorological 
+data used as input for the CALMET (version 6.5.0) simulations, including both surface 
+and upper -air data, were derived from hourly 3D outputs of a prognostic WRF model 
+with a 1 km resolution. Unlike data from a single monitoring station, which provides only 
+point measurements, this approach delivers spatially resolved, three -dimensional data. 
+The dataset spans the entire year of 2022, selected as the reference period.  
+Figure 1 illustrates the annual wind rose (blowing-from) at the first vertical layer, 10 
+m above ground level, and the frequency distribution of stability classes, as extrapolated 
+from the CALMET simulations at the centre of the domain (490.632 km UTM E, 5000.350 
+km UTM N, UTM zone 32). The meteorological simulation indicates prevailing wind di-
+rections from the northeast and southwest, with an average wind speed of approximately 
+2.84 m/s. Furthermore, nearly one -third of the annual hours are associated with  stability 
+class F, reflecting highly stable atmospheric conditions. These findings are consistent with 
+the typical climate of the Po Valley, where the domain is located. In the CALMET/CAL-
+PUFF modelling system, calm -wind conditions are defined as situation s in which wind 
+speed is lower than 0.5 m/s. Under such conditions, CALPUFF is able to simulate stagnant 
+puffs that are not transported by wind advection while still allowing for dispersion driven 
+
+Appl. Sci. 2026, 16, 1851 5 of 17 
+ 
+https://doi.org/10.3390/app16041851 
+by atmospheric turbulence. This capability is particularly relevant for the simulation of 
+odour dispersion under stable and low-wind conditions. 
+ 
+Figure 1. Annual wind rose (blowing –from) at the centre of the domain (490.632 km UTM E, 
+5000.350 km UTM N, UTM zone 32), (a). Annual distribution of stability classes, (b). 
+2.3. Emission Data and Sources Characterization 
+For FRTs, the OER for each tank was estimated as described by Invernizzi et al. [13], 
+by associating the odour concentration [ou E/m3] representative of the stored product to 
+the airflow [m3/h] emitted from the tank vent during the filling phase, as working losses 
+are the primary source of emissions for this type of tank. The model refers to freely vented 
+tanks, i.e., not connected to vapour recovery units, flares, or vapour balancing systems, 
+thus assuming direct venting to the atmosphere: 
+OER [ouE/s] = Qair [m3/h] × Cod [ouE/m3]
+3600 s/h  (3) 
+where Qair is the emitted airflow during the filling phase and Cod is the odour concen-
+tration at the vent. 
+Odour concentrations for each product were obtained by averaging datasets of val-
+ues collected during multiple olfactometric campaigns conducted by the Olfactometric 
+Laboratory of Politecnico di Milano at the vents of FRTs containing different hydrocarbon 
+products. The experimental procedures were carried out in accordance with recognized 
+olfactometric standards [5 3], ensuring consistency and reliability of the measurements 
+within the context of this study. It should be noted that these values are specific t o the 
+sampling campaigns and reflect the operational conditions of the tanks and facilities at 
+the time of sampling, including factors such as product temperature and filling level; 
+therefore, they should not be considered as universally applicable referen ce data. 
+A total of 21 odour concentration measurements were available for bitumen tanks, 
+while 42 measurements were collected for the remaining refined products (kerosene, die-
+sel, and fuel oil). For each product category, representative mean values and standard 
+deviations of the odour concentration were computed and are reported in Table 1.  
+Odour concentration values showed substantial variability across tanks and moni-
+toring campaigns, mainly related to product characteristics such as sulfur content and de-
+gree of refining. A clear distinction was nevertheless observed between bitumen and the 
+other refined products, with bitumen consistently exhibiting higher odour concentrations, 
+while kerosene, diesel, and fuel oil displayed broadly comparable levels. On this basis, 
+bitumen was treated as a separate category, and the remaining refined product s were 
+grouped together in the analysis. 
+The airflow rate was estimated based on the hourly fluctuations in the tank level, 
+which were obtained from a real-case refinery’s DCS (Distributed Control System), result-
+ing in an hourly variable OER throughout the year. Emissions were set to zero when the 
+
+
+Appl. Sci. 2026, 16, 1851 6 of 17 
+ 
+https://doi.org/10.3390/app16041851 
+tank was in a stationary or descending phase, as emissions are associated with the loading 
+phase, during which gas or vapor is released due to filling and pressure variations inside 
+the tank. Additionally, a constant OER was also considered for the entire year. This was 
+derived by replacing the hourly variations in tank throughput, as estimated from hourly 
+level data, with the total annual throughput distributed evenly across the year, as com-
+monly done by yearly VOC inventories [54]. 
+In the time -resolved approach, the hourly variability of FRT emissions originates 
+solely from the airflow rate Q air, while odour concentrations are assumed constant over 
+time and depend only on the type of product stored, thus differing from tank to tank.  
+In particular, the simulation of FRTs includes a total of 47 tanks, categorized as fol-
+lows: 10 bitumen tanks, 5 kerosene tanks, 11 diesel tanks, and 21 fuel oil tanks.  
+In the case of EFRTs, the OER was derived by associating the estimated VOC losses 
+[kg/y], with a representative HCOEC (Hydrocarbon Odour Emission Capacity) [ou E/kg] 
+value for each stored product, according to [13]: 
+OER [ouE/s] = HCOEC [ouE/kg] × Ltot[kg/y]
+8760 h/y× 3600 s/h  (4) 
+where HCOEC  is the hydrocarbon odour emission capacity  and Ltot  the yearly VOC 
+losses. 
+VOC losses were derived on a monthly basis using the equations for external floating 
+roof tanks provided in Chapter 7 of the U.S. EPA AP-42 methodology [53], accounting for 
+all relevant loss mechanisms, including rim seal, deck fitting, and withdrawal loss es. The 
+required input parameters include tank geometric characteristics (tank diameter and 
+height), roof and seal configuration, number and type of deck fittings, product properties, 
+and operating conditions. Meteorological inputs required by the AP-42 equations, such as 
+ambient temperature and wind speed, were derived from the CALMET meteorological 
+fields used for dispersion modelling. All remaining tank -specific parameters were ob-
+tained from refinery technical databases and design documentation. 
+The HCOEC values were determined through laboratory analyses conducted by the 
+Olfactometric Laboratory of Politecnico di Milano on various refinery cuts to assess their 
+odour potential. To measure HCOEC, air is bubbled through the liquid samples in a bub-
+bler to promote the controlled evaporation of volatile compounds. The airflow is regu-
+lated and monitored, while air samples are collected and analyzed by dynamic olfactom-
+etry to measure odour concentration. The total amount of odour released due to the evap-
+oration of a cut over a given time period can be computed as:  
+Od [ouE] = ∫ Qair × Cod(t)
+ttot
+0
+× dt (5) 
+where Qair represents the airflow delivered to the bubbler,  Cod denotes the odour con-
+centration measured in the collected air sample, and ttot refers to the time interval. 
+The hydrocarbon odour emission capacity can be estimated by relating the amount 
+of odour released to the mass evaporated during the test. Further details can be found in 
+[14]. 
+The choice of a monthly time frame for estimating VOC losses in EFRTs follows the 
+methodology outlined in US-EPA AP-42 [53], with the caveat that a one -month period is 
+considered the minimum duration for estimating emissions [54], as the equations reported 
+in US-EPA AP-42 become increasingly uncertain over shorter time spans. Although this 
+approach does not explicitly account for short-term (daily or hourly) variability, it is con-
+sistent with the applicability limits of the AP-42 correlations. 
+Moreover, OER values for EFRTs were estimated based on annual VOC losses, which 
+were homogeneously distributed throughout the year, resulting in a constant OER value 
+without monthly variability. 
+
+Appl. Sci. 2026, 16, 1851 7 of 17 
+ 
+https://doi.org/10.3390/app16041851 
+The simulation of EFRTs includes a total of 33 tanks, consisting of 9 crude oil tanks, 
+22 gasoline tanks, and the remainder storing kerosene and gas oil.  
+Table 1 presents the various HCOEC and odour concentration values considered in 
+the study for the different stored products, as well as the total annual VOC losses for 
+EFRTs and the total annual throughput of FRTs. The reported totals were obtained by 
+summing the contributions of all 33 EFRT tanks and all 47 FRT tanks, respectively, while 
+tank-specific values are provided in the Supplementary Material. 
+Table 1. Input for emission estimates for FRTs and EFRTs. 
+ FRTs EFRTs 
+ Q [m3/y] = 7×106 VOC losses [kg/y] = 52,000 
+ Cod [ouE/m3] HCOEC [ouE/kg] 
+Fuel oil  60,000 ± 69,000 - 
+Bitumen 150,000 ± 98,000 - 
+Gasoline - 106 
+Kerosene 60,000 ± 69,000 107 
+Diesel 60,000 ± 69,000 107 
+Crude oil - 108 
+Q = annual throughput; Cod = Odour concentration. 
+Among the hydrocarbon products considered, the highest odour potential differs de-
+pending on tank typology. For FRTs, bitumen is characterized by the highest odour con-
+centration at the vent, while for EFRTs, crude oil exhibits the highest HCOEC. However, 
+the intrinsic odour potential of the stored product alone does not directly determine the 
+emitted odour flux. 
+In the case of FRTs, the odour emission rate is primarily governed by tank operating 
+conditions, as it results from the combination of the product -specific Cod and the airflow 
+associated with tank filling operations. Consequently, peak emissions typically occur dur-
+ing filling events and periods of high throughput. 
+Conversely, for EFRTs, the odour emission rate is determined by the product-specific 
+HCOEC in combination with VOC losses estimated through empirical correlations. Gas-
+oline tanks are generally associated with the highest VOC losses, primarily due to the 
+higher volatility of gasoline compared to other stored products. However, VOC losses 
+from individual tanks are not governed by product type alone, but also by a range of tank-
+specific and operational parameters, and ambient temperature. As a consequence, EFR T 
+emissions typically exhibit a seasonal pattern, with higher emission levels occurring dur-
+ing the warmer months, when volatilization processes are enhanced. 
+The vent of each FRTs was modelled as a point source emission, with a height equal 
+to the tank roof, and a temperature assumed to be equal to the storage temperature of the 
+tank. Storage temperatures for the different hydrocarbon cuts (typically 50 –70 °C for fuel 
+oil, 150–200 °C for bitumen, and near-ambient temperature for kerosene and diesel) were 
+obtained directly from industrial Distributed Control System (DCS), where tank temper-
+atures are continuously monitored by in-tank temperature sensors as part of standard op-
+erational control. 
+EFRTs were simulated as area source emissions, with an emission height correspond-
+ing to the top of the tank walls and a surface area corresponding to the circular area of the 
+tank. The initial vertical dispersion coefficient, σZ0, defines the vertical extent of the puff 
+at the point of emission. As outlined in the AERMOD User’s Guide [55], σZ0 is determined 
+by dividing the vertical dimension of the emission source (i.e., its height) by a factor of 
+2.15 [56,57]. 
+
+Appl. Sci. 2026, 16, 1851 8 of 17 
+ 
+https://doi.org/10.3390/app16041851 
+Additional input data related to FRTs and EFRTs are provided in the Supplementary 
+Material. 
+3. Results 
+3.1. Annual Emission Trend 
+Figure 2 shows the comparison of total OER from EFRTs and FRTs, obtained by sum-
+ming the contributions of all tanks, considering two approaches for estimating VOC 
+losses: annual average and time-varying approach. 
+ 
+ 
+Figure 2. Annual emission trends for EFRTs and FRTs. Blue markers represent time-resolved odour 
+emission rates (monthly for EFRTs and hourly for FRTs), while the yellow line indicates the constant 
+annual-average emission rate used for comparison. 
+Concerning EFRTs, the results reveal a distinct seasonal trend, with higher VOC 
+emissions estimated during the summer months. This increase is primarily driven by ele-
+vated ambient temperatures and enhanced solar radiation, which lead to greater VOC 
+volatilization. Notably, the maximum deviation occurs in August, where the OER exceeds 
+the annual trend by 50%, highlighting the potential underestimation of emission rates 
+when relying solely on annual averages. Overall, outside the peak summer conditions, the 
+
+
+Appl. Sci. 2026, 16, 1851 9 of 17 
+ 
+https://doi.org/10.3390/app16041851 
+differences between the two approaches are modest, with an average deviation of about 
+10%. 
+In the case of FRTs, Figure 2 presents a comparison of the OER estimated by summing 
+the contributions of all tanks using the annual average throughput for each tank versus 
+an approach that considers hourly variations in tank levels. The results show that relying 
+on annual averages significantly underestimates peak values, as it smooths out fluctua-
+tions driven by intense tank -filling activities or high throughput periods. Quantitatively, 
+while the annual average OER is around 16,000 ouE/s, the highest peaks exceed 100,000 
+ouE/s, demonstrating a discrepancy of nearly one order of magnitude, corresponding to 
+underestimations approaching 85–90% during peak emission events. 
+3.2. Odour Impact 
+Odour impact was evaluated in terms of the 98th percentile of ground -level odour 
+concentrations over the simulation year, in accordance with the Italian regulatory frame-
+work. Hourly averaged concentration outputs (averaging time equal to 1 h) generated by 
+CALPUFF were used as the basis for the percentile calculation. 
+To account for short -term concentration fluctuations relevant for odour perception, 
+a peak-to-mean factor was applied during post-processing (using CALPOST tool, version 
+7.1.0). Specifically, hourly mean concentrations were multiplied by a constant peak -to-
+mean factor equal to 2.3, as prescribed by Italian regulation [58]. 
+Figure 3 illustrates the direction -dependent separation distances for three reference 
+concentration values mentioned in the recent Italian regulation for the control of odorous 
+emissions from industrial activities [58]. According to Schauberger et al. [59] , 1 ou E/m3 
+corresponds to the odour detection threshold, 3 ou E/m3 to odour discrimination, and 5 
+ouE/m3 to unmistakable perception. The separation distances represent contour lines (iso-
+pleths), varying according to direction, of an ambient concentration threshold. To evaluate 
+the separation distances, a dedicated receptor nest, located at ground level, was imple-
+mented by placing receptors radially around the geometric centre of the tank area, with 
+an angular spacing of 20° and at increasing distances from t he source. For each reference 
+concentration level, the separation distance was determined independently for each di-
+rection by interpolating between the two adjacent receptors encompassing the target con-
+centration. 
+From Figure 3, it can be observed that, for EFRTs, the outcome resulting from the two 
+different approaches for estimating odour emission fluxes is largely comparable. The sep-
+aration distances highlight more significant impacts in the prevailing wind directions (NE 
+and SW). Specifically, for angles of approximately 60° and 240° from the north, the maxi-
+mum separation distance reaches 1500 m for 1 ou E/m3, 400 m for 3 ou E/m3, and 200 m for 
+5 ouE/m3. For all three reference concentration values, the separation d istances estimated 
+by the two different approaches are nearly identical, suggesting negligible differences be-
+tween monthly varying emission fluxes and a constant annual emission rate.  
+However, in certain instances, the annual approach results in slightly higher separa-
+tion distances (e.g., for 1 ouE/m3 at 240°), although the difference is minimal. This could be 
+attributed to the fact that higher emission fluxes typically occur during the summer 
+months. These months often experience conditions that favour pollutant dispersion, such 
+as increased convectiv e turbulence driven by higher surface temperatures. This turbu-
+lence enhances vertical mixing in the atmosphere, facilitating the dilution and transport 
+of pollutants over greater distances. As a result, the dispersion efficiency is higher during 
+the summer, which compensates for the elevated emission rates. Therefore, the constant 
+annual emission rate approach may, in some cases, slightly overestimate the impacts at 
+the 98th percentile compared to the monthly approach. 
+
+Appl. Sci. 2026, 16, 1851 10 of 17 
+ 
+https://doi.org/10.3390/app16041851 
+In contrast, for FRTs, the trends in separation distances reveal more pronounced dis-
+crepancies, especially along the prevailing wind directions. Specifically, Figure 3 shows 
+that the 1 ou E/m3 concentration isoline extends up to approximately 150 0–1700 m in the 
+NE and SW directions when hourly emission variability is considered. In contrast, using 
+a constant annual emission rate, the same isoline is reduced to about 750 m. This trend is 
+consistent across different concentration levels. For instance, whe n considering the high-
+est reference concentration value of 5 ou E/m3, the discrepancy in separation distances 
+reaches a factor of up to five, passing from 500 m to 100 m, highlighting the significant 
+influence of hourly flux variability on the dispersion predictions. 
+ 
+Figure 3. Separation distances referred to 1 ou E/m3, 3 ou E/m3 and 5 ou E/m3 for EFRTs and FRTs, 
+expressed in terms of the annual 98th percentile of ground-level odour concentration. 
+Figure 4 shows the odour impact maps within the computational domain for EFRTs 
+and FRTs obtained by the two different approaches investigated. 
+
+
+Appl. Sci. 2026, 16, 1851 11 of 17 
+ 
+https://doi.org/10.3390/app16041851 
+ 
+Figure 4. Odour impact maps for EFRTs and FRTs, expressed in terms of the annual 98th percentile 
+of ground-level odour concentration. 
+As highlighted by the separation distances, the odour impact maps obtained for 
+EFRTs using the two different approaches (i.e., monthly variable and annual average) ap-
+pear virtually identical. In both cases, the 1 ouE/m3 isoline extends predominantly towards 
+the northeast and southwest, reaching distances of up to approximately 1500 m. 
+In contrast, for FRTs, significant discrepancies emerge between the two simulated 
+scenarios. When considering an hour -by-hour variable OER, the 1 ou E/m3 isoline reaches 
+a maximum distance of nearly 1800 m towards the southwest. In the annual average sce-
+nario, however, the same isoline extends only up to about 900 m. Similar differences are 
+observed for the other isolines as well. 
+Figure 5 highlights the relative (%) differences between the scenario with a variable 
+OER (monthly for EFRTs and hourly for FRTs) and the scenario with an annual average 
+approach over the simulation year: 
+     ∆ (%) =
+(𝐶𝑚𝑜𝑛𝑡ℎ𝑙𝑦/ℎ𝑜𝑢𝑟𝑙𝑦−𝐶𝑎𝑛𝑛𝑢𝑎𝑙)
+𝐶𝑎𝑛𝑛𝑢𝑎𝑙
+× 100   (6) 
+
+
+Appl. Sci. 2026, 16, 1851 12 of 17 
+ 
+https://doi.org/10.3390/app16041851 
+  
+Figure 5. Relative (%) differences between the time -variable OER scenario and the annual average 
+approach, for EFRTs and FRTs. 
+Figure 5 shows that, in the case of EFRTs, the differences between the two emission 
+scenarios are essentially negligible, generally falling between 5% and 10%. Specifically, 
+positive values indicate an overprediction of the variable scenario, with deviatio ns typi-
+cally under 10%, while negative values suggest a slight underprediction of the monthly 
+scenario, with discrepancies peaking at 15%. 
+For FRTs, much larger differences emerge near the sources, with variations up to 
+300% (hourly emissions about four times higher than annual averages). At the domain 
+boundary, discrepancies are smaller, typically 50 –100% (a factor of 1.5 –2). This pattern 
+reflects dispersion dynamics: close to the source, concentrations are highly sensitive to 
+emission temporal variability, while further away , turbulent diffusion and advection, in-
+troducing effects related to the larger-scale mixing and transport processes, reduce its in-
+fluence. 
+In addition to the results discussed above, which refer to the Italian regulatory crite-
+rion, a supplementary analysis was carried out to investigate how the relative differences 
+between time-resolved and annual -average emission scenarios depend on the defi nition 
+of the odour impact metric. To this end, a set of alternative impact metrics representative 
+of markedly different regulatory approaches was selected, spanning a wide range of per-
+centile and peak -to-mean combinations. These include criteria character ized by a rela-
+tively low percentile combined with a higher peak-to-mean factor (e.g., the German refer-
+ence criterion), high percentiles combined with low peak-to-mean factors (e.g., the French 
+reference criterion), and criteria where both the percentile and the peak-to-mean factor are 
+high (e.g., the Danish reference criterion). A criterion characterized by comparatively low 
+values of both parameters was also considered (e.g., the Irish reference criterion).  
+For each impact metric, the mean percentage variation between the time -resolved 
+and annual-average emission scenarios was calculated by averaging the relative differ-
+ences over all gridded receptors within the computational domain. The results, summa-
+rized i n Table 2, show a clear and systematic increase in the relative differences as the 
+selected percentile increases. Mean variations range from approximately 36% for the 90th 
+percentile to about 80% for the 98th percentile and increase further to 145% and 260 % for 
+the 99th and 99.5th percentiles, respectively. 
+  
+
+
+Appl. Sci. 2026, 16, 1851 13 of 17 
+ 
+https://doi.org/10.3390/app16041851 
+Table 2. Mean relative differences (%) between time-resolved and annual-average emission scenar-
+ios for FRTs under selected odour impact metrics. 
+Reference Impact 
+Metric Peak-to-Mean Percentile Mean Relative Differ-
+ence (%) 
+Germany 4 90 36 
+Italy 2.3 98 78 
+Ireland 1 98 78 
+Denmark 7.8 99 145 
+France 1 99.5 260 
+The comparison between the Italian and Irish reference criteria, which share the same 
+percentile (98th) but differ in the adopted peak -to-mean factor, clearly illustrates that the 
+peak-to-mean factor does not influence the relative differences between the two emission 
+scenarios when applied consistently. In both cases, identical mean relative variations are 
+obtained, confirming that the peak -to-mean factor affects absolute impact levels, while 
+cancelling out in the computation of relative differences. 
+Overall, this analysis indicates that the magnitude of the differences identified for the 
+Italian reference scenario may become even more pronounced under odour impact criteria 
+based on higher concentration percentiles. This suggests that, in regulatory co ntexts 
+adopting more stringent percentile -based metrics, the need for time -resolved emission 
+characterizations may be even more critical in order to adequately capture short -term 
+emission peaks and their contribution to odour impact. 
+4. Conclusions 
+This study aims to assess the impact of odour emissions from hydrocarbon storage 
+tanks by comparing dispersion model predictions obtained using annual average emis-
+sion data versus those derived from temporally resolved emission datasets.  
+For FRTs, the use of hourly resolved emission rates leads to substantially higher pre-
+dicted odour separation distances compared to constant annual -average emissions, with 
+discrepancies reaching up to a factor of four near the sources and remaining significant at 
+the domain boundary. This confirms that annualized emission inputs may severely un-
+derpredict odour impacts when emissions are driven by intermittent operational activities 
+such as tank filling. Aggregating these emissions over longer temporal scales  would be 
+expected to smooth short-term peaks and reduce the predicted impacts, potentially mask-
+ing the conditions most relevant for odour nuisance. 
+In contrast, the analysis revealed that for EFRTs, the differences between the two ap-
+proaches remain minimal, with discrepancies typically below 10%, indicating that a time-
+averaged approach may be adequate for this tank type within the current modelling 
+framework. This outcome should be interpreted in li ght of the temporal resolution pres-
+ently supported by established estimation methodologies. In particular, the monthly res-
+olution adopted for EFRT emissions reflects the minimum time scale for which AP -42-
+based estimates can be considered reliable; applying the same approach at finer temporal 
+scales would likely introduce additional uncertainty rather than improve predictive accu-
+racy. Future research should therefore focus on the development of dedicated met hods 
+capable of resolving EFRT emissions at finer temporal resolutions, beyond the current 
+state of the art. 
+Unlike traditional air pollutants, which are often regulated and evaluated based on 
+long-term average concentrations (e.g., annual means), odour impacts are typically as-
+sessed using short -term peak concentrations and percentiles. This distinction is crucia l 
+because odour nuisance is a transient phenomenon, driven by momentary high concen-
+trations rather than sustained exposure. Therefore, an approach that accounts for 
+
+Appl. Sci. 2026, 16, 1851 14 of 17 
+ 
+https://doi.org/10.3390/app16041851 
+temporal emission variability is particularly relevant for odour assessments, as it better 
+captures peak events that determine actual odour perception and potential nuisance. Fur-
+thermore, it should be noted that with higher calculation percentiles, as used  in several 
+countries [37], the differences in assessed separation distances or exposure levels increase 
+even further compared to those based on annual mean OER. 
+These findings highlight the implications of emission characterization choices in 
+odour dispersion modelling, particularly in regulatory applications, as simplified emis-
+sion inputs may lead to significant underestimation of impact areas. 
+Future research should extend this analysis to other industrial sources, assessing 
+whether finer temporal resolutions, such as hourly variability, provide better impact esti-
+mates than constant annual averages. For example, stack emissions, usually modelled  
+with steady-state annual rates, may show short -term fluctuations that affect dispersion 
+and ground-level concentrations. 
+Additionally, while this study considered a fixed odour concentration for FRTs based 
+on product type, future work should investigate the influence of tank operating condi-
+tions, such as liquid level and storage temperature, on odour concentrations at the ve nt. 
+Experimental studies and targeted sampling campaigns could provide valuable insights 
+into these variations and help refine emission input data. 
+Moreover, extending the analysis to different meteorological conditions would be 
+valuable, as atmospheric turbulence, wind patterns, and seasonal variability strongly af-
+fect odour dispersion and peak concentrations, thereby improving the robustness of reg-
+ulatory assessments. 
+Supplementary Material s: The following supporting information can be downloaded at 
+https://www.mdpi.com/article/10.3390/app16041851/s1, Supplementary Material S1: Geometry, 
+Emission Parameters, and Elevation (MSL) data for FRTs and EFRTs. 
+Author Contributions: Conceptualization, F.T., M.I. and S.S.; methodology, F.T. and M.I.; software, 
+F.T.; investigation, F.T.; data curation, F.T.; visualization, F.T.; writing —original draft, F.T .; writ-
+ing—review and editing, M.I. and S.S.; supervision, M.I. All authors have read and agreed to the 
+published version of the manuscript. 
+Funding: This research received no external funding. 
+Institutional Review Board Statement: Not applicable. 
+Informed Consent Statement: Not applicable. 
+Data Availability Statement: Dataset available on request from the authors. 
+Conflicts of Interest: The authors declare no conflicts of interest. 
+References 
+1. Chen, H.; Carter, K.E. Hazardous substances as the dominant non -methane volatile organic compounds with potential emis-
+sions from liquid storage tanks during well fracturing: A modeling approach.  J. Environ. Manag. 2020, 268, 110715. 
+https://doi.org/10.1016/j.jenvman.2020.110715. 
+2. Koçak, T.K.; Günal, A.Ç. Assessment of atmospheric volatile organic compounds at two crude oil production plants in South-
+eastern Türkiye. Environ. Monit. Assess. 2025, 197, 88. https://doi.org/10.1007/s10661-024-13494-1. 
+3. Liu, Y.; Han, F.; Liu, W.; Cui, X.; Luan, X.; Cui, Z. Process -based volatile organic compound emission inventory establishment 
+method for the petroleum refining industry. J. Clean Prod. 2020, 263, 121609. https://doi.org/10.1016/j.jclepro.2020.121609. 
+4. Simayi, M.; Hao, Y.; Li, J.; Shi, Y.; Ren, J.; Xi, Z.; Xie, S. Historical volatile organic compounds emission performance and reduc-
+tion potentials in China’s petroleum refining industry.  J. Clean Prod. 2021, 292, 125810. https://doi.org/10.1016/j.jcle-
+pro.2021.125810. 
+
+Appl. Sci. 2026, 16, 1851 15 of 17 
+ 
+https://doi.org/10.3390/app16041851 
+5. Rajabi, H.; Hadi Mosleh, M.; Mandal, P.; Lea-Langton, A.; Sedighi, M. Emissions of volatile organic compounds from crude oil 
+processing—Global emission inventory and environmental release.  Sci. Total Environ. 2020, 727, 138654. 
+https://doi.org/10.1016/j.scitotenv.2020.138654. 
+6. Kim, J.H.; Lee, H.E.; Yoon, S.J. Study on the speciation of VOCs at oil refining plant fenceline through active sampling.  Atmos-
+phere 2023, 14, 485. https://doi.org/10.3390/atmos14030485. 
+7. Gusev, A.L.; Jabbarov, T.G.; Mamedov, S.G.; Malikov, R.; Hajibalaev, N.M.; Abdullaeva, S.D.; Abbasov, N.M. Production of 
+hydrogen and carbon in the petrochemical industry by cracking of hydrocarbons in the process of heat utilization in steel pro-
+duction. Int. J. Hydrogen Energy 2023, 48, 14954–14963. https://doi.org/10.1016/j.ijhydene.2022.12.341. 
+8. Ragothaman, A.; Anderson, W.A. Air quality impacts of petroleum refining and petrochemical industries.  Environments 2017, 
+4, 66. https://doi.org/10.3390/environments4030066. 
+9. Hini, G.; Gao, K.; Zheng, Y.; Simayi, M.; Xie, S. Emission characteristics, OFPs, and mitigation perspectives of VOCs from refin-
+ing industry in China’s petrochemical bases. Aerosol Air Qual. Res. 2023, 23, 220347. https://doi.org/10.4209/aaqr.220347. 
+10. Chen, T.; Xue, L.; Zheng, P.; Zhang, Y.; Liu, Y.; Sun, J.; Han, G.; Li, H.; Zhang, X.; Li, Y.; Li, H.; Dong, C.; et al. Volatile organic 
+compounds and ozone air pollution in an oil production region in northern China. Atmos. Chem. Phys. 2020, 20, 7069–7086. 
+https://doi.org/10.5194/acp-20-7069-2020. 
+11. Jindamanee, K.; Keawboonchu, J.; Pinthong, N.; Meeyai, A.; Inchai, P.; Thepanondh, S. Environmental impacts and emission 
+profiles of volatile organic compounds from petroleum refineries.  Sci. Rep. 2025, 15, 15509. https://doi.org/10.1038/s41598-025-
+99932-7. 
+12. Lv, D.; Lu, S.; He, S.; Song, K.; Shao, M.; Xie, S.; Gong, Y. Research on accounting and detection of volatile organic compou nds 
+from a typical petroleum refinery in Hebei, North China.  Chemosphere 2021, 281, 130653. https://doi.org/10.1016/j.chemo-
+sphere.2021.130653. 
+13. Invernizzi, M.; Sironi, S. Odour emission rate estimation methods for hydrocarbon storage tanks.  Chem. Eng. Trans. 2021, 85, 
+67–72. https://doi.org/10.3303/CET2185012. 
+14. Invernizzi, M.; Ilare, J.; Capelli, L.; Sironi, S. Proposal of a method for evaluating odour emissions from refinery storage tanks. 
+Chem. Eng. Trans. 2018, 68, 49–54. https://doi.org/10.3303/CET1868009. 
+15. Tamaddoni, M.; Sotudeh-Gharebagh, R.; Nario, S.; Hajihosseinzadeh, M.; Mostoufi, N. Experimental study of the VOC emitted 
+from crude oil tankers. Process Saf. Environ. Prot. 2014, 92, 929–937. https://doi.org/10.1016/j.psep.2013.10.005. 
+16. Wang, H.L.; Nie, L.; Li, J.; Wang, Y.F.; Wang, G.; Wang, J.H.; Hao, Z.P. Characterization and assessment of volatile organic 
+compounds emissions from typical industries. Chin. Sci. Bull. 2013, 58, 724–730. https://doi.org/10.1007/s11434-012-5345-2. 
+17. Matsumoto, N.; Elder, M.; Ogihara, A. Japan’s policy to reduce emissions of volatile organic compounds: Factors that facilitate 
+industry participation in voluntary actions. J. Clean Prod. 2015, 93, 931–943. https://doi.org/10.1016/j.jclepro.2015.06.145. 
+18. Saikomol, S.; Thepanondh, S.; Laowagul, W. Emission losses and dispersion of volatile organic compounds from tank farm of 
+petroleum refinery complex. J. Environ. Health Sci. Eng. 2019, 17, 561–570. https://doi.org/10.1007/s40201-019-00370-1. 
+19. Wei, W.; Cheng, S.; Li, G.; Wang, G.; Wang, H. Characteristics of volatile organic compounds emitted from a petroleum refinery 
+in Beijing, China. Atmos. Environ. 2014, 89, 358–366. https://doi.org/10.1016/j.atmosenv.2014.01.038. 
+20. Farzaneh-Gord, M.; Nabati, A.; Rasekh, A.; Saadat-Targhi, M. The effect of crude oil type on evaporation loss from Khark Island 
+storage tanks. Pet. Sci. Technol. 2013, 31, 866–879. https://doi.org/10.1080/10916466.2010.521785. 
+21. Rota, R.; Frattini, S.; Astori, S.; Paludetto, R. Emissions from fixed-roof storage tanks: Modeling and experiments. Ind. Eng. Chem. 
+Res. 2001, 40, 5847–5857. https://doi.org/10.1021/ie010111m. 
+22. Maxwell, A.; Lawal, A. Petroleum product storage tank, design and loss control management. In Proceedings of the SPE African 
+Health, Safety, Security, Environment, and Social Responsibility Conference and Exhibition, Accra, Ghana, 4–6 October 2016. 
+23. Zinke, R.; Köhler, F.; Krause, U. Long -term emission measurements at a floating roof tank for gasoline storage.  J. Loss Prev. 
+Process Ind. 2018, 55, 152–161. https://doi.org/10.1016/j.jlp.2018.05.004. 
+24. Mansour, E.M.; El Aily, M.; Desouky, S.M. Flashing losses emission evaluation from crude oil storage tank. Egypt. J. Chem. 2020, 
+63, 4457–4462. https://doi.org/10.21608/EJCHEM.2020.24509.2467. 
+25. Wang, Y.; Liu, M.; Liu, F.; Zhao, C.; Zhao, D.; Han, F.; Liu, C. Research on the effect of wall corrosion and rim seal on the  
+withdrawal loss for a floating roof tank. Environ. Sci. Pollut. Res. 2018, 25, 18434–18442. https://doi.org/10.1007/s11356-018-1978-
+2. 
+26. Howari, F.M. Evaporation losses and dispersion of volatile organic compounds from tank farms.  Environ. Monit. Assess. 2015, 
+187, 256. https://doi.org/10.1007/s10661-015-4456-z. 
+
+Appl. Sci. 2026, 16, 1851 16 of 17 
+ 
+https://doi.org/10.3390/app16041851 
+27. Jovanovic, J.; Jovanovic, M.; Jovanovic, A.; Marinovic, V. Introduction of cleaner production in the tank farm of the Pancevo Oil 
+Refinery, Serbia. J. Clean Prod. 2010, 18, 791–798. https://doi.org/10.1016/j.jclepro.2010.01.002. 
+28. Lu, C.; Huang, H.; Chang, S.; Hsu, S. Emission characteristics of VOCs from three fixed -roof p-xylene liquid storage tanks.  
+Environ. Monit. Assess. 2013, 185, 6819–6830. https://doi.org/10.1007/s10661-013-3067-9. 
+29. Saikomol, S.; Thepanondh, S.; Laowagul, W.; Malakan, W.; Keawboonchu, J.; Kultan, V. Characteristics and dispersion model-
+ing of VOCs emission released from the tank farm of petroleum refinery complex.  EnvironmentAsia 2021, 14, 1 –12. 
+https://doi.org/10.14456/ea.2021.1. 
+30. Yang, H.; Ren, B.; Huang, Y.; Zhang, Z.; Hu, W.; Liu, M.; Zhao, H.; Jiang, G.; Hao, Z. Volatile organic compounds emissions 
+from internal floating-roof tank in oil depots in Beijing: Influencing factors and emission reduction strategies analysis. Sci. Total 
+Environ. 2024, 916, 170222. https://doi.org/10.1016/j.scitotenv.2024.170222. 
+31. Barbeş, S.B.; Badea, A.C.; Iordache, V. Volatile organic compounds losses simulation during storage of gasoline.  IOP Conf. Ser. 
+Earth Environ. Sci. 2023, 1185, 012009. https://doi.org/10.1088/1755-1315/1185/1/012009. 
+32. Mott, A.; Guo, H. Odour dispersion modelling, impact criteria, and setback distances for an oil refinery plant.  Atmos. Environ. 
+2022, 270, 118879. https://doi.org/10.1016/j.atmosenv.2021.118879. 
+33. Motalebi Damuchali, A.; Guo, H. Developing an odour emission factor for an oil refinery plant using reverse dispersion mod-
+eling. Atmos. Environ. 2020, 222, 117167. https://doi.org/10.1016/j.atmosenv.2019.117167. 
+34. Motalebi Damuchali, A.; Guo, H. Evaluation of odour properties, their relationships, and impact of an oil refinery plant on the 
+surrounding environment using field measurements.  Atmos. Environ. 2020, 230, 117480. https://doi.org/10.1016/j.at-
+mosenv.2020.117480. 
+35. Santos, J.M.; Griffiths, R.F.; Roberts, I.D.; Reis, N.C. A field experiment on turbulent concentration fluctuations of an atm os-
+pheric tracer gas in the vicinity of a complex -shaped building. Atmos. Environ. 2005, 39, 4999–5012. https://doi.org/10.1016/j.at-
+mosenv.2005.05.005. 
+36. Bokowa, A.; Diaz, C.; Koziel, J.A.; McGinley, M.; Barclay, J.; Schauberger, G.; Guillot, J.M.; Sneath, R.; Capelli, L.; Zoric h, V.; et 
+al. Summary and overview of the odour regulations worldwide. Atmosphere 2021, 12, 206. https://doi.org/10.3390/atmos12020206. 
+37. Brancher, M.; Piringer, M.; Grauer, A.F.; Schauberger, G. Do odour impact criteria of different jurisdictions ensure analogou s 
+separation distances for an equivalent level of protection? J. Environ. Manag. 2019, 240, 394–403. https://doi.org/10.1016/j.jen-
+vman.2019.03.102. 
+38. Brancher, M.; Knauder, W.; Piringer, M.; Schauberger, G. Temporal variability in odour emissions: To what extent this matters 
+for the assessment of annoyance using dispersion modelling.  Atmos. Environ. X 2020, 5, 100054. 
+https://doi.org/10.1016/j.aeaoa.2019.100054. 
+39. Zhang, Q.; Zhou, X. Assessing peak-to-mean ratios of odour intensity in the atmosphere near swine operations. Atmosphere 2020, 
+11, 224. https://doi.org/10.3390/atmos11030224. 
+40. Ghannam, K.; El -Fadel, M. Emissions characterization and regulatory compliance at an industrial complex: An integrated 
+MM5/CALPUFF approach. Atmos. Environ. 2013, 69, 156–169. https://doi.org/10.1016/j.atmosenv.2012.12.022. 
+41. Varela-Bruce, C.; Antileo, C. Assessment of odour emissions by the use of a dispersion model in the context of the proposed 
+new law in Chile. J. Environ. Manag. 2021, 295, 113208. https://doi.org/10.1016/j.jenvman.2021.113208. 
+42. Emert, A.D.; Griffis-Kyle, K.; Portillo-Quintero, C.; Smith, P.N. USEPA CALPUFF validation and dispersion modeling of beef 
+cattle feedlot PM10 and PM2.5 emissions factors.  Atmos. Environ. 2024, 316, 120189. https://doi.org/10.1016/j.at-
+mosenv.2023.120189. 
+43. Jittra, N.; Pinthong, N.; Thepanondh, S. Performance evaluation of AERMOD and CALPUFF air dispersion models in industrial 
+complex area. Air Soil Water Res. 2015, 8, 87–95. https://doi.org/10.4137/ASWR.S32781. 
+44. Tagliaferri, F.; Facagni, L.; Invernizzi, M.; Sironi, S. Variability in odour impact assessment due to different cloud cover estima-
+tion approaches: A northern Italy case study.  Case Stud. Chem. Environ. Eng. 2023, 8, 100492. 
+https://doi.org/10.1016/j.cscee.2023.100492. 
+45. Tagliaferri, F.; Facagni, L.; Invernizzi, M.; Ferrer Hernández, A.L.; Hernández-Garces, A.; Sironi, S. Odor impact assessment via 
+dispersion model: Comparison of different input meteorological datasets.  Appl. Sci. 2024, 14, 2457. 
+https://doi.org/10.3390/app14062457. 
+46. Tagliaferri, F.; Invernizzi, M.; Sironi, S. Strategies for the reduction of odour impact via dispersion modelling: A case study of a 
+rendering plant. Chem. Eng. Trans. 2024, 112, 181–186. https://doi.org/10.3303/CET24112031. 
+
+Appl. Sci. 2026, 16, 1851 17 of 17 
+ 
+https://doi.org/10.3390/app16041851 
+47. Szalata, L.; Zwózdziak, J.; Majerník, M.; Cierniak-Emerych, A.; Jarossová, M.A.; Dziuba, S.; Knošková, L.; Drábik, P. Assessment 
+of the odour quality of the air surrounding a landfill site: A case study.  Sustainability 2021, 13, 1713. 
+https://doi.org/10.3390/su13041713. 
+48. Yaacof, N.; Qamaruz Zaman, N.; Yusup, Y.; Yusoff, S. Establishment of suitable separation distance by using different methods 
+for malodor mitigation from palm oil mill.  Environ. Sci. Pollut. Res. 2019, 26, 24286–24299. https://doi.org/10.1007/s11356-019-
+05517-z. 
+49. Brancher, M.; Hoinaski, L.; Piringer, M.; Prata, A.A.; Schauberger, G. Dispersion modelling of environmental odours using 
+hourly-resolved emission scenarios: Implications for impact assessments.  Atmos. Environ. X 2021, 12, 100124. 
+https://doi.org/10.1016/j.aeaoa.2021.100124. 
+50. Schauberger, G.; Piringer, M.; Petz, E. Influence of the variability of the odour emission rate on the separation distance sh own 
+for the Irish odour impact criterion. Chem. Eng. Trans. 2016, 54, 193–198. https://doi.org/10.3303/CET1654033. 
+51. Scire, J.S.; Strimaitis, D.G.; Yamartino, R.J. A User’s Guide for the CALPUFF Dispersion Model; Earth Tech. Inc.: Concord, MA, USA, 
+2000. 
+52. Scire, J.; Robe, F.; Fernau, M.; Yamartino, R. A User’s Guide for the CALMET Meteorological Model; Earth Tech. Inc.: Concord, MA, 
+USA, 2000. 
+53. Van Harreveld, A.P. Update on the new EN 13725:2021. Chem.  Eng. Trans. 2021, 85, 115 –120. 
+https://doi.org/10.3303/CET2185020. 
+54. U.S. EPA. Emission Factor Documentation for AP-42 Organic Liquid Storage Tanks; U.S. Environmental Protection Agency: Durham, 
+NC, USA, 1997. 
+55. U.S. EPA. User’s Guide for the AMS/EPA Regulatory Model (AERMOD); EPA-454/B-18-001; U.S. Environmental Protection Agency: 
+Durham, NC, USA, 2018. 
+56. Hartley, S.; Rosenbaum, A.; Holder, C.; Cohen, J.; Graham, S.; Brode, R.; Thurman, J.; Langstaff, J.; Fox, T. Application of AER-
+MOD to Region -wide Emissions in an Urban Setting in Support of the NO 2 NAAQS Review. In Proceedings of the AWMA 
+Guideline on Air Quality Models: Next Generation of Models, Raleigh, NC , USA, 26 –30 October 2009. 
+https://doi.org/10.3155/2009CP-188.29. 
+57. Warren, C.J.; Paine, R.J.; Connors, J.A.; Szembek, C.; Knipping, E. Evaluation of a revised AERMOD treatment of plume disper-
+sion in the daytime elevated stable layer.  Air Waste Manag. Assoc. 2022, 72, 1040 –1052. 
+https://doi.org/10.1080/10962247.2022.2094031. 
+58. Ministero dell’Ambiente e della Sicurezza Energetica. Decreto Direttoriale 28 Giugno 2023, n. 309; Ministero dell’Ambiente e della 
+Sicurezza Energetica: Rome, Italy, 2023. 
+59. Schauberger, G.; Piringer, M.; Petz, E. Diurnal and annual variation of the sensation distance of odour emitted by livestock 
+buildings calculated by the Austrian odour dispersion model. Atmos. Environ. 2000, 34, 4839–4851. https://doi.org/10.1016/S1352-
+2310(00)00240-5. 
+Disclaimer/Publisher’s Note: The statements, opinions and data contained in all publications are solely those of the individual au-
+thor(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any in jury to 
+people or property resulting from any ideas, methods, instructions or products referred to in the content. 
