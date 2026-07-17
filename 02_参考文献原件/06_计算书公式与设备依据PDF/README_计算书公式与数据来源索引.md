@@ -16,10 +16,11 @@
 |---|---|---:|---|---|---|
 | `01_国家与政府规范/GB 50058-2014 爆炸危险环境电力装置设计规范.pdf` | 天津市应急管理局：[发布页](https://yjgl.tj.gov.cn/ZWFW5050/BZ2939/GJBZ6056/202011/t20201112_4070053.html)；[PDF 原件](https://yjgl.tj.gov.cn/ZWFW5050/BZ2939/GJBZ6056/202011/W020201112598126590156.pdf) | 122 | `7B072041116E2BC1091B9F63AB37C06F2CB50A56A399EC7085812CE6AA800B58` | 爆炸性气体环境分区、电气装置选型与布置；重点核查 PDF 19–25、30–40 | 用于防爆与电气安全，不代替石油库总图、工艺和消防规范 |
 | `01_国家与政府规范/GB 50974-2014 消防给水及消火栓系统技术规范.pdf` | 四川省消防救援总队：[发布页](https://sc.119.gov.cn/scxfjyzd/gfbz/2016/6/13/114241989bee4c119ad1329db92a5509.shtml)；[PDF 原件](https://sc.119.gov.cn/scxfjyzd/uploadfiles/2022103115593428198.pdf) | 229 | `BB4004B7E5D79FBFED82F5047E400DD91486A1A386E389EA09F7ADBE45872AF1` | 消防水源、设施和水力计算；重点核查 PDF 37–54、75–81 | 石油库专项消防要求仍须与 GB 50074、GB 50151 共同使用 |
+| `01_国家与政府规范/GB-T 50759-2022 油气回收处理设施技术标准.pdf` | 住房和城乡建设部：[发布公告的政府信息公开记录](https://www.mohurd.gov.cn/api-gateway/jpaas-web-server/front/document/download?fileName=2022%E5%B9%B4.pdf&fileUrl=YW5UzzlvCwcM%2FNHHX%2FtT6BJ6yM%2FAU1LVtmOVIvNjcuodKrYMbtEVykYUOoISn7rd1liJ3Xbku8CKj9rcuDHUCZSLTa80GxurpQoI49HVPRGjNZiCY1eAVyAKG8ipZL1CRnt22UAfsm96KZLwQjNf0g%3D%3D)；[住建部 PDF 原件](https://www.mohurd.gov.cn/file/2022/20220930/3e499997-3e55-4928-9d7f-7ca09ee5397b.pdf?n=%E6%B2%B9%E6%B0%94%E5%9B%9E%E6%94%B6%E5%A4%84%E7%90%86%E8%AE%BE%E6%96%BD%E6%8A%80%E6%9C%AF%E6%A0%87%E5%87%86) | 28 | `635FA7D9C4D7D22F1F1ED3D5751520AF6D6CDA4BAA5ABC374886CFEB42AF5D92` | PDF 1：修订说明；PDF 7–10：基本规定；PDF 11–12：平面布置；PDF 13–20：工艺及管道；PDF 21：自动控制；PDF 22–24：公用工程与消防；PDF 25：安全、职业卫生与环境保护；PDF 26：防火间距起止点 | 现行标准，自2022-12-01实施；正式替代并废止 GB 50759-2012。计划表所写“GB 50759-2012（2021年版）”不是可核验的正式版本号 |
 | `01_国家与政府规范/AQ-T 3055-2019 陆上油气管道建设项目安全设施设计导则.pdf` | 天津市应急管理局：[PDF 原件](https://yjgl.tj.gov.cn/ZWFW5050/BZ2939/XYBZ5301/202007/W020200729641374499761.pdf) | 32 | `79FCB366B924AF037B9B2004B98046D95E23176730222F2C4F2902C3ED631EFE` | HSE、安全设施设计内容完整性检查 | 适用对象是陆上油气管道项目，只作补充检查表，不作为库内工艺管道核心计算依据 |
 | `03_候选泵样本/KSB_RPH-V_API610流程泵样本.pdf` | KSB 官方：[PDF 原件](https://live-commerce-proxy-e2e-sales.ksb.com/rest/v2/ksb/users/anonymous/odata/disfile?application=PDF&checksum=d48df9f005011ef3f50482d1ec4be6da94a54415b948e5e25c210a9f1a1e4458&documentNumber=1308.450&documentPart=EN&documentType=YTO&documentVersion=01&extension=PDF&mimetype=application%2Fpdf&salesOrg=E2ED_PK) | 76 | `21BED63C39ED53C49E66B4968CF706BE1114FD74EA2BD84079CB713155C9CF70` | PDF 3 的密度、黏度、Qmin/Qmax、NPSH3 使用条件；PDF 4–75 的 Q-H、功率及 NPSHR 曲线 | RPH-V 为 API 610/ISO 13709 VS4 立式流程泵，仅作读图和候选校核；不得在工况点计算前定为最终装卸油泵 |
 
-以上四份 PDF 已完成页数、文件大小、SHA-256 校验，并抽取首页、目录/关键页及末页渲染检查；文件可正常打开，页面可辨认。
+以上五份 PDF 已完成页数、文件大小、SHA-256 校验，并抽取首页、目录/关键页及末页渲染检查；文件可正常打开，页面可辨认。其中 GB/T 50759-2022 已逐页渲染检查全部 28 页。
 
 ## 工作区中已有、允许进入计算的 PDF 原件
 
@@ -46,7 +47,7 @@
 | 消防给水 | 设计流量、持续时间、管网水力损失与消防泵工况 | GB 50974-2014 PDF 37–54、75–81；GB 50074；GB 50151 | 可开展，先按石油库专项要求确定边界 |
 | 泡沫灭火 | 供给强度 × 保护面积，结合连续供给时间计算储量 | GB 50151-2021 PDF 24 及对应系统条文；GB 50074 | 可开展，须逐罐按罐型和油品分类 |
 | 防爆分区与设备选型 | 按爆炸性气体环境分区后选电气防爆型式 | GB 50058-2014 PDF 19–25、30–40；GB 50074 | 可开展 |
-| HSE、防泄漏与 VOC | 设备设施检查、密闭收发油、油气回收和泄漏点控制 | GB 20950-2020 PDF 6、8–9；AQ/T 3055-2019（补充） | 可开展，AQ/T 3055 不越权替代石油库规范 |
+| HSE、防泄漏与 VOC | 设备设施检查、密闭收发油、油气收集、油气回收处理和泄漏点控制 | GB/T 50759-2022 PDF 7–25；GB 20950-2020 PDF 6、8–9；AQ/T 3055-2019（补充） | 可开展；GB/T 50759-2022 为油气回收设施现行设计依据，AQ/T 3055 不越权替代石油库规范 |
 
 ## 已核实状态但暂不允许引用条文/数值的标准
 
@@ -66,7 +67,6 @@
 - GB 50253-2014（2023 年版）《输油管道工程设计规范》（若最终设计边界确实涉及长输/站外输油管道）。
 - GB 50057-2010《建筑物防雷设计规范》正式 PDF。
 - GB/T 50493-2019《石油化工可燃气体和有毒气体检测报警设计标准》正式 PDF。
-- GB 50759-2012（2021 年版）《油品装载系统油气回收设施设计规范》正式 PDF。
 - GB 15599-2025 正式出版 PDF（2026-09-01 实施后再判断是否替换现行设计依据）。
 - 与系统计算工况匹配的最终泵型号完整制造商性能曲线和数据表。
 
