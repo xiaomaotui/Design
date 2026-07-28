@@ -21,17 +21,25 @@ try {
 
             $contentRange = $paragraph.Range.Duplicate
             $contentRange.End = $contentRange.End - 1
+            $contentRange.Text = $linear + "#" + [char]0xFF08 + [char]0x5F0F + $number + [char]0xFF09
+            $paragraph.Format.FirstLineIndent = 0
+            $paragraph.Format.LeftIndent = 0
+            $paragraph.Format.RightIndent = 0
+            $formulaRange = $paragraph.Range.Duplicate
+            $formulaRange.End = $formulaRange.End - 1
+            [void]$doc.OMaths.Add($formulaRange)
+            $formulaRange.OMaths.Item(1).BuildUp()
+            $converted++
+        }
+        elseif ($raw -match '^\[\[NUMEQ\|(.+)\]\]$') {
+            $linear = $Matches[1]
+            $contentRange = $paragraph.Range.Duplicate
+            $contentRange.End = $contentRange.End - 1
             $contentRange.Text = $linear
             $paragraph.Format.FirstLineIndent = 0
             $paragraph.Format.LeftIndent = 0
             $paragraph.Format.RightIndent = 0
-            $paragraph.Format.TabStops.ClearAll()
-
-            $section = $paragraph.Range.Sections.Item(1)
-            $usableWidth = $section.PageSetup.PageWidth - $section.PageSetup.LeftMargin - $section.PageSetup.RightMargin
-            [void]$paragraph.Format.TabStops.Add($usableWidth / 2, 1, 0)
-            [void]$paragraph.Format.TabStops.Add($usableWidth, 2, 0)
-
+            $paragraph.Alignment = 1
             $formulaRange = $paragraph.Range.Duplicate
             $formulaRange.End = $formulaRange.End - 1
             [void]$doc.OMaths.Add($formulaRange)

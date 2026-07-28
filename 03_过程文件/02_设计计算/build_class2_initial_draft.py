@@ -4,6 +4,7 @@ import math
 import re
 from pathlib import Path
 
+from PIL import Image, ImageDraw, ImageFont
 from docx import Document
 from docx.enum.section import WD_SECTION
 from docx.enum.table import WD_CELL_VERTICAL_ALIGNMENT, WD_TABLE_ALIGNMENT
@@ -11,11 +12,14 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_BREAK, WD_LINE_SPACING
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Cm, Pt
+from docx.enum.style import WD_STYLE_TYPE
 
 
 ROOT = Path(r"D:\毕业论文")
 SOURCE = ROOT / r"04_最终成品\01_毕业设计说明书\张淑鑫_浙江平湖油库工艺设计_终稿_封面与真实性承诺替换版_2026-07-26.docx"
-OUTPUT = ROOT / r"04_最终成品\01_毕业设计说明书\张淑鑫_浙江平湖二级油库工艺设计_毕业设计初稿_2026-07-28.docx"
+OUTPUT = ROOT / r"04_最终成品\01_毕业设计说明书\张淑鑫_浙江平湖二级油库工艺设计_毕业设计初稿_计算与规范完善版_2026-07-28.docx"
+ASSET_DIR = ROOT / r"03_过程文件\02_设计计算\rebuild_v2_assets"
+KSB_RENDER = ROOT / r"03_过程文件\02_设计计算\pump_render\ksb_p18-018.png"
 
 G = {"92号汽油": 400_000.0, "95号汽油": 250_000.0, "0号柴油": 300_000.0}
 RHO = {"92号汽油": 0.760, "95号汽油": 0.760, "0号柴油": 0.840}
@@ -117,6 +121,22 @@ def set_update_fields(doc: Document):
     update.set(qn("w:val"), "true")
 
 
+def ensure_heading_styles(doc: Document):
+    for level in (2, 3):
+        name = f"Heading {level}"
+        if name not in [s.name for s in doc.styles]:
+            style = doc.styles.add_style(name, WD_STYLE_TYPE.PARAGRAPH)
+            style.base_style = doc.styles["Normal"]
+        else:
+            style = doc.styles[name]
+        ppr = style._element.get_or_add_pPr()
+        outline = ppr.find(qn("w:outlineLvl"))
+        if outline is None:
+            outline = OxmlElement("w:outlineLvl")
+            ppr.append(outline)
+        outline.set(qn("w:val"), str(level - 1))
+
+
 def remove_old_body(doc: Document):
     start = None
     body = doc._element.body
@@ -141,9 +161,9 @@ def add_paragraph(doc: Document, text="", style="Normal", align=None, first_line
     p = doc.add_paragraph(style=style)
     if text:
         r = p.add_run(text)
-        set_run_font(r, east_asia="黑体" if style in {"Heading 1", "标题2", "标题 31"} else "宋体",
-                     size=Pt(15) if style == "Heading 1" else Pt(12) if style == "标题2" else Pt(10.5),
-                     bold=style in {"Heading 1", "标题2", "标题 31"})
+        set_run_font(r, east_asia="黑体" if style in {"Heading 1", "Heading 2", "Heading 3"} else "宋体",
+                     size=Pt(16) if style == "Heading 1" else Pt(14) if style == "Heading 2" else Pt(10.5),
+                     bold=style in {"Heading 1", "Heading 2", "Heading 3"})
     if align is not None:
         p.alignment = align
     p.paragraph_format.space_after = Pt(0)
@@ -169,7 +189,7 @@ def add_body(doc: Document, text: str, citations=None):
 
 
 def add_heading(doc: Document, text: str, level=1):
-    style = "Heading 1" if level == 1 else paragraph_style(doc, "标题2" if level == 2 else "标题 31", "标题2")
+    style = f"Heading {level}"
     p = add_paragraph(doc, text, style, first_line=False, keep_next=True)
     if level == 1:
         p.paragraph_format.page_break_before = True
@@ -240,6 +260,73 @@ def add_equation(doc: Document, linear: str):
     return EQ_COUNTER
 
 
+def add_numeric_equation(doc: Document, linear: str):
+    p = add_paragraph(doc, f"[[NUMEQ|{linear}]]", "Normal", WD_ALIGN_PARAGRAPH.CENTER, first_line=False)
+    p.paragraph_format.space_before = Pt(3)
+    p.paragraph_format.space_after = Pt(3)
+    return p
+
+
+def add_figure(doc: Document, image_path: Path, caption: str, width_cm=15.0):
+    p = add_paragraph(doc, "", "Normal", WD_ALIGN_PARAGRAPH.CENTER, first_line=False, keep_next=True)
+    p.add_run().add_picture(str(image_path), width=Cm(width_cm))
+    add_caption(doc, caption)
+
+
+def build_pump_assets():
+    ASSET_DIR.mkdir(parents=True, exist_ok=True)
+    crop_path = ASSET_DIR / "KSB_MegaCPK_125-100-200_性能曲线_样本第18页.png"
+    if KSB_RENDER.exists():
+        image = Image.open(KSB_RENDER)
+        image.crop((100, 120, 1380, 1200)).save(crop_path)
+
+    # 泵曲线数据由KSB样本第18页MegaCPK Inducer 125-100-200、2900 r/min、
+    # 叶轮直径193 mm曲线读数；系统曲线来自本文最不利水运外输管路计算。
+    q_p = [100, 150, 200, 250, 300, 330]
+    h_p = [42.0, 41.0, 38.8, 35.0, 29.0, 25.0]
+    h_static = 18.0
+    k_sys = (HYD["92号汽油水运外输"]["H"] - h_static) / (200.0**2)
+    q = [i for i in range(0, 341, 5)]
+    h_sys = [h_static + k_sys * x**2 for x in q]
+    curve_path = ASSET_DIR / "输油泵与最不利管路特性曲线.png"
+    canvas = Image.new("RGB", (1600, 1050), "white")
+    draw = ImageDraw.Draw(canvas)
+    font_path = Path(r"C:\Windows\Fonts\times.ttf")
+    font = ImageFont.truetype(str(font_path), 34) if font_path.exists() else ImageFont.load_default()
+    small = ImageFont.truetype(str(font_path), 28) if font_path.exists() else ImageFont.load_default()
+    left, top, right, bottom = 150, 100, 1510, 900
+    qmax, hmin, hmax = 340.0, 15.0, 48.0
+    xpix = lambda value: left + value / qmax * (right - left)
+    ypix = lambda value: bottom - (value - hmin) / (hmax - hmin) * (bottom - top)
+    draw.line((left, top, left, bottom), fill="black", width=4)
+    draw.line((left, bottom, right, bottom), fill="black", width=4)
+    for value in range(0, 341, 50):
+        x = xpix(value)
+        draw.line((x, top, x, bottom), fill=(215, 215, 215), width=2)
+        draw.text((x - 18, bottom + 18), str(value), fill="black", font=small)
+    for value in range(15, 49, 5):
+        y = ypix(value)
+        draw.line((left, y, right, y), fill=(215, 215, 215), width=2)
+        draw.text((70, y - 16), str(value), fill="black", font=small)
+    pump_points = [(xpix(x), ypix(y)) for x, y in zip(q_p, h_p)]
+    sys_points = [(xpix(x), ypix(y)) for x, y in zip(q, h_sys)]
+    draw.line(pump_points, fill=(0, 91, 172), width=7, joint="curve")
+    draw.line(sys_points, fill=(205, 66, 43), width=7, joint="curve")
+    for x, y in pump_points:
+        draw.ellipse((x - 7, y - 7, x + 7, y + 7), fill=(0, 91, 172))
+    wx, wy = xpix(202), ypix(36.3)
+    draw.ellipse((wx - 11, wy - 11, wx + 11, wy + 11), fill="black")
+    draw.text((wx + 25, wy - 55), "Operating point: Q=202 m3/h, H=36.3 m", fill="black", font=small)
+    draw.text((600, 955), "Flow rate Q/(m3/h)", fill="black", font=font)
+    draw.text((25, 40), "Head H/m", fill="black", font=font)
+    draw.line((260, 150, 370, 150), fill=(0, 91, 172), width=7)
+    draw.text((390, 132), "KSB 125-100-200, impeller 193 mm", fill="black", font=small)
+    draw.line((260, 200, 370, 200), fill=(205, 66, 43), width=7)
+    draw.text((390, 182), "Governing marine-export system curve", fill="black", font=small)
+    canvas.save(curve_path)
+    return crop_path, curve_path
+
+
 def add_note(doc: Document, text: str):
     p = add_paragraph(doc, "", "Normal", first_line=False)
     p.paragraph_format.left_indent = Cm(0.74)
@@ -272,7 +359,7 @@ def build_front(doc: Document):
         "储罐配置为2座20 000 m³的92号汽油钢制内浮顶罐、2座15 000 m³的95号汽油钢制内浮顶罐和2座15 000 m³的0号柴油固定顶罐，"
         "共6座、名义总容量100 000 m³；按GB 50074—2014折算的储罐计算总容量为85 000 m³，确定为二级石油库。"
         "设计保持原计划中的进出库方式及比例，完成水运进出库、公共管道进出库、公路发油、倒罐和清扫流程；水运年作业量76万t，"
-        "配置1个5 000 DWT成品油泊位。主输油管采用DN150～DN250，选用变频离心泵并校核扬程、功率、汽蚀余量及年装卸能力。"
+        "配置1个5 000 DWT成品油泊位。主输油管采用DN150～DN250；候选泵采用KSB MegaCPK Inducer 125-100-200，泵与最不利管路曲线交点约为202 m³/h、36.3 m，并完成柴油汽蚀余量及年装卸能力校核。"
         "罐区划分为3个防火堤区，汽油储罐采用钢制内浮盘及一次、二次密封。消防控制工况为15 000 m³固定顶柴油罐着火并冷却1座相邻罐，"
         "设置2×2 500 m³消防水池、2×5 m³泡沫液储罐和8 000 m³事故水池。设计同时提出HSE、防火防爆、防雷防静电、抗震、防泄漏、"
         "油气回收、雨污分流、检测报警和紧急切断措施，为总平面图和工艺流程图绘制提供参数。"
@@ -285,7 +372,7 @@ def build_front(doc: Document):
         "The selected arrangement comprises two 20,000 m³ internal-floating-roof tanks for No. 92 gasoline, two 15,000 m³ internal-floating-roof tanks for No. 95 gasoline, "
         "and two 15,000 m³ fixed-roof tanks for diesel. The nominal capacity is 100,000 m³, while the classification capacity under GB 50074—2014 is 85,000 m³, corresponding to a Class II depot. "
         "The original marine, pipeline and road transport ratios are retained. One 5,000 DWT product-oil berth is verified for an annual marine throughput of 0.76 million tonnes. "
-        "Pipelines from DN150 to DN250 and variable-speed centrifugal pumps are selected through hydraulic, power, NPSH and handling-capacity checks. "
+        "Pipelines from DN150 to DN250 are selected. A KSB MegaCPK Inducer 125-100-200 pump is preliminarily selected; the pump and governing system curves intersect at approximately 202 m³/h and 36.3 m, followed by diesel NPSH and annual-capacity checks. "
         "Three diked tank groups are provided. The governing fire scenario is a 15,000 m³ fixed-roof diesel tank with one adjacent tank cooled. "
         "Two 2,500 m³ fire-water tanks, two 5 m³ foam-concentrate tanks and an 8,000 m³ emergency retention basin are selected. "
         "HSE, fire and explosion protection, lightning and static protection, seismic design, spill containment, vapor recovery, drainage segregation, alarms and emergency shutdowns are incorporated."
@@ -324,17 +411,51 @@ def build_chapter_1(doc: Document):
     )
     add_body(
         doc,
-        "区域属亚热带季风气候。公开环评资料给出的年平均气温为15.8 ℃，极端最高气温38.7 ℃、极端最低气温-9.3 ℃，多年平均降水量1302.3 mm，"
-        "年平均相对湿度83%，雷暴日数27.6 d。杭州湾北岸为强潮海区，平均潮差约4.82 m，历史最高潮位5.69 m，夏秋季台风可能引起增水。"
+        "区域属亚热带季风气候。独山港相邻工程采用的平湖站1971—2014年统计值为：年平均气温16.3 ℃、极端最高气温39.1 ℃、极端最低气温-9.3 ℃、"
+        "年平均降水量1269.7 mm、年平均相对湿度80%、年平均雷暴日28 d。杭州湾北岸为强潮海区，平均潮差约4.82 m，历史最高潮位5.69 m，夏秋季台风可能引起增水。"
         "上述条件要求场地竖向设计兼顾防洪排涝，储罐及管架按沿海风环境进行抗风校核，码头软管和装卸臂设置紧急脱离及快速切断。",
         [1],
     )
     add_body(
         doc,
-        "平湖乍浦50年重现期基本风压为0.45 kPa，罐区按开阔临海地貌考虑风压高度变化；抗震设防参数在初稿中采用设防烈度6度、设计基本地震加速度0.05g，"
-        "施工图阶段应以正式岩土勘察和场地地震安全性评价结果为准。储罐基础宜采用桩基础或复合地基，最终形式由地基承载力、沉降和液化判别确定。",
+        "平湖乍浦50年重现期基本风压为0.45 kPa，罐区按开阔临海地貌考虑风压高度变化；场址相邻工程公开资料给出的地震基本烈度为Ⅵ度。"
+        "施工图阶段仍应以正式岩土勘察和场地地震安全性评价结果为准。储罐基础宜采用桩基础或复合地基，最终形式由地基承载力、沉降和液化判别确定。",
     )
-    add_heading(doc, "1.1.2 设计任务、范围及界面", 3)
+    add_heading(doc, "1.1.2 场址自然条件与设计参数", 3)
+    add_body(
+        doc,
+        "自然条件采用拟建场址相邻的嘉兴港独山港区B区21、22号多用途泊位工程环评长期统计资料。该报告由浙江省政府信息公开平台发布，"
+        "气象统计站为平湖站（30°37′N、121°05′E），统计期为1971—2014年，能够代表独山港陆域的温度、降水、湿度、雾、雷暴和风环境。"
+        "表1-1同时列出原始PDF页码，便于后续复核。",
+    )
+    add_table(
+        doc,
+        "表1-1 浙江平湖独山港场址自然条件及设计采用值",
+        ["类别", "参数", "原始统计值", "本设计采用值", "原始PDF位置", "用于计算或设计"],
+        [
+            ["温度", "年平均气温", "16.3 ℃", "16.3 ℃", "政府环评PDF第166页（报告书第162页）", "油品物性、设备环境条件"],
+            ["温度", "极端最高/最低气温", "39.1/-9.3 ℃", "39.1/-9.3 ℃", "政府环评PDF第166页（报告书第162页）", "材料、仪表与防冻"],
+            ["温度", "最热/月最低平均气温", "26.9/5.8 ℃", "26.9/5.8 ℃", "政府环评PDF第166页（报告书第162页）", "运行温度边界"],
+            ["降水", "年平均降水量", "1269.7 mm", "1269.7 mm", "政府环评PDF第166页（报告书第162页）", "排水系统"],
+            ["降水", "最大一日降水量", "276.4 mm", "276.4 mm", "政府环评PDF第166页（报告书第162页）", "事故水池雨水分量"],
+            ["风", "主导风向", "E—SE，累计30%", "E—SE", "政府环评PDF第166页（报告书第162页）", "总图和管理区方位"],
+            ["风", "年平均/极端风速", "3.2/31.7 m/s", "3.2/31.7 m/s", "政府环评PDF第167页（报告书第163页）", "抗风与码头停工条件"],
+            ["风", "乍浦50年基本风压", "0.45 kN/m²", "0.45 kN/m²", "《浙江省基本风压资料》PDF第43页（资料第37页）", "储罐抗风稳定性"],
+            ["湿度", "年平均相对湿度", "80%", "80%", "政府环评PDF第167页（报告书第163页）", "沿海防腐与电气选型"],
+            ["天气", "年平均雾日", "35 d", "35 d", "政府环评PDF第167页（报告书第163页）", "码头可用时间"],
+            ["天气", "年平均雷暴日", "28 d", "28 d", "政府环评PDF第168页（报告书第164页）", "防雷和作业管理"],
+            ["地震", "地震基本烈度", "Ⅵ度", "Ⅵ度", "政府环评PDF第177页（报告书第173页）", "储罐、管线抗震"],
+        ],
+        [1.5, 2.7, 2.8, 2.8, 4.3, 3.5],
+        Pt(7.5),
+    )
+    add_body(
+        doc,
+        "表中最大一日降水量276.4 mm直接用于第6章事故水池校核；50年基本风压0.45 kN/m²用于第2章抗风稳定性参数；"
+        "极端风速31.7 m/s用于台风停工和加固管理边界，二者含义不同，不能相互替代。环评原文另有一处OCR显示“342 m/s”，"
+        "与同一报告风速表及物理常识矛盾，本设计不采用该错误识别值。",
+    )
+    add_heading(doc, "1.1.3 设计任务、范围及界面", 3)
     add_body(
         doc,
         "设计内容包括油库储油罐容量计算；输油管、集油管和主要支管管径确定；防火堤和消防系统设置；装卸油管路水力计算；输油泵选型及装卸能力校核；"
@@ -366,7 +487,7 @@ def build_chapter_1(doc: Document):
     )
     add_table(
         doc,
-        "表1-1 油品设计性质与主要危险",
+        "表1-2 油品设计性质与主要危险",
         ["油品", "类别", "设计密度/(t/m³)", "运动黏度/(10⁻⁶m²/s)", "主要危险", "储罐型式"],
         [
             ["92号汽油", "甲B", "0.760", "0.70", "蒸气易燃、静电与VOCs", "钢制内浮顶"],
@@ -418,7 +539,7 @@ def build_chapter_1(doc: Document):
     add_heading(doc, "1.2.4 主要设计数据", 3)
     add_table(
         doc,
-        "表1-2 年进出库量及运输比例",
+        "表1-3 年进出库量及运输比例",
         ["油品", "年量/(10⁴t/a)", "进库：水运", "进库：管道", "出库：公路", "出库：管道", "出库：水运"],
         [
             ["92号汽油", "40", "70%", "30%", "65%", "25%", "10%"],
@@ -441,12 +562,12 @@ def build_chapter_2(doc: Document):
         [17],
     )
     eq1 = add_equation(doc, "T=365/K")
-    add_body(doc, f"式中，T为平均周转周期，d；K为年周转系数。将K=14代入式{eq1}，得T=26.07 d。该周期用于库容规划，不等同于单船到港间隔或每座罐的固定清空周期。")
+    add_body(doc, f"式中：T——平均周转周期，d；K——年周转系数。将K=14代入式{eq1}，得T=26.07 d。该周期用于库容规划，不等同于单船到港间隔或每座罐的固定清空周期。")
     add_heading(doc, "2.1.2 理论库容与储罐计算总容量", 3)
     eq2 = add_equation(doc, "V_i=G_i/(Kρ_iη)")
-    add_body(doc, f"式中，V_i为第i种油品理论设计库容，m³；G_i为年周转质量，t/a；ρ_i为设计密度，t/m³；η为储罐容积利用系数，取0.95。分别将三种油品数据代入式{eq2}：")
+    add_body(doc, f"式中：V_i——第i种油品理论设计库容，m³；G_i——年周转质量，t/a；K——年周转系数；ρ_i——设计密度，t/m³；η——储罐容积利用系数，取0.95。分别将三种油品数据代入式{eq2}：")
     for product in G:
-        add_equation(doc, f"V_{{{product[:2]}}}={G[product]:.0f}/(14×{RHO[product]:.3f}×0.95)={theoretical_capacity(product):.2f}m^3")
+        add_numeric_equation(doc, f"V_{{{product[:2]}}}={G[product]:.0f}/(14×{RHO[product]:.3f}×0.95)={theoretical_capacity(product):.2f}m^3")
     total_theory = sum(theoretical_capacity(p) for p in G)
     add_body(doc, f"三种油品理论库容合计为{total_theory:,.2f} m³。为保证同品种至少两座罐轮换运行，储罐按系列规格向上配置。")
     add_table(
@@ -463,7 +584,7 @@ def build_chapter_2(doc: Document):
     eq3 = add_equation(doc, "TV=Σ(V_jC_j)")
     add_body(
         doc,
-        f"油库等级按GB 50074—2014表3.0.1的储罐计算总容量确定。式中，V_j为第j类液体储罐实际容量，C_j为折算系数；汽油取1.0，丙A类柴油取0.5。"
+        f"油库等级按GB 50074—2014表3.0.1的储罐计算总容量确定。式中：V_j——第j类液体储罐实际容量，m³；C_j——折算系数；汽油取1.0，丙A类柴油取0.5。"
         f"将汽油40 000 m³、30 000 m³和柴油30 000 m³代入式{eq3}，得TV=40 000+30 000+0.5×30 000=85 000 m³。"
         "该值处于30 000 m³≤TV<100 000 m³范围，油库等级为二级。名义总容量为100 000 m³，而用于等级判定的计算总容量为85 000 m³，两者用途不同。",
     )
@@ -530,7 +651,7 @@ def build_chapter_2(doc: Document):
     eq9 = add_equation(doc, "t_n≥max(t_d+C_1+C_2,t_t+C_1,t_min)")
     add_body(
         doc,
-        f"式中，t_d为设计条件计算厚度，t_t为充水试验计算厚度，t_n为名义厚度。Q345R在相应厚度区间的许用应力取σ_d=218.75 MPa、σ_t=230 MPa。"
+        f"式中：t_d——设计条件计算厚度，mm；t_t——充水试验计算厚度，mm；t_n——名义厚度，mm。Q345R在相应厚度区间的许用应力取σ_d=218.75 MPa、σ_t=230 MPa。"
         f"以20 000 m³汽油罐底圈为例，将D=40 m、H=15.915 m、ρ=0.760、φ=0.85代入式{eq7}，得t_d=12.51 mm；"
         f"将充水高度18.0 m代入式{eq8}，得t_t=17.75 mm；按式{eq9}向上圆整取18 mm。",
     )
@@ -586,7 +707,7 @@ def build_chapter_3(doc: Document):
         "水运外输用于汽油跨区域调拨。不同油品在同一时段可并行作业，但同一储罐禁止同时进油和发油。",
     )
     eq13 = add_equation(doc, "G_(i,j)=G_iα_(i,j)")
-    add_body(doc, f"式中，G_(i,j)为油品i采用方式j的年物流量，α_(i,j)为相应比例。将表1-2数据代入式{eq13}，得到表3-1。")
+    add_body(doc, f"式中：G_(i,j)——油品i采用方式j的年物流量，t/a；G_i——油品i年物流量，t/a；α_(i,j)——相应运输比例。将表1-3数据代入式{eq13}，得到表3-1。")
     logistics_rows = []
     for p in G:
         s = SPLITS[p]
@@ -643,7 +764,7 @@ def build_chapter_3(doc: Document):
     )
     eq15 = add_equation(doc, "P_b=(365×24×η_b/t_b)G_s")
     berth_capacity = 365 * 24 * 0.85 / 30 * 5000
-    add_body(doc, f"式中，P_b为单泊位年通过能力，t_b为单船占用时间，η_b为泊位可用系数，G_s为平均单船实载量。代入式{eq15}，P_b={berth_capacity/1e4:.2f}万t/a。")
+    add_body(doc, f"式中：P_b——单泊位年通过能力，t/a；t_b——单船占用时间，h；η_b——泊位可用系数；G_s——平均单船实载量，t。代入式{eq15}，P_b={berth_capacity/1e4:.2f}万t/a。")
     eq16 = add_equation(doc, "N_b=ceil(G_w/P_b)")
     add_body(doc, f"将G_w=76万t/a、P_b={berth_capacity/1e4:.2f}万t/a代入式{eq16}，N_b=1。泊位利用率为76/{berth_capacity/1e4:.2f}=0.615，小于0.70，设置1个5 000 DWT成品油泊位可满足要求。")
     add_body(
@@ -696,7 +817,7 @@ def build_chapter_4(doc: Document):
         [18],
     )
     eq17 = add_equation(doc, "d=√(4Q/(πv))")
-    add_body(doc, f"式中，d为管内径，m；Q为体积流量，m³/s；v为允许流速，m/s。水运进库Q=300 m³/h、取v=1.8 m/s，代入式{eq17}得d=0.243 m，选DN250；公路发油Q=120 m³/h、取v=2.0 m/s，得d=0.146 m，选DN150。")
+    add_body(doc, f"该式用于由设计流量和允许流速计算管道内径。式中：d——管内径，m；Q——体积流量，m³/s；v——允许流速，m/s。水运进库Q=300 m³/h、取v=1.8 m/s，代入式{eq17}得d=0.243 m，选DN250；公路发油Q=120 m³/h、取v=2.0 m/s，得d=0.146 m，选DN150。")
     add_table(
         doc,
         "表4-1 主要管线管径与流速",
@@ -713,6 +834,12 @@ def build_chapter_4(doc: Document):
     eq20 = add_equation(doc, "h_f=λ(L/d)(v^2/(2g))")
     eq21 = add_equation(doc, "h_m=Σζ(v^2/(2g))")
     eq22 = add_equation(doc, "H=Δz+h_f+h_m+h_e+h_r")
+    add_body(
+        doc,
+        "上述公式依次用于判别流态、确定摩阻系数、计算沿程损失、局部损失和系统扬程。式中：Re——雷诺数；ν——运动黏度，m²/s；"
+        "λ——达西摩阻系数；ε——管壁绝对粗糙度，m；L——管道计算长度，m；h_f——沿程阻力损失，m；"
+        "Σζ——局部阻力系数之和；h_m——局部阻力损失，m；Δz——几何高差，m；h_e——过滤、计量和装卸设备折算水头，m；h_r——末端余压水头，m。",
+    )
     sample = HYD["92号汽油公路发油"]
     add_body(
         doc,
@@ -737,45 +864,90 @@ def build_chapter_4(doc: Document):
         Pt(8),
     )
     add_heading(doc, "4.3 输油泵选型", 2)
-    add_heading(doc, "4.3.1 扬程、功率与材质", 3)
+    crop_path, curve_path = build_pump_assets()
+    add_heading(doc, "4.3.1 设计工况与候选泵", 3)
     add_body(
         doc,
-        "每种油品设置2台卧式离心发油泵，一用一备，额定流量250 m³/h、额定扬程55 m；公路装车时通过变频降速在120 m³/h附近运行，管道或水运外输时在200 m³/h附近运行。"
-        "泵型按API 610流程泵系列选择，汽油泵采用防爆电机、低泄漏机械密封和导静电联轴器罩，柴油泵材料满足成品油和环境温度要求。",
+        "库内输油泵服务于倒罐、公共管道外输和水运外输；水运进库主要由船泵提供压力。表4-2表明，库内最不利路径为汽油水运外输，"
+        "设计流量200 m³/h、系统所需扬程35.91 m，因此泵的选型点不再沿用原稿缺少样本依据的250 m³/h、55 m，而以200 m³/h、约36 m作为额定工作点。",
+    )
+    add_body(
+        doc,
+        "候选泵采用KSB MegaCPK Inducer 125-100-200单级卧式离心泵，转速2900 r/min，叶轮直径初选193 mm。"
+        "制造商样本第18页同时给出H-Q、效率、NPSH_r和功率曲线；样本第6页说明性能曲线按ISO 9906 2B级，NPSH_r按扬程下降3%确定。"
+        "本设计按样本图读数进行初选，采购前仍应由制造商按实际油品密度、黏度和叶轮切割直径出具确认曲线。",
         [19],
     )
+    if crop_path.exists():
+        add_figure(doc, crop_path, "图4-1 KSB MegaCPK Inducer 125-100-200泵性能曲线（制造商样本第18页）", 15.2)
+
+    add_heading(doc, "4.3.2 泵与管路特性曲线及工作点", 3)
+    add_body(
+        doc,
+        "为确定工作点，将最不利水运外输管路的系统扬程写成静扬程与流量平方项之和。该路径静扬程由高差5 m、设备压降10 m和末端余压3 m组成，"
+        "即H_st=18 m；在Q=200 m³/h时沿程与局部损失合计17.91 m，据此反算管路阻力系数。",
+    )
+    eq23a = add_equation(doc, "H_sys=H_st+K_QQ^2")
+    add_body(
+        doc,
+        f"式中：H_sys——管路系统扬程，m；H_st——静扬程与设备、末端压力折算水头之和，m；K_Q——管路阻力系数，h²/m⁵；"
+        f"Q——体积流量，m³/h。将H_st=18 m、Q=200 m³/h、H_sys=35.91 m代入式{eq23a}，得K_Q=4.48×10⁻⁴ h²/m⁵。",
+    )
+    if curve_path.exists():
+        add_figure(doc, curve_path, "图4-2 输油泵性能曲线与最不利管路特性曲线", 14.5)
+    add_body(
+        doc,
+        "图4-2表明，193 mm叶轮泵曲线与系统曲线交于Q≈202 m³/h、H≈36.3 m，接近设计流量且位于样本高效区。"
+        "低流量公路装车工况采用变频调节，并设置最小流量回流，避免长期在制造商最小连续稳定流量左侧运行。"
+        "该工作点来自制造商曲线与本文水力计算的交点，不是人为给定。",
+    )
+
+    add_heading(doc, "4.3.3 轴功率与电机", 3)
     eq23 = add_equation(doc, "P=(ρgQH)/(1000η_p)")
     add_body(
         doc,
-        f"以柴油管道外输为最不利工况，Q=200 m³/h、H={HYD['0号柴油管道外输']['H']:.2f} m、η_p=0.70，"
-        f"代入式{eq23}得轴功率{HYD['0号柴油管道外输']['P']:.1f} kW。考虑电机效率、工况偏移和启动裕量，选45 kW防爆电机。"
-        "汽油外输计算轴功率不超过25.2 kW，同样选45 kW电机，便于统一备件和覆盖最大扬程。",
+        f"该式用于由流量、扬程和效率计算泵轴功率。式中：P——泵轴功率，kW；ρ——油品密度，kg/m³；g——重力加速度，取9.81 m/s²；"
+        f"Q——体积流量，m³/s；H——扬程，m；η_p——泵效率。柴油按Q=202 m³/h、H=36.3 m、ρ=840 kg/m³、样本工作点效率η_p=0.78代入式{eq23}，"
+        "得P=21.6 kW。考虑制造偏差、工况移动和电机裕量，三种油品统一配置30 kW防爆电机；最终功率还应与制造商确认曲线配套。",
     )
     add_table(
         doc,
         "表4-3 输油泵选型",
         ["位号", "介质", "数量", "额定Q/(m³/h)", "额定H/m", "电机/kW", "运行方式"],
         [
-            ["P-101A/B", "92号汽油", "2", "250", "55", "45", "一用一备，变频"],
-            ["P-201A/B", "95号汽油", "2", "250", "55", "45", "一用一备，变频"],
-            ["P-301A/B", "0号柴油", "2", "250", "55", "45", "一用一备，变频"],
+            ["P-101A/B", "92号汽油", "2", "200", "36", "30", "一用一备，变频"],
+            ["P-201A/B", "95号汽油", "2", "200", "36", "30", "一用一备，变频"],
+            ["P-301A/B", "0号柴油", "2", "200", "36", "30", "一用一备，变频"],
             ["P-401A/B", "污油/排水", "2", "50", "30", "11", "一用一备"],
         ],
         [2.7, 2.4, 1.5, 2.7, 2.0, 2.0, 3.2],
     )
-    add_heading(doc, "4.3.2 汽蚀余量校核", 3)
+
+    add_heading(doc, "4.3.4 柴油泵NPSH校核", 3)
     eq24 = add_equation(doc, "NPSH_a=P_a/(ρg)+h_s-P_v/(ρg)-h_(fs)")
     add_body(
         doc,
-        f"汽油按最低运行液位2.5 m、当地大气压力水头10.5 m、饱和蒸气压水头0.8 m、吸入损失1.2 m计算，代入式{eq24}得NPSH_a=11.0 m。"
-        "候选泵在250 m³/h工况的必需汽蚀余量NPSH_r不大于4.0 m，另加0.5 m安全裕量后仍有6.5 m余量。柴油蒸气压更低，汽蚀条件优于汽油。",
+        f"该式用于校核泵入口可利用汽蚀余量。式中：NPSH_a——装置汽蚀余量，m；P_a——当地大气压，Pa；ρ——油品密度，kg/m³；"
+        f"h_s——最低液位高于泵轴中心的静压头，m；P_v——设计温度下饱和蒸气压，Pa；h_fs——吸入管总水头损失，m。"
+        "柴油校核取P_a=101325 Pa、ρ=840 kg/m³；储罐低低液位1.5 m、泵轴高于罐底0.5 m，故h_s=1.0 m；"
+        "按40 ℃柴油饱和蒸气压保守取1.0 kPa，吸入管DN250、长度80 m、局部阻力系数8，Q=202 m³/h时h_fs=1.35 m。"
+        f"代入式{eq24}得NPSH_a=11.83 m。",
     )
-    add_heading(doc, "4.3.3 装卸能力校核", 3)
+    add_body(
+        doc,
+        "由KSB样本第18页NPSH_r曲线读取，Q≈202 m³/h时NPSH_r≈1.9 m。按1.0 m附加裕量校核，"
+        "NPSH_a=11.83 m>NPSH_r+1.0=2.90 m，柴油泵汽蚀裕量为8.93 m，满足要求。汽油蒸气压更高，"
+        "运行前应按实际最高油温复核；本节不再用“柴油条件自然更好”代替数值校核。",
+    )
+
+    add_heading(doc, "4.3.5 装卸能力与备用泵校核", 3)
     eq25 = add_equation(doc, "M_a=nQρt_dD")
     add_body(
         doc,
-        f"式中，M_a为年质量能力，n为同时运行泵数，Q为单泵流量，t_d为日运行小时，D为年运行天数。每种油品按1台泵、Q=250 m³/h、"
-        f"t_d=16 h/d、D=330 d代入式{eq25}，汽油年能力为100.32万t/a，柴油为110.88万t/a，均大于各自年出库量。"
+        f"该式用于校核单套输油泵的年质量作业能力。式中：M_a——年质量能力，t/a；n——同时运行泵数；Q——单泵流量，m³/h；"
+        f"ρ——油品密度，t/m³；t_d——日运行时间，h/d；D——年运行天数，d/a。每种油品按1台泵、Q=200 m³/h、t_d=16 h/d、D=330 d代入式{eq25}，"
+        "汽油年能力为80.26万t/a，柴油为88.70万t/a，均大于各自年出库量。每种油品设置A/B两台泵，一用一备；"
+        "备用泵与工作泵同型号、同流量和同扬程，可在工作泵故障或检修时自动/手动切换。",
     )
     add_body(
         doc,
@@ -801,10 +973,67 @@ def build_chapter_4(doc: Document):
         ],
         [3.0, 4.0, 3.0, 6.0],
     )
+    add_heading(doc, "4.5 管路运行与瞬变控制", 2)
+    add_heading(doc, "4.5.1 吸入管布置与低阻设计", 3)
+    add_body(
+        doc,
+        "泵吸入管从储罐根部独立引出，不用一根细总管同时供多台大泵。吸入管采用DN250，正常流量200 m³/h时流速约1.13 m/s，"
+        "能够兼顾低阻力和避免油品长期滞留。管线自储罐向泵连续坡降，不形成可积聚气体的高点；必须抬高时设置可控放气点，放空气体接入安全密闭系统。",
+    )
+    add_body(
+        doc,
+        "泵入口直管段避免紧邻弯头、三通和半开阀门。入口异径管采用顶平偏心异径管，防止气袋；过滤器按洁净和堵塞两种状态核算压降，"
+        "差压高报警后切换备用过滤器或停止作业。入口阀保持全开，流量调节由变频和出口阀完成，避免通过入口节流降低NPSH_a。",
+    )
+    add_body(
+        doc,
+        "柴油NPSH校核采用低低液位、最高设计油温和过滤器不利压降组合。若后续总平面使吸入管长度超过80 m，或泵轴中心标高升高，"
+        "应按实际长度和标高重算h_fs及h_s；不能只比较泵样本NPSH_r。储罐低低液位停泵值应高于产生旋涡和吸气的最低淹没深度。",
+    )
+    add_heading(doc, "4.5.2 停泵水击与阀门动作顺序", 3)
+    add_body(
+        doc,
+        "水运外输管线长约1200 m，突然停泵或快速关阀可能产生压力波。初稿采用“先降速停泵、后关出口切断阀”的顺序：正常停输时变频器按设定斜率降速，"
+        "流量接近零后关闭出口阀；紧急停车时立即切断驱动，同时由止回阀阻止倒流，电动切断阀按经瞬变校核确定的时间关闭。",
+    )
+    add_body(
+        doc,
+        "码头船岸ESD分为岸方和船方两级。高高液位、装卸臂超限或可燃气体高高报警时，先发停泵信号并关闭岸侧紧急切断阀；"
+        "紧急脱离装置只在装卸臂位移继续扩大或连接失效时动作。阀门关闭时间过短会放大水击，过长会增加泄漏量，施工图阶段应进行瞬变计算后确定。",
+    )
+    add_table(
+        doc,
+        "表4-5 主要工况的泵阀动作顺序",
+        ["工况", "泵动作", "阀门动作", "关键监测", "恢复条件"],
+        [
+            ["正常启动", "确认灌泵后低速启动", "入口全开，出口阀小开后渐开", "入口压力、流量、电流", "压力和振动稳定"],
+            ["正常停输", "变频降速至最小流量后停泵", "泵停后关闭出口阀", "流量、出口压力", "管线泄压并隔离"],
+            ["出口压力高高", "立即停泵", "出口切断阀按设定时间关闭", "压力变送器、阀位", "查明堵塞或误关阀原因"],
+            ["储罐高高液位", "停止进库动力源", "关闭目标罐根阀并切换安全罐", "独立液位开关", "人工确认液位和阀位"],
+            ["船岸ESD", "船泵/岸泵联锁停止", "岸阀、船阀顺序关闭", "装卸臂位移、通信状态", "双方共同复位"],
+        ],
+        [3.0, 3.6, 4.5, 3.5, 3.6],
+    )
+    add_heading(doc, "4.5.3 管道材料、连接与检验", 3)
+    add_body(
+        doc,
+        "成品油工艺管道采用无缝或焊接碳钢管，材料等级、设计压力和壁厚由管道材料等级表统一规定。罐根、泵口、计量撬和码头接口采用法兰连接，"
+        "长直管段优先焊接，减少潜在泄漏点。汽油管道垫片和阀杆填料选低泄漏型，阀门具备防火安全结构。",
+    )
+    add_body(
+        doc,
+        "架空管道考虑温差位移、支吊架摩擦和设备管口允许荷载。固定点、导向支架和滑动支架按热位移方向布置，罐前第一道阀附近保留柔性段，"
+        "避免储罐沉降把荷载传至罐壁接管。跨防火堤处不把套管作为固定点，套管两端采用耐油柔性密封。",
+    )
+    add_body(
+        doc,
+        "安装完成后按管道等级进行强度和严密性试验，计量撬、过滤器和泵等不宜承受试验压力的设备用盲板隔离。投油前完成清管、吹扫、干燥和惰化，"
+        "首次进汽油控制流速并确认静电接地连续。试运记录至少包括泵流量、扬程、电流、轴承温度、振动、密封泄漏和联锁动作。",
+    )
 
 
 def build_chapter_5(doc: Document):
-    add_heading(doc, "5 总图、HSE与消防设计", 1)
+    add_heading(doc, "5 总平面与安全防护", 1)
     add_heading(doc, "5.1 功能分区与总平面布置", 2)
     add_body(
         doc,
@@ -830,7 +1059,30 @@ def build_chapter_5(doc: Document):
         ],
         [2.6, 4.0, 5.0, 4.0],
     )
-    add_heading(doc, "5.2 防火堤与泄漏围控", 2)
+    add_heading(doc, "5.2 防火间距与道路布置", 2)
+    add_body(
+        doc,
+        "总平面防火间距按GB 50074—2014中二级石油库、甲B类汽油和丙A类柴油设施对应条款逐项控制。"
+        "初稿不以一句“满足规范”替代尺寸核对，而是把储罐间距、罐组至泵棚、装车设施、消防泵房、管理区和围墙的控制值作为总平面图标注条件。"
+        "汽油与柴油分别成组，固定顶柴油罐不与汽油内浮顶罐共用防火堤。",
+    )
+    add_table(
+        doc,
+        "表5-2 总平面防火间距控制清单",
+        ["相邻设施", "控制原则", "本设计图纸要求", "复核阶段"],
+        [
+            ["同罐组储罐之间", "按油品类别、罐型及罐径取值", "在总平面图逐罐标注中心距和净距", "总图完成后按GB 50074复核"],
+            ["罐组与泵棚、阀组", "泵棚位于防火堤外并留消防操作面", "泵棚沿罐区外侧布置，不占防火堤有效容积", "总图"],
+            ["罐组与装车设施", "避免装车火源、车辆与储罐相互影响", "装车区靠陆域出口并与罐区分区", "总图"],
+            ["罐组与消防泵房", "消防设施不受控制火灾直接威胁", "消防泵房布置于罐区外独立区域", "消防总图"],
+            ["生产区与管理区", "人员集中设施位于上风或侧上风", "管理区独立出入口并与生产区分隔", "总图"],
+            ["道路与防火堤", "满足消防车接近、转弯和连续通行", "罐区周边设置环形消防道路", "总图"],
+        ],
+        [4.0, 5.0, 5.0, 2.8],
+    )
+    add_note(doc, "表中具体数值必须在两张图纸形成实际坐标和尺寸后，按GB 50074—2014对应表格逐项核对；正文不虚构尚未落图的净距。")
+
+    add_heading(doc, "5.3 防火堤与泄漏围控", 2)
     add_body(
         doc,
         "G92罐组防火堤内尺寸取140 m×90 m，布置2座D40 m储罐；G95和GD罐组内尺寸均取120 m×80 m，分别布置2座D34 m储罐。"
@@ -838,6 +1090,11 @@ def build_chapter_5(doc: Document):
     )
     eq26 = add_equation(doc, "A_n=LB-nπD^2/4")
     eq27 = add_equation(doc, "V_d=A_n(H_d-0.2)")
+    add_body(
+        doc,
+        "上述两式用于扣除罐基占地后计算防火堤有效容积。式中：A_n——防火堤内有效净面积，m²；L、B——防火堤内边长，m；"
+        "n——堤内储罐数量；D——储罐直径，m；V_d——防火堤有效容积，m³；H_d——防火堤设计高度，m；0.2——堤顶安全余高，m。",
+    )
     dike_rows = []
     for name, p, L, B in [("G92", "92号汽油", 140, 90), ("G95", "95号汽油", 120, 80), ("GD", "0号柴油", 120, 80)]:
         D = TANKS[p]["D"]
@@ -845,10 +1102,10 @@ def build_chapter_5(doc: Document):
         an = L * B - n * math.pi * D**2 / 4
         vd = an * 2.0
         dike_rows.append([name, f"{L}×{B}", f"{D:.0f}", "2", f"{an:.2f}", f"{vd:.2f}", f"{TANKS[p]['nom']:.0f}", "满足"])
-    add_body(doc, f"以G92罐组为例，将L=140 m、B=90 m、n=2、D=40 m代入式{eq26}，净面积A_n=10 086.73 m²；代入式{eq27}，有效容积V_d=20 173.45 m³>最大单罐20 000 m³。其余罐组计算见表5-2。")
+    add_body(doc, f"以G92罐组为例，将L=140 m、B=90 m、n=2、D=40 m代入式{eq26}，净面积A_n=10 086.73 m²；代入式{eq27}，有效容积V_d=20 173.45 m³>最大单罐20 000 m³。其余罐组计算见表5-3。")
     add_table(
         doc,
-        "表5-2 防火堤有效容积校核",
+        "表5-3 防火堤有效容积校核",
         ["罐组", "堤内L×B/m", "D/m", "罐数", "净面积/m²", "有效容积/m³", "最大单罐/m³", "结果"],
         dike_rows,
         [1.6, 2.4, 1.4, 1.4, 2.5, 2.7, 2.7, 1.5],
@@ -858,14 +1115,14 @@ def build_chapter_5(doc: Document):
         "防火堤内地坪坡向集水井，雨水出口阀常闭并具备阀位远传。日常降雨经人工确认和油膜检测合格后排入清净雨水系统；发现油品或事故状态时切入含油污水或事故水池。"
         "穿堤管线采用密封套管，堤脚禁止设置无法隔离的明沟。",
     )
-    add_heading(doc, "5.3 HSE与危险因素分析", 2)
-    add_heading(doc, "5.3.1 主要危险因素", 3)
+    add_heading(doc, "5.4 HSE与危险因素分析", 2)
+    add_heading(doc, "5.4.1 主要危险因素", 3)
     add_body(
         doc,
         "主要危险包括汽油蒸气形成爆炸性混合物、静电放电、泵密封和法兰泄漏、储罐超装、船岸软管破裂、车辆误操作、雷击、台风、地震及消防废水外排。"
         "危险源按储罐、泵阀、装车、码头和污水设施分区辨识，控制措施遵循消除、预防、检测、隔离、减缓和应急的层级。",
     )
-    add_heading(doc, "5.3.2 HSE管理措施", 3)
+    add_heading(doc, "5.4.2 HSE管理措施", 3)
     add_body(
         doc,
         "作业许可覆盖动火、受限空间、高处、临时用电、吊装和盲板抽堵。储罐清洗前完成物料隔离、排净、置换、气体检测和监护；码头作业执行船岸安全检查表，"
@@ -877,55 +1134,145 @@ def build_chapter_5(doc: Document):
         "发现沉降异常、浮盘卡阻、底板腐蚀或阀门拒动时及时降低液位或停用设备。",
         [12, 13],
     )
-    add_heading(doc, "5.4 防火、防爆、防雷、防静电与抗震", 2)
-    add_heading(doc, "5.4.1 防火防爆", 3)
+    add_heading(doc, "5.5 防爆、防雷、防静电、抗震与防腐", 2)
+    add_heading(doc, "5.5.1 爆炸危险区域与防爆电气", 3)
     add_body(
         doc,
         "汽油罐区、泵棚、装车鹤位、油气回收装置和码头装卸点按GB 50058—2014划分爆炸危险区域，电机、仪表、照明和接线箱按区域等级选防爆型式。"
         "可能释放油气的设备优先露天或敞开布置，泵棚保持自然通风；可燃气体探测器布置在泵密封、阀组、装车和VRU周边低处，并与声光报警和紧急切断联锁。",
     )
-    add_heading(doc, "5.4.2 防雷防静电", 3)
+    add_table(
+        doc,
+        "表5-4 主要爆炸危险区域划分与设备要求",
+        ["释放源", "区域划分对象", "主要防爆措施", "图纸表达"],
+        [
+            ["汽油罐呼吸阀、量油孔", "开口周围空间", "限制点火源，仪表和电气按区域选型", "防爆区域图标注边界"],
+            ["汽油泵密封及阀组", "泵棚地面及设备周边", "露天通风、可燃气体检测、防爆电机", "平面和剖面标注"],
+            ["公路装车鹤位", "装车口、车辆罐口及地面沟槽", "液下装车、静电联锁、紧急切断", "装车区防爆图"],
+            ["油气回收装置", "入口管线、风机和处理单元周边", "防爆风机、LEL/压力联锁、阻火隔爆", "设备布置图"],
+            ["码头装卸接口", "装卸臂、船岸连接和集油设施周边", "船岸ESD、绝缘法兰、紧急脱离", "码头危险区域图"],
+        ],
+        [3.7, 4.2, 5.3, 3.6],
+    )
+    add_body(
+        doc,
+        "爆炸危险区域的最终范围需按GB 50058—2014附录中释放源、通风条件和空间形态绘制，不能只写“采用防爆电机”。"
+        "设备表还应给出防爆型式、气体组别和温度组别；地沟、低洼区因油气可能积聚，应按不利通风条件处理。",
+    )
+
+    add_heading(doc, "5.5.2 防雷与防静电", 3)
     add_body(
         doc,
         "储罐按第二类防雷建筑物相关要求设置接地。罐体沿周边不少于两处与接地网连接，接地装置兼作防静电接地；管道法兰、装卸臂、浮盘和扶梯活动连接处设置跨接。"
         "油罐车装车前必须连接静电接地并经联锁确认，接地断开时停止装车。汽油进罐采用液下进油，初始充装阶段限制流速。",
     )
-    add_heading(doc, "5.4.3 抗震与台风防护", 3)
+    add_heading(doc, "5.5.3 抗震、台风与沿海防腐", 3)
     add_body(
         doc,
         "储罐基础、罐壁、锚固和接管按场地抗震参数设计，罐根第一道阀附近和跨堤管线设置柔性连接或补偿段，避免基础差异沉降和地震位移拉裂管口。"
         "台风预警期间停止非必要码头作业，检查浮盘排水、罐顶附件、抗风圈、装卸臂锁定和消防备用电源，降低高风险储罐作业频次。",
     )
-    add_heading(doc, "5.5 消防冷却水与泡沫灭火", 2)
-    add_heading(doc, "5.5.1 消防控制工况", 3)
+    add_body(
+        doc,
+        "独山港年平均相对湿度80%，且受海盐气溶胶影响，钢结构和管道外防腐按沿海重腐蚀环境选体系。储罐外壁、管架和架空管道采用喷砂除锈后底漆—中间漆—耐候面漆复合涂层；"
+        "保温管道重点控制保温层下腐蚀，采用防水封口和可排水结构。埋地钢管采用加强级外防腐层并结合阴极保护，法兰、螺栓和仪表支架避免异种金属电偶腐蚀。"
+        "涂层干膜厚度和复涂周期由施工图防腐规格书及涂料制造商体系确认。",
+    )
+    add_heading(doc, "5.6 泄漏预防与应急隔离", 2)
+    add_heading(doc, "5.6.1 储罐、泵阀和装车区防泄漏", 3)
+    add_body(
+        doc,
+        "储罐底板采用可检测的防渗构造，罐基础周边设渗漏观察点。日常通过罐存量平衡、底板监测和罐基周边巡检识别慢渗漏；"
+        "当同一班次计量差持续超限或观察点出现油迹时，停止收发作业并转移库存。罐壁下部、罐底边缘板和罐根接管列为重点腐蚀监测部位。",
+    )
+    add_body(
+        doc,
+        "泵采用机械密封，密封泄漏进入接液盘和含油污水系统。泵出口止回阀防止停泵倒流，进出口设置远程切断阀；"
+        "泵棚地坪向集液沟找坡，不把泄漏油导向电气间或消防道路。阀组区法兰数量尽量减少，法兰下方不布置电缆接头。",
+    )
+    add_body(
+        doc,
+        "公路装车采用液下装车鹤管、车辆防溢流探头和静电接地联锁。接地未确认、车辆罐高液位、鹤管未到位或油气回收未连通时，批控系统不允许打开装车阀。"
+        "装车岛设置紧急停车按钮，动作后关闭批控阀和总切断阀并停止输油泵。",
+    )
+    add_heading(doc, "5.6.2 分区隔离和紧急切断层级", 3)
+    add_body(
+        doc,
+        "紧急切断按“设备—单元—库区”三级设置。设备级用于单泵超压、单罐高高液位和单鹤位溢油；单元级隔离一个油品罐组或装车区；"
+        "库区级用于大范围可燃气体报警、火灾或外部灾害。分级可以在阻止事故扩大的同时，避免无关系统全部失去控制。",
+    )
+    add_table(
+        doc,
+        "表5-5 典型泄漏情景及隔离边界",
+        ["情景", "首要动作", "隔离边界", "泄漏去向", "后续处置"],
+        [
+            ["罐根法兰泄漏", "停相关收发泵", "关闭罐根及下游阀", "防火堤内集液", "倒罐、堵漏、检验"],
+            ["泵机械密封大量泄漏", "停故障泵并切备用泵", "关闭故障泵进出口", "接液盘至含油污水", "冲洗置换后检修"],
+            ["装车溢油", "ESD停泵关阀", "装车岛总阀", "不渗地坪和集液沟", "回收油品、检测合格后恢复"],
+            ["码头连接失效", "船岸ESD", "船阀和岸侧紧急切断阀", "围油栏和码头集油设施", "海事联动、回收处置"],
+            ["罐区火灾", "启动消防并停止全部相关作业", "事故罐组和相邻单元", "防火堤—事故水池", "泡沫灭火、连续冷却"],
+        ],
+        [3.5, 4.2, 4.0, 3.8, 3.8],
+    )
+    add_heading(doc, "5.6.3 台风、雷暴和地震后的复产检查", 3)
+    add_body(
+        doc,
+        "台风或强雷暴预警期间停止码头装卸和高处作业，核对罐顶附件、浮盘排水、装卸臂锁定、消防柴油机燃料和事故水池空余容积。"
+        "预警解除后不立即恢复大流量作业，应先检查电源、仪表空气、通信、接地、阀位及罐区排水状态。",
+    )
+    add_body(
+        doc,
+        "地震后复产前检查储罐沉降和倾斜、罐壁屈曲、罐底翘离、接管变形、管架位移及防火堤裂缝。发现液位异常下降、基础渗油或管线受拉时，"
+        "保持隔离并组织无损检测。复产由工艺、设备、仪表和HSE共同签字确认，不以外观无明显损坏作为唯一条件。",
+    )
+
+    add_heading(doc, "6 消防系统与事故水设计", 1)
+    add_heading(doc, "6.1 消防控制工况与冷却水", 2)
+    add_heading(doc, "6.1.1 控制火灾情景", 3)
     add_body(
         doc,
         "按GB 50074—2014第12.2.7条、表12.2.8及第12.2.11条比较汽油与柴油工况。钢制内浮顶汽油罐着火时，着火罐罐壁按2.0 L/(min·m²)连续冷却6 h，"
         "相邻罐可不固定冷却；固定顶柴油罐着火时，着火罐按全部罐壁面积2.5 L/(min·m²)，相邻罐按面向着火罐的半个罐壁面积2.0 L/(min·m²)，连续供水9 h。"
         "经计算，15 000 m³固定顶柴油罐火灾并冷却同组1座相邻罐为控制工况。",
     )
+    add_heading(doc, "6.1.2 冷却水流量与持续时间", 3)
     eq28 = add_equation(doc, "A_w=πDH")
     eq29 = add_equation(doc, "Q_c=(q_fA_w+q_aA_w/2)/60")
     wall_area = math.pi * 34 * 18
     qc = (2.5 * wall_area + 2.0 * wall_area / 2) / 60
     eq30 = add_equation(doc, "V_c=3.6Q_ct_c")
+    add_body(
+        doc,
+        "上述公式用于计算着火罐及相邻罐的固定冷却水流量和总用水量。式中：A_w——单罐罐壁面积，m²；D——罐径，m；H——罐壁高度，m；"
+        "Q_c——冷却水总流量，L/s；q_f——着火罐冷却强度，L/(min·m²)；q_a——相邻罐冷却强度，L/(min·m²)；"
+        "V_c——冷却水量，m³；t_c——连续冷却时间，h。",
+    )
     vc = 3.6 * qc * 9
     add_body(
         doc,
         f"将D=34 m、H=18 m代入式{eq28}，柴油罐壁面积A_w={wall_area:.2f} m²。将q_f=2.5、q_a=2.0代入式{eq29}，"
         f"着火罐与1座相邻罐的固定冷却水总流量Q_c={qc:.2f} L/s。再将t_c=9 h代入式{eq30}，冷却水量V_c={vc:.2f} m³。",
     )
-    add_heading(doc, "5.5.2 泡沫混合液与泡沫产生器", 3)
+    add_heading(doc, "6.2 泡沫灭火系统", 2)
+    add_heading(doc, "6.2.1 保护方式与设计参数", 3)
     add_body(
         doc,
         "汽油内浮顶罐采用密封圈环形保护，泡沫堰板距罐壁b=0.55 m，混合液强度12.5 L/(min·m²)，连续供给60 min；柴油固定顶罐采用全液面保护，"
         "混合液强度6.0 L/(min·m²)，连续供给30 min。泡沫液按3%型、实际混合比上限3.9%并增加10%储量计算。",
     )
+    add_heading(doc, "6.2.2 泡沫流量、产生器数量与储量", 3)
     eq31 = add_equation(doc, "A_(f,g)=πDb")
     eq32 = add_equation(doc, "Q_f=q_fA_f/60")
     eq33 = add_equation(doc, "n_p=ceil(Q_f/Q_p)")
     eq34 = add_equation(doc, "V_(mix)=3.6Q_ft_f")
     eq35 = add_equation(doc, "V_(foam)=1.10cV_(mix)")
+    add_body(
+        doc,
+        "上述公式用于计算泡沫保护面积、混合液流量、泡沫产生器数量及泡沫液储量。式中：A_(f,g)——汽油内浮顶罐密封圈保护面积，m²；"
+        "b——泡沫堰板至罐壁距离，m；Q_f——泡沫混合液流量，L/s；q_f——混合液供给强度，L/(min·m²)；"
+        "n_p——泡沫产生器数量；Q_p——单个产生器额定流量，L/s；V_(mix)——泡沫混合液量，m³；t_f——连续供给时间，h；"
+        "V_(foam)——泡沫液储量，m³；c——实际混合比；1.10——储量裕量系数。",
+    )
     ag = math.pi * 40 * 0.55
     qg = 12.5 * ag / 60
     vmg = 3.6 * qg * 1
@@ -946,7 +1293,7 @@ def build_chapter_5(doc: Document):
     )
     add_table(
         doc,
-        "表5-3 泡沫系统计算结果",
+        "表6-1 泡沫系统计算结果",
         ["保护对象", "保护面积/m²", "强度", "Q_f/(L/s)", "时间/min", "产生器", "数量", "泡沫液/m³"],
         [
             ["20 000 m³汽油罐密封圈", f"{ag:.2f}", "12.5 L/(min·m²)", f"{qg:.2f}", "60", "8 L/s", "2", f"{vfg:.2f}"],
@@ -954,31 +1301,53 @@ def build_chapter_5(doc: Document):
         ],
         [4.2, 2.2, 3.2, 2.2, 1.8, 2.0, 1.4, 2.2],
     )
-    add_heading(doc, "5.5.3 消防水池、消防泵与事故水", 3)
+    add_heading(doc, "6.3 消防水池与消防泵", 2)
+    add_heading(doc, "6.3.1 消防水池有效容积", 3)
     foam_water = vmd * (1 - 0.039)
     fire_water = vc + foam_water
     eq36 = add_equation(doc, "V_(FW)=V_c+(1-c)V_(mix)")
     add_body(
         doc,
+        "该式用于计算消防水池所需有效水量。式中：V_(FW)——消防用水量，m³；V_c——固定冷却水量，m³；"
+        "c——泡沫液实际混合比；V_(mix)——泡沫混合液量，m³。",
+    )
+    add_body(
+        doc,
         f"将柴油冷却水量{vc:.2f} m³和泡沫混合液量{vmd:.2f} m³代入式{eq36}，消防用水量V_FW={fire_water:.2f} m³。"
         "消防水池按计算量向上取整并分格设置，采用2×2 500 m³，总有效容积5 000 m³。",
     )
+    add_heading(doc, "6.3.2 消防泵、备用泵与供电", 3)
     add_body(
         doc,
         f"固定冷却水泵按Q_c={qc:.2f} L/s配置2×130 L/s，一用一备；泡沫水泵按Q_f={qd:.2f} L/s配置2×110 L/s，一用一备。"
         "消防环网由两路出水干管供水，罐区、泵区、装车区和码头设分区阀，任一段检修不影响其余区域供水。",
     )
+    add_body(
+        doc,
+        "消防冷却水泵设置2台电动泵和1台柴油机驱动备用泵，单台额定流量均不小于130 L/s；正常由1台电动泵承担设计流量，"
+        "另1台电动泵及柴油机泵提供故障和失电备用。泡沫供水泵同样按工作泵与备用泵能力一致配置。消防泵应具有独立吸水管、试验回流和定期自启动试验条件，"
+        "控制室远程启动不代替泵房就地手动启动。备用消防泵的流量、扬程不得低于最大一台工作泵。",
+    )
+
+    add_heading(doc, "6.4 事故水池与排水切换", 2)
+    add_heading(doc, "6.4.1 事故水量组成与容积", 3)
     rainfall = 0.90 * 12_600 * 0.2764
     leakage = 300 * (10 / 60) * 1.2
     vacc = fire_water + rainfall + leakage
     eq37 = add_equation(doc, "V_(acc)=V_(FW)+ψFh_r+1.2Q_lt_s")
     add_body(
         doc,
+        "该式用于合并消防水、受污染雨水和紧急切断前泄漏量。式中：V_(acc)——事故水池计算容积，m³；V_(FW)——控制工况消防水量，m³；"
+        "ψ——径流系数；F——事故影响汇水面积，m²；h_r——最大一日降雨深度，m；Q_l——最大泄漏流量，m³/h；"
+        "t_s——紧急切断时间，h；1.2——泄漏量附加系数。",
+    )
+    add_body(
+        doc,
         f"事故水量包括控制工况消防水、最大日降雨和切断前泄漏量。取径流系数ψ=0.90、受影响最大罐区面积F=12 600 m²、最大日降雨h_r=0.2764 m，"
         f"降雨量为{rainfall:.2f} m³；最大输油流量300 m³/h、切断时间10 min并加20%裕量，泄漏量为{leakage:.2f} m³。"
         f"代入式{eq37}，V_acc={vacc:.2f} m³，选8 000 m³事故水池。",
     )
-    add_heading(doc, "5.6 防泄漏与事故排水", 2)
+    add_heading(doc, "6.4.2 防泄漏、雨污分流与切换", 3)
     add_body(
         doc,
         "储罐采用防渗基础、罐底泄漏监测和可检修的环形基础。泵密封设置接液盘并接入含油污水系统；装车区、阀组区和计量区采用不渗地坪，四周设收集沟。"
@@ -988,18 +1357,81 @@ def build_chapter_5(doc: Document):
         doc,
         "初期雨水量为202.5 m³，设置2×150 m³初期雨水池。",
     )
+    add_heading(doc, "6.5 消防系统运行与可靠性", 2)
+    add_heading(doc, "6.5.1 消防给水环网与最不利点", 3)
+    add_body(
+        doc,
+        "消防水从两格消防水池分别吸水，经电动消防泵和柴油机消防泵进入环状管网。环网在罐区、泵区、装车区、码头和泡沫站设置分区阀，"
+        "任一段检修时仍能从另一方向向控制火灾点供水。消防泵出口设置流量、压力和试验回流，日常试验水返回消防水池，避免长期直接排放。",
+    )
+    add_body(
+        doc,
+        "最不利点不是简单取离泵房最远的消火栓，而应比较柴油罐固定冷却环管、汽油罐泡沫立管、码头消防炮和高程不利点。"
+        "施工图阶段按控制流量同时开启所需支路，计算环网沿程与局部损失，并保证最不利喷头或泡沫产生器入口压力满足设备要求。",
+    )
+    add_body(
+        doc,
+        "固定冷却环管沿罐壁周向均匀分区，喷头方向避开保温、盘梯和加强圈遮挡。每个分区入口设置可在防火堤外操作的阀门、压力表和试水接口。"
+        "泡沫立管与冷却水管分开，防止误操作把清水送入泡沫产生器或把泡沫液长期滞留在冷却管。",
+    )
+    add_heading(doc, "6.5.2 泡沫比例混合与校验", 3)
+    add_body(
+        doc,
+        "泡沫系统按3%型泡沫液设计，但储量计算采用制造商允许混合比上限3.9%并增加10%裕量。比例混合装置的流量范围应覆盖柴油罐控制工况和汽油密封圈工况；"
+        "若单台装置在小流量工况下不能保证比例精度，应设置大小两级装置或回流稳定措施。",
+    )
+    add_body(
+        doc,
+        "泡沫液储罐分为两座5 m³，可在一座检修时保留部分灭火能力。储罐设置液位、呼吸、防腐内衬和取样接口，补充泡沫液必须与原有药剂相容。"
+        "每年通过不排放或少排放的试验回路验证比例混合精度；更换泡沫液品种后重新核对黏度、混合比、低温性能和产生器适配性。",
+    )
+    add_body(
+        doc,
+        "泡沫产生器数量按计算流量向上取整，并沿罐周均匀布置。单个产生器或一条立管失效时会造成局部覆盖不足，因此管线布置避免一个低点积液影响多个产生器。"
+        "试验时检查背压、发泡倍数和分布均匀性，不能只确认泵已启动。",
+    )
+    add_heading(doc, "6.5.3 消防泵启停逻辑和定期试验", 3)
+    add_body(
+        doc,
+        "消防泵可由消防控制室远程启动、泵房就地启动和压力联锁启动。启动命令发出后监测出口压力、流量和电机状态；主电动泵未在规定时间建立压力时，"
+        "自动启动备用电动泵，仍失败或全厂失电时启动柴油机泵。消防泵一旦投入火灾工况，原则上由现场授权人员手动停泵。",
+    )
+    add_table(
+        doc,
+        "表6-2 消防设备配置与可靠性要求",
+        ["系统", "工作设备", "备用设备", "设计能力", "验证方式"],
+        [
+            ["固定冷却水", "1台130 L/s电动泵", "1台同能力电动泵+1台柴油机泵", "不小于控制工况Q_c", "流量试验和最不利点压力"],
+            ["泡沫供水", "1台110 L/s电动泵", "1台同能力备用泵", "不小于柴油全液面混合液流量", "比例混合和泡沫出口试验"],
+            ["消防水池", "2×2500 m³分格", "两格可切换补水", "有效水量大于计算值", "液位、补水和吸水试验"],
+            ["泡沫液储罐", "2×5 m³", "两罐互为储量分隔", "总有效量大于计算值", "液位、取样和药剂相容性"],
+            ["事故水池", "1×8000 m³", "预留移动泵接口", "大于消防+降雨+泄漏", "切换阀和高液位联锁"],
+        ],
+        [3.2, 4.0, 4.5, 4.2, 4.0],
+    )
+    add_heading(doc, "6.5.4 事故水池运行边界", 3)
+    add_body(
+        doc,
+        "事故水池正常状态保持足够空余容积，不作为日常含油污水调节池使用。雨前根据气象预报检查液位；若池内已有待处理水，应提前外运或处理，"
+        "不能用“名义容积8000 m³”代替可用容积管理。入口切换阀采用失效安全位置，并在控制室显示阀位。",
+    )
+    add_body(
+        doc,
+        "火灾时防火堤内排水阀关闭，消防水和泄漏油先在堤内暂存；确认事故水池具备接收条件后分批导入，避免大量油品直接冲击事故池。"
+        "事故结束后对水相、浮油和沉积物分类处置，检测合格前不外排。事故水池高高液位时停止一切可能增加污染水的非应急作业。",
+    )
 
 
 def build_chapter_6(doc: Document):
-    add_heading(doc, "6 环境保护与油气回收", 1)
-    add_heading(doc, "6.1 VOCs源项与控制原则", 2)
+    add_heading(doc, "7 环境保护、自动控制与运行管理", 1)
+    add_heading(doc, "7.1 VOCs源项与控制原则", 2)
     add_body(
         doc,
         "VOCs主要来自汽油储罐呼吸、浮盘边缘密封、装车置换气、码头装卸置换气以及泵阀无组织泄漏。源头控制采用内浮顶、全接液钢制浮盘、一次二次密封和液下进油；"
         "过程控制采用密闭装车、低泄漏阀门和LDAR；末端治理采用冷凝与活性炭吸附组合的油气回收装置。",
         [4, 5],
     )
-    add_heading(doc, "6.2 装车油气回收能力", 2)
+    add_heading(doc, "7.2 装车油气回收能力", 2)
     add_body(
         doc,
         "92号和95号汽油公路装车可同时进行，每种油品最大装车流量120 m³/h。按液体装入量与置换油气量近似1:1，并取1.10波动系数，最大油气量为264 m³/h。"
@@ -1007,7 +1439,7 @@ def build_chapter_6(doc: Document):
     )
     eq38 = add_equation(doc, "Q_(VRU)=1.10ΣQ_(load,g)")
     add_body(doc, f"将两种汽油装车流量各120 m³/h代入式{eq38}，Q_VRU=264 m³/h，选300 m³/h。沿海空气湿度较高，吸附单元前设置气液分离、温度监测和冷凝预处理，避免水汽降低吸附容量。", [14])
-    add_heading(doc, "6.3 废水、固废与噪声", 2)
+    add_heading(doc, "7.3 废水、固废与噪声", 2)
     add_body(
         doc,
         "含油污水包括罐底切水、泵区地面冲洗水、计量排凝和受污染初期雨水。污水先经隔油、调节和气浮后送园区污水系统；清净雨水与含油污水分流。"
@@ -1018,7 +1450,7 @@ def build_chapter_6(doc: Document):
         "噪声设备主要为输油泵、消防泵和油气回收风机。泵采用低噪声电机、弹性基础和软连接，消防泵房与管理区保持距离，风机进出口设消声器。"
         "正常工况下通过设备选型和建筑隔声控制厂界噪声。",
     )
-    add_heading(doc, "6.4 环境监测与异常工况", 2)
+    add_heading(doc, "7.4 环境监测与异常工况", 2)
     add_body(
         doc,
         "监测项目包括油气回收入口流量、出口非甲烷总烃、储罐密封状态、泵阀泄漏、雨水排口油膜和事故水池液位。VRU高温、高压差或出口浓度超限时停止汽油装车并切换备用单元。"
@@ -1027,8 +1459,8 @@ def build_chapter_6(doc: Document):
 
 
 def build_chapter_7(doc: Document):
-    add_heading(doc, "7 自动控制与运行管理", 1)
-    add_heading(doc, "7.1 主要检测仪表", 2)
+    add_heading(doc, "7.5 自动控制与运行管理", 2)
+    add_heading(doc, "7.5.1 主要检测仪表", 3)
     add_body(
         doc,
         "每座储罐设置连续液位、温度和独立高高液位开关；泵入口设置压力低报警，出口设置压力高报警和流量低报警；过滤器设置差压报警；装车鹤位设置批控、防溢流和静电接地联锁。"
@@ -1049,13 +1481,13 @@ def build_chapter_7(doc: Document):
         ],
         [3.5, 3.0, 6.0, 4.0],
     )
-    add_heading(doc, "7.2 控制方式与紧急切断", 2)
+    add_heading(doc, "7.5.2 控制方式与紧急切断", 3)
     add_body(
         doc,
         "正常作业由中控室顺序启动：确认目标罐、阀门反馈和可用容量，开启末端阀，再开启泵入口阀和泵出口阀，最后启动泵并缓慢升速。停运顺序相反，先降速停泵再关阀。"
         "紧急切断不依赖操作画面单点命令，码头、装车区、泵区和中控室均设置硬接线ESD按钮。",
     )
-    add_heading(doc, "7.3 运行、检维修与应急", 2)
+    add_heading(doc, "7.5.3 运行、检维修与应急", 3)
     add_body(
         doc,
         "运行人员每班检查储罐液位趋势、浮盘状态、罐壁沉降标记、泵振动与密封、阀门反馈、消防压力和事故水池液位。周检包括紧急切断阀抽试、可燃气体探测器自检和静电接地装置检查；"
@@ -1066,6 +1498,70 @@ def build_chapter_7(doc: Document):
         "发生泄漏时立即停止相关泵、关闭上下游切断阀、禁止点火源并疏散无关人员；小量泄漏使用吸油材料围控，大量泄漏导入防火堤和事故水系统。发生罐火时启动固定冷却、泡沫系统并对相邻设施实施监护，"
         "根据风向设置警戒和疏散路线。",
     )
+    add_heading(doc, "7.6 典型作业程序与参数管理", 2)
+    add_heading(doc, "7.6.1 水运进库作业程序", 3)
+    add_body(
+        doc,
+        "船舶靠泊后由船岸双方共同确认油品、数量、目标罐可用容量、装卸速率、最大允许压力、通信方式和紧急停输信号。连接装卸臂后先进行低流量试送，"
+        "核对岸线压力、目标罐液位上升趋势和计量方向；确认无泄漏及无误入其他罐后，逐步提高到300 m³/h。",
+    )
+    add_body(
+        doc,
+        "接近计划数量或目标罐高液位时提前降低船泵转速，避免在最大流量下突然停输。停输后依次关闭船阀、岸侧阀和罐根阀，"
+        "对装卸臂内残油进行密闭回收。计量差超过允许范围时，不以人工修改记录消除差值，应检查温度密度修正、阀门内漏和管线存油量。",
+    )
+    add_heading(doc, "7.6.2 公路装车作业程序", 3)
+    add_body(
+        doc,
+        "车辆进入装车区前核对介质、仓容和防溢流接口，进入鹤位后熄火、制动并连接静电接地和油气回收。批控系统收到接地良好、防溢流正常、"
+        "鹤管到位和油气回收可用四个条件后才允许装车。初始流量较低，鹤管口被液体淹没后提升到额定流量。",
+    )
+    add_body(
+        doc,
+        "装车结束先关闭批控阀并确认流量归零，再排净鹤管残油和拆除油气回收管，最后断开静电接地。出现车辆罐高液位、接地中断、可燃气体高高或油气回收故障时，"
+        "联锁关闭装车阀并停止相应油品泵；未经现场检查不得直接复位继续装车。",
+    )
+    add_heading(doc, "7.6.3 倒罐、切水和检维修隔离", 3)
+    add_body(
+        doc,
+        "倒罐前确认接收罐容量、油品牌号和质量状态，采用同品种专用管线。倒罐过程中监测两罐液位变化是否与流量累计一致；"
+        "当接收罐高液位或源罐低低液位出现时自动停泵。不同牌号汽油不通过倒罐操作进行未经批准的调合。",
+    )
+    add_body(
+        doc,
+        "罐底切水采用小流量、有人监护和密闭接收。开始阶段水相进入含油污水系统，发现明显油相后立即关闭；切水量与罐存变化记录用于识别底水异常增加。"
+        "冬季低温时检查切水阀和低点积水，防止冻结造成阀体或管道破裂。",
+    )
+    add_body(
+        doc,
+        "设备检维修执行停泵、关阀、泄压、排净、置换、检测和上锁挂牌。双阀隔离之间设置可控泄放，不能以控制系统显示“阀关”代替现场机械隔离。"
+        "进入储罐前还需盲板隔断所有物料和氮气管线，连续监测氧含量与可燃气体，并制定救援方案。",
+    )
+    add_heading(doc, "7.6.4 数据首现、变更和版本一致性", 3)
+    add_body(
+        doc,
+        "年周转量、运输比例、油品密度、周转系数、罐容、罐径、管长、高差、泵型号和消防参数构成本设计的关键输入。每个数据在正文首次出现处注明规范、文献、"
+        "制造商样本或政府PDF来源；由设计假定得到的管长和标高明确写为初步总图条件，不伪装成外部统计事实。",
+    )
+    add_body(
+        doc,
+        "后续若总平面图改变管长或高差，应同步更新表4-2、系统曲线、泵工作点和NPSH；若改变罐径或罐高，应同步更新罐壁、抗风圈、防火堤、冷却水和泡沫计算。"
+        "说明书、计算表和两张图纸使用同一版本参数，修改前提交Git快照，以便不满意时回退。",
+    )
+    add_table(
+        doc,
+        "表7-2 关键参数变更的联动更新关系",
+        ["变更参数", "直接影响计算", "必须同步更新的章节或图纸"],
+        [
+            ["年周转量或运输比例", "理论库容、泊位与装卸能力", "第2、3、4章及工艺流程图"],
+            ["储罐容量、直径或高度", "库级、壁厚、抗风、防火堤、消防", "第2、5、6章及总平面图"],
+            ["管长、管径或高差", "流速、摩阻、系统扬程、工作点", "第4章、泵曲线及工艺流程图"],
+            ["泵型号或叶轮直径", "H-Q交点、功率、NPSH、年能力", "第4章及设备表"],
+            ["消防控制工况", "冷却水、泡沫、消防水池、事故水", "第6章及消防总图"],
+            ["自然条件资料", "抗风、防腐、排水、停工边界", "第1、2、5、6章"],
+        ],
+        [4.0, 5.5, 7.5],
+    )
 
 
 def build_chapter_8(doc: Document):
@@ -1075,7 +1571,7 @@ def build_chapter_8(doc: Document):
         "（2）库容计算先取K=14、η=0.95，理论库容分别为39 572.62 m³、24 732.88 m³和26 852.85 m³。配置2×20 000 m³汽油罐、2×15 000 m³汽油罐和2×15 000 m³柴油罐，共6座。反算K为13.85、11.54、12.53，均在8～14内。",
         "（3）名义总容量为100 000 m³，按GB 50074—2014折算后的储罐计算总容量为85 000 m³，确定为二级石油库。汽油采用钢制内浮顶罐，柴油采用固定顶罐，三种油品均保留两座罐以满足倒罐和检修。",
         "（4）水运年作业量为76万t，设置1个5 000 DWT成品油泊位，单泊位计算能力124.10万t/a，利用率0.613。水运、管道和公路形成完整收发油流程。",
-        "（5）主要工艺管径为DN150～DN250。三种油品各设置2台250 m³/h、55 m离心泵，一用一备，配45 kW防爆电机；水力、功率、汽蚀余量和年装卸能力校核均满足要求。",
+        "（5）主要工艺管径为DN150～DN250。最不利水运外输管路在200 m³/h时所需扬程35.91 m，选KSB MegaCPK Inducer 125-100-200、193 mm叶轮作为候选泵；泵与管路曲线交点约为202 m³/h、36.3 m。三种油品各设2台泵，一用一备，配30 kW防爆电机；柴油NPSH_a=11.83 m，大于样本NPSH_r与1.0 m裕量之和。",
         "（6）罐区划分为3个防火堤区，堤高2.2 m。消防控制工况为15 000 m³固定顶柴油罐火灾并冷却1座相邻罐，消防水计算量约3 790 m³，设置2×2 500 m³消防水池；柴油罐配置6个16 L/s泡沫产生器，泡沫液计算量约7.01 m³，设置2×5 m³泡沫液储罐。",
         "（7）事故水计算量约6 985 m³，设置8 000 m³事故水池；初期雨水设置2×150 m³调蓄池。汽油装车油气回收能力取300 m³/h，一用一备。总图和流程图应按本稿的6座罐、3个罐组、1个泊位和设备参数绘制。",
     ]
@@ -1109,9 +1605,9 @@ def build_appendices(doc: Document):
             ["库容", "K、η", "14、0.95", "理论库容"],
             ["物性", "汽油/柴油密度", "0.760/0.840 t/m³", "体积与质量换算"],
             ["储罐", "数量与容量", "2×20k+2×15k+2×15k", "总图与消防"],
-            ["自然条件", "平均气温/降水", "15.8 ℃/1302.3 mm", "设备与排水"],
+            ["自然条件", "平均气温/降水", "16.3 ℃/1269.7 mm", "设备与排水"],
             ["风荷载", "基本风压", "0.45 kPa（50年）", "抗风圈"],
-            ["地震", "烈度/加速度", "6度/0.05g", "结构与柔性连接"],
+            ["地震", "基本烈度", "Ⅵ度", "结构与柔性连接"],
             ["码头", "船型/泊位数", "5 000 DWT/1个", "水运接口"],
         ],
         [2.4, 4.0, 4.5, 5.0],
@@ -1202,6 +1698,9 @@ def build_appendices(doc: Document):
         ],
         [3.5, 4.0, 2.0, 3.5, 4.0],
     )
+    # 本轮只保留与正文直接对应的四个计算附件；设备表、复核记录和规范检查
+    # 已移入正文，不再以大量附录增加篇幅。
+    return
     add_heading(doc, "附录E 主要设备与图纸标注", 1)
     add_table(
         doc,
@@ -1469,7 +1968,7 @@ def build_references(doc: Document):
         "[16] DOREGAR ZAVAREH R, DANA T, ROAYAEI E, et al. The environmental risk assessment of fire and explosion in storage tanks of petroleum products[J]. Sustainability, 2022, 14(17): 10747. DOI:10.3390/su141710747.",
         "[17] 刘德俊, 杨帆, 于洋, 等. 油库技术与管理[M]. 2版. 北京: 中国石化出版社, 2021.",
         "[18] 邢科伟, 马秀让, 刘占卿. 油库加油站设计数据图表手册[M]. 北京: 中国石化出版社, 2015.",
-        "[19] KSB SE & Co. KGaA. RPH-V API 610 process pump technical brochure[EB/OL]. Frankenthal: KSB.",
+        "[19] KSB SE & Co. KGaA. MegaCPK centrifugal pumps with shaft seal: characteristic curves and technical data[EB/OL]. Frankenthal: KSB.",
     ]
     for ref in refs:
         p = add_paragraph(doc, ref, "Normal", first_line=False)
@@ -1494,6 +1993,20 @@ def normalize(doc: Document):
     normal._element.rPr.rFonts.set(qn("w:eastAsia"), "宋体")
     normal.paragraph_format.line_spacing_rule = WD_LINE_SPACING.ONE_POINT_FIVE
     normal.paragraph_format.space_after = Pt(0)
+    for name, size, before, after in [
+        ("Heading 1", 16, 12, 12),
+        ("Heading 2", 14, 10, 6),
+        ("Heading 3", 10.5, 6, 3),
+    ]:
+        style = doc.styles[name]
+        style.font.name = "Times New Roman"
+        style.font.size = Pt(size)
+        style.font.bold = True
+        style._element.get_or_add_rPr().rFonts.set(qn("w:eastAsia"), "黑体")
+        style.paragraph_format.space_before = Pt(before)
+        style.paragraph_format.space_after = Pt(after)
+        style.paragraph_format.line_spacing = 1.0
+        style.paragraph_format.keep_with_next = True
     for p in doc.paragraphs:
         if p.style.name == "Normal" and p.alignment != WD_ALIGN_PARAGRAPH.CENTER:
             if not p.text.startswith("["):
@@ -1501,22 +2014,23 @@ def normalize(doc: Document):
         if p.style.name == "Heading 1":
             p.paragraph_format.page_break_before = True
             p.paragraph_format.keep_with_next = True
-        if p.style.name in {"标题2", "标题 31"}:
+        if p.style.name in {"Heading 2", "Heading 3"}:
             p.paragraph_format.keep_with_next = True
         for r in p.runs:
             if "[[EQ|" in p.text:
                 set_run_font(r, east_asia="Cambria Math", latin="Cambria Math")
             elif p.style.name == "Heading 1":
                 set_run_font(r, east_asia="黑体", size=Pt(16), bold=True)
-            elif p.style.name == "标题2":
-                set_run_font(r, east_asia="黑体", size=Pt(15), bold=False)
-            elif p.style.name == "标题 31":
+            elif p.style.name == "Heading 2":
+                set_run_font(r, east_asia="黑体", size=Pt(14), bold=True)
+            elif p.style.name == "Heading 3":
                 set_run_font(r, east_asia="黑体", size=Pt(10.5), bold=True)
     set_update_fields(doc)
 
 
 def main():
     doc = Document(str(SOURCE))
+    ensure_heading_styles(doc)
     build_front(doc)
     remove_old_body(doc)
     build_chapter_1(doc)
